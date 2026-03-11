@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from servo_interfaces/msg/SetPwm.msg
+// generated code does not contain a copyright notice
+
+
+module servo_interfaces {
+  module msg {
+    struct SetPwm {
+      @verbatim (language="comment", text=
+        "PCA9685 channel number")
+      @default (value=1)
+      uint8 motor_num;
+
+      @verbatim (language="comment", text=
+        "Taarget position of the servo motor (degrees)")
+      @default (value=90)
+      uint8 target_position;
+
+      @default (value=5)
+      uint8 speed;
+    };
+  };
+};

@@ -1,0 +1,392 @@
+[0.000000] (-) TimerEvent: {}
+[0.000394] (-) JobUnselected: {'identifier': 'my_package'}
+[0.000701] (-) JobUnselected: {'identifier': 'my_servo_controller'}
+[0.001046] (-) JobUnselected: {'identifier': 'ros2_pca9685'}
+[0.001188] (servo_interfaces) JobQueued: {'identifier': 'servo_interfaces', 'dependencies': OrderedDict()}
+[0.001230] (servo_interfaces) JobStarted: {'identifier': 'servo_interfaces'}
+[0.010136] (servo_interfaces) JobProgress: {'identifier': 'servo_interfaces', 'progress': 'cmake'}
+[0.013374] (servo_interfaces) Command: {'cmd': ['/usr/bin/cmake', '/home/rasp/robot_ws/src/servo_interfaces', '-DCMAKE_INSTALL_PREFIX=/home/rasp/robot_ws/install/servo_interfaces'], 'cwd': '/home/rasp/robot_ws/build/servo_interfaces', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'rasp', 'SSH_CLIENT': '192.168.137.1 65446 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/rasp/.vscode-server/cli/servers/Stable-072586267e68ece9a47aa43f8c108e0dcbf44622/server/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'BROWSER': '/home/rasp/.vscode-server/cli/servers/Stable-072586267e68ece9a47aa43f8c108e0dcbf44622/server/bin/helpers/browser.sh', 'HOME': '/home/rasp', 'TERM_PROGRAM_VERSION': '1.109.5', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-71ca6195-31c7-4c13-b3fa-3fcf08a8c280.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/rasp/.vscode-server/cli/servers/Stable-072586267e68ece9a47aa43f8c108e0dcbf44622/server/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/rasp/.vscode-server/cli/servers/Stable-072586267e68ece9a47aa43f8c108e0dcbf44622/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/cert.pem', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'rasp', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '3', 'PATH': '/home/rasp/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/rasp/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/rasp/.vscode-server/cli/servers/Stable-072586267e68ece9a47aa43f8c108e0dcbf44622/server/bin/remote-cli:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-9f58d43e34.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/rasp/robot_ws/build/servo_interfaces', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.137.1 65446 192.168.137.72 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.038430] (servo_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.099673] (-) TimerEvent: {}
+[0.200078] (-) TimerEvent: {}
+[0.300470] (-) TimerEvent: {}
+[0.376514] (servo_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)\n'}
+[0.379949] (servo_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.400583] (-) TimerEvent: {}
+[0.426372] (servo_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.467120] (servo_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.6.7 (/opt/ros/jazzy/share/rosidl_adapter/cmake)\n'}
+[0.500692] (-) TimerEvent: {}
+[0.601146] (-) TimerEvent: {}
+[0.701660] (-) TimerEvent: {}
+[0.802037] (-) TimerEvent: {}
+[0.902507] (-) TimerEvent: {}
+[1.003116] (-) TimerEvent: {}
+[1.103600] (-) TimerEvent: {}
+[1.203984] (-) TimerEvent: {}
+[1.304400] (-) TimerEvent: {}
+[1.404816] (-) TimerEvent: {}
+[1.449838] (servo_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)\n'}
+[1.504924] (-) TimerEvent: {}
+[1.605336] (-) TimerEvent: {}
+[1.705844] (-) TimerEvent: {}
+[1.806295] (-) TimerEvent: {}
+[1.906698] (-) TimerEvent: {}
+[2.007093] (-) TimerEvent: {}
+[2.105640] (servo_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.107156] (-) TimerEvent: {}
+[2.207403] (-) TimerEvent: {}
+[2.307784] (-) TimerEvent: {}
+[2.408180] (-) TimerEvent: {}
+[2.508827] (-) TimerEvent: {}
+[2.609259] (-) TimerEvent: {}
+[2.709760] (-) TimerEvent: {}
+[2.810182] (-) TimerEvent: {}
+[2.910566] (-) TimerEvent: {}
+[2.959443] (servo_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.964477] (servo_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)\n'}
+[3.010693] (-) TimerEvent: {}
+[3.111145] (-) TimerEvent: {}
+[3.173728] (servo_interfaces) StdoutLine: {'line': b'-- Found PythonExtra: /usr/bin/python3  \n'}
+[3.211268] (-) TimerEvent: {}
+[3.311868] (-) TimerEvent: {}
+[3.412523] (-) TimerEvent: {}
+[3.512957] (-) TimerEvent: {}
+[3.613394] (-) TimerEvent: {}
+[3.713766] (-) TimerEvent: {}
+[3.814167] (-) TimerEvent: {}
+[3.883910] (servo_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed \n'}
+[3.914254] (-) TimerEvent: {}
+[3.953125] (servo_interfaces) StdoutLine: {'line': b'-- Configuring done (3.9s)\n'}
+[4.012616] (servo_interfaces) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[4.014327] (-) TimerEvent: {}
+[4.030438] (servo_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/rasp/robot_ws/build/servo_interfaces\n'}
+[4.047174] (servo_interfaces) CommandEnded: {'returncode': 0}
+[4.047867] (servo_interfaces) JobProgress: {'identifier': 'servo_interfaces', 'progress': 'build'}
+[4.049388] (servo_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/rasp/robot_ws/build/servo_interfaces', '--', '-j4', '-l4'], 'cwd': '/home/rasp/robot_ws/build/servo_interfaces', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'rasp', 'SSH_CLIENT': '192.168.137.1 65446 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/rasp/.vscode-server/cli/servers/Stable-072586267e68ece9a47aa43f8c108e0dcbf44622/server/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'BROWSER': '/home/rasp/.vscode-server/cli/servers/Stable-072586267e68ece9a47aa43f8c108e0dcbf44622/server/bin/helpers/browser.sh', 'HOME': '/home/rasp', 'TERM_PROGRAM_VERSION': '1.109.5', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-71ca6195-31c7-4c13-b3fa-3fcf08a8c280.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/rasp/.vscode-server/cli/servers/Stable-072586267e68ece9a47aa43f8c108e0dcbf44622/server/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/rasp/.vscode-server/cli/servers/Stable-072586267e68ece9a47aa43f8c108e0dcbf44622/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/cert.pem', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'rasp', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '3', 'PATH': '/home/rasp/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/rasp/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/rasp/.vscode-server/cli/servers/Stable-072586267e68ece9a47aa43f8c108e0dcbf44622/server/bin/remote-cli:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-9f58d43e34.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/rasp/robot_ws/build/servo_interfaces', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.137.1 65446 192.168.137.72 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[4.114564] (-) TimerEvent: {}
+[4.137379] (servo_interfaces) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating type hashes for ROS interfaces\x1b[0m\n'}
+[4.154013] (servo_interfaces) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_copy_servo_interfaces\n'}
+[4.214692] (-) TimerEvent: {}
+[4.315570] (-) TimerEvent: {}
+[4.415963] (-) TimerEvent: {}
+[4.509149] (servo_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[4.510779] (servo_interfaces) StdoutLine: {'line': b'creating servo_interfaces.egg-info\n'}
+[4.516299] (-) TimerEvent: {}
+[4.540527] (servo_interfaces) StdoutLine: {'line': b'writing servo_interfaces.egg-info/PKG-INFO\n'}
+[4.541190] (servo_interfaces) StdoutLine: {'line': b'writing dependency_links to servo_interfaces.egg-info/dependency_links.txt\n'}
+[4.541532] (servo_interfaces) StdoutLine: {'line': b'writing top-level names to servo_interfaces.egg-info/top_level.txt\n'}
+[4.541833] (servo_interfaces) StdoutLine: {'line': b"writing manifest file 'servo_interfaces.egg-info/SOURCES.txt'\n"}
+[4.548036] (servo_interfaces) StdoutLine: {'line': b'[  2%] Built target servo_interfaces__rosidl_generator_type_description\n'}
+[4.568529] (servo_interfaces) StdoutLine: {'line': b'[  4%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[4.590111] (servo_interfaces) StdoutLine: {'line': b'[  6%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[4.616382] (-) TimerEvent: {}
+[4.639650] (servo_interfaces) StdoutLine: {'line': b"reading manifest file 'servo_interfaces.egg-info/SOURCES.txt'\n"}
+[4.640673] (servo_interfaces) StdoutLine: {'line': b"writing manifest file 'servo_interfaces.egg-info/SOURCES.txt'\n"}
+[4.716672] (-) TimerEvent: {}
+[4.771661] (servo_interfaces) StdoutLine: {'line': b'[  6%] Built target ament_cmake_python_build_servo_interfaces_egg\n'}
+[4.816745] (-) TimerEvent: {}
+[4.917086] (-) TimerEvent: {}
+[5.017437] (-) TimerEvent: {}
+[5.117949] (-) TimerEvent: {}
+[5.219551] (-) TimerEvent: {}
+[5.259699] (servo_interfaces) StdoutLine: {'line': b'[  6%] Built target servo_interfaces__cpp\n'}
+[5.319680] (-) TimerEvent: {}
+[5.338597] (servo_interfaces) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__description.c.o\x1b[0m\n'}
+[5.339049] (servo_interfaces) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/set_pwm__description.c.o\x1b[0m\n'}
+[5.339291] (servo_interfaces) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/set_pwm__functions.c.o\x1b[0m\n'}
+[5.341260] (servo_interfaces) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/set_pwm__type_support.c.o\x1b[0m\n'}
+[5.420595] (-) TimerEvent: {}
+[5.435148] (servo_interfaces) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__functions.c.o\x1b[0m\n'}
+[5.450979] (servo_interfaces) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__type_support.c.o\x1b[0m\n'}
+[5.520708] (-) TimerEvent: {}
+[5.568539] (servo_interfaces) StdoutLine: {'line': b'[ 22%] \x1b[32m\x1b[1mLinking C shared library libservo_interfaces__rosidl_generator_c.so\x1b[0m\n'}
+[5.620837] (-) TimerEvent: {}
+[5.643529] (servo_interfaces) StdoutLine: {'line': b'[ 22%] Built target servo_interfaces__rosidl_generator_c\n'}
+[5.666864] (servo_interfaces) StdoutLine: {'line': b'[ 31%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[5.667795] (servo_interfaces) StdoutLine: {'line': b'[ 31%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[5.668335] (servo_interfaces) StdoutLine: {'line': b'[ 31%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[5.668497] (servo_interfaces) StdoutLine: {'line': b'[ 31%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[5.721067] (-) TimerEvent: {}
+[5.824547] (-) TimerEvent: {}
+[5.925087] (-) TimerEvent: {}
+[6.025535] (-) TimerEvent: {}
+[6.126091] (-) TimerEvent: {}
+[6.227945] (-) TimerEvent: {}
+[6.331040] (-) TimerEvent: {}
+[6.401760] (servo_interfaces) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/servo_interfaces/msg/set_pwm__type_support.cpp.o\x1b[0m\n'}
+[6.402402] (servo_interfaces) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/servo_interfaces/msg/set_pwm__type_support.cpp.o\x1b[0m\n'}
+[6.431281] (-) TimerEvent: {}
+[6.492832] (servo_interfaces) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding C object CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_pwm__type_support.c.o\x1b[0m\n'}
+[6.532519] (-) TimerEvent: {}
+[6.546594] (servo_interfaces) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/servo_interfaces/srv/motor_angle__type_support.cpp.o\x1b[0m\n'}
+[6.579558] (servo_interfaces) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding C object CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/srv/detail/motor_angle__type_support.c.o\x1b[0m\n'}
+[6.594766] (servo_interfaces) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_pwm__type_support_c.cpp.o\x1b[0m\n'}
+[6.632796] (-) TimerEvent: {}
+[6.662154] (servo_interfaces) StdoutLine: {'line': b'[ 47%] \x1b[32m\x1b[1mLinking CXX shared library libservo_interfaces__rosidl_typesupport_c.so\x1b[0m\n'}
+[6.697543] (servo_interfaces) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking C shared library libservo_interfaces__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[6.734504] (-) TimerEvent: {}
+[6.764336] (servo_interfaces) StdoutLine: {'line': b'[ 50%] Built target servo_interfaces__rosidl_typesupport_c\n'}
+[6.781215] (servo_interfaces) StdoutLine: {'line': b'[ 50%] Built target servo_interfaces__rosidl_typesupport_introspection_c\n'}
+[6.789811] (servo_interfaces) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/srv/detail/motor_angle__type_support_c.cpp.o\x1b[0m\n'}
+[6.809588] (servo_interfaces) StdoutLine: {'line': b'[ 54%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[6.834676] (-) TimerEvent: {}
+[6.935532] (-) TimerEvent: {}
+[7.036976] (-) TimerEvent: {}
+[7.140527] (-) TimerEvent: {}
+[7.241061] (-) TimerEvent: {}
+[7.343839] (-) TimerEvent: {}
+[7.429619] (servo_interfaces) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/servo_interfaces/srv/motor_angle__type_support.cpp.o\x1b[0m\n'}
+[7.446571] (-) TimerEvent: {}
+[7.547201] (-) TimerEvent: {}
+[7.647791] (-) TimerEvent: {}
+[7.751803] (-) TimerEvent: {}
+[7.803603] (servo_interfaces) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/set_pwm__type_support.cpp.o\x1b[0m\n'}
+[7.852123] (-) TimerEvent: {}
+[7.942741] (servo_interfaces) StdoutLine: {'line': b'[ 61%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[7.952293] (-) TimerEvent: {}
+[8.053501] (-) TimerEvent: {}
+[8.154985] (-) TimerEvent: {}
+[8.254355] (servo_interfaces) StdoutLine: {'line': b'[ 63%] \x1b[32m\x1b[1mLinking CXX shared library libservo_interfaces__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[8.257616] (-) TimerEvent: {}
+[8.358148] (-) TimerEvent: {}
+[8.406223] (servo_interfaces) StdoutLine: {'line': b'[ 63%] Built target servo_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[8.430319] (servo_interfaces) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/servo_interfaces/srv/detail/dds_fastrtps/motor_angle__type_support.cpp.o\x1b[0m\n'}
+[8.458348] (-) TimerEvent: {}
+[8.559358] (-) TimerEvent: {}
+[8.589806] (servo_interfaces) StdoutLine: {'line': b'[ 68%] \x1b[32m\x1b[1mLinking CXX shared library libservo_interfaces__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[8.659686] (-) TimerEvent: {}
+[8.765662] (-) TimerEvent: {}
+[8.866755] (-) TimerEvent: {}
+[8.907615] (servo_interfaces) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/set_pwm__type_support.cpp.o\x1b[0m\n'}
+[8.919572] (servo_interfaces) StdoutLine: {'line': b'[ 70%] Built target servo_interfaces__rosidl_typesupport_cpp\n'}
+[8.945270] (servo_interfaces) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/servo_interfaces/srv/detail/motor_angle__type_support.cpp.o\x1b[0m\n'}
+[8.969592] (-) TimerEvent: {}
+[9.070297] (-) TimerEvent: {}
+[9.171033] (-) TimerEvent: {}
+[9.274872] (-) TimerEvent: {}
+[9.375466] (-) TimerEvent: {}
+[9.476017] (-) TimerEvent: {}
+[9.576546] (-) TimerEvent: {}
+[9.677090] (-) TimerEvent: {}
+[9.777715] (-) TimerEvent: {}
+[9.807624] (servo_interfaces) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX shared library libservo_interfaces__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[9.878140] (-) TimerEvent: {}
+[9.899525] (servo_interfaces) StdoutLine: {'line': b'[ 77%] \x1b[32m\x1b[1mLinking CXX shared library libservo_interfaces__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[9.978578] (-) TimerEvent: {}
+[10.025570] (servo_interfaces) StdoutLine: {'line': b'[ 77%] Built target servo_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[10.078622] (-) TimerEvent: {}
+[10.087544] (servo_interfaces) StdoutLine: {'line': b'[ 77%] Built target servo_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[10.123679] (servo_interfaces) StdoutLine: {'line': b'[ 77%] Built target servo_interfaces\n'}
+[10.160461] (servo_interfaces) StdoutLine: {'line': b'[ 79%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[10.178723] (-) TimerEvent: {}
+[10.279098] (-) TimerEvent: {}
+[10.379480] (-) TimerEvent: {}
+[10.479825] (-) TimerEvent: {}
+[10.580156] (-) TimerEvent: {}
+[10.680477] (-) TimerEvent: {}
+[10.780907] (-) TimerEvent: {}
+[10.879638] (servo_interfaces) StdoutLine: {'line': b'[ 79%] Built target servo_interfaces__py\n'}
+[10.880964] (-) TimerEvent: {}
+[10.916543] (servo_interfaces) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/srv/_motor_angle_s.c.o\x1b[0m\n'}
+[10.916892] (servo_interfaces) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_set_pwm_s.c.o\x1b[0m\n'}
+[10.981113] (-) TimerEvent: {}
+[11.082232] (-) TimerEvent: {}
+[11.178026] (servo_interfaces) StdoutLine: {'line': b'[ 86%] \x1b[32m\x1b[1mLinking C shared library libservo_interfaces__rosidl_generator_py.so\x1b[0m\n'}
+[11.182338] (-) TimerEvent: {}
+[11.257160] (servo_interfaces) StdoutLine: {'line': b'[ 86%] Built target servo_interfaces__rosidl_generator_py\n'}
+[11.282496] (-) TimerEvent: {}
+[11.296389] (servo_interfaces) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/servo_interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[11.296823] (servo_interfaces) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/servo_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[11.297080] (servo_interfaces) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/servo_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[11.382663] (-) TimerEvent: {}
+[11.483321] (-) TimerEvent: {}
+[11.523667] (servo_interfaces) StdoutLine: {'line': b'[ 95%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/servo_interfaces/servo_interfaces_s__rosidl_typesupport_c.so\x1b[0m\n'}
+[11.527508] (servo_interfaces) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/servo_interfaces/servo_interfaces_s__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[11.566057] (servo_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/servo_interfaces/servo_interfaces_s__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[11.584042] (-) TimerEvent: {}
+[11.586495] (servo_interfaces) StdoutLine: {'line': b'[100%] Built target servo_interfaces_s__rosidl_typesupport_c\n'}
+[11.589697] (servo_interfaces) StdoutLine: {'line': b'[100%] Built target servo_interfaces_s__rosidl_typesupport_introspection_c\n'}
+[11.626083] (servo_interfaces) StdoutLine: {'line': b'[100%] Built target servo_interfaces_s__rosidl_typesupport_fastrtps_c\n'}
+[11.647683] (servo_interfaces) CommandEnded: {'returncode': 0}
+[11.648685] (servo_interfaces) JobProgress: {'identifier': 'servo_interfaces', 'progress': 'install'}
+[11.666006] (servo_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/rasp/robot_ws/build/servo_interfaces'], 'cwd': '/home/rasp/robot_ws/build/servo_interfaces', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'rasp', 'SSH_CLIENT': '192.168.137.1 65446 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/rasp/.vscode-server/cli/servers/Stable-072586267e68ece9a47aa43f8c108e0dcbf44622/server/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'BROWSER': '/home/rasp/.vscode-server/cli/servers/Stable-072586267e68ece9a47aa43f8c108e0dcbf44622/server/bin/helpers/browser.sh', 'HOME': '/home/rasp', 'TERM_PROGRAM_VERSION': '1.109.5', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-71ca6195-31c7-4c13-b3fa-3fcf08a8c280.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/rasp/.vscode-server/cli/servers/Stable-072586267e68ece9a47aa43f8c108e0dcbf44622/server/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/rasp/.vscode-server/cli/servers/Stable-072586267e68ece9a47aa43f8c108e0dcbf44622/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/cert.pem', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'rasp', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '3', 'PATH': '/home/rasp/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/rasp/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/rasp/.vscode-server/cli/servers/Stable-072586267e68ece9a47aa43f8c108e0dcbf44622/server/bin/remote-cli:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-9f58d43e34.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/rasp/robot_ws/build/servo_interfaces', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.137.1 65446 192.168.137.72 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[11.680323] (servo_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[11.680692] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/ament_index/resource_index/rosidl_interfaces/servo_interfaces\n'}
+[11.680952] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/msg/SetPwm.json\n'}
+[11.681191] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/srv/MotorAngle.json\n'}
+[11.681392] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces\n'}
+[11.681570] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg\n'}
+[11.681704] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/set_pwm.h\n'}
+[11.681828] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[11.681965] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail\n'}
+[11.682142] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__description.c\n'}
+[11.682275] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__struct.h\n'}
+[11.682398] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__functions.c\n'}
+[11.682536] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__functions.h\n'}
+[11.682680] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__type_support.h\n'}
+[11.682831] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__type_support.c\n'}
+[11.682953] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv\n'}
+[11.683073] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/motor_angle.h\n'}
+[11.683191] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail\n'}
+[11.683311] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__type_support.h\n'}
+[11.683436] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__description.c\n'}
+[11.683990] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__type_support.c\n'}
+[11.684107] (-) TimerEvent: {}
+[11.684248] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__functions.h\n'}
+[11.684546] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__struct.h\n'}
+[11.684685] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__functions.c\n'}
+[11.684814] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/environment/library_path.sh\n'}
+[11.685005] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/environment/library_path.dsv\n'}
+[11.685254] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_generator_c.so\n'}
+[11.685941] (servo_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/rasp/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_generator_c.so" to ""\n'}
+[11.686081] (servo_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces\n'}
+[11.686182] (servo_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg\n'}
+[11.686327] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[11.686471] (servo_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail\n'}
+[11.686620] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_fastrtps_c.h\n'}
+[11.686714] (servo_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv\n'}
+[11.686808] (servo_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail\n'}
+[11.686906] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__rosidl_typesupport_fastrtps_c.h\n'}
+[11.687024] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[11.687438] (servo_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/rasp/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[11.687590] (servo_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces\n'}
+[11.687697] (servo_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg\n'}
+[11.687785] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[11.687895] (servo_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail\n'}
+[11.687997] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_introspection_c.h\n'}
+[11.688092] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__type_support.c\n'}
+[11.688205] (servo_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv\n'}
+[11.688293] (servo_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail\n'}
+[11.688378] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__type_support.c\n'}
+[11.688499] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__rosidl_typesupport_introspection_c.h\n'}
+[11.688629] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[11.689177] (servo_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/rasp/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[11.689312] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_c.so\n'}
+[11.690006] (servo_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/rasp/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_c.so" to ""\n'}
+[11.690191] (servo_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces\n'}
+[11.690287] (servo_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg\n'}
+[11.690376] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[11.690524] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/set_pwm.hpp\n'}
+[11.690635] (servo_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail\n'}
+[11.690740] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__traits.hpp\n'}
+[11.690824] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__struct.hpp\n'}
+[11.690919] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__builder.hpp\n'}
+[11.691059] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__type_support.hpp\n'}
+[11.691150] (servo_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv\n'}
+[11.691409] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/motor_angle.hpp\n'}
+[11.691607] (servo_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail\n'}
+[11.691711] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__type_support.hpp\n'}
+[11.691845] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__builder.hpp\n'}
+[11.691944] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__traits.hpp\n'}
+[11.692033] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__struct.hpp\n'}
+[11.692165] (servo_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces\n'}
+[11.692263] (servo_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg\n'}
+[11.692378] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[11.692494] (servo_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail\n'}
+[11.692616] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[11.692729] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/dds_fastrtps\n'}
+[11.692815] (servo_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv\n'}
+[11.692918] (servo_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail\n'}
+[11.693005] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/dds_fastrtps\n'}
+[11.693088] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[11.693174] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[11.693715] (servo_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/rasp/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[11.693904] (servo_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces\n'}
+[11.694013] (servo_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg\n'}
+[11.694103] (servo_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail\n'}
+[11.694224] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_introspection_cpp.hpp\n'}
+[11.694343] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__type_support.cpp\n'}
+[11.694480] (servo_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv\n'}
+[11.694584] (servo_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail\n'}
+[11.694673] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__rosidl_typesupport_introspection_cpp.hpp\n'}
+[11.694793] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__type_support.cpp\n'}
+[11.694878] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[11.695341] (servo_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/rasp/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[11.695494] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_cpp.so\n'}
+[11.696068] (servo_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/rasp/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[11.696191] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/environment/pythonpath.sh\n'}
+[11.696298] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/environment/pythonpath.dsv\n'}
+[11.696496] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces-0.0.0-py3.12.egg-info\n'}
+[11.696774] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces-0.0.0-py3.12.egg-info/top_level.txt\n'}
+[11.697246] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces-0.0.0-py3.12.egg-info/PKG-INFO\n'}
+[11.697392] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces-0.0.0-py3.12.egg-info/SOURCES.txt\n'}
+[11.697509] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces-0.0.0-py3.12.egg-info/dependency_links.txt\n'}
+[11.697667] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces\n'}
+[11.697782] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[11.697885] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/msg\n'}
+[11.697970] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/msg/__init__.py\n'}
+[11.698058] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/msg/_set_pwm_s.c\n'}
+[11.698166] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/msg/_set_pwm.py\n'}
+[11.698306] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/__init__.py\n'}
+[11.698614] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/srv\n'}
+[11.698726] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/srv/__init__.py\n'}
+[11.698814] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/srv/_motor_angle.py\n'}
+[11.701144] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/srv/_motor_angle_s.c\n'}
+[11.701340] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[11.701455] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[11.701552] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/servo_interfaces_s__rosidl_typesupport_fastrtps_c.so\n'}
+[11.701656] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/servo_interfaces_s__rosidl_typesupport_introspection_c.so\n'}
+[11.701741] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/servo_interfaces_s__rosidl_typesupport_c.so\n'}
+[11.759663] (servo_interfaces) StdoutLine: {'line': b"Listing '/home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces'...\n"}
+[11.760070] (servo_interfaces) StdoutLine: {'line': b"Compiling '/home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/__init__.py'...\n"}
+[11.760200] (servo_interfaces) StdoutLine: {'line': b"Listing '/home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/msg'...\n"}
+[11.760325] (servo_interfaces) StdoutLine: {'line': b"Compiling '/home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/msg/__init__.py'...\n"}
+[11.760477] (servo_interfaces) StdoutLine: {'line': b"Compiling '/home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/msg/_set_pwm.py'...\n"}
+[11.760602] (servo_interfaces) StdoutLine: {'line': b"Listing '/home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/srv'...\n"}
+[11.760705] (servo_interfaces) StdoutLine: {'line': b"Compiling '/home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/srv/__init__.py'...\n"}
+[11.760799] (servo_interfaces) StdoutLine: {'line': b"Compiling '/home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/srv/_motor_angle.py'...\n"}
+[11.773784] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/servo_interfaces_s__rosidl_typesupport_fastrtps_c.so\n'}
+[11.774361] (servo_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/servo_interfaces_s__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[11.774711] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/servo_interfaces_s__rosidl_typesupport_introspection_c.so\n'}
+[11.775246] (servo_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/servo_interfaces_s__rosidl_typesupport_introspection_c.so" to ""\n'}
+[11.775569] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/servo_interfaces_s__rosidl_typesupport_c.so\n'}
+[11.776093] (servo_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/servo_interfaces_s__rosidl_typesupport_c.so" to ""\n'}
+[11.776233] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_generator_py.so\n'}
+[11.776844] (servo_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/rasp/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_generator_py.so" to ""\n'}
+[11.777037] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/msg/SetPwm.idl\n'}
+[11.777169] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/srv/MotorAngle.idl\n'}
+[11.777297] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/msg/SetPwm.msg\n'}
+[11.777405] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/srv/MotorAngle.srv\n'}
+[11.777677] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/ament_index/resource_index/package_run_dependencies/servo_interfaces\n'}
+[11.777894] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/ament_index/resource_index/parent_prefix_path/servo_interfaces\n'}
+[11.778072] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/environment/ament_prefix_path.sh\n'}
+[11.778234] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/environment/ament_prefix_path.dsv\n'}
+[11.778397] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/environment/path.sh\n'}
+[11.778567] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/environment/path.dsv\n'}
+[11.778725] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/local_setup.bash\n'}
+[11.778893] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/local_setup.sh\n'}
+[11.779056] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/local_setup.zsh\n'}
+[11.779222] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/local_setup.dsv\n'}
+[11.779396] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/package.dsv\n'}
+[11.779669] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/ament_index/resource_index/packages/servo_interfaces\n'}
+[11.779923] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_generator_cExport.cmake\n'}
+[11.780135] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[11.780346] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[11.780565] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[11.780776] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[11.780986] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[11.781193] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[11.781384] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[11.781619] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_generator_cppExport.cmake\n'}
+[11.781846] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[11.782043] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[11.782258] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[11.782504] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[11.782721] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[11.782911] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[11.783114] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_generator_pyExport.cmake\n'}
+[11.783303] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[11.783534] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[11.783873] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[11.784059] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[11.784163] (-) TimerEvent: {}
+[11.784310] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[11.784609] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[11.784756] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[11.784887] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[11.785012] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfacesConfig.cmake\n'}
+[11.785159] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfacesConfig-version.cmake\n'}
+[11.785325] (servo_interfaces) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/package.xml\n'}
+[11.789194] (servo_interfaces) CommandEnded: {'returncode': 0}
+[11.864769] (servo_interfaces) JobEnded: {'identifier': 'servo_interfaces', 'rc': 0}
+[11.865955] (-) EventReactorShutdown: {}

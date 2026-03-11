@@ -1,0 +1,17 @@
+[1.226s] Invoking command in '/home/rasp/robot_ws/build/my_servo_controller': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rasp/robot_ws/build/my_servo_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rasp/robot_ws/install/my_servo_controller/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rasp/robot_ws/build/my_servo_controller/build --no-deps symlink_data
+[1.670s] running develop
+[1.939s] running egg_info
+[1.964s] writing my_servo_controller.egg-info/PKG-INFO
+[1.964s] writing dependency_links to my_servo_controller.egg-info/dependency_links.txt
+[1.966s] writing entry points to my_servo_controller.egg-info/entry_points.txt
+[1.967s] writing requirements to my_servo_controller.egg-info/requires.txt
+[1.967s] writing top-level names to my_servo_controller.egg-info/top_level.txt
+[2.025s] reading manifest file 'my_servo_controller.egg-info/SOURCES.txt'
+[2.025s] writing manifest file 'my_servo_controller.egg-info/SOURCES.txt'
+[2.053s] running build_ext
+[2.053s] Creating /home/rasp/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my-servo-controller.egg-link (link to .)
+[2.054s] Installing servo_controller_node script to /home/rasp/robot_ws/install/my_servo_controller/lib/my_servo_controller
+[2.055s] 
+[2.055s] Installed /home/rasp/robot_ws/build/my_servo_controller
+[2.055s] running symlink_data
+[2.152s] Invoked command in '/home/rasp/robot_ws/build/my_servo_controller' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rasp/robot_ws/build/my_servo_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rasp/robot_ws/install/my_servo_controller/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rasp/robot_ws/build/my_servo_controller/build --no-deps symlink_data

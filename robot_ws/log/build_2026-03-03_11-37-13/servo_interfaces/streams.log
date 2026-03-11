@@ -1,0 +1,142 @@
+[0.027s] Invoking command in '/home/rasp/robot_ws/build/servo_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rasp/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/rasp/robot_ws/build/servo_interfaces -- -j4 -l4
+[0.137s] [  2%] Built target servo_interfaces__rosidl_generator_type_description
+[0.179s] [  2%] Built target ament_cmake_python_symlink_servo_interfaces
+[0.192s] [  4%] Built target servo_interfaces__cpp
+[0.228s] [ 22%] Built target servo_interfaces__rosidl_generator_c
+[0.328s] [ 31%] Built target servo_interfaces__rosidl_typesupport_fastrtps_cpp
+[0.344s] [ 40%] Built target servo_interfaces__rosidl_typesupport_introspection_cpp
+[0.357s] [ 50%] Built target servo_interfaces__rosidl_typesupport_fastrtps_c
+[0.461s] [ 59%] Built target servo_interfaces__rosidl_typesupport_cpp
+[0.469s] [ 68%] Built target servo_interfaces__rosidl_typesupport_introspection_c
+[0.481s] [ 77%] Built target servo_interfaces__rosidl_typesupport_c
+[0.563s] [ 77%] Built target servo_interfaces
+[0.659s] [ 79%] Built target servo_interfaces__py
+[0.754s] [ 86%] Built target servo_interfaces__rosidl_generator_py
+[0.842s] [ 90%] Built target servo_interfaces_s__rosidl_typesupport_introspection_c
+[0.901s] [ 95%] Built target servo_interfaces_s__rosidl_typesupport_c
+[0.902s] [100%] Built target servo_interfaces_s__rosidl_typesupport_fastrtps_c
+[1.040s] running egg_info
+[1.109s] writing servo_interfaces.egg-info/PKG-INFO
+[1.111s] writing dependency_links to servo_interfaces.egg-info/dependency_links.txt
+[1.111s] writing top-level names to servo_interfaces.egg-info/top_level.txt
+[1.309s] reading manifest file 'servo_interfaces.egg-info/SOURCES.txt'
+[1.312s] writing manifest file 'servo_interfaces.egg-info/SOURCES.txt'
+[1.466s] [100%] Built target ament_cmake_python_build_servo_interfaces_egg
+[1.489s] Invoked command in '/home/rasp/robot_ws/build/servo_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rasp/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/rasp/robot_ws/build/servo_interfaces -- -j4 -l4
+[1.491s] Invoking command in '/home/rasp/robot_ws/build/servo_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rasp/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/rasp/robot_ws/build/servo_interfaces
+[1.507s] -- Install configuration: ""
+[1.508s] -- Execute custom install script
+[1.508s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/share/ament_index/resource_index/rosidl_interfaces/servo_interfaces
+[1.527s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/msg/SetPwm.json
+[1.545s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/srv/MotorAngle.json
+[1.564s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__functions.h
+[1.582s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__struct.h
+[1.600s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__type_support.h
+[1.618s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/rosidl_generator_c__visibility_control.h
+[1.637s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/set_pwm.h
+[1.655s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__functions.h
+[1.672s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__struct.h
+[1.690s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__type_support.h
+[1.709s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/motor_angle.h
+[1.727s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/environment/library_path.sh
+[1.749s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/environment/library_path.dsv
+[1.767s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_fastrtps_c.h
+[1.784s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[1.801s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__rosidl_typesupport_fastrtps_c.h
+[1.818s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_introspection_c.h
+[1.835s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[1.853s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__rosidl_typesupport_introspection_c.h
+[1.871s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__builder.hpp
+[1.887s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__struct.hpp
+[1.906s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__traits.hpp
+[1.922s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__type_support.hpp
+[1.941s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[1.957s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/set_pwm.hpp
+[1.974s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__builder.hpp
+[1.992s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__struct.hpp
+[2.010s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__traits.hpp
+[2.029s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__type_support.hpp
+[2.046s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/motor_angle.hpp
+[2.064s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_fastrtps_cpp.hpp
+[2.081s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[2.098s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__rosidl_typesupport_fastrtps_cpp.hpp
+[2.115s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_introspection_cpp.hpp
+[2.132s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__rosidl_typesupport_introspection_cpp.hpp
+[2.150s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/environment/pythonpath.sh
+[2.167s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/environment/pythonpath.dsv
+[2.185s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces-0.0.0-py3.12.egg-info/PKG-INFO
+[2.201s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces-0.0.0-py3.12.egg-info/SOURCES.txt
+[2.219s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces-0.0.0-py3.12.egg-info/dependency_links.txt
+[2.237s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces-0.0.0-py3.12.egg-info/top_level.txt
+[2.255s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/__init__.py
+[2.272s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_c.c
+[2.289s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[2.306s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[2.324s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/msg/__init__.py
+[2.342s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/msg/_set_pwm.py
+[2.359s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/msg/_set_pwm_s.c
+[2.376s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/servo_interfaces_s__rosidl_typesupport_c.so
+[2.394s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/servo_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[2.411s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/servo_interfaces_s__rosidl_typesupport_introspection_c.so
+[2.428s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/srv/__init__.py
+[2.446s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/srv/_motor_angle.py
+[2.463s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/srv/_motor_angle_s.c
+[2.482s] -- Up-to-date symlink: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/servo_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[2.482s] -- Up-to-date symlink: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/servo_interfaces_s__rosidl_typesupport_introspection_c.so
+[2.482s] -- Up-to-date symlink: /home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/servo_interfaces_s__rosidl_typesupport_c.so
+[2.482s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/msg/SetPwm.idl
+[2.498s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/srv/MotorAngle.idl
+[2.516s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/msg/SetPwm.msg
+[2.536s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/srv/MotorAngle.srv
+[2.554s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/share/ament_index/resource_index/package_run_dependencies/servo_interfaces
+[2.570s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/share/ament_index/resource_index/parent_prefix_path/servo_interfaces
+[2.587s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/environment/ament_prefix_path.sh
+[2.604s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/environment/ament_prefix_path.dsv
+[2.621s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/environment/path.sh
+[2.641s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/environment/path.dsv
+[2.657s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/local_setup.bash
+[2.674s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/local_setup.sh
+[2.692s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/local_setup.zsh
+[2.709s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/local_setup.dsv
+[2.726s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/package.dsv
+[2.743s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/share/ament_index/resource_index/packages/servo_interfaces
+[2.762s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/rosidl_cmake-extras.cmake
+[2.780s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.798s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.817s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[2.837s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[2.853s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[2.870s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[2.888s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfacesConfig.cmake
+[2.906s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfacesConfig-version.cmake
+[2.923s] -- Symlinking: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/package.xml
+[2.940s] -- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_generator_c.so
+[2.940s] -- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_fastrtps_c.so
+[2.941s] -- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_introspection_c.so
+[2.941s] -- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_c.so
+[2.942s] -- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[2.942s] -- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_introspection_cpp.so
+[2.943s] -- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_cpp.so
+[3.001s] Listing '/home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces'...
+[3.001s] Compiling '/home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/__init__.py'...
+[3.001s] Listing '/home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/msg'...
+[3.001s] Listing '/home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/srv'...
+[3.014s] -- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_generator_py.so
+[3.014s] -- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_generator_cExport.cmake
+[3.014s] -- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_generator_cExport-noconfig.cmake
+[3.015s] -- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[3.015s] -- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[3.015s] -- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[3.015s] -- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[3.015s] -- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfaces__rosidl_typesupport_cExport.cmake
+[3.015s] -- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[3.015s] -- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_generator_cppExport.cmake
+[3.015s] -- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[3.016s] -- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[3.016s] -- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[3.016s] -- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[3.016s] -- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfaces__rosidl_typesupport_cppExport.cmake
+[3.016s] -- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[3.016s] -- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_generator_pyExport.cmake
+[3.016s] -- Up-to-date: /home/rasp/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[3.020s] Invoked command in '/home/rasp/robot_ws/build/servo_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rasp/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/rasp/robot_ws/build/servo_interfaces

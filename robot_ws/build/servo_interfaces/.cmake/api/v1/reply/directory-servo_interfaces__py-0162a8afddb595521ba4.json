@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "servo_interfaces__py",
+		"source" : "/home/rasp/robot_ws/build/servo_interfaces/servo_interfaces__py"
+	}
+}

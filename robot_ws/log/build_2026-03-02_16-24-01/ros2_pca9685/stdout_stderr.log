@@ -1,0 +1,31 @@
+[  2%] Built target ros2_pca9685__rosidl_generator_type_description
+[  2%] Built target ament_cmake_python_copy_ros2_pca9685
+[  5%] Built target ros2_pca9685__cpp
+[ 18%] Built target ros2_pca9685__rosidl_generator_c
+[ 42%] Built target ros2_pca9685__rosidl_typesupport_fastrtps_c
+[ 42%] Built target ros2_pca9685__rosidl_typesupport_cpp
+[ 42%] Built target ros2_pca9685__rosidl_typesupport_fastrtps_cpp
+[ 50%] Built target ros2_pca9685__rosidl_typesupport_c
+[ 57%] Built target ros2_pca9685__rosidl_typesupport_introspection_c
+[ 65%] Built target ros2_pca9685__rosidl_typesupport_introspection_cpp
+[ 68%] [32mBuilding CXX object CMakeFiles/ros2_pca9685_node.dir/src/pca9685_node.cpp.o[0m
+[ 68%] Built target ros2_pca9685
+[ 71%] Built target ros2_pca9685__py
+[ 76%] Built target ros2_pca9685__rosidl_generator_py
+[ 86%] Built target ros2_pca9685_s__rosidl_typesupport_fastrtps_c
+[ 86%] Built target ros2_pca9685_s__rosidl_typesupport_introspection_c
+[ 92%] Built target ros2_pca9685_s__rosidl_typesupport_c
+running egg_info
+writing ros2_pca9685.egg-info/PKG-INFO
+writing dependency_links to ros2_pca9685.egg-info/dependency_links.txt
+writing top-level names to ros2_pca9685.egg-info/top_level.txt
+reading manifest file 'ros2_pca9685.egg-info/SOURCES.txt'
+writing manifest file 'ros2_pca9685.egg-info/SOURCES.txt'
+[ 92%] Built target ament_cmake_python_build_ros2_pca9685_egg
+[01m[K/home/rasp/robot_ws/src/ros2_pca9685/src/pca9685_node.cpp:[m[K In member function ‘[01m[Kvoid Pca9685Node::[01;32m[KServiceCallback[m[K(ros2_pca9685::srv::SetPwm_Request_<std::allocator<void> >::SharedPtr, ros2_pca9685::srv::SetPwm_Response_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/rasp/robot_ws/src/ros2_pca9685/src/pca9685_node.cpp:62:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kspeed[m[K’ was not declared in this scope
+   62 |     [01;31m[Kspeed[m[K = request->speed;
+      |     [01;31m[K^~~~~[m[K
+gmake[2]: *** [CMakeFiles/ros2_pca9685_node.dir/build.make:104: CMakeFiles/ros2_pca9685_node.dir/src/pca9685_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:625: CMakeFiles/ros2_pca9685_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

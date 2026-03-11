@@ -1,0 +1,36 @@
+-- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclcpp: 28.1.16 (/opt/ros/jazzy/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+-- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+-- Found rosidl_adapter: 4.6.7 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+-- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+-- Configuring done (1.9s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/rasp/robot_ws/build/ros2_pca9685
+failed to create symbolic link '/home/rasp/robot_ws/build/ros2_pca9685/ament_cmake_python/ros2_pca9685/ros2_pca9685' because existing path cannot be removed: Is a directory
+[  2%] Built target ros2_pca9685__rosidl_generator_type_description
+gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_ros2_pca9685.dir/build.make:70: CMakeFiles/ament_cmake_python_symlink_ros2_pca9685] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:454: CMakeFiles/ament_cmake_python_symlink_ros2_pca9685.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+[  5%] [34m[1mGenerating C code for ROS interfaces[0m
+[  7%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[  7%] Built target ros2_pca9685__cpp
+[ 15%] [32mBuilding C object CMakeFiles/ros2_pca9685__rosidl_generator_c.dir/rosidl_generator_c/ros2_pca9685/srv/detail/set_pwm__description.c.o[0m
+[ 15%] [32mBuilding C object CMakeFiles/ros2_pca9685__rosidl_generator_c.dir/rosidl_generator_c/ros2_pca9685/srv/detail/set_pwm__functions.c.o[0m
+[ 15%] [32mBuilding C object CMakeFiles/ros2_pca9685__rosidl_generator_c.dir/rosidl_generator_c/ros2_pca9685/srv/detail/set_pwm__type_support.c.o[0m
+[ 18%] [32m[1mLinking C shared library libros2_pca9685__rosidl_generator_c.so[0m
+[ 18%] Built target ros2_pca9685__rosidl_generator_c
+gmake: *** [Makefile:146: all] Error 2

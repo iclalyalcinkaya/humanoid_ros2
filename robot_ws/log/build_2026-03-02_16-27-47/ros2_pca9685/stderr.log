@@ -1,0 +1,7 @@
+[01m[K/home/rasp/robot_ws/src/ros2_pca9685/src/pca9685_node.cpp:[m[K In member function ‘[01m[Kvoid Pca9685Node::[01;32m[KServiceCallback[m[K(ros2_pca9685::srv::SetPwm_Request_<std::allocator<void> >::SharedPtr, ros2_pca9685::srv::SetPwm_Response_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/rasp/robot_ws/src/ros2_pca9685/src/pca9685_node.cpp:69:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kdelay[m[K’ was not declared in this scope
+   69 |         [01;31m[Kdelay[m[K(10);
+      |         [01;31m[K^~~~~[m[K
+gmake[2]: *** [CMakeFiles/ros2_pca9685_node.dir/build.make:104: CMakeFiles/ros2_pca9685_node.dir/src/pca9685_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:625: CMakeFiles/ros2_pca9685_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

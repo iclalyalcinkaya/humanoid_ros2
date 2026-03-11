@@ -1,0 +1,18 @@
+[1.273s] Invoking command in '/home/rasp/robot_ws/build/my_servo_controller': AMENT_PREFIX_PATH=/home/rasp/robot_ws/install/servo_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rasp/robot_ws/install/servo_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/rasp/robot_ws/install/servo_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rasp/robot_ws/build/my_servo_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rasp/robot_ws/install/my_servo_controller/lib/python3.12/site-packages:/home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rasp/robot_ws/build/my_servo_controller/build --no-deps symlink_data
+[1.727s] running develop
+[1.999s] running egg_info
+[2.025s] writing my_servo_controller.egg-info/PKG-INFO
+[2.025s] writing dependency_links to my_servo_controller.egg-info/dependency_links.txt
+[2.026s] writing entry points to my_servo_controller.egg-info/entry_points.txt
+[2.027s] writing requirements to my_servo_controller.egg-info/requires.txt
+[2.028s] writing top-level names to my_servo_controller.egg-info/top_level.txt
+[2.084s] reading manifest file 'my_servo_controller.egg-info/SOURCES.txt'
+[2.085s] writing manifest file 'my_servo_controller.egg-info/SOURCES.txt'
+[2.113s] running build_ext
+[2.113s] Creating /home/rasp/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my-servo-controller.egg-link (link to .)
+[2.114s] Installing servo_controller_node script to /home/rasp/robot_ws/install/my_servo_controller/lib/my_servo_controller
+[2.115s] Installing servo_mover_node script to /home/rasp/robot_ws/install/my_servo_controller/lib/my_servo_controller
+[2.115s] 
+[2.115s] Installed /home/rasp/robot_ws/build/my_servo_controller
+[2.115s] running symlink_data
+[2.221s] Invoked command in '/home/rasp/robot_ws/build/my_servo_controller' returned '0': AMENT_PREFIX_PATH=/home/rasp/robot_ws/install/servo_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rasp/robot_ws/install/servo_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/rasp/robot_ws/install/servo_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rasp/robot_ws/build/my_servo_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rasp/robot_ws/install/my_servo_controller/lib/python3.12/site-packages:/home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rasp/robot_ws/build/my_servo_controller/build --no-deps symlink_data

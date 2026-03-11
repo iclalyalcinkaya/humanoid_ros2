@@ -1,0 +1,33 @@
+[0.017s] Invoking command in '/home/rasp/robot_ws/build/ros2_pca9685': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rasp/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/rasp/robot_ws/src/ros2_pca9685 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rasp/robot_ws/install/ros2_pca9685
+[0.040s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.082s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.211s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.222s] -- Found rclcpp: 28.1.16 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.259s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.273s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.289s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.309s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.393s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.395s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.492s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.577s] -- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[0.650s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[0.662s] -- Found rosidl_adapter: 4.6.7 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[1.078s] -- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[1.328s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.424s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.426s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[1.892s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[1.922s] -- Configuring done (1.9s)
+[2.125s] -- Generating done (0.2s)
+[2.205s] -- Build files have been written to: /home/rasp/robot_ws/build/ros2_pca9685
+[2.231s] Invoked command in '/home/rasp/robot_ws/build/ros2_pca9685' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rasp/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/rasp/robot_ws/src/ros2_pca9685 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rasp/robot_ws/install/ros2_pca9685
+[2.233s] Invoking command in '/home/rasp/robot_ws/build/ros2_pca9685': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rasp/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/rasp/robot_ws/build/ros2_pca9685 -- -j4 -l4
+[2.325s] failed to create symbolic link '/home/rasp/robot_ws/build/ros2_pca9685/ament_cmake_python/ros2_pca9685/ros2_pca9685' because existing path cannot be removed: Is a directory
+[2.326s] [  2%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[2.327s] gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_ros2_pca9685.dir/build.make:70: CMakeFiles/ament_cmake_python_symlink_ros2_pca9685] Error 1
+[2.328s] gmake[1]: *** [CMakeFiles/Makefile2:454: CMakeFiles/ament_cmake_python_symlink_ros2_pca9685.dir/all] Error 2
+[2.328s] gmake[1]: *** Waiting for unfinished jobs....
+[2.704s] [  2%] Built target ros2_pca9685__rosidl_generator_type_description
+[2.707s] gmake: *** [Makefile:146: all] Error 2
+[2.710s] Invoked command in '/home/rasp/robot_ws/build/ros2_pca9685' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rasp/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/rasp/robot_ws/build/ros2_pca9685 -- -j4 -l4

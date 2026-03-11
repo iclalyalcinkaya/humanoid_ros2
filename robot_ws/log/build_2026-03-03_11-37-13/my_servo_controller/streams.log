@@ -1,0 +1,36 @@
+[1.241s] Invoking command in '/home/rasp/robot_ws/build/my_servo_controller': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rasp/robot_ws/build/my_servo_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rasp/robot_ws/install/my_servo_controller/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/rasp/robot_ws/build/my_servo_controller/build
+[1.667s] running develop
+[1.940s] Removing /home/rasp/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my-servo-controller.egg-link (link to .)
+[2.042s] Invoked command in '/home/rasp/robot_ws/build/my_servo_controller' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rasp/robot_ws/build/my_servo_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rasp/robot_ws/install/my_servo_controller/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/rasp/robot_ws/build/my_servo_controller/build
+[2.044s] Invoking command in '/home/rasp/robot_ws/src/my_servo_controller': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rasp/robot_ws/build/my_servo_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rasp/robot_ws/install/my_servo_controller/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_servo_controller build --build-base /home/rasp/robot_ws/build/my_servo_controller/build install --record /home/rasp/robot_ws/build/my_servo_controller/install.log --single-version-externally-managed install_data --force
+[2.415s] running egg_info
+[2.441s] writing ../../build/my_servo_controller/my_servo_controller.egg-info/PKG-INFO
+[2.441s] writing dependency_links to ../../build/my_servo_controller/my_servo_controller.egg-info/dependency_links.txt
+[2.444s] writing entry points to ../../build/my_servo_controller/my_servo_controller.egg-info/entry_points.txt
+[2.444s] writing requirements to ../../build/my_servo_controller/my_servo_controller.egg-info/requires.txt
+[2.445s] writing top-level names to ../../build/my_servo_controller/my_servo_controller.egg-info/top_level.txt
+[2.502s] reading manifest file '../../build/my_servo_controller/my_servo_controller.egg-info/SOURCES.txt'
+[2.503s] writing manifest file '../../build/my_servo_controller/my_servo_controller.egg-info/SOURCES.txt'
+[2.503s] running build
+[2.503s] running build_py
+[2.504s] copying my_servo_controller/servo_controller.py -> /home/rasp/robot_ws/build/my_servo_controller/build/lib/my_servo_controller
+[2.504s] copying my_servo_controller/servo_mover.py -> /home/rasp/robot_ws/build/my_servo_controller/build/lib/my_servo_controller
+[2.504s] running install
+[2.514s] running install_lib
+[2.541s] creating /home/rasp/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller
+[2.542s] copying /home/rasp/robot_ws/build/my_servo_controller/build/lib/my_servo_controller/__init__.py -> /home/rasp/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller
+[2.542s] copying /home/rasp/robot_ws/build/my_servo_controller/build/lib/my_servo_controller/servo_controller.py -> /home/rasp/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller
+[2.542s] copying /home/rasp/robot_ws/build/my_servo_controller/build/lib/my_servo_controller/servo_mover.py -> /home/rasp/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller
+[2.542s] byte-compiling /home/rasp/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller/__init__.py to __init__.cpython-312.pyc
+[2.543s] byte-compiling /home/rasp/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller/servo_controller.py to servo_controller.cpython-312.pyc
+[2.543s] byte-compiling /home/rasp/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller/servo_mover.py to servo_mover.cpython-312.pyc
+[2.544s] running install_data
+[2.544s] copying resource/my_servo_controller -> /home/rasp/robot_ws/install/my_servo_controller/share/ament_index/resource_index/packages
+[2.545s] copying package.xml -> /home/rasp/robot_ws/install/my_servo_controller/share/my_servo_controller
+[2.545s] running install_egg_info
+[2.574s] Copying ../../build/my_servo_controller/my_servo_controller.egg-info to /home/rasp/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller-0.0.0-py3.12.egg-info
+[2.575s] running install_scripts
+[2.762s] Installing servo_controller_node script to /home/rasp/robot_ws/install/my_servo_controller/lib/my_servo_controller
+[2.763s] Installing servo_mover_node script to /home/rasp/robot_ws/install/my_servo_controller/lib/my_servo_controller
+[2.764s] writing list of installed files to '/home/rasp/robot_ws/build/my_servo_controller/install.log'
+[2.856s] Invoked command in '/home/rasp/robot_ws/src/my_servo_controller' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rasp/robot_ws/build/my_servo_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rasp/robot_ws/install/my_servo_controller/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_servo_controller build --build-base /home/rasp/robot_ws/build/my_servo_controller/build install --record /home/rasp/robot_ws/build/my_servo_controller/install.log --single-version-externally-managed install_data --force

@@ -1,0 +1,426 @@
+[0.000000] (-) TimerEvent: {}
+[0.000403] (-) JobUnselected: {'identifier': 'my_package'}
+[0.000726] (-) JobUnselected: {'identifier': 'my_servo_controller'}
+[0.000889] (ros2_pca9685) JobQueued: {'identifier': 'ros2_pca9685', 'dependencies': OrderedDict()}
+[0.000917] (ros2_pca9685) JobStarted: {'identifier': 'ros2_pca9685'}
+[0.011180] (ros2_pca9685) JobProgress: {'identifier': 'ros2_pca9685', 'progress': 'cmake'}
+[0.011917] (ros2_pca9685) Command: {'cmd': ['/usr/bin/cmake', '/home/rasp/robot_ws/src/ros2_pca9685', '-DCMAKE_INSTALL_PREFIX=/home/rasp/robot_ws/install/ros2_pca9685'], 'cwd': '/home/rasp/robot_ws/build/ros2_pca9685', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'rasp', 'SSH_CLIENT': '192.168.137.1 61559 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/rasp/.vscode-server/cli/servers/Stable-072586267e68ece9a47aa43f8c108e0dcbf44622/server/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/rasp/robot_ws/install/ros2_pca9685/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'BROWSER': '/home/rasp/.vscode-server/cli/servers/Stable-072586267e68ece9a47aa43f8c108e0dcbf44622/server/bin/helpers/browser.sh', 'HOME': '/home/rasp', 'OLDPWD': '/home/rasp/robot_ws/src', 'TERM_PROGRAM_VERSION': '1.109.5', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-2db968f4-f381-40ea-902e-0ea8d907a899.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/rasp/.vscode-server/cli/servers/Stable-072586267e68ece9a47aa43f8c108e0dcbf44622/server/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/rasp/.vscode-server/cli/servers/Stable-072586267e68ece9a47aa43f8c108e0dcbf44622/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/cert.pem', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/rasp/robot_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'rasp', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '35', 'PATH': '/home/rasp/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/rasp/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/rasp/.vscode-server/cli/servers/Stable-072586267e68ece9a47aa43f8c108e0dcbf44622/server/bin/remote-cli:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-9f58d43e34.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/rasp/robot_ws/install/ros2_pca9685:/home/rasp/robot_ws/install/my_servo_controller:/home/rasp/robot_ws/install/my_package:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/rasp/robot_ws/build/ros2_pca9685', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.137.1 61559 192.168.137.72 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages:/home/rasp/robot_ws/build/my_servo_controller:/home/rasp/robot_ws/install/my_servo_controller/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/rasp/robot_ws/install/ros2_pca9685:/home/rasp/robot_ws/install/my_package:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/rasp/robot_ws/install/my_servo_controller:/opt/ros/jazzy'}), 'shell': False}
+[0.099750] (-) TimerEvent: {}
+[0.117721] (ros2_pca9685) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.199853] (-) TimerEvent: {}
+[0.223826] (ros2_pca9685) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.253299] (ros2_pca9685) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.299962] (-) TimerEvent: {}
+[0.400386] (-) TimerEvent: {}
+[0.419953] (ros2_pca9685) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.436181] (ros2_pca9685) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.436505] (ros2_pca9685) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.437090] (ros2_pca9685) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.451500] (ros2_pca9685) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.500480] (-) TimerEvent: {}
+[0.600856] (-) TimerEvent: {}
+[0.631969] (ros2_pca9685) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.647919] (ros2_pca9685) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.648338] (ros2_pca9685) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.649080] (ros2_pca9685) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.652811] (ros2_pca9685) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.700967] (-) TimerEvent: {}
+[0.801391] (-) TimerEvent: {}
+[0.874968] (ros2_pca9685) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[0.901489] (-) TimerEvent: {}
+[1.001878] (-) TimerEvent: {}
+[1.038429] (ros2_pca9685) StdoutLine: {'line': b'-- Found rclcpp: 28.1.16 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[1.090894] (ros2_pca9685) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[1.101965] (-) TimerEvent: {}
+[1.111013] (ros2_pca9685) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[1.134239] (ros2_pca9685) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.159816] (ros2_pca9685) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.202084] (-) TimerEvent: {}
+[1.264872] (ros2_pca9685) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[1.268934] (ros2_pca9685) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.302183] (-) TimerEvent: {}
+[1.402507] (-) TimerEvent: {}
+[1.410121] (ros2_pca9685) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[1.438155] (ros2_pca9685) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[1.474026] (ros2_pca9685) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.502635] (-) TimerEvent: {}
+[1.572851] (ros2_pca9685) StdoutLine: {'line': b'-- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)\n'}
+[1.602805] (-) TimerEvent: {}
+[1.652214] (ros2_pca9685) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)\n'}
+[1.672324] (ros2_pca9685) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.6.7 (/opt/ros/jazzy/share/rosidl_adapter/cmake)\n'}
+[1.702920] (-) TimerEvent: {}
+[1.803291] (-) TimerEvent: {}
+[1.903655] (-) TimerEvent: {}
+[2.004041] (-) TimerEvent: {}
+[2.104418] (-) TimerEvent: {}
+[2.204941] (-) TimerEvent: {}
+[2.305400] (-) TimerEvent: {}
+[2.405822] (-) TimerEvent: {}
+[2.506203] (-) TimerEvent: {}
+[2.606559] (-) TimerEvent: {}
+[2.608784] (ros2_pca9685) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)\n'}
+[2.706682] (-) TimerEvent: {}
+[2.807209] (-) TimerEvent: {}
+[2.907668] (-) TimerEvent: {}
+[3.008047] (-) TimerEvent: {}
+[3.108401] (-) TimerEvent: {}
+[3.208855] (-) TimerEvent: {}
+[3.309315] (-) TimerEvent: {}
+[3.409763] (-) TimerEvent: {}
+[3.510186] (-) TimerEvent: {}
+[3.610602] (-) TimerEvent: {}
+[3.710991] (-) TimerEvent: {}
+[3.733151] (ros2_pca9685) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.811115] (-) TimerEvent: {}
+[3.911532] (-) TimerEvent: {}
+[4.012015] (-) TimerEvent: {}
+[4.112371] (-) TimerEvent: {}
+[4.175079] (ros2_pca9685) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[4.178930] (ros2_pca9685) StdoutLine: {'line': b'-- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)\n'}
+[4.212509] (-) TimerEvent: {}
+[4.313019] (-) TimerEvent: {}
+[4.395556] (ros2_pca9685) StdoutLine: {'line': b'-- Found PythonExtra: /usr/bin/python3  \n'}
+[4.413159] (-) TimerEvent: {}
+[4.513551] (-) TimerEvent: {}
+[4.613950] (-) TimerEvent: {}
+[4.714312] (-) TimerEvent: {}
+[4.814735] (-) TimerEvent: {}
+[4.915157] (-) TimerEvent: {}
+[5.015679] (-) TimerEvent: {}
+[5.116093] (-) TimerEvent: {}
+[5.116507] (ros2_pca9685) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed \n'}
+[5.176311] (ros2_pca9685) StdoutLine: {'line': b'-- Configuring done (5.1s)\n'}
+[5.216207] (-) TimerEvent: {}
+[5.235435] (ros2_pca9685) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[5.254624] (ros2_pca9685) StdoutLine: {'line': b'-- Build files have been written to: /home/rasp/robot_ws/build/ros2_pca9685\n'}
+[5.284400] (ros2_pca9685) CommandEnded: {'returncode': 0}
+[5.285213] (ros2_pca9685) JobProgress: {'identifier': 'ros2_pca9685', 'progress': 'build'}
+[5.286767] (ros2_pca9685) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/rasp/robot_ws/build/ros2_pca9685', '--', '-j4', '-l4'], 'cwd': '/home/rasp/robot_ws/build/ros2_pca9685', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'rasp', 'SSH_CLIENT': '192.168.137.1 61559 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/rasp/.vscode-server/cli/servers/Stable-072586267e68ece9a47aa43f8c108e0dcbf44622/server/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/rasp/robot_ws/install/ros2_pca9685/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'BROWSER': '/home/rasp/.vscode-server/cli/servers/Stable-072586267e68ece9a47aa43f8c108e0dcbf44622/server/bin/helpers/browser.sh', 'HOME': '/home/rasp', 'OLDPWD': '/home/rasp/robot_ws/src', 'TERM_PROGRAM_VERSION': '1.109.5', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-2db968f4-f381-40ea-902e-0ea8d907a899.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/rasp/.vscode-server/cli/servers/Stable-072586267e68ece9a47aa43f8c108e0dcbf44622/server/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/rasp/.vscode-server/cli/servers/Stable-072586267e68ece9a47aa43f8c108e0dcbf44622/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/cert.pem', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/rasp/robot_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'rasp', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '35', 'PATH': '/home/rasp/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/rasp/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/rasp/.vscode-server/cli/servers/Stable-072586267e68ece9a47aa43f8c108e0dcbf44622/server/bin/remote-cli:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-9f58d43e34.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/rasp/robot_ws/install/ros2_pca9685:/home/rasp/robot_ws/install/my_servo_controller:/home/rasp/robot_ws/install/my_package:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/rasp/robot_ws/build/ros2_pca9685', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.137.1 61559 192.168.137.72 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages:/home/rasp/robot_ws/build/my_servo_controller:/home/rasp/robot_ws/install/my_servo_controller/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/rasp/robot_ws/install/ros2_pca9685:/home/rasp/robot_ws/install/my_package:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/rasp/robot_ws/install/my_servo_controller:/opt/ros/jazzy'}), 'shell': False}
+[5.316330] (-) TimerEvent: {}
+[5.379755] (ros2_pca9685) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating type hashes for ROS interfaces\x1b[0m\n'}
+[5.396673] (ros2_pca9685) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_copy_ros2_pca9685\n'}
+[5.416468] (-) TimerEvent: {}
+[5.516893] (-) TimerEvent: {}
+[5.618444] (-) TimerEvent: {}
+[5.718926] (-) TimerEvent: {}
+[5.741540] (ros2_pca9685) StdoutLine: {'line': b'[  2%] Built target ros2_pca9685__rosidl_generator_type_description\n'}
+[5.748245] (ros2_pca9685) StdoutLine: {'line': b'running egg_info\n'}
+[5.749231] (ros2_pca9685) StdoutLine: {'line': b'creating ros2_pca9685.egg-info\n'}
+[5.762932] (ros2_pca9685) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[5.779503] (ros2_pca9685) StdoutLine: {'line': b'writing ros2_pca9685.egg-info/PKG-INFO\n'}
+[5.780336] (ros2_pca9685) StdoutLine: {'line': b'writing dependency_links to ros2_pca9685.egg-info/dependency_links.txt\n'}
+[5.781427] (ros2_pca9685) StdoutLine: {'line': b'writing top-level names to ros2_pca9685.egg-info/top_level.txt\n'}
+[5.781674] (ros2_pca9685) StdoutLine: {'line': b"writing manifest file 'ros2_pca9685.egg-info/SOURCES.txt'\n"}
+[5.785778] (ros2_pca9685) StdoutLine: {'line': b'[  7%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[5.819762] (-) TimerEvent: {}
+[5.871104] (ros2_pca9685) StdoutLine: {'line': b"reading manifest file 'ros2_pca9685.egg-info/SOURCES.txt'\n"}
+[5.872034] (ros2_pca9685) StdoutLine: {'line': b"writing manifest file 'ros2_pca9685.egg-info/SOURCES.txt'\n"}
+[5.919882] (-) TimerEvent: {}
+[5.984924] (ros2_pca9685) StdoutLine: {'line': b'[  7%] Built target ament_cmake_python_build_ros2_pca9685_egg\n'}
+[6.019985] (-) TimerEvent: {}
+[6.120479] (-) TimerEvent: {}
+[6.221007] (-) TimerEvent: {}
+[6.323256] (-) TimerEvent: {}
+[6.349449] (ros2_pca9685) StdoutLine: {'line': b'[  7%] Built target ros2_pca9685__cpp\n'}
+[6.373330] (ros2_pca9685) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding C object CMakeFiles/ros2_pca9685__rosidl_generator_c.dir/rosidl_generator_c/ros2_pca9685/srv/detail/set_pwm__description.c.o\x1b[0m\n'}
+[6.373774] (ros2_pca9685) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding C object CMakeFiles/ros2_pca9685__rosidl_generator_c.dir/rosidl_generator_c/ros2_pca9685/srv/detail/set_pwm__functions.c.o\x1b[0m\n'}
+[6.373950] (ros2_pca9685) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding C object CMakeFiles/ros2_pca9685__rosidl_generator_c.dir/rosidl_generator_c/ros2_pca9685/srv/detail/set_pwm__type_support.c.o\x1b[0m\n'}
+[6.425016] (-) TimerEvent: {}
+[6.510061] (ros2_pca9685) StdoutLine: {'line': b'[ 18%] \x1b[32m\x1b[1mLinking C shared library libros2_pca9685__rosidl_generator_c.so\x1b[0m\n'}
+[6.525075] (-) TimerEvent: {}
+[6.585156] (ros2_pca9685) StdoutLine: {'line': b'[ 18%] Built target ros2_pca9685__rosidl_generator_c\n'}
+[6.608520] (ros2_pca9685) StdoutLine: {'line': b'[ 26%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[6.608933] (ros2_pca9685) StdoutLine: {'line': b'[ 26%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[6.609075] (ros2_pca9685) StdoutLine: {'line': b'[ 26%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[6.609196] (ros2_pca9685) StdoutLine: {'line': b'[ 28%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[6.626834] (-) TimerEvent: {}
+[6.727311] (-) TimerEvent: {}
+[6.830787] (-) TimerEvent: {}
+[6.931224] (-) TimerEvent: {}
+[7.032036] (-) TimerEvent: {}
+[7.132570] (-) TimerEvent: {}
+[7.171188] (ros2_pca9685) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/ros2_pca9685__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ros2_pca9685/srv/set_pwm__type_support.cpp.o\x1b[0m\n'}
+[7.230876] (ros2_pca9685) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding C object CMakeFiles/ros2_pca9685__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ros2_pca9685/srv/detail/set_pwm__type_support.c.o\x1b[0m\n'}
+[7.234029] (-) TimerEvent: {}
+[7.334512] (-) TimerEvent: {}
+[7.359216] (ros2_pca9685) StdoutLine: {'line': b'[ 36%] \x1b[32m\x1b[1mLinking C shared library libros2_pca9685__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[7.369355] (ros2_pca9685) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding CXX object CMakeFiles/ros2_pca9685__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ros2_pca9685/srv/detail/set_pwm__type_support_c.cpp.o\x1b[0m\n'}
+[7.386909] (ros2_pca9685) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/ros2_pca9685__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ros2_pca9685/srv/detail/dds_fastrtps/set_pwm__type_support.cpp.o\x1b[0m\n'}
+[7.438814] (-) TimerEvent: {}
+[7.449530] (ros2_pca9685) StdoutLine: {'line': b'[ 42%] Built target ros2_pca9685__rosidl_typesupport_introspection_c\n'}
+[7.492951] (ros2_pca9685) StdoutLine: {'line': b'[ 44%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[7.540816] (-) TimerEvent: {}
+[7.641337] (-) TimerEvent: {}
+[7.741955] (-) TimerEvent: {}
+[7.845250] (-) TimerEvent: {}
+[7.945877] (-) TimerEvent: {}
+[8.046530] (-) TimerEvent: {}
+[8.149835] (-) TimerEvent: {}
+[8.223869] (ros2_pca9685) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object CMakeFiles/ros2_pca9685__rosidl_typesupport_c.dir/rosidl_typesupport_c/ros2_pca9685/srv/set_pwm__type_support.cpp.o\x1b[0m\n'}
+[8.249990] (-) TimerEvent: {}
+[8.303987] (ros2_pca9685) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking CXX shared library libros2_pca9685__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[8.340139] (ros2_pca9685) StdoutLine: {'line': b'[ 52%] \x1b[32m\x1b[1mLinking CXX shared library libros2_pca9685__rosidl_typesupport_c.so\x1b[0m\n'}
+[8.350144] (-) TimerEvent: {}
+[8.450740] (-) TimerEvent: {}
+[8.486557] (ros2_pca9685) StdoutLine: {'line': b'[ 52%] Built target ros2_pca9685__rosidl_typesupport_c\n'}
+[8.518151] (ros2_pca9685) StdoutLine: {'line': b'[ 55%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[8.551833] (-) TimerEvent: {}
+[8.574073] (ros2_pca9685) StdoutLine: {'line': b'[ 55%] Built target ros2_pca9685__rosidl_typesupport_cpp\n'}
+[8.651991] (-) TimerEvent: {}
+[8.654525] (ros2_pca9685) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/ros2_pca9685_node.dir/src/pca9685.cpp.o\x1b[0m\n'}
+[8.752114] (-) TimerEvent: {}
+[8.785310] (ros2_pca9685) StdoutLine: {'line': b'[ 60%] \x1b[32m\x1b[1mLinking CXX shared library libros2_pca9685__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[8.852340] (-) TimerEvent: {}
+[8.956183] (-) TimerEvent: {}
+[9.039267] (ros2_pca9685) StdoutLine: {'line': b'[ 60%] Built target ros2_pca9685__rosidl_typesupport_fastrtps_c\n'}
+[9.056330] (-) TimerEvent: {}
+[9.063121] (ros2_pca9685) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/ros2_pca9685_node.dir/src/pca9685_hal.cpp.o\x1b[0m\n'}
+[9.158853] (-) TimerEvent: {}
+[9.194285] (ros2_pca9685) StdoutLine: {'line': b'[ 65%] \x1b[32m\x1b[1mLinking CXX shared library libros2_pca9685__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[9.259069] (-) TimerEvent: {}
+[9.340985] (ros2_pca9685) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/ros2_pca9685__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ros2_pca9685/srv/detail/set_pwm__type_support.cpp.o\x1b[0m\n'}
+[9.359857] (-) TimerEvent: {}
+[9.462817] (-) TimerEvent: {}
+[9.469301] (ros2_pca9685) StdoutLine: {'line': b'[ 68%] Built target ros2_pca9685__rosidl_typesupport_fastrtps_cpp\n'}
+[9.493272] (ros2_pca9685) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/ros2_pca9685_node.dir/src/pca9685_node.cpp.o\x1b[0m\n'}
+[9.562989] (-) TimerEvent: {}
+[9.665140] (-) TimerEvent: {}
+[9.767039] (-) TimerEvent: {}
+[9.867527] (-) TimerEvent: {}
+[9.971023] (-) TimerEvent: {}
+[10.071466] (-) TimerEvent: {}
+[10.172041] (-) TimerEvent: {}
+[10.265476] (ros2_pca9685) StdoutLine: {'line': b'[ 73%] \x1b[32m\x1b[1mLinking CXX shared library libros2_pca9685__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[10.272170] (-) TimerEvent: {}
+[10.372658] (-) TimerEvent: {}
+[10.450529] (ros2_pca9685) StdoutLine: {'line': b'[ 73%] Built target ros2_pca9685__rosidl_typesupport_introspection_cpp\n'}
+[10.472798] (-) TimerEvent: {}
+[10.489054] (ros2_pca9685) StdoutLine: {'line': b'[ 73%] Built target ros2_pca9685\n'}
+[10.527165] (ros2_pca9685) StdoutLine: {'line': b'[ 76%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[10.572911] (-) TimerEvent: {}
+[10.673301] (-) TimerEvent: {}
+[10.773712] (-) TimerEvent: {}
+[10.874065] (-) TimerEvent: {}
+[10.974749] (-) TimerEvent: {}
+[11.075508] (-) TimerEvent: {}
+[11.171742] (ros2_pca9685) StdoutLine: {'line': b'[ 76%] Built target ros2_pca9685__py\n'}
+[11.175632] (-) TimerEvent: {}
+[11.211212] (ros2_pca9685) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding C object CMakeFiles/ros2_pca9685__rosidl_generator_py.dir/rosidl_generator_py/ros2_pca9685/srv/_set_pwm_s.c.o\x1b[0m\n'}
+[11.275777] (-) TimerEvent: {}
+[11.376210] (-) TimerEvent: {}
+[11.463766] (ros2_pca9685) StdoutLine: {'line': b'[ 81%] \x1b[32m\x1b[1mLinking C shared library libros2_pca9685__rosidl_generator_py.so\x1b[0m\n'}
+[11.476341] (-) TimerEvent: {}
+[11.549794] (ros2_pca9685) StdoutLine: {'line': b'[ 81%] Built target ros2_pca9685__rosidl_generator_py\n'}
+[11.576487] (-) TimerEvent: {}
+[11.594927] (ros2_pca9685) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding C object CMakeFiles/ros2_pca9685_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/ros2_pca9685/_ros2_pca9685_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[11.617143] (ros2_pca9685) StdoutLine: {'line': b'[ 86%] \x1b[32mBuilding C object CMakeFiles/ros2_pca9685_s__rosidl_typesupport_c.dir/rosidl_generator_py/ros2_pca9685/_ros2_pca9685_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[11.617502] (ros2_pca9685) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/ros2_pca9685_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/ros2_pca9685/_ros2_pca9685_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[11.678800] (-) TimerEvent: {}
+[11.779302] (-) TimerEvent: {}
+[11.838657] (ros2_pca9685) StdoutLine: {'line': b'[ 92%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/ros2_pca9685/ros2_pca9685_s__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[11.876825] (ros2_pca9685) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/ros2_pca9685/ros2_pca9685_s__rosidl_typesupport_c.so\x1b[0m\n'}
+[11.879859] (-) TimerEvent: {}
+[11.888580] (ros2_pca9685) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/ros2_pca9685/ros2_pca9685_s__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[11.918956] (ros2_pca9685) StdoutLine: {'line': b'[ 97%] Built target ros2_pca9685_s__rosidl_typesupport_introspection_c\n'}
+[11.955930] (ros2_pca9685) StdoutLine: {'line': b'[ 97%] Built target ros2_pca9685_s__rosidl_typesupport_c\n'}
+[11.962197] (ros2_pca9685) StdoutLine: {'line': b'[ 97%] Built target ros2_pca9685_s__rosidl_typesupport_fastrtps_c\n'}
+[11.979966] (-) TimerEvent: {}
+[12.080361] (-) TimerEvent: {}
+[12.180746] (-) TimerEvent: {}
+[12.281114] (-) TimerEvent: {}
+[12.381512] (-) TimerEvent: {}
+[12.481936] (-) TimerEvent: {}
+[12.582326] (-) TimerEvent: {}
+[12.682680] (-) TimerEvent: {}
+[12.783057] (-) TimerEvent: {}
+[12.883456] (-) TimerEvent: {}
+[12.983861] (-) TimerEvent: {}
+[13.084220] (-) TimerEvent: {}
+[13.184607] (-) TimerEvent: {}
+[13.285074] (-) TimerEvent: {}
+[13.385678] (-) TimerEvent: {}
+[13.486065] (-) TimerEvent: {}
+[13.586439] (-) TimerEvent: {}
+[13.686844] (-) TimerEvent: {}
+[13.787224] (-) TimerEvent: {}
+[13.887619] (-) TimerEvent: {}
+[13.988032] (-) TimerEvent: {}
+[14.088421] (-) TimerEvent: {}
+[14.188798] (-) TimerEvent: {}
+[14.289161] (-) TimerEvent: {}
+[14.389554] (-) TimerEvent: {}
+[14.489969] (-) TimerEvent: {}
+[14.590355] (-) TimerEvent: {}
+[14.690784] (-) TimerEvent: {}
+[14.791199] (-) TimerEvent: {}
+[14.891559] (-) TimerEvent: {}
+[14.991951] (-) TimerEvent: {}
+[15.092313] (-) TimerEvent: {}
+[15.192671] (-) TimerEvent: {}
+[15.293035] (-) TimerEvent: {}
+[15.393395] (-) TimerEvent: {}
+[15.493845] (-) TimerEvent: {}
+[15.594418] (-) TimerEvent: {}
+[15.657538] (ros2_pca9685) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable ros2_pca9685_node\x1b[0m\n'}
+[15.694548] (-) TimerEvent: {}
+[15.795227] (-) TimerEvent: {}
+[15.896362] (-) TimerEvent: {}
+[15.973036] (ros2_pca9685) StdoutLine: {'line': b'[100%] Built target ros2_pca9685_node\n'}
+[15.996349] (ros2_pca9685) CommandEnded: {'returncode': 0}
+[15.996827] (-) TimerEvent: {}
+[15.997305] (ros2_pca9685) JobProgress: {'identifier': 'ros2_pca9685', 'progress': 'install'}
+[16.014609] (ros2_pca9685) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/rasp/robot_ws/build/ros2_pca9685'], 'cwd': '/home/rasp/robot_ws/build/ros2_pca9685', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'rasp', 'SSH_CLIENT': '192.168.137.1 61559 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/rasp/.vscode-server/cli/servers/Stable-072586267e68ece9a47aa43f8c108e0dcbf44622/server/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/rasp/robot_ws/install/ros2_pca9685/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'BROWSER': '/home/rasp/.vscode-server/cli/servers/Stable-072586267e68ece9a47aa43f8c108e0dcbf44622/server/bin/helpers/browser.sh', 'HOME': '/home/rasp', 'OLDPWD': '/home/rasp/robot_ws/src', 'TERM_PROGRAM_VERSION': '1.109.5', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-2db968f4-f381-40ea-902e-0ea8d907a899.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/rasp/.vscode-server/cli/servers/Stable-072586267e68ece9a47aa43f8c108e0dcbf44622/server/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/rasp/.vscode-server/cli/servers/Stable-072586267e68ece9a47aa43f8c108e0dcbf44622/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/cert.pem', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/rasp/robot_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'rasp', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '35', 'PATH': '/home/rasp/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/rasp/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/rasp/.vscode-server/cli/servers/Stable-072586267e68ece9a47aa43f8c108e0dcbf44622/server/bin/remote-cli:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-9f58d43e34.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/rasp/robot_ws/install/ros2_pca9685:/home/rasp/robot_ws/install/my_servo_controller:/home/rasp/robot_ws/install/my_package:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/rasp/robot_ws/build/ros2_pca9685', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.137.1 61559 192.168.137.72 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages:/home/rasp/robot_ws/build/my_servo_controller:/home/rasp/robot_ws/install/my_servo_controller/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/rasp/robot_ws/install/ros2_pca9685:/home/rasp/robot_ws/install/my_package:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/rasp/robot_ws/install/my_servo_controller:/opt/ros/jazzy'}), 'shell': False}
+[16.030682] (ros2_pca9685) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[16.031620] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ament_index/resource_index/rosidl_interfaces/ros2_pca9685\n'}
+[16.032021] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/srv/SetPwm.json\n'}
+[16.032240] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685\n'}
+[16.032380] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/msg\n'}
+[16.032503] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/msg/rosidl_generator_c__visibility_control.h\n'}
+[16.032621] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv\n'}
+[16.032741] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/set_pwm.h\n'}
+[16.032927] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/detail\n'}
+[16.033103] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/detail/set_pwm__description.c\n'}
+[16.033236] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/detail/set_pwm__struct.h\n'}
+[16.033351] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/detail/set_pwm__functions.c\n'}
+[16.033500] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/detail/set_pwm__functions.h\n'}
+[16.033646] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/detail/set_pwm__type_support.h\n'}
+[16.033778] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/detail/set_pwm__type_support.c\n'}
+[16.034030] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/environment/library_path.sh\n'}
+[16.034186] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/environment/library_path.dsv\n'}
+[16.034415] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/lib/libros2_pca9685__rosidl_generator_c.so\n'}
+[16.035041] (ros2_pca9685) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/rasp/robot_ws/install/ros2_pca9685/lib/libros2_pca9685__rosidl_generator_c.so" to ""\n'}
+[16.035179] (ros2_pca9685) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685\n'}
+[16.035275] (ros2_pca9685) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/msg\n'}
+[16.035398] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[16.035493] (ros2_pca9685) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv\n'}
+[16.035607] (ros2_pca9685) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/detail\n'}
+[16.035706] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/detail/set_pwm__rosidl_typesupport_fastrtps_c.h\n'}
+[16.035822] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/lib/libros2_pca9685__rosidl_typesupport_fastrtps_c.so\n'}
+[16.036311] (ros2_pca9685) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/rasp/robot_ws/install/ros2_pca9685/lib/libros2_pca9685__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[16.036471] (ros2_pca9685) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685\n'}
+[16.036565] (ros2_pca9685) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/msg\n'}
+[16.036654] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[16.036780] (ros2_pca9685) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv\n'}
+[16.036869] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/set_pwm.hpp\n'}
+[16.036990] (ros2_pca9685) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/detail\n'}
+[16.037079] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/detail/set_pwm__traits.hpp\n'}
+[16.037189] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/detail/set_pwm__struct.hpp\n'}
+[16.037289] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/detail/set_pwm__builder.hpp\n'}
+[16.037399] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/detail/set_pwm__type_support.hpp\n'}
+[16.037509] (ros2_pca9685) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685\n'}
+[16.037613] (ros2_pca9685) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/msg\n'}
+[16.037732] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[16.037868] (ros2_pca9685) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv\n'}
+[16.037951] (ros2_pca9685) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/detail\n'}
+[16.038050] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/detail/set_pwm__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[16.038136] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/detail/dds_fastrtps\n'}
+[16.038261] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/lib/libros2_pca9685__rosidl_typesupport_fastrtps_cpp.so\n'}
+[16.038965] (ros2_pca9685) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/rasp/robot_ws/install/ros2_pca9685/lib/libros2_pca9685__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[16.039135] (ros2_pca9685) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685\n'}
+[16.039225] (ros2_pca9685) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/msg\n'}
+[16.039356] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[16.039442] (ros2_pca9685) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv\n'}
+[16.039547] (ros2_pca9685) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/detail\n'}
+[16.039630] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/detail/set_pwm__rosidl_typesupport_introspection_c.h\n'}
+[16.039724] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/detail/set_pwm__type_support.c\n'}
+[16.039834] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/lib/libros2_pca9685__rosidl_typesupport_introspection_c.so\n'}
+[16.040364] (ros2_pca9685) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/rasp/robot_ws/install/ros2_pca9685/lib/libros2_pca9685__rosidl_typesupport_introspection_c.so" to ""\n'}
+[16.040494] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/lib/libros2_pca9685__rosidl_typesupport_c.so\n'}
+[16.041047] (ros2_pca9685) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/rasp/robot_ws/install/ros2_pca9685/lib/libros2_pca9685__rosidl_typesupport_c.so" to ""\n'}
+[16.041195] (ros2_pca9685) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685\n'}
+[16.041314] (ros2_pca9685) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv\n'}
+[16.041428] (ros2_pca9685) StdoutLine: {'line': b'-- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/detail\n'}
+[16.041517] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/detail/set_pwm__rosidl_typesupport_introspection_cpp.hpp\n'}
+[16.041602] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/detail/set_pwm__type_support.cpp\n'}
+[16.041733] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/lib/libros2_pca9685__rosidl_typesupport_introspection_cpp.so\n'}
+[16.042303] (ros2_pca9685) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/rasp/robot_ws/install/ros2_pca9685/lib/libros2_pca9685__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[16.042423] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/lib/libros2_pca9685__rosidl_typesupport_cpp.so\n'}
+[16.043051] (ros2_pca9685) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/rasp/robot_ws/install/ros2_pca9685/lib/libros2_pca9685__rosidl_typesupport_cpp.so" to ""\n'}
+[16.043185] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/environment/pythonpath.sh\n'}
+[16.043296] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/environment/pythonpath.dsv\n'}
+[16.043469] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685-1.0.0-py3.12.egg-info\n'}
+[16.043628] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685-1.0.0-py3.12.egg-info/top_level.txt\n'}
+[16.043772] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685-1.0.0-py3.12.egg-info/PKG-INFO\n'}
+[16.043897] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685-1.0.0-py3.12.egg-info/SOURCES.txt\n'}
+[16.044020] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685-1.0.0-py3.12.egg-info/dependency_links.txt\n'}
+[16.044201] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685\n'}
+[16.044327] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/_ros2_pca9685_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[16.044460] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/_ros2_pca9685_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[16.044619] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/ros2_pca9685_s__rosidl_typesupport_fastrtps_c.so\n'}
+[16.044880] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/__init__.py\n'}
+[16.045006] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/ros2_pca9685_s__rosidl_typesupport_c.so\n'}
+[16.045249] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/srv\n'}
+[16.045368] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/srv/__init__.py\n'}
+[16.045489] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/srv/_set_pwm_s.c\n'}
+[16.045632] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/srv/_set_pwm.py\n'}
+[16.045802] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/_ros2_pca9685_s.ep.rosidl_typesupport_c.c\n'}
+[16.045950] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/ros2_pca9685_s__rosidl_typesupport_introspection_c.so\n'}
+[16.096933] (-) TimerEvent: {}
+[16.106577] (ros2_pca9685) StdoutLine: {'line': b"Listing '/home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685'...\n"}
+[16.107021] (ros2_pca9685) StdoutLine: {'line': b"Compiling '/home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/__init__.py'...\n"}
+[16.107150] (ros2_pca9685) StdoutLine: {'line': b"Listing '/home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/srv'...\n"}
+[16.107271] (ros2_pca9685) StdoutLine: {'line': b"Compiling '/home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/srv/__init__.py'...\n"}
+[16.107394] (ros2_pca9685) StdoutLine: {'line': b"Compiling '/home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/srv/_set_pwm.py'...\n"}
+[16.121378] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/ros2_pca9685_s__rosidl_typesupport_fastrtps_c.so\n'}
+[16.121962] (ros2_pca9685) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/ros2_pca9685_s__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[16.122315] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/ros2_pca9685_s__rosidl_typesupport_introspection_c.so\n'}
+[16.122869] (ros2_pca9685) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/ros2_pca9685_s__rosidl_typesupport_introspection_c.so" to ""\n'}
+[16.123192] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/ros2_pca9685_s__rosidl_typesupport_c.so\n'}
+[16.123730] (ros2_pca9685) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/ros2_pca9685_s__rosidl_typesupport_c.so" to ""\n'}
+[16.123890] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/lib/libros2_pca9685__rosidl_generator_py.so\n'}
+[16.124502] (ros2_pca9685) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/rasp/robot_ws/install/ros2_pca9685/lib/libros2_pca9685__rosidl_generator_py.so" to ""\n'}
+[16.124682] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/srv/SetPwm.idl\n'}
+[16.124825] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/srv/SetPwm.srv\n'}
+[16.124940] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/include/include\n'}
+[16.125055] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/include/include/ros2_pca9685\n'}
+[16.125172] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/include/include/ros2_pca9685/pca9685_hal.h\n'}
+[16.125287] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/include/include/ros2_pca9685/pca9685_node.h\n'}
+[16.125446] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/include/include/ros2_pca9685/pca9685.h\n'}
+[16.125686] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/lib/ros2_pca9685/ros2_pca9685_node\n'}
+[16.127909] (ros2_pca9685) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/rasp/robot_ws/install/ros2_pca9685/lib/ros2_pca9685/ros2_pca9685_node" to ""\n'}
+[16.128194] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/config\n'}
+[16.128297] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/config/params.yaml\n'}
+[16.128566] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/launch\n'}
+[16.128719] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/launch/ros2_pca9685.launch.py\n'}
+[16.129004] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ament_index/resource_index/package_run_dependencies/ros2_pca9685\n'}
+[16.129115] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ament_index/resource_index/parent_prefix_path/ros2_pca9685\n'}
+[16.129241] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/environment/ament_prefix_path.sh\n'}
+[16.129366] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/environment/ament_prefix_path.dsv\n'}
+[16.129542] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/environment/path.sh\n'}
+[16.129711] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/environment/path.dsv\n'}
+[16.129886] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/local_setup.bash\n'}
+[16.130046] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/local_setup.sh\n'}
+[16.130217] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/local_setup.zsh\n'}
+[16.130381] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/local_setup.dsv\n'}
+[16.130543] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/package.dsv\n'}
+[16.130787] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ament_index/resource_index/packages/ros2_pca9685\n'}
+[16.131050] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/export_ros2_pca9685__rosidl_generator_cExport.cmake\n'}
+[16.131278] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/export_ros2_pca9685__rosidl_generator_cExport-noconfig.cmake\n'}
+[16.131552] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/export_ros2_pca9685__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[16.131743] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/export_ros2_pca9685__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[16.131961] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/export_ros2_pca9685__rosidl_generator_cppExport.cmake\n'}
+[16.132162] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/export_ros2_pca9685__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[16.132343] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/export_ros2_pca9685__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[16.132530] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/ros2_pca9685__rosidl_typesupport_introspection_cExport.cmake\n'}
+[16.133036] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/ros2_pca9685__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[16.133296] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/ros2_pca9685__rosidl_typesupport_cExport.cmake\n'}
+[16.133477] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/ros2_pca9685__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[16.133686] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/ros2_pca9685__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[16.133890] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/ros2_pca9685__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[16.134089] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/ros2_pca9685__rosidl_typesupport_cppExport.cmake\n'}
+[16.134276] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/ros2_pca9685__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[16.134469] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/export_ros2_pca9685__rosidl_generator_pyExport.cmake\n'}
+[16.134642] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/export_ros2_pca9685__rosidl_generator_pyExport-noconfig.cmake\n'}
+[16.134858] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/rosidl_cmake-extras.cmake\n'}
+[16.135024] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[16.135193] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[16.135361] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[16.135533] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[16.135702] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[16.135876] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[16.136042] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/ros2_pca9685Config.cmake\n'}
+[16.136179] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/ros2_pca9685Config-version.cmake\n'}
+[16.136336] (ros2_pca9685) StdoutLine: {'line': b'-- Installing: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/package.xml\n'}
+[16.139809] (ros2_pca9685) CommandEnded: {'returncode': 0}
+[16.174511] (ros2_pca9685) JobEnded: {'identifier': 'ros2_pca9685', 'rc': 0}
+[16.175624] (-) EventReactorShutdown: {}

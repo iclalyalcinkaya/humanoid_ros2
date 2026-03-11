@@ -1,0 +1,21 @@
+running egg_info
+writing ../../build/ros2_pca9685/ros2_pca9685.egg-info/PKG-INFO
+writing dependency_links to ../../build/ros2_pca9685/ros2_pca9685.egg-info/dependency_links.txt
+writing entry points to ../../build/ros2_pca9685/ros2_pca9685.egg-info/entry_points.txt
+writing requirements to ../../build/ros2_pca9685/ros2_pca9685.egg-info/requires.txt
+writing top-level names to ../../build/ros2_pca9685/ros2_pca9685.egg-info/top_level.txt
+reading manifest file '../../build/ros2_pca9685/ros2_pca9685.egg-info/SOURCES.txt'
+writing manifest file '../../build/ros2_pca9685/ros2_pca9685.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+copying resource/ros2_pca9685 -> /home/rasp/robot_ws/install/ros2_pca9685/share/ament_index/resource_index/packages
+copying package.xml -> /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685
+running install_egg_info
+Copying ../../build/ros2_pca9685/ros2_pca9685.egg-info to /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685-0.0.0-py3.12.egg-info
+running install_scripts
+Installing listener script to /home/rasp/robot_ws/install/ros2_pca9685/lib/ros2_pca9685
+Installing talker script to /home/rasp/robot_ws/install/ros2_pca9685/lib/ros2_pca9685
+writing list of installed files to '/home/rasp/robot_ws/build/ros2_pca9685/install.log'

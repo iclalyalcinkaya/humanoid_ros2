@@ -1,0 +1,128 @@
+[0.035s] Invoking command in '/home/rasp/robot_ws/build/ros2_pca9685': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rasp/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/rasp/robot_ws/build/ros2_pca9685 -- -j4 -l4
+[0.157s] [  2%] Built target ros2_pca9685__rosidl_generator_type_description
+[0.182s] [  2%] Built target ament_cmake_python_symlink_ros2_pca9685
+[0.232s] [  5%] Built target ros2_pca9685__cpp
+[0.269s] [ 18%] Built target ros2_pca9685__rosidl_generator_c
+[0.365s] [ 26%] Built target ros2_pca9685__rosidl_typesupport_c
+[0.402s] [ 34%] Built target ros2_pca9685__rosidl_typesupport_introspection_c
+[0.417s] [ 42%] Built target ros2_pca9685__rosidl_typesupport_fastrtps_cpp
+[0.465s] [ 50%] Built target ros2_pca9685__rosidl_typesupport_introspection_cpp
+[0.511s] [ 57%] Built target ros2_pca9685__rosidl_typesupport_fastrtps_c
+[0.521s] [ 65%] Built target ros2_pca9685__rosidl_typesupport_cpp
+[0.600s] [ 76%] Built target ros2_pca9685_node
+[0.622s] [ 76%] Built target ros2_pca9685
+[0.689s] [ 78%] Built target ros2_pca9685__py
+[0.750s] [ 84%] Built target ros2_pca9685__rosidl_generator_py
+[0.843s] [ 89%] Built target ros2_pca9685_s__rosidl_typesupport_introspection_c
+[0.854s] [ 94%] Built target ros2_pca9685_s__rosidl_typesupport_fastrtps_c
+[0.859s] [100%] Built target ros2_pca9685_s__rosidl_typesupport_c
+[0.908s] running egg_info
+[0.940s] writing ros2_pca9685.egg-info/PKG-INFO
+[0.941s] writing dependency_links to ros2_pca9685.egg-info/dependency_links.txt
+[0.943s] writing top-level names to ros2_pca9685.egg-info/top_level.txt
+[1.038s] reading manifest file 'ros2_pca9685.egg-info/SOURCES.txt'
+[1.039s] writing manifest file 'ros2_pca9685.egg-info/SOURCES.txt'
+[1.129s] [100%] Built target ament_cmake_python_build_ros2_pca9685_egg
+[1.164s] Invoked command in '/home/rasp/robot_ws/build/ros2_pca9685' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rasp/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/rasp/robot_ws/build/ros2_pca9685 -- -j4 -l4
+[1.165s] Invoking command in '/home/rasp/robot_ws/build/ros2_pca9685': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rasp/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/rasp/robot_ws/build/ros2_pca9685
+[1.175s] -- Install configuration: ""
+[1.176s] -- Execute custom install script
+[1.176s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/share/ament_index/resource_index/rosidl_interfaces/ros2_pca9685
+[1.178s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/srv/SetPwm.json
+[1.178s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/msg/rosidl_generator_c__visibility_control.h
+[1.178s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/detail/set_pwm__functions.h
+[1.178s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/detail/set_pwm__struct.h
+[1.178s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/detail/set_pwm__type_support.h
+[1.178s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/set_pwm.h
+[1.179s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/environment/library_path.sh
+[1.179s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/environment/library_path.dsv
+[1.180s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[1.181s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/detail/set_pwm__rosidl_typesupport_fastrtps_c.h
+[1.181s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/msg/rosidl_generator_cpp__visibility_control.hpp
+[1.182s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/detail/set_pwm__builder.hpp
+[1.182s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/detail/set_pwm__struct.hpp
+[1.182s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/detail/set_pwm__traits.hpp
+[1.182s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/detail/set_pwm__type_support.hpp
+[1.182s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/set_pwm.hpp
+[1.183s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[1.183s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/detail/set_pwm__rosidl_typesupport_fastrtps_cpp.hpp
+[1.184s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[1.184s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/detail/set_pwm__rosidl_typesupport_introspection_c.h
+[1.184s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/include/ros2_pca9685/ros2_pca9685/srv/detail/set_pwm__rosidl_typesupport_introspection_cpp.hpp
+[1.185s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/environment/pythonpath.sh
+[1.185s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/environment/pythonpath.dsv
+[1.185s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685-1.0.0-py3.12.egg-info/PKG-INFO
+[1.186s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685-1.0.0-py3.12.egg-info/SOURCES.txt
+[1.186s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685-1.0.0-py3.12.egg-info/dependency_links.txt
+[1.186s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685-1.0.0-py3.12.egg-info/top_level.txt
+[1.187s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/__init__.py
+[1.187s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/_ros2_pca9685_s.ep.rosidl_typesupport_c.c
+[1.187s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/_ros2_pca9685_s.ep.rosidl_typesupport_fastrtps_c.c
+[1.187s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/_ros2_pca9685_s.ep.rosidl_typesupport_introspection_c.c
+[1.187s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/ros2_pca9685_s__rosidl_typesupport_c.so
+[1.187s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/ros2_pca9685_s__rosidl_typesupport_fastrtps_c.so
+[1.188s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/ros2_pca9685_s__rosidl_typesupport_introspection_c.so
+[1.188s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/srv/__init__.py
+[1.188s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/srv/_set_pwm.py
+[1.188s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/srv/_set_pwm_s.c
+[1.188s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/ros2_pca9685_s__rosidl_typesupport_fastrtps_c.so
+[1.189s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/ros2_pca9685_s__rosidl_typesupport_introspection_c.so
+[1.189s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/ros2_pca9685_s__rosidl_typesupport_c.so
+[1.189s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/srv/SetPwm.idl
+[1.190s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/srv/SetPwm.srv
+[1.190s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/include/include/ros2_pca9685/pca9685.h
+[1.190s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/include/include/ros2_pca9685/pca9685_hal.h
+[1.190s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/include/include/ros2_pca9685/pca9685_node.h
+[1.191s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/lib/ros2_pca9685/ros2_pca9685_node
+[1.191s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/config/params.yaml
+[1.192s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/launch/ros2_pca9685.launch.py
+[1.192s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/share/ament_index/resource_index/package_run_dependencies/ros2_pca9685
+[1.192s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/share/ament_index/resource_index/parent_prefix_path/ros2_pca9685
+[1.193s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/environment/ament_prefix_path.sh
+[1.193s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/environment/ament_prefix_path.dsv
+[1.193s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/environment/path.sh
+[1.193s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/environment/path.dsv
+[1.194s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/local_setup.bash
+[1.194s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/local_setup.sh
+[1.194s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/local_setup.zsh
+[1.194s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/local_setup.dsv
+[1.195s] -- Symlinking: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/package.dsv
+[1.215s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/share/ament_index/resource_index/packages/ros2_pca9685
+[1.215s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/rosidl_cmake-extras.cmake
+[1.216s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.216s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.216s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/ament_cmake_export_libraries-extras.cmake
+[1.217s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/ament_cmake_export_targets-extras.cmake
+[1.217s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[1.217s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[1.218s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/ros2_pca9685Config.cmake
+[1.218s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/ros2_pca9685Config-version.cmake
+[1.218s] -- Up-to-date symlink: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/package.xml
+[1.219s] -- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/lib/libros2_pca9685__rosidl_generator_c.so
+[1.219s] -- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/lib/libros2_pca9685__rosidl_typesupport_fastrtps_c.so
+[1.220s] -- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/lib/libros2_pca9685__rosidl_typesupport_fastrtps_cpp.so
+[1.220s] -- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/lib/libros2_pca9685__rosidl_typesupport_introspection_c.so
+[1.220s] -- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/lib/libros2_pca9685__rosidl_typesupport_c.so
+[1.221s] -- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/lib/libros2_pca9685__rosidl_typesupport_introspection_cpp.so
+[1.221s] -- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/lib/libros2_pca9685__rosidl_typesupport_cpp.so
+[1.293s] Listing '/home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685'...
+[1.293s] Listing '/home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/srv'...
+[1.303s] -- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/lib/libros2_pca9685__rosidl_generator_py.so
+[1.303s] -- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/export_ros2_pca9685__rosidl_generator_cExport.cmake
+[1.304s] -- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/export_ros2_pca9685__rosidl_generator_cExport-noconfig.cmake
+[1.304s] -- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/export_ros2_pca9685__rosidl_typesupport_fastrtps_cExport.cmake
+[1.304s] -- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/export_ros2_pca9685__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[1.304s] -- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/export_ros2_pca9685__rosidl_generator_cppExport.cmake
+[1.304s] -- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/export_ros2_pca9685__rosidl_typesupport_fastrtps_cppExport.cmake
+[1.304s] -- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/export_ros2_pca9685__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[1.304s] -- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/ros2_pca9685__rosidl_typesupport_introspection_cExport.cmake
+[1.305s] -- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/ros2_pca9685__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[1.305s] -- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/ros2_pca9685__rosidl_typesupport_cExport.cmake
+[1.305s] -- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/ros2_pca9685__rosidl_typesupport_cExport-noconfig.cmake
+[1.305s] -- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/ros2_pca9685__rosidl_typesupport_introspection_cppExport.cmake
+[1.305s] -- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/ros2_pca9685__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[1.306s] -- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/ros2_pca9685__rosidl_typesupport_cppExport.cmake
+[1.306s] -- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/ros2_pca9685__rosidl_typesupport_cppExport-noconfig.cmake
+[1.306s] -- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/export_ros2_pca9685__rosidl_generator_pyExport.cmake
+[1.306s] -- Up-to-date: /home/rasp/robot_ws/install/ros2_pca9685/share/ros2_pca9685/cmake/export_ros2_pca9685__rosidl_generator_pyExport-noconfig.cmake
+[1.309s] Invoked command in '/home/rasp/robot_ws/build/ros2_pca9685' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rasp/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/rasp/robot_ws/build/ros2_pca9685

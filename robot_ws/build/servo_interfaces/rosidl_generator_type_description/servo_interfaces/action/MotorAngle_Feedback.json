@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "servo_interfaces/action/MotorAngle_Feedback",
+      "fields": [
+        {
+          "name": "current_position",
+          "type": {
+            "type_id": 3,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "servo_interfaces/action/MotorAngle_Feedback",
+      "hash_string": "RIHS01_83096466aaea70ce40f184fe5d8d3dba44c9d35e1e291356b2ba2920d1b83250"
+    }
+  ]
+}

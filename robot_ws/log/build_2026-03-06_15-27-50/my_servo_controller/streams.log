@@ -1,0 +1,27 @@
+[1.374s] Invoking command in '/home/rasp/robot_ws/src/my_servo_controller': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rasp/robot_ws/build/my_servo_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rasp/robot_ws/install/my_servo_controller/lib/python3.12/site-packages:/home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages:/home/rasp/robot_ws/install/my_servo_controller/lib/python3.12/site-packages:/home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_servo_controller build --build-base /home/rasp/robot_ws/build/my_servo_controller/build install --record /home/rasp/robot_ws/build/my_servo_controller/install.log --single-version-externally-managed install_data
+[1.769s] running egg_info
+[1.799s] writing ../../build/my_servo_controller/my_servo_controller.egg-info/PKG-INFO
+[1.799s] writing dependency_links to ../../build/my_servo_controller/my_servo_controller.egg-info/dependency_links.txt
+[1.801s] writing entry points to ../../build/my_servo_controller/my_servo_controller.egg-info/entry_points.txt
+[1.802s] writing requirements to ../../build/my_servo_controller/my_servo_controller.egg-info/requires.txt
+[1.803s] writing top-level names to ../../build/my_servo_controller/my_servo_controller.egg-info/top_level.txt
+[1.866s] reading manifest file '../../build/my_servo_controller/my_servo_controller.egg-info/SOURCES.txt'
+[1.867s] writing manifest file '../../build/my_servo_controller/my_servo_controller.egg-info/SOURCES.txt'
+[1.867s] running build
+[1.867s] running build_py
+[1.867s] copying my_servo_controller/action_controller.py -> /home/rasp/robot_ws/build/my_servo_controller/build/lib/my_servo_controller
+[1.868s] running install
+[1.877s] running install_lib
+[1.908s] copying /home/rasp/robot_ws/build/my_servo_controller/build/lib/my_servo_controller/action_controller.py -> /home/rasp/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller
+[1.909s] byte-compiling /home/rasp/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller/action_controller.py to action_controller.cpython-312.pyc
+[1.911s] Sorry: IndentationError: expected an indented block after function definition on line 109 (action_controller.py, line 110)
+[1.912s] running install_data
+[1.912s] running install_egg_info
+[1.944s] removing '/home/rasp/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller-0.0.0-py3.12.egg-info' (and everything under it)
+[1.944s] Copying ../../build/my_servo_controller/my_servo_controller.egg-info to /home/rasp/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller-0.0.0-py3.12.egg-info
+[1.946s] running install_scripts
+[2.148s] Installing action_controller_node script to /home/rasp/robot_ws/install/my_servo_controller/lib/my_servo_controller
+[2.148s] Installing servo_controller_node script to /home/rasp/robot_ws/install/my_servo_controller/lib/my_servo_controller
+[2.150s] Installing servo_mover_node script to /home/rasp/robot_ws/install/my_servo_controller/lib/my_servo_controller
+[2.151s] writing list of installed files to '/home/rasp/robot_ws/build/my_servo_controller/install.log'
+[2.232s] Invoked command in '/home/rasp/robot_ws/src/my_servo_controller' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rasp/robot_ws/build/my_servo_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rasp/robot_ws/install/my_servo_controller/lib/python3.12/site-packages:/home/rasp/robot_ws/install/servo_interfaces/lib/python3.12/site-packages:/home/rasp/robot_ws/install/my_servo_controller/lib/python3.12/site-packages:/home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_servo_controller build --build-base /home/rasp/robot_ws/build/my_servo_controller/build install --record /home/rasp/robot_ws/build/my_servo_controller/install.log --single-version-externally-managed install_data

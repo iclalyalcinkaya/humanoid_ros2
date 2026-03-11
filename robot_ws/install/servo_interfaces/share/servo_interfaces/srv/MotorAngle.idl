@@ -1,0 +1,28 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from servo_interfaces/srv/MotorAngle.srv
+// generated code does not contain a copyright notice
+
+
+module servo_interfaces {
+  module srv {
+    struct MotorAngle_Request {
+      @default (value=1)
+      uint8 motor_num;
+
+      @default (value=120)
+      uint8 target_position;
+
+      @default (value=0.008)
+      double kp;
+
+      @default (value=0.01)
+      double ki;
+
+      @default (value=0.003)
+      double kd;
+    };
+    struct MotorAngle_Response {
+      boolean is_set;
+    };
+  };
+};

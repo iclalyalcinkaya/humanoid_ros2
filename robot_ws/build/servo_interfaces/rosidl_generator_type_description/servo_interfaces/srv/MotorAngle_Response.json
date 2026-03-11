@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "servo_interfaces/srv/MotorAngle_Response",
+      "fields": [
+        {
+          "name": "is_set",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "servo_interfaces/srv/MotorAngle_Response",
+      "hash_string": "RIHS01_7e6c96af2e527c9fb76c512f5a3adc5ed8877a2ff50eb042196427b23c499e0e"
+    }
+  ]
+}

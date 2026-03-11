@@ -1,0 +1,11 @@
+uint8 motor_num
+uint8 target_position
+float32 kp 0.008
+float32 ki 0.010
+float32 kd 0.003
+uint8 speed
+string client_id
+---
+bool success
+---
+uint8 current_position

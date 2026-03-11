@@ -1,0 +1,15 @@
+{
+  "package_name": "servo_interfaces",
+  "output_dir": "/home/rasp/robot_ws/build/servo_interfaces/rosidl_generator_type_description/servo_interfaces",
+  "idl_tuples": [
+    "/home/rasp/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces:msg/SetPwm.idl",
+    "/home/rasp/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces:srv/MotorAngle.idl",
+    "/home/rasp/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces:action/MotorAngle.idl"
+  ],
+  "include_paths": [
+    "service_msgs:/opt/ros/jazzy/share/service_msgs",
+    "builtin_interfaces:/opt/ros/jazzy/share/builtin_interfaces",
+    "action_msgs:/opt/ros/jazzy/share/action_msgs",
+    "unique_identifier_msgs:/opt/ros/jazzy/share/unique_identifier_msgs"
+  ]
+}

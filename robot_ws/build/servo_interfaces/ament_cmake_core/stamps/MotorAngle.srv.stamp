@@ -1,0 +1,7 @@
+uint8 motor_num 1     
+uint8 target_position 120
+float64 kp 0.008
+float64 ki 0.010
+float64 kd 0.003
+---
+bool is_set

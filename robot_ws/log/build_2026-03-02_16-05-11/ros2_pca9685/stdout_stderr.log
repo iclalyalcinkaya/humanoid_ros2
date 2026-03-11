@@ -1,0 +1,7 @@
+failed to create symbolic link '/home/rasp/robot_ws/build/ros2_pca9685/ament_cmake_python/ros2_pca9685/ros2_pca9685' because existing path cannot be removed: Is a directory
+[  2%] Built target ros2_pca9685__rosidl_generator_type_description
+gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_ros2_pca9685.dir/build.make:70: CMakeFiles/ament_cmake_python_symlink_ros2_pca9685] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:454: CMakeFiles/ament_cmake_python_symlink_ros2_pca9685.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+[  5%] Built target ros2_pca9685__cpp
+gmake: *** [Makefile:146: all] Error 2

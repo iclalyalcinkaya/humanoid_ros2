@@ -1,0 +1,46 @@
+[1.277s] Invoking command in '/home/rasp/robot_ws/src/ros2_pca9685': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rasp/robot_ws/build/ros2_pca9685/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ros2_pca9685 build --build-base /home/rasp/robot_ws/build/ros2_pca9685/build install --record /home/rasp/robot_ws/build/ros2_pca9685/install.log --install-scripts $base/lib/ros2_pca9685 --single-version-externally-managed install_data
+[1.453s] /usr/lib/python3/dist-packages/setuptools/dist.py:744: SetuptoolsDeprecationWarning: Invalid dash-separated options
+[1.453s] !!
+[1.453s] 
+[1.453s]         ********************************************************************************
+[1.453s]         Usage of dash-separated 'script-dir' will not be supported in future
+[1.453s]         versions. Please use the underscore name 'script_dir' instead.
+[1.453s] 
+[1.453s]         This deprecation is overdue, please update your project and remove deprecated
+[1.454s]         calls to avoid build errors in the future.
+[1.454s] 
+[1.454s]         See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+[1.454s]         ********************************************************************************
+[1.454s] 
+[1.454s] !!
+[1.454s]   opt = self.warn_dash_deprecation(opt, section)
+[1.636s] running egg_info
+[1.661s] writing ../../build/ros2_pca9685/ros2_pca9685.egg-info/PKG-INFO
+[1.661s] writing dependency_links to ../../build/ros2_pca9685/ros2_pca9685.egg-info/dependency_links.txt
+[1.663s] writing entry points to ../../build/ros2_pca9685/ros2_pca9685.egg-info/entry_points.txt
+[1.664s] writing requirements to ../../build/ros2_pca9685/ros2_pca9685.egg-info/requires.txt
+[1.665s] writing top-level names to ../../build/ros2_pca9685/ros2_pca9685.egg-info/top_level.txt
+[1.719s] reading manifest file '../../build/ros2_pca9685/ros2_pca9685.egg-info/SOURCES.txt'
+[1.720s] writing manifest file '../../build/ros2_pca9685/ros2_pca9685.egg-info/SOURCES.txt'
+[1.721s] running build
+[1.721s] running build_py
+[1.721s] copying ros2_pca9685/__init__.py -> /home/rasp/robot_ws/build/ros2_pca9685/build/lib/ros2_pca9685
+[1.721s] copying ros2_pca9685/subscriber_member_function.py -> /home/rasp/robot_ws/build/ros2_pca9685/build/lib/ros2_pca9685
+[1.721s] copying ros2_pca9685/publisher_member_function.py -> /home/rasp/robot_ws/build/ros2_pca9685/build/lib/ros2_pca9685
+[1.722s] running install
+[1.731s] running install_lib
+[1.757s] copying /home/rasp/robot_ws/build/ros2_pca9685/build/lib/ros2_pca9685/__init__.py -> /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685
+[1.757s] copying /home/rasp/robot_ws/build/ros2_pca9685/build/lib/ros2_pca9685/subscriber_member_function.py -> /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685
+[1.757s] copying /home/rasp/robot_ws/build/ros2_pca9685/build/lib/ros2_pca9685/publisher_member_function.py -> /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685
+[1.758s] byte-compiling /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/__init__.py to __init__.cpython-312.pyc
+[1.759s] byte-compiling /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/subscriber_member_function.py to subscriber_member_function.cpython-312.pyc
+[1.760s] byte-compiling /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685/publisher_member_function.py to publisher_member_function.cpython-312.pyc
+[1.764s] running install_data
+[1.764s] running install_egg_info
+[1.793s] removing '/home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685-0.0.0-py3.12.egg-info' (and everything under it)
+[1.794s] Copying ../../build/ros2_pca9685/ros2_pca9685.egg-info to /home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages/ros2_pca9685-0.0.0-py3.12.egg-info
+[1.795s] running install_scripts
+[1.974s] Installing listener script to /home/rasp/robot_ws/install/ros2_pca9685/lib/ros2_pca9685
+[1.974s] Installing talker script to /home/rasp/robot_ws/install/ros2_pca9685/lib/ros2_pca9685
+[1.975s] writing list of installed files to '/home/rasp/robot_ws/build/ros2_pca9685/install.log'
+[2.080s] Invoked command in '/home/rasp/robot_ws/src/ros2_pca9685' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rasp/robot_ws/build/ros2_pca9685/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rasp/robot_ws/install/ros2_pca9685/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ros2_pca9685 build --build-base /home/rasp/robot_ws/build/ros2_pca9685/build install --record /home/rasp/robot_ws/build/ros2_pca9685/install.log --install-scripts $base/lib/ros2_pca9685 --single-version-externally-managed install_data

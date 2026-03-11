@@ -1,0 +1,46 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "servo_interfaces/msg/SetPwm",
+      "fields": [
+        {
+          "name": "motor_num",
+          "type": {
+            "type_id": 3,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": "1"
+        },
+        {
+          "name": "target_position",
+          "type": {
+            "type_id": 3,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": "90"
+        },
+        {
+          "name": "speed",
+          "type": {
+            "type_id": 3,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": "5"
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "servo_interfaces/msg/SetPwm",
+      "hash_string": "RIHS01_26fa427e9d919f6f410fe4184e5ad08919ff9b348c5c8c13b995f1c13eb4f588"
+    }
+  ]
+}

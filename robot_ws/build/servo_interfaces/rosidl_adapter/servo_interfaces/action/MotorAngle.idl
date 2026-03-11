@@ -1,0 +1,33 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from servo_interfaces/action/MotorAngle.action
+// generated code does not contain a copyright notice
+
+
+module servo_interfaces {
+  module action {
+    struct MotorAngle_Goal {
+      uint8 motor_num;
+
+      uint8 target_position;
+
+      @default (value=0.008)
+      float kp;
+
+      @default (value=0.01)
+      float ki;
+
+      @default (value=0.003)
+      float kd;
+
+      uint8 speed;
+
+      string client_id;
+    };
+    struct MotorAngle_Result {
+      boolean success;
+    };
+    struct MotorAngle_Feedback {
+      uint8 current_position;
+    };
+  };
+};

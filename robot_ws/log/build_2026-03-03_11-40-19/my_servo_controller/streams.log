@@ -1,0 +1,20 @@
+[1.249s] Invoking command in '/home/rasp/robot_ws/build/my_servo_controller': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rasp/robot_ws/build/my_servo_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rasp/robot_ws/install/my_servo_controller/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rasp/robot_ws/build/my_servo_controller/build --no-deps symlink_data --force
+[1.698s] running develop
+[1.971s] running egg_info
+[1.997s] writing my_servo_controller.egg-info/PKG-INFO
+[1.997s] writing dependency_links to my_servo_controller.egg-info/dependency_links.txt
+[1.998s] writing entry points to my_servo_controller.egg-info/entry_points.txt
+[1.999s] writing requirements to my_servo_controller.egg-info/requires.txt
+[2.000s] writing top-level names to my_servo_controller.egg-info/top_level.txt
+[2.057s] reading manifest file 'my_servo_controller.egg-info/SOURCES.txt'
+[2.057s] writing manifest file 'my_servo_controller.egg-info/SOURCES.txt'
+[2.085s] running build_ext
+[2.086s] Creating /home/rasp/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my-servo-controller.egg-link (link to .)
+[2.086s] Installing servo_controller_node script to /home/rasp/robot_ws/install/my_servo_controller/lib/my_servo_controller
+[2.087s] Installing servo_mover_node script to /home/rasp/robot_ws/install/my_servo_controller/lib/my_servo_controller
+[2.087s] 
+[2.087s] Installed /home/rasp/robot_ws/build/my_servo_controller
+[2.087s] running symlink_data
+[2.088s] symbolically linking /home/rasp/robot_ws/build/my_servo_controller/resource/my_servo_controller -> /home/rasp/robot_ws/install/my_servo_controller/share/ament_index/resource_index/packages
+[2.088s] symbolically linking /home/rasp/robot_ws/build/my_servo_controller/package.xml -> /home/rasp/robot_ws/install/my_servo_controller/share/my_servo_controller
+[2.192s] Invoked command in '/home/rasp/robot_ws/build/my_servo_controller' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rasp/robot_ws/build/my_servo_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rasp/robot_ws/install/my_servo_controller/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rasp/robot_ws/build/my_servo_controller/build --no-deps symlink_data --force

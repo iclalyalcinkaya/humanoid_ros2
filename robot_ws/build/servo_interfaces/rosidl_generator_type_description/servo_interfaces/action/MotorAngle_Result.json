@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "servo_interfaces/action/MotorAngle_Result",
+      "fields": [
+        {
+          "name": "success",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "servo_interfaces/action/MotorAngle_Result",
+      "hash_string": "RIHS01_dad874eadce018f68ea2e916572fe1cee232431b5f4a584d9f1ea81fda1f15d1"
+    }
+  ]
+}
