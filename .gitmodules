@@ -1,0 +1,3 @@
+[submodule "webpages/ros2libjs"]
+	path = webpages/ros2libjs
+	url = https://github.com/6RiverSystems/ros2libjs.git

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>14-Motor Servo Action Control</title>
+    
+    <script src="https://unpkg.com/eventemitter3@latest/dist/eventemitter3.umd.min.js"></script>
+    <script>
+    // Trick the ROS UMD bundler into finding what it expects
+    window.eventemitter2 = { EventEmitter2: window.EventEmitter3, EventEmitter: window.EventEmitter3 };
+    window.EventEmitter2 = window.EventEmitter3;
+    </script>
+    <script src="./roslib_6river.js"></script>
+
+    <style>
+        body { font-family: sans-serif; text-align: center; padding: 20px; background: #f0f2f5; }
+        .card { background: white; padding: 20px; display: inline-block; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); width: 850px; }
+        .status { padding: 10px; margin-bottom: 20px; border-radius: 8px; font-weight: bold; }
+        .connected { background: #dcfce7; color: #166534; }
+        .disconnected { background: #fee2e2; color: #991b1b; }
+        .control-row { display: flex; align-items: center; justify-content: space-between; background: #f8f9fa; padding: 10px; margin: 5px 0; border-radius: 8px; border: 1px solid #eee; }
+        .motors-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; }
+        input[type=range] { flex-grow: 1; margin: 0 10px; accent-color: #8c00ff; }
+        .val-display { width: 90px; text-align: right; font-family: monospace; font-weight: bold; color: #8c00ff; }
+        .btn { padding: 8px 12px; cursor: pointer; border: none; border-radius: 4px; background: #8c00ff; color: white; font-weight: bold; transition: 0.2s; }
+        .btn:hover { background: #7300d1; }
+        .mode-btn { background: #3b82f6; width: 120px; }
+        .mode-btn.active { background: #1e3a8a; outline: 2px solid #000; }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h1>Servo Action Interface</h1>
+        
+        <div id="statusIndicator" class="status disconnected">
+            <span id="connecting">Connecting to 192.168.137.72...</span>
+            <span id="connected" style="display:none;">Connected to Robot</span>
+            <span id="error" style="display:none;">Error in backend!</span>
+            <span id="closed" style="display:none;">Connection closed.</span>
+        </div>
+
+        <div class="control-row">
+            <label><strong>PID Gains</strong></label>
+            Kp: <input type="number" id="kp" value="0.030" step="0.001" style="width:70px">
+            Ki: <input type="number" id="ki" value="0.000" step="0.001" style="width:70px">
+            Kd: <input type="number" id="kd" value="0.000" step="0.001" style="width:70px">
+        </div>
+
+        <div class="control-row" style="justify-content: center; gap: 20px;">
+            <label><strong>Presets:</strong></label>
+            <button class="btn mode-btn" id="btnMode1" onclick="setMode(1)">Pose</button>
+            <button class="btn mode-btn" id="btnMode2" onclick="setMode(2)">Wave</button>
+            <button class="btn mode-btn" id="btnMode3" onclick="setMode(3)">Speak</button>
+            <button class="btn mode-btn" id="btnMode4" onclick="setMode(4)">Home</button>
+            
+        </div>
+
+        <div class="control-row" style="justify-content: center; gap: 20px;">
+            <button class="btn" onclick="cancelAll()" style="background: #a855f7;">STOP ALL</button>
+            <button class="btn" onclick="disconnect()" style="background: #a855f7;">Disconnect</button>
+            <button class="btn" onclick="reconnect()" style="background: #a855f7;">Reconnect</button>
+        </div>
+
+        <hr>
+        <h3>Motor Positions</h3>
+        <div id="motorsContainer" class="motors-grid"></div>
+    </div>
+
+    <script>
+        const myClientId = "client_" + Math.random().toString(36).substr(2, 9);
+        console.log("My Client ID is:", myClientId);
+
+        // --- 1. PRESET CONFIGURATION ---
+        const modeAngles = {
+            1: [90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90], 
+            2: [45, 135, 45, 135, 45, 135, 45, 135, 45, 135, 45, 135, 45, 135], 
+            3: [0, 80, 0, 80, 0, 80, 0, 80, 0, 80, 0, 80, 0, 80] ,
+            4: [60, 120, 60, 120, 60, 120, 60, 120, 60, 120, 60, 120, 60, 120]
+        };
+
+        // --- 2. BUILD THE UI ---
+        const container = document.getElementById("motorsContainer");
+        for (let i = 1; i <= 14; i++) {
+            container.innerHTML += `
+                <div class="control-row">
+                    <label>M${i}</label>
+                    <input type="range" id="slider${i}" min="0" max="180" value="90" 
+                           oninput="document.getElementById('label${i}').innerText = this.value + '°'"
+                           onchange="sendMotorGoal(${i})">
+                    <div class="val-display" id="label${i}">90°</div>
+                </div>`;
+        }
+
+        // --- 3. CONNECT TO ROS ---
+        var ros = new ROSLIB.Ros({ url : 'ws://192.168.137.72:9090' });
+
+        ros.on('error', function(error) {
+            document.getElementById('statusIndicator').className = "status disconnected";
+            document.getElementById('connecting').style.display = 'none';
+            document.getElementById('connected').style.display = 'none';
+            document.getElementById('closed').style.display = 'none';
+            document.getElementById('error').style.display = 'inline';
+        });
+
+        ros.on('connection', function() {
+            document.getElementById('statusIndicator').className = "status connected";
+            document.getElementById('connecting').style.display = 'none';
+            document.getElementById('error').style.display = 'none';
+            document.getElementById('closed').style.display = 'none';
+            document.getElementById('connected').style.display = 'inline';
+
+            reconnect();
+
+            //setMode(4);
+        });
+
+        ros.on('close', function() {
+            document.getElementById('statusIndicator').className = "status disconnected";
+            document.getElementById('connecting').style.display = 'none';
+            document.getElementById('connected').style.display = 'none';
+            document.getElementById('closed').style.display = 'inline';
+        });
+
+        // --- 4. DEFINE THE ACTION CLIENT ---
+        var servoActionClient = new ROSLIB.Action({
+            ros : ros,
+            name : '/move_servo',
+            actionType : 'servo_interfaces/action/MotorAngle' 
+        });
+
+        let activeGoals = {};
+        let currentSequenceToken = 0; // Tracks the currently active sequence
+        let i = 1;
+        // --- 5. SEND GOAL LOGIC (Now returns a Promise) ---
+        // We added forcedPos so the Mode function can pass a target directly without needing the slider
+        function sendMotorGoal(motorId, forcedPos = null, myToken = null) {
+            return new Promise((resolve) => {
+                // If forcedPos is given, use it. Otherwise, read the slider.
+                var pos = forcedPos !== null ? forcedPos : parseInt(document.getElementById(`slider${motorId}`).value);
+                
+                if (forcedPos !== null) {
+                    document.getElementById(`slider${motorId}`).value = pos; // Update slider visually
+                }else if(activeGoals[motorId]) {
+                    console.log(`PID =  ${activeGoals[motorId]}`);
+                    servoActionClient.cancelGoal(activeGoals[motorId]);
+                }
+                if(!myToken) console.log(`Moving motor ${motorId} to ${pos}`);
+
+                var goal = {
+                    motor_num: motorId,
+                    target_position: pos,
+                    kp: parseFloat(document.getElementById('kp').value),
+                    ki: parseFloat(document.getElementById('ki').value),
+                    kd: parseFloat(document.getElementById('kd').value),
+                    client_id: myClientId,
+                    //speed: 5
+                };
+
+                activeGoals[motorId] = servoActionClient.sendGoal(goal,  
+                    function(result) {
+                        console.log("current result = ", result);
+                        // Action finished!
+                        document.getElementById(`label${motorId}`).innerText = pos + "°";
+                        document.getElementById(`label${motorId}`).style.color = "#22c55e"; 
+                        delete activeGoals[motorId]; // Clear active goal
+                        if(myToken && i < 15 && currentSequenceToken === myToken) i++;
+                        resolve(true); // Tell the Promise we are done so the next motor can start
+                    },
+                    function(feedback) {
+                        // Action is moving!
+                        console.log("current feedback = ", feedback);
+                        var currentPos = feedback.current_position !== undefined ? feedback.current_position : feedback.feedback.current_position;
+                        document.getElementById(`label${motorId}`).innerText = currentPos + "°";
+                        document.getElementById(`label${motorId}`).style.color = "#f59e0b";
+                        if(myToken && currentSequenceToken !== myToken) {
+                            // If the token doesn't match, it means a new command has taken over, so we should stop this motor immediately
+                            servoActionClient.cancelGoal(activeGoals[motorId]);
+                        }
+                    }
+                );
+            });
+        }
+
+        // --- 6. SEQUENTIAL MODE TOGGLE LOGIC ---
+        async function setMode(modeNum) {
+            // 1. Generate a unique ID for this specific button click
+            let myToken = Date.now(); 
+            currentSequenceToken = myToken; // Update the global tracker
+
+            // 2. Instantly cancel any motors that are currently moving
+            cancelAll(true); 
+
+            //await new Promise(resolve => setTimeout(resolve, 100));
+
+            const angles = modeAngles[modeNum];
+            if (!angles) return;
+
+            document.querySelectorAll('.mode-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(`btnMode${modeNum}`).classList.add('active');
+
+            console.log(`Applying Mode ${modeNum} Sequentially...`);
+            if(modeNum === 1) { //In mode 1 first move the left arm
+                i = 8;
+                while (currentSequenceToken === myToken && i<=14) {
+                    let targetAngle = angles[i - 1]; 
+                    // Pause and wait for the motor to finish
+                    await sendMotorGoal(i, targetAngle, myToken);
+                }
+            }
+            i = 1;
+            while (currentSequenceToken === myToken && i<=14 && (modeNum !== 1 || i <= 7)) {
+                let targetAngle = angles[i - 1];
+                // Pause and wait for the motor to finish
+                await sendMotorGoal(i, targetAngle, myToken);
+            }
+            if(modeNum === 2 && currentSequenceToken === myToken) {
+                let wave = angles[2]
+                while (currentSequenceToken === myToken) {
+                    wave = wave === 45 ? 135 : 45; // Toggle between two angles
+                    await sendMotorGoal(2, wave, myToken);
+                }
+            }else if(modeNum === 3 && currentSequenceToken === myToken) {
+                let elbow = angles[2]
+                let sholder_roll = angles[1]
+                while (currentSequenceToken === myToken) {
+                    elbow = elbow === 80 ? 100 : 80;
+                    sholder_roll = sholder_roll === 0 ? 20 : 0; 
+                    sendMotorGoal(2, elbow, myToken);
+                    await sendMotorGoal(1, sholder_roll, myToken);
+                }
+            }
+            // Un-highlight the button only if THIS sequence actually finished uninterrupted
+            if (currentSequenceToken === myToken) {
+                document.getElementById(`btnMode${modeNum}`).classList.remove('active');
+                currentSequenceToken = 0; // Sequence is done
+                console.log("Sequence Complete!");
+            }else{
+                console.log(`Mode ${modeNum} sequence was interrupted before completion.`);
+            }
+        }
+
+        // --- 7. CANCEL LOGIC ---
+        // I added the 'isInternal' flag so the UI doesn't visually clear the mode buttons 
+        // if the cancel is just happening to make way for a new mode.
+        function cancelAll(isInternal = false) {
+            console.log("Canceling active goals...");
+            if (!isInternal) {
+                currentSequenceToken = 0; // Break any active loops if the user clicked "STOP ALL"
+                document.querySelectorAll('.mode-btn').forEach(btn => btn.classList.remove('active'));
+            }
+            for (let motorId in activeGoals) {
+                console.log(`ID =  ${activeGoals[motorId]}, motorId = ${motorId}`);
+                servoActionClient.cancelGoal(activeGoals[motorId]);      
+                delete activeGoals[motorId];
+            }
+        }
+        
+        let dummyId = 0;
+        function disconnect() {
+             document.getElementById('statusIndicator').className = "status disconnected";
+             document.getElementById('connecting').style.display = 'none';
+             document.getElementById('connected').style.display = 'none';
+             document.getElementById('closed').style.display = 'inline';
+             console.log("Disconnecting... dummyId = ", dummyId);
+             servoActionClient.cancelGoal(dummyId);
+             dummyId = 0;
+        }
+
+        function reconnect() {
+             document.getElementById('statusIndicator').className = "status connected";
+             document.getElementById('connecting').style.display = 'none';
+             document.getElementById('connected').style.display = 'inline';
+             document.getElementById('closed').style.display = 'none';
+             
+            let dummyGoal = {
+                motor_num: 99,
+                target_position: 90,
+                kp: 0, ki: 0, kd: 0,
+                client_id: myClientId
+            };
+            
+            dummyId = servoActionClient.sendGoal(dummyGoal,
+                function(status){ if(status == 5) console.log("Accepted dummy"); }, 
+                function(result) { 
+                    if (result.success) {
+                        console.log("Dummy goal ended successfully." + result.success); 
+                    } else {
+                        console.error("Dummy goal was aborted by the server.");
+                    } 
+                },
+                function(feedback) { /* Ignore feedback */ }
+            );
+        }
+    </script>
+</body>
+</html>
