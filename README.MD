@@ -33,10 +33,10 @@ Motor açılarının komutlarını göndermek için action kullanmak daha mantı
 Actions asenkron olarak çalışır, bir hedef gönderdikten sonra farklı şeylerle uğraşabilir. Farklı bir hedef gönderebilir veya önceki hedefi durdurabilir. Süreç sırasında ise server sürekli bir feedback gönderebilir.
 
 ## ACTION SERVER CLIENT BAĞLANTISI
-Veri iletiminde internet sayfası action client gibi davranırken ros server gibi davranıyor.
+Veri iletiminde API action client gibi davranırken ros server gibi davranıyor.
 Bu ikisi arasındaki bağlantı rosbridge_server ile kuruluyor.
 
-Api istenilen posizyon verilerini goal olarak ros’a gönderiyor. Ros PID ile motorları hareket ettiriyor.
+API istenilen posizyon verilerini goal olarak ros’a gönderiyor. Ros PID ile motorları hareket ettiriyor.
 
 Action kullanılmasının nedeni yeni bir goal geldiğinde eskisini terk edebilmek.
 

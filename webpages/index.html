@@ -18,14 +18,18 @@
         .status { padding: 10px; margin-bottom: 20px; border-radius: 8px; font-weight: bold; }
         .connected { background: #dcfce7; color: #166534; }
         .disconnected { background: #fee2e2; color: #991b1b; }
-        .control-row { display: flex; align-items: center; justify-content: space-between; background: #f8f9fa; padding: 10px; margin: 5px 0; border-radius: 8px; border: 1px solid #eee; }
+        .control-row { display: flex; align-items: center; justify-content: space-between; background: #f8f9fa; padding: 10px; margin: 5px 0; border-radius: 8px; border: 1px solid #eee; gap: 10px;}
         .motors-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; }
         input[type=range] { flex-grow: 1; margin: 0 10px; accent-color: #8c00ff; }
-        .val-display { width: 90px; text-align: right; font-family: monospace; font-weight: bold; color: #8c00ff; }
+        .val-display { width: 35px; text-align: right; font-family: monospace; font-weight: bold; color: #8c00ff; }
         .btn { padding: 8px 12px; cursor: pointer; border: none; border-radius: 4px; background: #8c00ff; color: white; font-weight: bold; transition: 0.2s; }
         .btn:hover { background: #7300d1; }
         .mode-btn { background: #3b82f6; width: 120px; }
         .mode-btn.active { background: #1e3a8a; outline: 2px solid #000; }
+    
+        .step-btn { padding: 2px 6px; cursor: pointer; border: 1px solid #cbd5e1; border-radius: 4px; background: #e2e8f0; font-size: 12px; font-weight: bold; color: #334155; transition: 0.1s;}
+        .step-btn:hover { background: #cbd5e1; }
+        .pid-group { display: flex; align-items: center; gap: 4px; margin: 0 10px; }
     </style>
 </head>
 
@@ -40,11 +44,34 @@
             <span id="closed" style="display:none;">Connection closed.</span>
         </div>
 
-        <div class="control-row" style="justify-content: center; gap: 20px;">
-            <span><strong>PID Parameters</strong></span>
-            <label for="kp">Kp:</label> <input type="number" id="kp" value="0.030" step="0.001" style="width:70px">
-            <label for="ki">Ki:</label> <input type="number" id="ki" value="0.000" step="0.001" style="width:70px">
-            <label for="kd">Kd:</label> <input type="number" id="kd" value="0.000" step="0.001" style="width:70px">
+        <div class="control-row" style="justify-content: center; gap: 5px;">
+            <span><strong>PID Param</strong></span>
+            <div class="pid-group">
+                <label for="kp">Kp:</label>
+                <button class="step-btn" onclick="adjustPID('kp', -1)">-1</button>
+                <button class="step-btn" onclick="adjustPID('kp', -0.01)">-.01</button>
+                <input type="number" id="kp" value="0.030" step="0.001" style="width:65px; text-align:center;">
+                <button class="step-btn" onclick="adjustPID('kp', 0.01)">+.01</button>
+                <button class="step-btn" onclick="adjustPID('kp', 1)">+1</button>
+            </div>
+
+            <div class="pid-group">
+                <label for="ki">Ki:</label>
+                <button class="step-btn" onclick="adjustPID('ki', -1)">-1</button>
+                <button class="step-btn" onclick="adjustPID('ki', -0.01)">-.01</button>
+                <input type="number" id="ki" value="0.000" step="0.001" style="width:65px; text-align:center;">
+                <button class="step-btn" onclick="adjustPID('ki', 0.01)">+.01</button>
+                <button class="step-btn" onclick="adjustPID('ki', 1)">+1</button>
+            </div>
+
+            <div class="pid-group">
+                <label for="kd">Kd:</label>
+                <button class="step-btn" onclick="adjustPID('kd', -1)">-1</button>
+                <button class="step-btn" onclick="adjustPID('kd', -0.01)">-.01</button>
+                <input type="number" id="kd" value="0.000" step="0.001" style="width:65px; text-align:center;">
+                <button class="step-btn" onclick="adjustPID('kd', 0.01)">+.01</button>
+                <button class="step-btn" onclick="adjustPID('kd', 1)">+1</button>
+            </div>    
         </div>
 
         <div class="control-row" style="justify-content: center; gap: 20px;">
@@ -78,21 +105,47 @@
             4: [60, 120, 60, 120, 60, 120, 60, 120, 60, 120, 60, 120, 60, 120]
         };
 
+        function adjustPID(paramId, delta) {
+            let inputField = document.getElementById(paramId);
+            let newVal = parseFloat(inputField.value) + delta;
+            inputField.value = newVal.toFixed(3); // Keep it strictly to 3 decimal places
+        }
+
+        function adjustMotor(motorId, delta) {
+            let slider = document.getElementById(`slider${motorId}`);
+            let newVal = parseInt(slider.value) + delta;
+            
+            // Prevent the buttons from pushing the slider out of bounds
+            if (newVal > 180) newVal = 180;
+            if (newVal < 0) newVal = 0;
+            
+            slider.value = newVal;
+            document.getElementById(`label${motorId}`).innerText = newVal + '°';
+            
+            // Automatically send the goal to ROS when the button is clicked
+            sendMotorGoal(motorId);
+        }
+
         // --- 2. BUILD THE UI ---
         const container = document.getElementById("motorsContainer");
         for (let i = 1; i <= 14; i++) {
             container.innerHTML += `
                 <div class="control-row">
-                    <label for="slider${i}">M${i}</label>
+                    <label for="slider${i}" style="width: 35px; text-align: left; font-weight: bold;">M${i}</label>
+                    <button class="step-btn" onclick="adjustMotor(${i}, -10)">-10</button>
+                    <button class="step-btn" onclick="adjustMotor(${i}, -1)">-1</button>
                     <input type="range" id="slider${i}" min="0" max="180" value="90" 
                            oninput="document.getElementById('label${i}').innerText = this.value + '°'"
                            onchange="sendMotorGoal(${i})">
+                    <button class="step-btn" onclick="adjustMotor(${i}, 1)">+1</button>
+                    <button class="step-btn" onclick="adjustMotor(${i}, 10)">+10</button>
                     <div class="val-display" id="label${i}">90°</div>
                 </div>`;
         }
 
         // --- 3. CONNECT TO ROS ---
-        var ros = new ROSLIB.Ros({ url : 'ws://192.168.137.72:9090' });
+        //192.168.137.72
+        var ros = new ROSLIB.Ros({ url : 'ws://10.225.237.128:9090' });
 
         ros.on('error', function(error) {
             document.getElementById('statusIndicator').className = "status disconnected";
@@ -212,7 +265,7 @@
                         }                       
                     },
                     function(failedMsg) {//????
-                        clearTimeout(rejectionWatchdog); // Just in case it actually DOES fire someday
+                        //clearTimeout(rejectionWatchdog); // Just in case it actually DOES fire someday
                         
                         console.error(`Motor ${motorId} goal was explicitly REJECTED!`, failedMsg);
                         resolve(false); 

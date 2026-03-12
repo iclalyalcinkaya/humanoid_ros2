@@ -72,7 +72,7 @@ class ServoActionServer(Node):
             return GoalResponse.ACCEPT
 
         elif self.active_client_id == incoming_id:
-            self.get_logger().info(f"Goal request: Motor {goal_request.motor_num} -> {goal_request.target_position}")
+            self.get_logger().info(f"Goal request: Motor {goal_request.motor_num} to {goal_request.target_position}")
             return GoalResponse.ACCEPT
 
         else:

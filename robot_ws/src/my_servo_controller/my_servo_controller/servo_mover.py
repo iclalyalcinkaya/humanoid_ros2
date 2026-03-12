@@ -1,4 +1,4 @@
-#!/home/rasp/Desktop/ROS2/.venv/bin/python3
+#!/usr/bin/python
 
 import sys
 import rclpy
