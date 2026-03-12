@@ -135,54 +135,22 @@
             messageType: 'action_msgs/msg/GoalStatusArray'
         });
 
-        // Translates the ROS 2 UUID back into our hex string.
-        // Handles both Base64 compressed strings and raw arrays!
-        function decodeUUID(uuidData) {
-            if (typeof uuidData === 'string') {
-                // 1. Decode the Base64 string into binary characters
-                const binaryStr = atob(uuidData);
-                // 2. Map each character's raw charCode back to a 2-digit hex string
-                return [...binaryStr].map(char => char.charCodeAt(0).toString(16).padStart(2, '0')).join('');
-            } 
-            else if (Array.isArray(uuidData)) {
-                // Fallback just in case the library decides to send a raw array
-                return uuidData.map(byte => byte.toString(16).padStart(2, '0')).join('');
-            }
-            return ""; // Failsafe
-        }
-
-        // Generates a perfect 32-character hex string (e.g., "4a98b2...")
-        function generateHexUUID() {
-            return [...Array(32)].map(() => Math.floor(Math.random() * 16).toString(16)).join('');
-        }
-
         statusSub.subscribe(function(message) {
-            message.status_list.forEach(function(goalData) {
-                
-                let statusCode = goalData.status;
-                let rawByteArray = goalData.goal_info.goal_id.uuid; 
-                
-                // Translate the bytes into our readable string
-                let serverGoalUUID = decodeUUID(rawByteArray);
-                console.log(serverGoalUUID);
-                // Find which motor this UUID belongs to by searching our activeGoals dictionary
-                let matchedMotorId = Object.keys(activeGoals).find(key => activeGoals[key] === serverGoalUUID);
-
-                if (matchedMotorId) {
-                    // We found a match! We now know exactly which motor this status belongs to.
-                    if (statusCode === 6) { // 6 = ABORTED
-                        console.error(`SERVER ALERT: Motor ${matchedMotorId} ABORTED its goal!`);
-                        document.getElementById(`label${matchedMotorId}`).innerText = "ABORTED";
-                        document.getElementById(`label${matchedMotorId}`).style.color = "#dc3545"; 
-                        delete activeGoals[matchedMotorId];
-                    } 
-                    else if (statusCode === 4) { // 4 = SUCCEEDED
-                        console.log(`SERVER ALERT: Motor ${matchedMotorId} SUCCEEDED.`);
-                    }else if (statusCode === 2) { 
-                        console.warn(`SERVER ALERT: Motor ${matchedMotorId} ACCEPTED.`);
-                    }
-                }
-            });
+            let length = message.status_list.length;
+            //console.log(length);
+            let goalData = message.status_list[length-1];
+            //console.log(goalData);
+            let statusCode = goalData.status;
+            let rawByteArray = goalData.goal_info.goal_id.uuid; 
+            
+            if (statusCode === 6) { // 6 = ABORTED
+                console.error(`SERVER ALERT: Goal ABORTED!`); 
+                cancelAll();
+            }else if (statusCode === 3) { 
+                console.warn(`SERVER ALERT: Goal CANCELING.`);
+            }else if (statusCode === 1) { 
+                console.log(`Goal ACCEPTED.`);
+            }
         });
 
         let activeGoals = {};
@@ -212,8 +180,6 @@
                     client_id: myClientId,
                     //speed: 5
                 };
-
-                let myGoalUUID = generateHexUUID();
 
                 activeGoals[motorId] = servoActionClient.sendGoal(goal,  
                     function(result) {
@@ -246,9 +212,9 @@
                         // Resolve the promise (as false) so the sequence doesn't freeze forever!
                         resolve(false); 
                     },
-                    myGoalUUID
+                    //myGoalUUID
                 );
-                console.log("active goal",activeGoals[motorId]);
+                //console.log("active goal",activeGoals[motorId]);
             });
         }
 
@@ -327,7 +293,8 @@
              document.getElementById('connecting').style.display = 'none';
              document.getElementById('connected').style.display = 'none';
              document.getElementById('closed').style.display = 'inline';
-             console.log("Disconnecting... dummyId = ", dummyId);
+             cancelAll();
+             console.log("Disconnecting...");
              servoActionClient.cancelGoal(dummyId);
              dummyId = 0;
         }
@@ -347,11 +314,9 @@
             
             dummyId = servoActionClient.sendGoal(dummyGoal,
                 function(result) { 
-                    if (result.success) {
-                        console.log("Dummy goal ended successfully." + result.success); 
-                    } else {
-                        console.error("Dummy goal was aborted by the server.");
-                    } 
+                    if (!result.success) {
+                        console.log("Disconnected successfully."); 
+                    }
                 },
                 function(feedback) { /* Ignore feedback */ }
             );
