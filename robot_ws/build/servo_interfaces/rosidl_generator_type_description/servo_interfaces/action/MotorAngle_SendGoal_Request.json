@@ -57,7 +57,7 @@
               "string_capacity": 0,
               "nested_type_name": ""
             },
-            "default_value": "0.008"
+            "default_value": "0.03"
           },
           {
             "name": "ki",
@@ -67,7 +67,7 @@
               "string_capacity": 0,
               "nested_type_name": ""
             },
-            "default_value": "0.01"
+            "default_value": "0.0"
           },
           {
             "name": "kd",
@@ -77,7 +77,7 @@
               "string_capacity": 0,
               "nested_type_name": ""
             },
-            "default_value": "0.003"
+            "default_value": "0.0"
           },
           {
             "name": "speed",

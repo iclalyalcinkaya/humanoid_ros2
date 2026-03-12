@@ -10,13 +10,13 @@ module servo_interfaces {
 
       uint8 target_position;
 
-      @default (value=0.008)
+      @default (value=0.03)
       float kp;
 
-      @default (value=0.01)
+      @default (value=0.0)
       float ki;
 
-      @default (value=0.003)
+      @default (value=0.0)
       float kd;
 
       uint8 speed;

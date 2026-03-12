@@ -376,13 +376,13 @@
 			{
 				"command" : 11,
 				"file" : 2,
-				"line" : 181,
+				"line" : 216,
 				"parent" : 4
 			},
 			{
 				"command" : 11,
 				"file" : 2,
-				"line" : 216,
+				"line" : 181,
 				"parent" : 4
 			},
 			{
@@ -559,6 +559,14 @@
 	[
 		{
 			"backtrace" : 59,
+			"id" : "servo_interfaces__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 60,
+			"id" : "servo_interfaces__rosidl_typesupport_c::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 60,
 			"id" : "servo_interfaces__py::@631eca19e6638f13754f"
 		},
 		{
@@ -568,14 +576,6 @@
 		{
 			"backtrace" : 9,
 			"id" : "servo_interfaces__rosidl_generator_c::@6890427a1f51a3e7e1df"
-		},
-		{
-			"backtrace" : 60,
-			"id" : "servo_interfaces__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df"
-		},
-		{
-			"backtrace" : 59,
-			"id" : "servo_interfaces__rosidl_typesupport_c::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "servo_interfaces_s__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",

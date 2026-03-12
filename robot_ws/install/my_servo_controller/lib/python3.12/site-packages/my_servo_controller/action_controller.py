@@ -28,7 +28,7 @@ class ServoActionServer(Node):
         self.active_client_id = None
         self.old_leng = 0
         self.current_angles = MOTOR_START_ANGLES #self.load_angles()
-        self.file_lock = threading.Lock()
+        self.file_lock = threading.Lock() #So threads won't try to write at the same time
 
         self._action_server = ActionServer(
             self,
@@ -40,14 +40,14 @@ class ServoActionServer(Node):
             callback_group=self.action_cb_group
         )
 
-        self._client_sub = self.create_subscription(
+        self._client_sub = self.create_subscription( 
             ConnectedClients,
             '/connected_clients',
             self.listener_callback,
             10
         )
 
-    def listener_callback(self, msg):
+    def listener_callback(self, msg): #To learn if the Rosbridge client still active
         leng = len(msg.clients)
         if(self.first_id == None and leng != 0):
             self.first_id = msg.clients[leng-1].connection_time.sec
@@ -91,7 +91,7 @@ class ServoActionServer(Node):
         motor_num = request.motor_num - 1
         target_position = float(request.target_position)
         
-        if motor_num == 98:
+        if motor_num == 98: #So the connection continue
             self.get_logger().info("Dummy goal received. Keeping websocket connection alive.")
             while not goal_handle.is_cancel_requested:
                 time.sleep(1.0)
