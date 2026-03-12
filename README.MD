@@ -57,13 +57,13 @@ Veya bir sin dalgası şeklinde belli aralıklarla açılar gönderilebilir.
 ## KONUŞMA
 Önce belirlenen pozisyona getirilir. Ardından omuz ve dirsek beraber dairesel olarak oynatılır.
 
-Birden fazla eklemi oynatırken açılar anlık olarak kaydedildiğinden birbirinin kayıtlarını değiştirebiliyorlar. Bunu önlemek için MultiThreadedExecutor kullanılarak motorlar paralel olarak çalıştırılıyor. Başlangışta motor açılarından oluşan bir Dictionary oluşturuyor. Sadece açısı değişen motorun değerini değiştirerek paralel çalışıyorlar.
+Birden fazla motorun aynı anda hareketi için MultiThreadedExecutor kullanılıyor. Başlangıçta motor açılarından oluşan bir Dictionary oluşturuyor. Sadece açısı değişen motorun değerini değiştirerek paralel çalışıyorlar.
 
-İşlem sonunda bir json dosyasına motor açılarını yazıyor. Yazdığı dosyanın içindeki yazıları okuyarak işlem yapmıyor.
+İşlem sonunda bir json dosyasına motor açılarını yazıyor. Yazdığı dosyanın içindeki açıları okuyarak işlem yapmıyor.
 
 ## OLUŞABİLECEK SORUNLAR  
 Son konumlarını bir dosyanın içine kaydediyor. Robot kapalı iken elle oynatılırsa terar açıldığında kayıtlı noktaya ivmeli bir hareket yapar.
-Home pozisyonuna gitmesini sağlayacak bir tuş eklendi. Bu durumda açılmadan önce elle home pozisyonunun yakınlarına elle getirilmesi durumunda çarpışma yaşama ihtimali azalır. Json dosyasına kaydediliyor. İlk çalıştırıldığında dosyaya home pozisyon açılarını yazıyor.
+Home pozisyonuna gitmesini sağlayacak bir tuş eklendi. Bu durumda açılmadan önce elle home pozisyonunun yakınlarına elle getirilmesi durumunda çarpışma yaşama ihtimali azalır. İlk çalıştırıldığında dosyaya home pozisyon açılarını yazıyor.
 
 Çarpmayı algılayamadan devam edebilir. Onun için bir hata durumu koymalı veya acil durum butonu yeterli olur.
 
