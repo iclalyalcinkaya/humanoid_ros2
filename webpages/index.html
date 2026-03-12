@@ -304,19 +304,19 @@
                 await sendMotorGoal(i, targetAngle, myToken);
             }
             if(modeNum === 2 && currentSequenceToken === myToken) {
-                let wave = angles[2]
+                let wave = angles[3]
                 while (currentSequenceToken === myToken) {
-                    wave = wave === 45 ? 135 : 45; // Toggle between two angles
-                    await sendMotorGoal(2, wave, myToken);
+                    wave = wave === 135 ? 100 : 135; // Toggle between two angles
+                    await sendMotorGoal(4, wave, myToken);
                 }
             }else if(modeNum === 3 && currentSequenceToken === myToken) {
                 let elbow = angles[2]
-                let sholder_roll = angles[1]
+                let sholder_roll = angles[3]
                 while (currentSequenceToken === myToken) {
-                    elbow = elbow === 80 ? 100 : 80;
-                    sholder_roll = sholder_roll === 0 ? 20 : 0; 
-                    sendMotorGoal(2, elbow, myToken);
-                    await sendMotorGoal(1, sholder_roll, myToken);
+                    elbow = elbow === 0 ? 10 : 0;
+                    sholder_roll = sholder_roll === 80 ? 60 : 80; 
+                    sendMotorGoal(3, elbow, myToken);
+                    await sendMotorGoal(4, sholder_roll, myToken);
                 }
             }
             // Un-highlight the button only if THIS sequence actually finished uninterrupted

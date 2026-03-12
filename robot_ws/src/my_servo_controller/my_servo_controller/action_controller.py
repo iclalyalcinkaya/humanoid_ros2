@@ -27,7 +27,7 @@ class ServoActionServer(Node):
         self.first_id = None
         self.active_client_id = None
         self.old_leng = 0
-        self.current_angles = MOTOR_START_ANGLES #self.load_angles()
+        self.current_angles = self.load_angles() #MOTOR_START_ANGLES
         self.file_lock = threading.Lock() #So threads won't try to write at the same time
 
         self._action_server = ActionServer(

@@ -30,6 +30,7 @@ setup(
             "servo_controller_node = my_servo_controller.servo_controller:main",
             "servo_mover_node = my_servo_controller.servo_mover:main",
             "action_controller_node = my_servo_controller.action_controller:main",
+            "gazibo_sim_node = my_servo_controller.gazibo_sim:main",
         ],
     },
 )
