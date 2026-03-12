@@ -1,6 +1,0 @@
-[0.000000] (-) TimerEvent: {}
-[0.000452] (-) JobUnselected: {'identifier': 'my_package'}
-[0.000668] (-) JobUnselected: {'identifier': 'my_servo_controller'}
-[0.000733] (-) JobUnselected: {'identifier': 'ros2_pca9685'}
-[0.000770] (-) JobUnselected: {'identifier': 'servo_interfaces'}
-[0.000971] (-) EventReactorShutdown: {}

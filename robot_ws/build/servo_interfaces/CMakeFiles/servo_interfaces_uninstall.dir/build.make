@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rasp/robot_ws/src/servo_interfaces
+CMAKE_SOURCE_DIR = /home/rasp/humanoid/robot_ws/src/servo_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rasp/robot_ws/build/servo_interfaces
+CMAKE_BINARY_DIR = /home/rasp/humanoid/robot_ws/build/servo_interfaces
 
 # Utility rule file for servo_interfaces_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/servo_interfaces_uninstall.dir/compiler_depend.make
 include CMakeFiles/servo_interfaces_uninstall.dir/progress.make
 
 CMakeFiles/servo_interfaces_uninstall:
-	/usr/bin/cmake -P /home/rasp/robot_ws/build/servo_interfaces/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/rasp/humanoid/robot_ws/build/servo_interfaces/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 servo_interfaces_uninstall: CMakeFiles/servo_interfaces_uninstall
 servo_interfaces_uninstall: CMakeFiles/servo_interfaces_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/servo_interfaces_uninstall.dir/clean:
 .PHONY : CMakeFiles/servo_interfaces_uninstall.dir/clean
 
 CMakeFiles/servo_interfaces_uninstall.dir/depend:
-	cd /home/rasp/robot_ws/build/servo_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rasp/robot_ws/src/servo_interfaces /home/rasp/robot_ws/src/servo_interfaces /home/rasp/robot_ws/build/servo_interfaces /home/rasp/robot_ws/build/servo_interfaces /home/rasp/robot_ws/build/servo_interfaces/CMakeFiles/servo_interfaces_uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/rasp/humanoid/robot_ws/build/servo_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rasp/humanoid/robot_ws/src/servo_interfaces /home/rasp/humanoid/robot_ws/src/servo_interfaces /home/rasp/humanoid/robot_ws/build/servo_interfaces /home/rasp/humanoid/robot_ws/build/servo_interfaces /home/rasp/humanoid/robot_ws/build/servo_interfaces/CMakeFiles/servo_interfaces_uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/servo_interfaces_uninstall.dir/depend
 

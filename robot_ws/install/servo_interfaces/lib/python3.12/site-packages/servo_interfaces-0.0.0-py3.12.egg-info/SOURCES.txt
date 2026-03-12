@@ -4,9 +4,3 @@ servo_interfaces.egg-info/PKG-INFO
 servo_interfaces.egg-info/SOURCES.txt
 servo_interfaces.egg-info/dependency_links.txt
 servo_interfaces.egg-info/top_level.txt
-servo_interfaces/action/__init__.py
-servo_interfaces/action/_motor_angle.py
-servo_interfaces/msg/__init__.py
-servo_interfaces/msg/_set_pwm.py
-servo_interfaces/srv/__init__.py
-servo_interfaces/srv/_motor_angle.py

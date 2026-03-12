@@ -24,8 +24,8 @@ def generate_launch_description():
             )
         ),
         ExecuteProcess(
-            cmd=['/home/rasp/venv/bin/python3', '-m', 'http.server'],
-            cwd='/home/rasp/webpages',
+            cmd=['/home/rasp/humanoid/venv/bin/python3', '-m', 'http.server'],
+            cwd='/home/rasp/humanoid/webpages',
             output='screen'
         ),
     ])

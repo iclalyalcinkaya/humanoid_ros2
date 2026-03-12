@@ -1,8 +1,8 @@
 {
   "package_name": "servo_interfaces",
   "non_idl_tuples": [
-    "/home/rasp/robot_ws/src/servo_interfaces:msg/SetPwm.msg",
-    "/home/rasp/robot_ws/src/servo_interfaces:srv/MotorAngle.srv",
-    "/home/rasp/robot_ws/src/servo_interfaces:action/MotorAngle.action"
+    "/home/rasp/humanoid/robot_ws/src/servo_interfaces:msg/SetPwm.msg",
+    "/home/rasp/humanoid/robot_ws/src/servo_interfaces:srv/MotorAngle.srv",
+    "/home/rasp/humanoid/robot_ws/src/servo_interfaces:action/MotorAngle.action"
   ]
 }

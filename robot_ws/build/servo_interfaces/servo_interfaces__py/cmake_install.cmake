@@ -1,8 +1,8 @@
-# Install script for directory: /home/rasp/robot_ws/build/servo_interfaces/servo_interfaces__py
+# Install script for directory: /home/rasp/humanoid/robot_ws/build/servo_interfaces/servo_interfaces__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/rasp/robot_ws/install/servo_interfaces")
+  set(CMAKE_INSTALL_PREFIX "/home/rasp/humanoid/robot_ws/install/servo_interfaces")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

@@ -129,6 +129,62 @@
             actionType : 'servo_interfaces/action/MotorAngle' 
         });
 
+        var statusSub = new ROSLIB.Topic({
+            ros: ros,
+            name: '/move_servo/_action/status',
+            messageType: 'action_msgs/msg/GoalStatusArray'
+        });
+
+        // Translates the ROS 2 UUID back into our hex string.
+        // Handles both Base64 compressed strings and raw arrays!
+        function decodeUUID(uuidData) {
+            if (typeof uuidData === 'string') {
+                // 1. Decode the Base64 string into binary characters
+                const binaryStr = atob(uuidData);
+                // 2. Map each character's raw charCode back to a 2-digit hex string
+                return [...binaryStr].map(char => char.charCodeAt(0).toString(16).padStart(2, '0')).join('');
+            } 
+            else if (Array.isArray(uuidData)) {
+                // Fallback just in case the library decides to send a raw array
+                return uuidData.map(byte => byte.toString(16).padStart(2, '0')).join('');
+            }
+            return ""; // Failsafe
+        }
+
+        // Generates a perfect 32-character hex string (e.g., "4a98b2...")
+        function generateHexUUID() {
+            return [...Array(32)].map(() => Math.floor(Math.random() * 16).toString(16)).join('');
+        }
+
+        statusSub.subscribe(function(message) {
+            message.status_list.forEach(function(goalData) {
+                
+                let statusCode = goalData.status;
+                let rawByteArray = goalData.goal_info.goal_id.uuid; 
+                
+                // Translate the bytes into our readable string
+                let serverGoalUUID = decodeUUID(rawByteArray);
+                console.log(serverGoalUUID);
+                // Find which motor this UUID belongs to by searching our activeGoals dictionary
+                let matchedMotorId = Object.keys(activeGoals).find(key => activeGoals[key] === serverGoalUUID);
+
+                if (matchedMotorId) {
+                    // We found a match! We now know exactly which motor this status belongs to.
+                    if (statusCode === 6) { // 6 = ABORTED
+                        console.error(`SERVER ALERT: Motor ${matchedMotorId} ABORTED its goal!`);
+                        document.getElementById(`label${matchedMotorId}`).innerText = "ABORTED";
+                        document.getElementById(`label${matchedMotorId}`).style.color = "#dc3545"; 
+                        delete activeGoals[matchedMotorId];
+                    } 
+                    else if (statusCode === 4) { // 4 = SUCCEEDED
+                        console.log(`SERVER ALERT: Motor ${matchedMotorId} SUCCEEDED.`);
+                    }else if (statusCode === 2) { 
+                        console.warn(`SERVER ALERT: Motor ${matchedMotorId} ACCEPTED.`);
+                    }
+                }
+            });
+        });
+
         let activeGoals = {};
         let currentSequenceToken = 0; // Tracks the currently active sequence
         let i = 1;
@@ -157,9 +213,11 @@
                     //speed: 5
                 };
 
+                let myGoalUUID = generateHexUUID();
+
                 activeGoals[motorId] = servoActionClient.sendGoal(goal,  
                     function(result) {
-                        console.log("current result = ", result);
+                        //console.log("current result = ", result);
                         // Action finished!
                         document.getElementById(`label${motorId}`).innerText = pos + "°";
                         document.getElementById(`label${motorId}`).style.color = "#22c55e"; 
@@ -169,16 +227,28 @@
                     },
                     function(feedback) {
                         // Action is moving!
-                        console.log("current feedback = ", feedback);
+                        //console.log("current feedback = ", feedback);
                         var currentPos = feedback.current_position !== undefined ? feedback.current_position : feedback.feedback.current_position;
                         document.getElementById(`label${motorId}`).innerText = currentPos + "°";
                         document.getElementById(`label${motorId}`).style.color = "#f59e0b";
                         if(myToken && currentSequenceToken !== myToken) {
                             // If the token doesn't match, it means a new command has taken over, so we should stop this motor immediately
                             servoActionClient.cancelGoal(activeGoals[motorId]);
-                        }
-                    }
+                        }                       
+                    },
+                    function(failedMsg) {//????
+                        console.error(`Motor ${motorId} goal was REJECTED by the server!`, failedMsg);
+                        document.getElementById(`label${motorId}`).innerText = "REJECTED";
+                        document.getElementById(`label${motorId}`).style.color = "#dc3545"; // Red
+                        
+                        delete activeGoals[motorId];
+                        
+                        // Resolve the promise (as false) so the sequence doesn't freeze forever!
+                        resolve(false); 
+                    },
+                    myGoalUUID
                 );
+                console.log("active goal",activeGoals[motorId]);
             });
         }
 
@@ -187,11 +257,7 @@
             // 1. Generate a unique ID for this specific button click
             let myToken = Date.now(); 
             currentSequenceToken = myToken; // Update the global tracker
-
-            // 2. Instantly cancel any motors that are currently moving
             cancelAll(true); 
-
-            //await new Promise(resolve => setTimeout(resolve, 100));
 
             const angles = modeAngles[modeNum];
             if (!angles) return;
@@ -211,7 +277,6 @@
             i = 1;
             while (currentSequenceToken === myToken && i<=14 && (modeNum !== 1 || i <= 7)) {
                 let targetAngle = angles[i - 1];
-                // Pause and wait for the motor to finish
                 await sendMotorGoal(i, targetAngle, myToken);
             }
             if(modeNum === 2 && currentSequenceToken === myToken) {
@@ -281,7 +346,6 @@
             };
             
             dummyId = servoActionClient.sendGoal(dummyGoal,
-                function(status){ if(status == 5) console.log("Accepted dummy"); }, 
                 function(result) { 
                     if (result.success) {
                         console.log("Dummy goal ended successfully." + result.success); 

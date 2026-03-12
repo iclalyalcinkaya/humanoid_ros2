@@ -1,9 +1,0 @@
-[0.017s] Invoking command in '/home/rasp/robot_ws/build/ros2_pca9685': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rasp/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/rasp/robot_ws/build/ros2_pca9685 -- -j4 -l4
-[0.110s] failed to create symbolic link '/home/rasp/robot_ws/build/ros2_pca9685/ament_cmake_python/ros2_pca9685/ros2_pca9685' because existing path cannot be removed: Is a directory
-[0.110s] [  2%] Built target ros2_pca9685__rosidl_generator_type_description
-[0.112s] gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_ros2_pca9685.dir/build.make:70: CMakeFiles/ament_cmake_python_symlink_ros2_pca9685] Error 1
-[0.112s] gmake[1]: *** [CMakeFiles/Makefile2:454: CMakeFiles/ament_cmake_python_symlink_ros2_pca9685.dir/all] Error 2
-[0.113s] gmake[1]: *** Waiting for unfinished jobs....
-[0.147s] [  5%] Built target ros2_pca9685__cpp
-[0.150s] gmake: *** [Makefile:146: all] Error 2
-[0.153s] Invoked command in '/home/rasp/robot_ws/build/ros2_pca9685' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rasp/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/rasp/robot_ws/build/ros2_pca9685 -- -j4 -l4
