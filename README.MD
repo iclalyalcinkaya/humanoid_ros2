@@ -3,6 +3,8 @@
 ## Launching
 ```
 git clone https://github.com/iclalyalcinkaya/humanoid_ros2.git
+```
+```
 cd robot_ws/
 colcon build
 source install/setup.bash 
@@ -22,6 +24,8 @@ Farklı bir I2C adresi kullanılıyorsa belirtilebilir.
 Referans saat hızı hertz cinsinden belirtilebilir
 PWM frekansı ayarlanabilir.
 İstenilen kanaldaki servonun açısı değiştirilebilir.
+
+[ServoKit API](https://docs.circuitpython.org/projects/servokit/en/latest/index.html)
 
 ## SERVİCE VEYA ACTİON
 Motor açılarının komutlarını göndermek için action kullanmak daha mantıklı oluyor. Services senkron olarak çalışır ve bir sonraki isteği göndermek için öncekinin bitmesi bekler. İsteği gönderdikten sonra süreç hakkında bir bilgisi olmaz. 
