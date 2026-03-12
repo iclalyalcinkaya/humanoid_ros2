@@ -56,6 +56,7 @@ class ServoActionServer(Node):
         elif(self.old_leng != leng):
             self.old_leng = leng
             if not any(client.connection_time.sec == self.first_id for client in msg.clients):
+                self.active_client_id = None
                 if (leng != 0):
                     self.first_id = msg.clients[leng-1].connection_time.sec
                 else:

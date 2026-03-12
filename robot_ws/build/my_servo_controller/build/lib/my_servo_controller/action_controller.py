@@ -26,7 +26,7 @@ class ServoActionServer(Node):
         self.action_cb_group = ReentrantCallbackGroup()
         self.first_id = None
         self.active_client_id = None
-
+        self.old_leng = 0
         self.current_angles = self.load_angles()
         self.file_lock = threading.Lock()
 
@@ -51,7 +51,16 @@ class ServoActionServer(Node):
         leng = len(msg.clients)
         if(self.first_id == None and leng != 0):
             self.first_id = msg.clients[leng-1].connection_time.sec
+            self.old_leng = leng
             self.get_logger().info(f"{self.first_id}")
+        elif(self.old_leng != leng):
+            self.old_leng = leng
+            if not any(client.connection_time.sec == self.first_id for client in msg.clients):
+                self.active_client_id = None
+                if (leng != 0):
+                    self.first_id = msg.clients[leng-1].connection_time.sec
+                else:
+                    self.first_id = None
 
     def goal_callback(self, goal_request):
         incoming_id = goal_request.client_id
