@@ -1,6 +1,6 @@
 # HUMANOID ROBOT WITH ROS2
 
-## Launching
+## LAUNCHING
 ```
 git clone https://github.com/iclalyalcinkaya/humanoid_ros2.git
 ```
@@ -12,7 +12,7 @@ ros2 launch my_servo_controller action_controller_launch.py
 ```
 [Web sayfası](http://localhost:8000/)
 
-## ROS2LİBJS
+## ROS2LIBJS
 HTML yazarken eski roslibjs kullanıldığında action veri paket isimlendirme şekli ROS’tan ROS2’ye değiştiğinden hata veriyordu. Bu yüzden farklı bir paket kullanılması gerekiyordu.
 
 HTML için [ROS2 kütüphanesi](https://github.com/6RiverSystems/ros2libjs)
@@ -27,19 +27,20 @@ PWM frekansı ayarlanabilir.
 
 [ServoKit API](https://docs.circuitpython.org/projects/servokit/en/latest/index.html)
 
-## SERVİCE VEYA ACTİON
+## SERVICE VEYA ACTION
 Motor açılarının komutlarını göndermek için action kullanmak daha mantıklı oluyor. Services senkron olarak çalışır ve bir sonraki isteği göndermek için öncekinin bitmesi bekler. İsteği gönderdikten sonra süreç hakkında bir bilgisi olmaz. 
 
 Actions asenkron olarak çalışır, bir hedef gönderdikten sonra farklı şeylerle uğraşabilir. Farklı bir hedef gönderebilir veya önceki hedefi durdurabilir. Süreç sırasında ise server sürekli bir feedback gönderebilir.
 
-## Actıon server clıent bağlantısı
-Veri iletiminde api action client gibi davranırken ros server gibi davranıyor.
+## ACTION SERVER CLIENT BAĞLANTISI
+Veri iletiminde internet sayfası action client gibi davranırken ros server gibi davranıyor.
+Bu ikisi arasındaki bağlantı rosbridge_server ile kuruluyor.
 
-Api istenilen posizyonverilerini goal olarak ros’a gönderiyor. Ros PID ile motorları hareket ettiriyor.
+Api istenilen posizyon verilerini goal olarak ros’a gönderiyor. Ros PID ile motorları hareket ettiriyor.
 
 Action kullanılmasının nedeni yeni bir goal geldiğinde eskisini terk edebilmek.
 
-## Poz verme
+## POZ VERME
 Sürekli bir hareket olmadığından motorlar belirlenen açılara götürülür.
 
 Pozdan sonra diğer hareketlere geçerken eklemlerin oynatma sıralarına dikkat edilmeli. Aksi halde çarpışma gerçekleşebilir.
@@ -48,26 +49,26 @@ Diğer durumlarda sağ koldan harekete başlarken bunda sol koldan harekete baş
 
 Sağ kol aynı anda sol kol aynı anda ama bir kol diğer kolun hareketinin bitirmesini bekleyecek şeklinde ilerleyebilir.
 
-## El sallama
+## EL SALLAMA
 PID sayesinde yavaş hareket ettiğinden belirli iki açı arasında dirsek git gel yaptırılabilir.
 
-Veya bir sin dalgası şeklinde belli aralıklarla açılar gönderilebilir
+Veya bir sin dalgası şeklinde belli aralıklarla açılar gönderilebilir.
 
 ## KONUŞMA
 Önce belirlenen pozisyona getirilir. Ardından omuz ve dirsek beraber dairesel olarak oynatılır.
 
-Birden fazla eklemi oynatırken açılar anlık olarak kaydedildiğinden birbirinin kayıtlarını değiştirebiliyorlar.
+Birden fazla eklemi oynatırken açılar anlık olarak kaydedildiğinden birbirinin kayıtlarını değiştirebiliyorlar. Bunu önlemek için MultiThreadedExecutor kullanılarak motorlar paralel olarak çalıştırılıyor. Başlangışta motor açılarından oluşan bir Dictionary oluşturuyor. Sadece açısı değişen motorun değerini değiştirerek paralel çalışıyorlar.
 
-İşlem sonunda kaydedilirse de işlem yarıda bırakıldığı zaman hangi açıda kaldığı bilinmiyor.
+İşlem sonunda bir json dosyasına motor açılarını yazıyor. Yazdığı dosyanın içindeki yazıları okuyarak işlem yapmıyor.
 
-Kaydetmeden hemen önce en son kaydedilen açıyı okuyarak bu hata giderilebilir ancak işlem miktarını attırmaktadır. Feedback olarak alınan değer kaydedilebilir.
-
-## Oluşabilecek sorunlar  
+## OLUŞABİLECEK SORUNLAR  
 Son konumlarını bir dosyanın içine kaydediyor. Robot kapalı iken elle oynatılırsa terar açıldığında kayıtlı noktaya ivmeli bir hareket yapar.
-Kapamadan önce bir home pozisyonu belirleyip bir tuşla bu pozisyona getirilebilir. Kapatılırken dosya silinip tekrar açıldığında eklemler home pozisyonunda olduğu açılarla yeni bir dosya oluşturulabilir. Bu durumda açılmadan önce elle home pozisyonunun yakınlarına elle getirilmesi durumunda çarpışma yaşama ihtimali azalır. Json dosyasına kaydediliyor. İlk çalıştırıldığında dosyaya home pozisyon açılarını yazıyor.
+Home pozisyonuna gitmesini sağlayacak bir tuş eklendi. Bu durumda açılmadan önce elle home pozisyonunun yakınlarına elle getirilmesi durumunda çarpışma yaşama ihtimali azalır. Json dosyasına kaydediliyor. İlk çalıştırıldığında dosyaya home pozisyon açılarını yazıyor.
 
 Çarpmayı algılayamadan devam edebilir. Onun için bir hata durumu koymalı veya acil durum butonu yeterli olur.
 
-Launch dosyası olarak çalıştırınca ve durdurunca node durmuyor. Hayalet olarak çalışmaya devam ediyor.
+Launch dosyası olarak çalıştırınca ve düzgün bir şekilde kapatılmaz ise node durmuyor. Hayalet olarak çalışmaya devam ediyor.
 
-İki farklı client aynı motor için istek gönderirse önlem yok.
+İki farklı client aynı motor için istek göndermesine karşı hedefle beraber client id bilgisi de gönderiliyor.
+
+Çok fazla goal peş peşe gönderilince rosbridge server client bağlantısını tekrar tekrar kurup silmeye çalışıyor. Ancak hızına yetişemeyince hata veriyordu. Bunu önlemek başlangışta adına hiç bir motoru hareket ettirmeyecek ve bağlantıyı sürdürecek bir dummy goal gönderiliyor.

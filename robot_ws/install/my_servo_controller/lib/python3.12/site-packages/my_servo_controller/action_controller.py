@@ -27,7 +27,7 @@ class ServoActionServer(Node):
         self.first_id = None
         self.active_client_id = None
         self.old_leng = 0
-        self.current_angles = self.load_angles()
+        self.current_angles = MOTOR_START_ANGLES #self.load_angles()
         self.file_lock = threading.Lock()
 
         self._action_server = ActionServer(
@@ -52,13 +52,14 @@ class ServoActionServer(Node):
         if(self.first_id == None and leng != 0):
             self.first_id = msg.clients[leng-1].connection_time.sec
             self.old_leng = leng
-            self.get_logger().info(f"{self.first_id}")
+            self.get_logger().info(f"Working client ID= {self.first_id}")
         elif(self.old_leng != leng):
             self.old_leng = leng
             if not any(client.connection_time.sec == self.first_id for client in msg.clients):
                 self.active_client_id = None
                 if (leng != 0):
                     self.first_id = msg.clients[leng-1].connection_time.sec
+                    self.get_logger().info(f"Working client ID= {self.first_id}")
                 else:
                     self.first_id = None
 
@@ -115,9 +116,7 @@ class ServoActionServer(Node):
                     goal_handle.canceled()
                     self.get_logger().info(f'Goal canceled by client: Motor {motor_num+1} -> {target_position}')
                     result.success = False
-                    
                     self.save_angles_thread_safe()
-                    #self.active_client_id = None
                     return result
 
                 Pn = Kp * error
@@ -146,7 +145,6 @@ class ServoActionServer(Node):
             
             self.save_angles_thread_safe()
 
-            #self.active_client_id = None
             result.success = True
             return result
             

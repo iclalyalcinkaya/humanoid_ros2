@@ -27,8 +27,8 @@ class ServoActionServer(Node):
         self.first_id = None
         self.active_client_id = None
         self.old_leng = 0
-        self.current_angles = self.load_angles()
-        self.file_lock = threading.Lock()
+        self.current_angles = MOTOR_START_ANGLES #self.load_angles()
+        self.file_lock = threading.Lock() #So threads won't try to write at the same time
 
         self._action_server = ActionServer(
             self,
@@ -40,25 +40,26 @@ class ServoActionServer(Node):
             callback_group=self.action_cb_group
         )
 
-        self._client_sub = self.create_subscription(
+        self._client_sub = self.create_subscription( 
             ConnectedClients,
             '/connected_clients',
             self.listener_callback,
             10
         )
 
-    def listener_callback(self, msg):
+    def listener_callback(self, msg): #To learn if the Rosbridge client still active
         leng = len(msg.clients)
         if(self.first_id == None and leng != 0):
             self.first_id = msg.clients[leng-1].connection_time.sec
             self.old_leng = leng
-            self.get_logger().info(f"{self.first_id}")
+            self.get_logger().info(f"Working client ID= {self.first_id}")
         elif(self.old_leng != leng):
             self.old_leng = leng
             if not any(client.connection_time.sec == self.first_id for client in msg.clients):
                 self.active_client_id = None
                 if (leng != 0):
                     self.first_id = msg.clients[leng-1].connection_time.sec
+                    self.get_logger().info(f"Working client ID= {self.first_id}")
                 else:
                     self.first_id = None
 
@@ -90,7 +91,7 @@ class ServoActionServer(Node):
         motor_num = request.motor_num - 1
         target_position = float(request.target_position)
         
-        if motor_num == 98:
+        if motor_num == 98: #So the connection continue
             self.get_logger().info("Dummy goal received. Keeping websocket connection alive.")
             while not goal_handle.is_cancel_requested:
                 time.sleep(1.0)
@@ -115,9 +116,7 @@ class ServoActionServer(Node):
                     goal_handle.canceled()
                     self.get_logger().info(f'Goal canceled by client: Motor {motor_num+1} -> {target_position}')
                     result.success = False
-                    
                     self.save_angles_thread_safe()
-                    #self.active_client_id = None
                     return result
 
                 Pn = Kp * error
@@ -146,7 +145,6 @@ class ServoActionServer(Node):
             
             self.save_angles_thread_safe()
 
-            #self.active_client_id = None
             result.success = True
             return result
             

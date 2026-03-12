@@ -110,8 +110,7 @@
             document.getElementById('connected').style.display = 'inline';
 
             reconnect();
-
-            //setMode(4);
+            //setMode(4); //At firt go home pos
         });
 
         ros.on('close', function() {
@@ -119,7 +118,6 @@
             document.getElementById('connecting').style.display = 'none';
             document.getElementById('connected').style.display = 'none';
             document.getElementById('closed').style.display = 'inline';
-            //disconnect();
         });
 
         // --- 4. DEFINE THE ACTION CLIENT ---
@@ -149,9 +147,6 @@
                 cancelAll();
             }else if (statusCode === 3) { 
                 console.warn(`SERVER ALERT: Goal CANCELING.`);
-            }else if (statusCode === 1) { 
-                console.log(`Goal ACCEPTED.`);
-                accept = 1;
             }else if (statusCode === 1) { 
                 console.log(`Goal ACCEPTED.`);
                 accept = 1;
