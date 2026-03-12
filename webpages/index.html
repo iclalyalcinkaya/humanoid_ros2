@@ -135,6 +135,7 @@
             messageType: 'action_msgs/msg/GoalStatusArray'
         });
 
+        let accept = 0;
         statusSub.subscribe(function(message) {
             let length = message.status_list.length;
             //console.log(length);
@@ -150,6 +151,10 @@
                 console.warn(`SERVER ALERT: Goal CANCELING.`);
             }else if (statusCode === 1) { 
                 console.log(`Goal ACCEPTED.`);
+                accept = 1;
+            }else if (statusCode === 1) { 
+                console.log(`Goal ACCEPTED.`);
+                accept = 1;
             }
         });
 
@@ -157,7 +162,6 @@
         let currentSequenceToken = 0; // Tracks the currently active sequence
         let i = 1;
         // --- 5. SEND GOAL LOGIC (Now returns a Promise) ---
-        // We added forcedPos so the Mode function can pass a target directly without needing the slider
         function sendMotorGoal(motorId, forcedPos = null, myToken = null) {
             return new Promise((resolve) => {
                 // If forcedPos is given, use it. Otherwise, read the slider.
@@ -166,7 +170,7 @@
                 if (forcedPos !== null) {
                     document.getElementById(`slider${motorId}`).value = pos; // Update slider visually
                 }else if(activeGoals[motorId]) {
-                    console.log(`PID =  ${activeGoals[motorId]}`);
+                    //console.log(`PID =  ${activeGoals[motorId]}`);
                     servoActionClient.cancelGoal(activeGoals[motorId]);
                 }
                 if(!myToken) console.log(`Moving motor ${motorId} to ${pos}`);
@@ -180,6 +184,16 @@
                     client_id: myClientId,
                     //speed: 5
                 };
+
+                /*
+                let rejectionWatchdog = setTimeout(() => {
+                    console.error(`Motor ${motorId} was REJECTED or dropped by the server!`);
+                    document.getElementById(`label${motorId}`).innerText = "REJECTED";
+                    document.getElementById(`label${motorId}`).style.color = "#dc3545"; 
+                    delete activeGoals[motorId];
+                    resolve(false); // Resolve so the loop doesn't freeze
+                }, 2000);
+                */
 
                 activeGoals[motorId] = servoActionClient.sendGoal(goal,  
                     function(result) {
@@ -203,13 +217,9 @@
                         }                       
                     },
                     function(failedMsg) {//????
-                        console.error(`Motor ${motorId} goal was REJECTED by the server!`, failedMsg);
-                        document.getElementById(`label${motorId}`).innerText = "REJECTED";
-                        document.getElementById(`label${motorId}`).style.color = "#dc3545"; // Red
+                        clearTimeout(rejectionWatchdog); // Just in case it actually DOES fire someday
                         
-                        delete activeGoals[motorId];
-                        
-                        // Resolve the promise (as false) so the sequence doesn't freeze forever!
+                        console.error(`Motor ${motorId} goal was explicitly REJECTED!`, failedMsg);
                         resolve(false); 
                     },
                     //myGoalUUID
