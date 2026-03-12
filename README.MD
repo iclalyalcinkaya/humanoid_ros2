@@ -1,4 +1,15 @@
 # HUMANOID ROBOT WITH ROS2
+
+## Launching
+```
+git clone https://github.com/iclalyalcinkaya/humanoid_ros2.git
+cd robot_ws/
+colcon build
+source install/setup.bash 
+ros2 launch my_servo_controller action_controller_launch.py
+```
+[Web sayfası](http://localhost:8000/)
+
 ## ROS2LİBJS
 HTML yazarken eski roslibjs kullanıldığında action veri paket isimlendirme şekli ROS’tan ROS2’ye değiştiğinden hata veriyordu. Bu yüzden farklı bir paket kullanılması gerekiyordu.
 
