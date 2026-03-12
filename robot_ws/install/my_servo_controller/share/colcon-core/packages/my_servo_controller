@@ -1,1 +1,1 @@
-rclpy:servo_interfaces
+rclpy:rosbridge_msgs:servo_interfaces

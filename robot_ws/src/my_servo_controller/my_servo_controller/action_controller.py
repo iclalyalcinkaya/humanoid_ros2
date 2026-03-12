@@ -11,6 +11,7 @@ import json
 import os
 import threading
 import time
+from rosbridge_msgs.msg import ConnectedClients
 
 MOTOR_COUNT = 14
 ANGLE_FILE = "angle.json"
@@ -23,11 +24,9 @@ class ServoActionServer(Node):
         self.get_logger().info("Servo Action Server has been started.")
         self.kit = ServoKit(channels=16, frequency=50)
         self.action_cb_group = ReentrantCallbackGroup()
-
+        self.first_id = None
         self.active_client_id = None
-        self.last_command_time = 0.0
-        self.lock_timeout = 3.0
-
+        self.old_leng = 0
         self.current_angles = self.load_angles()
         self.file_lock = threading.Lock()
 
@@ -41,14 +40,32 @@ class ServoActionServer(Node):
             callback_group=self.action_cb_group
         )
 
-    def goal_callback(self, goal_request):
-        #current_time = time.time()
-        incoming_id = goal_request.client_id
+        self._client_sub = self.create_subscription(
+            ConnectedClients,
+            '/connected_clients',
+            self.listener_callback,
+            10
+        )
 
-        #if self.active_client_id is None or (current_time - self.last_command_time) > self.lock_timeout:
+    def listener_callback(self, msg):
+        leng = len(msg.clients)
+        if(self.first_id == None and leng != 0):
+            self.first_id = msg.clients[leng-1].connection_time.sec
+            self.old_leng = leng
+            self.get_logger().info(f"{self.first_id}")
+        elif(self.old_leng != leng):
+            self.old_leng = leng
+            if not any(client.connection_time.sec == self.first_id for client in msg.clients):
+                if (leng != 0):
+                    self.first_id = msg.clients[leng-1].connection_time.sec
+                else:
+                    self.first_id = None
+
+    def goal_callback(self, goal_request):
+        incoming_id = goal_request.client_id
+    
         if self.active_client_id is None:
             self.active_client_id = incoming_id
-            #self.last_command_time = current_time
             self.get_logger().info(f"Control locked to new client: {incoming_id}")
             return GoalResponse.ACCEPT
 

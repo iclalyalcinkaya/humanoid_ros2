@@ -25,7 +25,7 @@ def generate_launch_description():
         ),
         ExecuteProcess(
             cmd=['python3', '-m', 'http.server'],
-            cwd='/home/rasp/humanoid/webpages',
+            cwd='../webpages',
             output='screen'
         ),
     ])
