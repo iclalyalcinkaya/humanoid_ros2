@@ -4,9 +4,8 @@
   <name>ros_gz_h1_bringup</name>
   <version>0.0.0</version>
   <description>Contains launch files for the h1_gazebo_sim project</description>
-  <maintainer email="karsten.appenzeller@stud.uni-due.de">Karsten Appenzeller</maintainer>
-  <license>Apache 2.0</license>
-  <author>Karsten Appenzeller</author>
+  <maintainer email="rasp@todo.todo">rasp</maintainer>
+  <license>TODO: License declaration</license>
 
   <depend>ros_gz</depend>
   <depend>sdformat_urdf</depend>

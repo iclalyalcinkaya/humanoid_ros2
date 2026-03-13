@@ -1,0 +1,41 @@
+[1.541s] Invoking command in '/home/rasp/humanoid/robot_ws/src/ros2_heinz/h1_gazebo_sim/ros_gz_h1_controller': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rasp/humanoid/robot_ws/build/ros_gz_h1_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rasp/humanoid/robot_ws/install/ros_gz_h1_controller/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../build/ros_gz_h1_controller build --build-base /home/rasp/humanoid/robot_ws/build/ros_gz_h1_controller/build install --record /home/rasp/humanoid/robot_ws/build/ros_gz_h1_controller/install.log --single-version-externally-managed install_data
+[2.037s] running egg_info
+[2.038s] creating ../../../../build/ros_gz_h1_controller/ros_gz_h1_controller.egg-info
+[2.072s] writing ../../../../build/ros_gz_h1_controller/ros_gz_h1_controller.egg-info/PKG-INFO
+[2.072s] writing dependency_links to ../../../../build/ros_gz_h1_controller/ros_gz_h1_controller.egg-info/dependency_links.txt
+[2.072s] writing entry points to ../../../../build/ros_gz_h1_controller/ros_gz_h1_controller.egg-info/entry_points.txt
+[2.073s] writing requirements to ../../../../build/ros_gz_h1_controller/ros_gz_h1_controller.egg-info/requires.txt
+[2.073s] writing top-level names to ../../../../build/ros_gz_h1_controller/ros_gz_h1_controller.egg-info/top_level.txt
+[2.073s] writing manifest file '../../../../build/ros_gz_h1_controller/ros_gz_h1_controller.egg-info/SOURCES.txt'
+[2.147s] reading manifest file '../../../../build/ros_gz_h1_controller/ros_gz_h1_controller.egg-info/SOURCES.txt'
+[2.148s] writing manifest file '../../../../build/ros_gz_h1_controller/ros_gz_h1_controller.egg-info/SOURCES.txt'
+[2.149s] running build
+[2.149s] running build_py
+[2.149s] creating /home/rasp/humanoid/robot_ws/build/ros_gz_h1_controller/build
+[2.150s] creating /home/rasp/humanoid/robot_ws/build/ros_gz_h1_controller/build/lib
+[2.150s] creating /home/rasp/humanoid/robot_ws/build/ros_gz_h1_controller/build/lib/ros_gz_h1_controller
+[2.150s] copying ros_gz_h1_controller/__init__.py -> /home/rasp/humanoid/robot_ws/build/ros_gz_h1_controller/build/lib/ros_gz_h1_controller
+[2.151s] copying ros_gz_h1_controller/example.py -> /home/rasp/humanoid/robot_ws/build/ros_gz_h1_controller/build/lib/ros_gz_h1_controller
+[2.151s] copying ros_gz_h1_controller/example_matrix_pose.py -> /home/rasp/humanoid/robot_ws/build/ros_gz_h1_controller/build/lib/ros_gz_h1_controller
+[2.152s] running install
+[2.162s] running install_lib
+[2.200s] creating /home/rasp/humanoid/robot_ws/install/ros_gz_h1_controller/lib/python3.12/site-packages/ros_gz_h1_controller
+[2.200s] copying /home/rasp/humanoid/robot_ws/build/ros_gz_h1_controller/build/lib/ros_gz_h1_controller/__init__.py -> /home/rasp/humanoid/robot_ws/install/ros_gz_h1_controller/lib/python3.12/site-packages/ros_gz_h1_controller
+[2.200s] copying /home/rasp/humanoid/robot_ws/build/ros_gz_h1_controller/build/lib/ros_gz_h1_controller/example.py -> /home/rasp/humanoid/robot_ws/install/ros_gz_h1_controller/lib/python3.12/site-packages/ros_gz_h1_controller
+[2.201s] copying /home/rasp/humanoid/robot_ws/build/ros_gz_h1_controller/build/lib/ros_gz_h1_controller/example_matrix_pose.py -> /home/rasp/humanoid/robot_ws/install/ros_gz_h1_controller/lib/python3.12/site-packages/ros_gz_h1_controller
+[2.202s] byte-compiling /home/rasp/humanoid/robot_ws/install/ros_gz_h1_controller/lib/python3.12/site-packages/ros_gz_h1_controller/__init__.py to __init__.cpython-312.pyc
+[2.202s] byte-compiling /home/rasp/humanoid/robot_ws/install/ros_gz_h1_controller/lib/python3.12/site-packages/ros_gz_h1_controller/example.py to example.cpython-312.pyc
+[2.206s] byte-compiling /home/rasp/humanoid/robot_ws/install/ros_gz_h1_controller/lib/python3.12/site-packages/ros_gz_h1_controller/example_matrix_pose.py to example_matrix_pose.cpython-312.pyc
+[2.206s] running install_data
+[2.206s] creating /home/rasp/humanoid/robot_ws/install/ros_gz_h1_controller/share/ament_index
+[2.207s] creating /home/rasp/humanoid/robot_ws/install/ros_gz_h1_controller/share/ament_index/resource_index
+[2.207s] creating /home/rasp/humanoid/robot_ws/install/ros_gz_h1_controller/share/ament_index/resource_index/packages
+[2.207s] copying resource/ros_gz_h1_controller -> /home/rasp/humanoid/robot_ws/install/ros_gz_h1_controller/share/ament_index/resource_index/packages
+[2.209s] copying package.xml -> /home/rasp/humanoid/robot_ws/install/ros_gz_h1_controller/share/ros_gz_h1_controller
+[2.209s] running install_egg_info
+[2.248s] Copying ../../../../build/ros_gz_h1_controller/ros_gz_h1_controller.egg-info to /home/rasp/humanoid/robot_ws/install/ros_gz_h1_controller/lib/python3.12/site-packages/ros_gz_h1_controller-0.0.0-py3.12.egg-info
+[2.248s] running install_scripts
+[2.493s] Installing example script to /home/rasp/humanoid/robot_ws/install/ros_gz_h1_controller/lib/ros_gz_h1_controller
+[2.494s] Installing example_matrix_pose script to /home/rasp/humanoid/robot_ws/install/ros_gz_h1_controller/lib/ros_gz_h1_controller
+[2.494s] writing list of installed files to '/home/rasp/humanoid/robot_ws/build/ros_gz_h1_controller/install.log'
+[2.598s] Invoked command in '/home/rasp/humanoid/robot_ws/src/ros2_heinz/h1_gazebo_sim/ros_gz_h1_controller' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rasp/humanoid/robot_ws/build/ros_gz_h1_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rasp/humanoid/robot_ws/install/ros_gz_h1_controller/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../build/ros_gz_h1_controller build --build-base /home/rasp/humanoid/robot_ws/build/ros_gz_h1_controller/build install --record /home/rasp/humanoid/robot_ws/build/ros_gz_h1_controller/install.log --single-version-externally-managed install_data

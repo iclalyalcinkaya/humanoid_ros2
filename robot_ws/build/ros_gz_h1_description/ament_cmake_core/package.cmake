@@ -1,6 +1,6 @@
 set(_AMENT_PACKAGE_NAME "ros_gz_h1_description")
 set(ros_gz_h1_description_VERSION "0.0.0")
-set(ros_gz_h1_description_MAINTAINER "Karsten Appenzeller <karsten.appenzeller@stud.uni-due.de>")
+set(ros_gz_h1_description_MAINTAINER "rasp <rasp@todo.todo>")
 set(ros_gz_h1_description_BUILD_DEPENDS )
 set(ros_gz_h1_description_BUILDTOOL_DEPENDS "ament_cmake")
 set(ros_gz_h1_description_BUILD_EXPORT_DEPENDS )

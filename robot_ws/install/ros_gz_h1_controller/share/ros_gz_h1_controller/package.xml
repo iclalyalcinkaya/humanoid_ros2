@@ -4,9 +4,9 @@
   <name>ros_gz_h1_controller</name>
   <version>0.0.0</version>
   <description>ROS2 Controller for Biped H1 in Python</description>
-  <maintainer email="karsten.appenzeller@stud.uni-due.de">Karsten Appenzeller</maintainer>
-  <license>Apache-2.0</license>
-  <author>Karsten Appenzeller</author>
+  <maintainer email="rasp@todo.todo">rasp</maintainer>
+  <license>TODO: License declaration</license>
+
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
   <test_depend>ament_pep257</test_depend>
