@@ -15,10 +15,10 @@ import threading
 import time
 
 # --- CONFIGURATION ---
-MOTOR_COUNT = 14
+MOTOR_COUNT = 12
 ANGLE_FILE = "angle.json"
-MOTOR_ANGLE_LIMITS = [[0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180]]
-MOTOR_START_ANGLES = {'1': 90, '2': 90, '3': 90, '4': 90, '5': 90, '6': 90, '7': 90, '8': 90, '9': 90, '10': 90, '11': 180, '12': 90, '13': 90, '14': 90}
+MOTOR_ANGLE_LIMITS = [[0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180]]
+MOTOR_START_ANGLES = {'1': 90, '2': 90, '3': 90, '4': 90, '5': 90, '6': 90, '7': 90, '8': 90, '9': 90, '10': 90, '11': 180, '12': 90}
 
 # NEW: Map your 14 motor indices (0-13) to the Gazebo H1 joint names
 # You will need to verify the exact joint names in the URDF file
@@ -28,15 +28,13 @@ GAZEBO_JOINT_MAP = {
     2: "left_shoulder_yaw_joint",
     3: "left_elbow_joint",
     4: "left_wrist_roll_joint",
-    5: "left_wrist_pitch_joint",
-    6: "left_wrist_yaw_joint", 
-    7: "right_shoulder_pitch_joint",
-    8: "right_shoulder_roll_joint",
-    9: "right_shoulder_yaw_joint",
-    10: "right_elbow_joint",
-    11: "right_wrist_roll_joint", 
-    12: "right_wrist_pitch_joint",
-    13: "right_wrist_yaw_joint"
+    5: "right_shoulder_pitch_joint",
+    6: "right_shoulder_roll_joint", 
+    7: "right_shoulder_yaw_joint",
+    8: "right_elbow_joint",
+    9: "right_wrist_roll_joint",
+    10: "neck_pan_joint",
+    11: "neck_tilt_joint"
     }
 
 class GaziboSimServer(Node):
@@ -48,9 +46,7 @@ class GaziboSimServer(Node):
         self.first_id = None
         self.active_client_id = None
         self.old_leng = 0
-        self.current_angles = self.load_angles()
-        self.file_lock = threading.Lock()
-
+        self.current_angles = MOTOR_START_ANGLES #self.load_angles()
         # NEW: Initialize all the Gazebo publishers
         self.gazebo_pubs = {}
         for motor_idx, joint_name in GAZEBO_JOINT_MAP.items():
@@ -109,7 +105,8 @@ class GaziboSimServer(Node):
 
         motor_num = request.motor_num - 1
         target_position = float(request.target_position)
-        
+
+        '''
         if motor_num == 98:
             self.get_logger().info("Dummy goal received. Keeping websocket connection alive.")
             while not goal_handle.is_cancel_requested:
@@ -118,7 +115,7 @@ class GaziboSimServer(Node):
             self.active_client_id = None
             result.success = False
             return result
-
+        '''
         current_an = float(self.current_angles.get(str(motor_num+1), 90))
         min_angle, max_angle = MOTOR_ANGLE_LIMITS[motor_num]
         
@@ -127,15 +124,14 @@ class GaziboSimServer(Node):
             Ts = 0.1
             error_1 = In_1 = 0.0
             error = target_position - current_an
-
+            
             while abs(error) > 0.1:
-                if goal_handle.is_cancel_requested:
+                if goal_handle.is_cancel_requested or self.active_client_id is None:
                     goal_handle.canceled()
                     self.get_logger().info(f'Goal canceled by client: Motor {motor_num+1} -> {target_position}')
-                    self.save_angles_thread_safe()
                     result.success = False
                     return result
-
+           
                 Pn = Kp * error
                 In = In_1 + (Ki * error * Ts)
                 Dn = Kd * (error - error_1) / Ts
@@ -162,7 +158,6 @@ class GaziboSimServer(Node):
 
             goal_handle.succeed()
             self.get_logger().info(f"Goal Succeeded: Motor {motor_num+1} arrived at {target_position}")
-            self.save_angles_thread_safe()
             result.success = True
             return result
             
@@ -172,21 +167,6 @@ class GaziboSimServer(Node):
             self.active_client_id = None
             result.success = False
             return result
-
-    def load_angles(self):
-        if not os.path.exists(ANGLE_FILE): 
-            return MOTOR_START_ANGLES.copy()
-        try:
-            with open(ANGLE_FILE, "r") as f: 
-                return json.load(f)
-        except:
-            self.get_logger().error("Error occurred while loading angles. Using defaults.") 
-            return MOTOR_START_ANGLES.copy()
-
-    def save_angles_thread_safe(self):
-        with self.file_lock:
-            with open(ANGLE_FILE, "w") as f:
-                json.dump(self.current_angles, f, indent=4)
 
 def main(args=None):
     rclpy.init(args=args)

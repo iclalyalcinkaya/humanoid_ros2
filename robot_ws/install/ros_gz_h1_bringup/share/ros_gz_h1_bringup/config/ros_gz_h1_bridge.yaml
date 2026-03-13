@@ -79,21 +79,21 @@
   ros_type_name: "std_msgs/msg/Float64"
   gz_type_name: "gz.msgs.Double"
   direction: ROS_TO_GZ
-#- ros_topic_name: "/h1/left_wrist_pitch_joint/cmd_pos"
-#  gz_topic_name: "/model/h1_ign/joint/left_wrist_pitch_joint/0/cmd_pos"
-#  ros_type_name: "std_msgs/msg/Float64"
-#  gz_type_name: "gz.msgs.Double"
-#  direction: ROS_TO_GZ
-#- ros_topic_name: "/h1/left_wrist_roll_joint/cmd_pos"
-#  gz_topic_name: "/model/h1_ign/joint/left_wrist_roll_joint/0/cmd_pos"
-#  ros_type_name: "std_msgs/msg/Float64"
-#  gz_type_name: "gz.msgs.Double"
-#  direction: ROS_TO_GZ
-#- ros_topic_name: "/h1/left_wrist_yaw_joint/cmd_pos"
-#  gz_topic_name: "/model/h1_ign/joint/left_wrist_yaw_joint/0/cmd_pos"
-#  ros_type_name: "std_msgs/msg/Float64"
-#  gz_type_name: "gz.msgs.Double"
-#  direction: ROS_TO_GZ
+- ros_topic_name: "/h1/left_wrist_pitch_joint/cmd_pos"
+  gz_topic_name: "/model/h1_ign/joint/left_wrist_pitch_joint/0/cmd_pos"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "gz.msgs.Double"
+  direction: ROS_TO_GZ
+- ros_topic_name: "/h1/left_wrist_roll_joint/cmd_pos"
+  gz_topic_name: "/model/h1_ign/joint/left_wrist_roll_joint/0/cmd_pos"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "gz.msgs.Double"
+  direction: ROS_TO_GZ
+- ros_topic_name: "/h1/left_wrist_yaw_joint/cmd_pos"
+  gz_topic_name: "/model/h1_ign/joint/left_wrist_yaw_joint/0/cmd_pos"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "gz.msgs.Double"
+  direction: ROS_TO_GZ
 - ros_topic_name: "/h1/right_ankle_pitch_joint/cmd_pos"
   gz_topic_name: "/model/h1_ign/joint/right_ankle_pitch_joint/0/cmd_pos"
   ros_type_name: "std_msgs/msg/Float64"
@@ -144,43 +144,53 @@
   ros_type_name: "std_msgs/msg/Float64"
   gz_type_name: "gz.msgs.Double"
   direction: ROS_TO_GZ
-#- ros_topic_name: "/h1/right_wrist_pitch_joint/cmd_pos"
-#  gz_topic_name: "/model/h1_ign/joint/right_wrist_pitch_joint/0/cmd_pos"
-#  ros_type_name: "std_msgs/msg/Float64"
-#  gz_type_name: "gz.msgs.Double"
-#  direction: ROS_TO_GZ
-#- ros_topic_name: "/h1/right_wrist_roll_joint/cmd_pos"
-#  gz_topic_name: "/model/h1_ign/joint/right_wrist_roll_joint/0/cmd_pos"
-#  ros_type_name: "std_msgs/msg/Float64"
-#  gz_type_name: "gz.msgs.Double"
-#  direction: ROS_TO_GZ
-#- ros_topic_name: "/h1/right_wrist_yaw_joint/cmd_pos"
-#  gz_topic_name: "/model/h1_ign/joint/right_wrist_yaw_joint/0/cmd_pos"
-#  ros_type_name: "std_msgs/msg/Float64"
-#  gz_type_name: "gz.msgs.Double"
-#  direction: ROS_TO_GZ
+- ros_topic_name: "/h1/right_wrist_pitch_joint/cmd_pos"
+  gz_topic_name: "/model/h1_ign/joint/right_wrist_pitch_joint/0/cmd_pos"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "gz.msgs.Double"
+  direction: ROS_TO_GZ
+- ros_topic_name: "/h1/right_wrist_roll_joint/cmd_pos"
+  gz_topic_name: "/model/h1_ign/joint/right_wrist_roll_joint/0/cmd_pos"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "gz.msgs.Double"
+  direction: ROS_TO_GZ
+- ros_topic_name: "/h1/right_wrist_yaw_joint/cmd_pos"
+  gz_topic_name: "/model/h1_ign/joint/right_wrist_yaw_joint/0/cmd_pos"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "gz.msgs.Double"
+  direction: ROS_TO_GZ
 - ros_topic_name: "/h1/torso_joint/cmd_pos"
   gz_topic_name: "/model/h1_ign/joint/torso_joint/0/cmd_pos"
   ros_type_name: "std_msgs/msg/Float64"
   gz_type_name: "gz.msgs.Double"
   direction: ROS_TO_GZ
-#- ros_topic_name: "/h1/left_contact_points"
-#  gz_topic_name: "/world/demo/model/h1_ign/link/left_ankle_roll_link/sensor/contact_sensor_left/contact"
-#  ros_type_name: "ros_gz_interfaces/msg/Contacts"
-#  gz_type_name: "gz.msgs.Contacts"
-#  direction: GZ_TO_ROS  
-#- ros_topic_name: "/h1/right_contact_points"
-#  gz_topic_name: "/world/demo/model/h1_ign/link/right_ankle_roll_link/sensor/contact_sensor_right/contact"
-#  ros_type_name: "ros_gz_interfaces/msg/Contacts"
-# gz_type_name: "gz.msgs.Contacts"
-#  direction: GZ_TO_ROS  
-#- ros_topic_name: "/h1/left_ankle_joint/force_torque"
-#  gz_topic_name: "/left_ankle_joint/force_torque"
-#  ros_type_name: "geometry_msgs/msg/Wrench"
-#  gz_type_name: "gz.msgs.Wrench"
-#  direction: GZ_TO_ROS
-#- ros_topic_name: "/h1/right_ankle_joint/force_torque"
-#  gz_topic_name: "/right_ankle_joint/force_torque"
-#  ros_type_name: "geometry_msgs/msg/Wrench"
-#  gz_type_name: "gz.msgs.Wrench"
-#  direction: GZ_TO_ROS
+- ros_topic_name: "/h1/left_contact_points"
+  gz_topic_name: "/world/demo/model/h1_ign/link/left_ankle_roll_link/sensor/contact_sensor_left/contact"
+  ros_type_name: "ros_gz_interfaces/msg/Contacts"
+  gz_type_name: "gz.msgs.Contacts"
+  direction: GZ_TO_ROS  
+- ros_topic_name: "/h1/right_contact_points"
+  gz_topic_name: "/world/demo/model/h1_ign/link/right_ankle_roll_link/sensor/contact_sensor_right/contact"
+  ros_type_name: "ros_gz_interfaces/msg/Contacts"
+  gz_type_name: "gz.msgs.Contacts"
+  direction: GZ_TO_ROS  
+- ros_topic_name: "/h1/left_ankle_joint/force_torque"
+  gz_topic_name: "/left_ankle_joint/force_torque"
+  ros_type_name: "geometry_msgs/msg/Wrench"
+  gz_type_name: "gz.msgs.Wrench"
+  direction: GZ_TO_ROS
+- ros_topic_name: "/h1/right_ankle_joint/force_torque"
+  gz_topic_name: "/right_ankle_joint/force_torque"
+  ros_type_name: "geometry_msgs/msg/Wrench"
+  gz_type_name: "gz.msgs.Wrench"
+  direction: GZ_TO_ROS
+- ros_topic_name: "/h1/neck_pan_joint/cmd_pos"
+  gz_topic_name: "/model/h1_ign/joint/neck_pan_joint/0/cmd_pos"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "gz.msgs.Double"
+  direction: ROS_TO_GZ
+- ros_topic_name: "/h1/neck_tilt_joint/cmd_pos"
+  gz_topic_name: "/model/h1_ign/joint/neck_tilt_joint/0/cmd_pos"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "gz.msgs.Double"
+  direction: ROS_TO_GZ

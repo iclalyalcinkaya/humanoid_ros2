@@ -16,7 +16,7 @@ from rosbridge_msgs.msg import ConnectedClients
 MOTOR_COUNT = 14
 ANGLE_FILE = "angle.json"
 MOTOR_ANGLE_LIMITS = [[0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180]]
-MOTOR_START_ANGLES = {'1': 90, '2': 90, '3': 90, '4': 90, '5': 90, '6': 90, '7': 90, '8': 90, '9': 90, '10': 90, '11': 180, '12': 90, '13': 90, '14': 90}
+MOTOR_START_ANGLES = {'1': 90, '2': 90, '3': 90, '4': 90, '5': 90, '6': 90, '7': 90, '8': 90, '9': 90, '10': 90, '11': 90, '12': 90, '13': 90, '14': 90}
 
 class ServoActionServer(Node):
     def __init__(self):
@@ -90,15 +90,6 @@ class ServoActionServer(Node):
 
         motor_num = request.motor_num - 1
         target_position = float(request.target_position)
-        
-        if motor_num == 98: #So the connection continue
-            self.get_logger().info("Dummy goal received. Keeping websocket connection alive.")
-            while not goal_handle.is_cancel_requested:
-                time.sleep(1.0)
-            goal_handle.canceled()
-            self.active_client_id = None
-            result.success = False
-            return result
 
         current_an = float(self.current_angles.get(str(motor_num+1), 90))
         
@@ -112,7 +103,7 @@ class ServoActionServer(Node):
             error = target_position - current_an
 
             while abs(error) > 0.1:
-                if goal_handle.is_cancel_requested:
+                if goal_handle.is_cancel_requested or self.active_client_id is None:
                     goal_handle.canceled()
                     self.get_logger().info(f'Goal canceled by client: Motor {motor_num+1} -> {target_position}')
                     result.success = False
@@ -174,7 +165,7 @@ class ServoActionServer(Node):
 def main(args=None):
     rclpy.init(args=args)
     node = ServoActionServer()
-    executor = MultiThreadedExecutor(num_threads=MOTOR_COUNT+1) 
+    executor = MultiThreadedExecutor(num_threads=MOTOR_COUNT) 
     executor.add_node(node)
     try:
         executor.spin()

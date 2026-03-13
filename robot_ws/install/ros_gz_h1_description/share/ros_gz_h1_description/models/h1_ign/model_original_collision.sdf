@@ -991,7 +991,7 @@
         </material>
       </visual>
     </link>
-    <joint name='left_wrist_roll_joint' type='fixed'>
+    <joint name='left_wrist_roll_joint' type='revolute'>
       <pose relative_to='left_elbow_link'>0.121 -0.032899999999999999 -0.010999999999999999 0 0 0</pose>
       <parent>left_elbow_link</parent>
       <child>left_wrist_roll_link</child>
@@ -1046,7 +1046,7 @@
         </material>
       </visual>
     </link>
-    <joint name='left_wrist_pitch_joint' type='fixed'>
+    <joint name='left_wrist_pitch_joint' type='revolute'>
       <pose relative_to='left_wrist_roll_link'>0.086999999999999994 0 0 0 0 0</pose>
       <parent>left_wrist_roll_link</parent>
       <child>left_wrist_pitch_link</child>
@@ -1101,7 +1101,7 @@
         </material>
       </visual>
     </link>
-    <joint name='left_wrist_yaw_joint' type='fixed'>
+    <joint name='left_wrist_yaw_joint' type='revolute'>
       <pose relative_to='left_wrist_pitch_link'>0.02 0 0 0 0 0</pose>
       <parent>left_wrist_pitch_link</parent>
       <child>left_wrist_yaw_link</child>
@@ -1367,7 +1367,7 @@
         </material>
       </visual>
     </link>
-    <joint name='right_wrist_roll_joint' type='fixed'>
+    <joint name='right_wrist_roll_joint' type='revolute'>
       <pose relative_to='right_elbow_link'>0.121 0.032899999999999999 -0.010999999999999999 0 0 0</pose>
       <parent>right_elbow_link</parent>
       <child>right_wrist_roll_link</child>
@@ -1422,7 +1422,7 @@
         </material>
       </visual>
     </link>
-    <joint name='right_wrist_pitch_joint' type='fixed'>
+    <joint name='right_wrist_pitch_joint' type='revolute'>
       <pose relative_to='right_wrist_roll_link'>0.086999999999999994 0 0 0 0 0</pose>
       <parent>right_wrist_roll_link</parent>
       <child>right_wrist_pitch_link</child>
@@ -1477,7 +1477,7 @@
         </material>
       </visual>
     </link>
-    <joint name='right_wrist_yaw_joint' type='fixed'>
+    <joint name='right_wrist_yaw_joint' type='revolute'>
       <pose relative_to='right_wrist_pitch_link'>0.02 0 0 0 0 0</pose>
       <parent>right_wrist_pitch_link</parent>
       <child>right_wrist_yaw_link</child>
@@ -1547,5 +1547,57 @@
     <frame name='logo_link' attached_to='logo_joint'>
       <pose>0 0 0 0 0 0</pose>
     </frame>
+
+    <link name="neck_link">
+      <pose relative_to="torso_link">0 0 0.45 0 0 0</pose>
+      <inertial>
+        <mass>0.5</mass>
+        <inertia>
+          <ixx>0.001</ixx><ixy>0</ixy><ixz>0</ixz>
+          <iyy>0.001</iyy><iyz>0</iyz><izz>0.001</izz>
+        </inertia>
+      </inertial>
+      <visual name="neck_visual">
+        <geometry><cylinder><radius>0.03</radius><length>0.05</length></cylinder></geometry>
+        <material><ambient>0.1 0.1 0.1 1</ambient><diffuse>0.1 0.1 0.1 1</diffuse></material>
+      </visual>
+    </link>
+
+    <joint name="neck_pan_joint" type="revolute">
+      <pose relative_to="torso_link">0 0 0.45 0 0 0</pose>
+      <parent>torso_link</parent>
+      <child>neck_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit><lower>-1.57</lower><upper>1.57</upper><effort>10.0</effort><velocity>5.0</velocity></limit>
+      </axis>
+    </joint>
+
+    <link name="head_link">
+      <pose relative_to="neck_link">0 0 0.08 0 0 0</pose>
+      <inertial>
+        <mass>1.0</mass>
+        <inertia>
+          <ixx>0.01</ixx><ixy>0</ixy><ixz>0</ixz>
+          <iyy>0.01</iyy><iyz>0</iyz><izz>0.01</izz>
+        </inertia>
+      </inertial>
+      <visual name="head_visual">
+        <geometry><sphere><radius>0.08</radius></sphere></geometry>
+        <material><ambient>0.9 0.9 0.9 1</ambient><diffuse>0.9 0.9 0.9 1</diffuse></material>
+      </visual>
+    </link>
+
+    <joint name="neck_tilt_joint" type="revolute">
+      <pose relative_to="neck_link">0 0 0.025 0 0 0</pose>
+      <parent>neck_link</parent>
+      <child>head_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit><lower>-0.78</lower><upper>0.78</upper><effort>10.0</effort><velocity>5.0</velocity></limit>
+      </axis>
+    </joint>
+
+    </plugin>
   </model>
 </sdf>

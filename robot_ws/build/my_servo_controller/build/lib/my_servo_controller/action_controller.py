@@ -90,7 +90,8 @@ class ServoActionServer(Node):
 
         motor_num = request.motor_num - 1
         target_position = float(request.target_position)
-        
+
+        '''
         if motor_num == 98: #So the connection continue
             self.get_logger().info("Dummy goal received. Keeping websocket connection alive.")
             while not goal_handle.is_cancel_requested:
@@ -99,7 +100,7 @@ class ServoActionServer(Node):
             self.active_client_id = None
             result.success = False
             return result
-
+        '''
         current_an = float(self.current_angles.get(str(motor_num+1), 90))
         
         min_angle, max_angle = MOTOR_ANGLE_LIMITS[motor_num]
@@ -112,7 +113,7 @@ class ServoActionServer(Node):
             error = target_position - current_an
 
             while abs(error) > 0.1:
-                if goal_handle.is_cancel_requested:
+                if goal_handle.is_cancel_requested or self.active_client_id is None:
                     goal_handle.canceled()
                     self.get_logger().info(f'Goal canceled by client: Motor {motor_num+1} -> {target_position}')
                     result.success = False
