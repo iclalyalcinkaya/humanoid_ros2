@@ -30,6 +30,7 @@ servo_interfaces__action__MotorAngle_Goal__init(servo_interfaces__action__MotorA
   // kd
   msg->kd = 0.0f;
   // speed
+  msg->speed = 1;
   // client_id
   if (!rosidl_runtime_c__String__init(&msg->client_id)) {
     servo_interfaces__action__MotorAngle_Goal__fini(msg);

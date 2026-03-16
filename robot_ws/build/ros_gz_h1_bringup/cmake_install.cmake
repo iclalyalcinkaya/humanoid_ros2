@@ -1,4 +1,4 @@
-# Install script for directory: /home/rasp/humanoid/robot_ws/src/ros2_heinz/h1_gazebo_sim/ros_gz_h1_bringup
+# Install script for directory: /home/rasp/humanoid/robot_ws/src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_bringup
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -43,11 +43,11 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_gz_h1_bringup/launch" TYPE DIRECTORY FILES "/home/rasp/humanoid/robot_ws/src/ros2_heinz/h1_gazebo_sim/ros_gz_h1_bringup/launch/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_gz_h1_bringup/launch" TYPE DIRECTORY FILES "/home/rasp/humanoid/robot_ws/src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_bringup/launch/")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_gz_h1_bringup/config" TYPE DIRECTORY FILES "/home/rasp/humanoid/robot_ws/src/ros2_heinz/h1_gazebo_sim/ros_gz_h1_bringup/config/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_gz_h1_bringup/config" TYPE DIRECTORY FILES "/home/rasp/humanoid/robot_ws/src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_bringup/config/")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -106,7 +106,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_gz_h1_bringup" TYPE FILE FILES "/home/rasp/humanoid/robot_ws/src/ros2_heinz/h1_gazebo_sim/ros_gz_h1_bringup/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_gz_h1_bringup" TYPE FILE FILES "/home/rasp/humanoid/robot_ws/src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_bringup/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

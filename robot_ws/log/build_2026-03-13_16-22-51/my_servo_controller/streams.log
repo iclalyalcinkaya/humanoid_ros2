@@ -1,0 +1,52 @@
+[1.305s] Invoking command in '/home/rasp/humanoid/robot_ws/src/my_servo_controller': AMENT_PREFIX_PATH=/home/rasp/humanoid/robot_ws/install/servo_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rasp/humanoid/robot_ws/install/servo_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/rasp/humanoid/robot_ws/install/servo_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rasp/humanoid/robot_ws/build/my_servo_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rasp/humanoid/robot_ws/install/my_servo_controller/lib/python3.12/site-packages:/home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_servo_controller build --build-base /home/rasp/humanoid/robot_ws/build/my_servo_controller/build install --record /home/rasp/humanoid/robot_ws/build/my_servo_controller/install.log --single-version-externally-managed install_data
+[1.696s] running egg_info
+[1.697s] creating ../../build/my_servo_controller/my_servo_controller.egg-info
+[1.726s] writing ../../build/my_servo_controller/my_servo_controller.egg-info/PKG-INFO
+[1.726s] writing dependency_links to ../../build/my_servo_controller/my_servo_controller.egg-info/dependency_links.txt
+[1.726s] writing entry points to ../../build/my_servo_controller/my_servo_controller.egg-info/entry_points.txt
+[1.727s] writing requirements to ../../build/my_servo_controller/my_servo_controller.egg-info/requires.txt
+[1.727s] writing top-level names to ../../build/my_servo_controller/my_servo_controller.egg-info/top_level.txt
+[1.727s] writing manifest file '../../build/my_servo_controller/my_servo_controller.egg-info/SOURCES.txt'
+[1.790s] reading manifest file '../../build/my_servo_controller/my_servo_controller.egg-info/SOURCES.txt'
+[1.791s] writing manifest file '../../build/my_servo_controller/my_servo_controller.egg-info/SOURCES.txt'
+[1.791s] running build
+[1.791s] running build_py
+[1.791s] creating /home/rasp/humanoid/robot_ws/build/my_servo_controller/build
+[1.791s] creating /home/rasp/humanoid/robot_ws/build/my_servo_controller/build/lib
+[1.791s] creating /home/rasp/humanoid/robot_ws/build/my_servo_controller/build/lib/my_servo_controller
+[1.792s] copying my_servo_controller/gazibo_sim.py -> /home/rasp/humanoid/robot_ws/build/my_servo_controller/build/lib/my_servo_controller
+[1.792s] copying my_servo_controller/action_controller.py -> /home/rasp/humanoid/robot_ws/build/my_servo_controller/build/lib/my_servo_controller
+[1.792s] copying my_servo_controller/__init__.py -> /home/rasp/humanoid/robot_ws/build/my_servo_controller/build/lib/my_servo_controller
+[1.792s] copying my_servo_controller/servo_controller.py -> /home/rasp/humanoid/robot_ws/build/my_servo_controller/build/lib/my_servo_controller
+[1.792s] copying my_servo_controller/servo_mover.py -> /home/rasp/humanoid/robot_ws/build/my_servo_controller/build/lib/my_servo_controller
+[1.792s] running install
+[1.802s] running install_lib
+[1.832s] creating /home/rasp/humanoid/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller
+[1.832s] copying /home/rasp/humanoid/robot_ws/build/my_servo_controller/build/lib/my_servo_controller/gazibo_sim.py -> /home/rasp/humanoid/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller
+[1.832s] copying /home/rasp/humanoid/robot_ws/build/my_servo_controller/build/lib/my_servo_controller/action_controller.py -> /home/rasp/humanoid/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller
+[1.832s] copying /home/rasp/humanoid/robot_ws/build/my_servo_controller/build/lib/my_servo_controller/__init__.py -> /home/rasp/humanoid/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller
+[1.833s] copying /home/rasp/humanoid/robot_ws/build/my_servo_controller/build/lib/my_servo_controller/servo_controller.py -> /home/rasp/humanoid/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller
+[1.833s] copying /home/rasp/humanoid/robot_ws/build/my_servo_controller/build/lib/my_servo_controller/servo_mover.py -> /home/rasp/humanoid/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller
+[1.834s] byte-compiling /home/rasp/humanoid/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller/gazibo_sim.py to gazibo_sim.cpython-312.pyc
+[1.836s] byte-compiling /home/rasp/humanoid/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller/action_controller.py to action_controller.cpython-312.pyc
+[1.838s] byte-compiling /home/rasp/humanoid/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller/__init__.py to __init__.cpython-312.pyc
+[1.839s] byte-compiling /home/rasp/humanoid/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller/servo_controller.py to servo_controller.cpython-312.pyc
+[1.840s] byte-compiling /home/rasp/humanoid/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller/servo_mover.py to servo_mover.cpython-312.pyc
+[1.841s] running install_data
+[1.841s] creating /home/rasp/humanoid/robot_ws/install/my_servo_controller/share/ament_index
+[1.841s] creating /home/rasp/humanoid/robot_ws/install/my_servo_controller/share/ament_index/resource_index
+[1.841s] creating /home/rasp/humanoid/robot_ws/install/my_servo_controller/share/ament_index/resource_index/packages
+[1.841s] copying resource/my_servo_controller -> /home/rasp/humanoid/robot_ws/install/my_servo_controller/share/ament_index/resource_index/packages
+[1.841s] copying package.xml -> /home/rasp/humanoid/robot_ws/install/my_servo_controller/share/my_servo_controller
+[1.841s] creating /home/rasp/humanoid/robot_ws/install/my_servo_controller/share/my_servo_controller/launch
+[1.841s] copying launch/gazibo_sim_launch.py -> /home/rasp/humanoid/robot_ws/install/my_servo_controller/share/my_servo_controller/launch
+[1.842s] copying launch/action_controller_launch.py -> /home/rasp/humanoid/robot_ws/install/my_servo_controller/share/my_servo_controller/launch
+[1.842s] running install_egg_info
+[1.874s] Copying ../../build/my_servo_controller/my_servo_controller.egg-info to /home/rasp/humanoid/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller-0.0.0-py3.12.egg-info
+[1.875s] running install_scripts
+[2.091s] Installing action_controller_node script to /home/rasp/humanoid/robot_ws/install/my_servo_controller/lib/my_servo_controller
+[2.092s] Installing gazibo_sim_node script to /home/rasp/humanoid/robot_ws/install/my_servo_controller/lib/my_servo_controller
+[2.092s] Installing servo_controller_node script to /home/rasp/humanoid/robot_ws/install/my_servo_controller/lib/my_servo_controller
+[2.093s] Installing servo_mover_node script to /home/rasp/humanoid/robot_ws/install/my_servo_controller/lib/my_servo_controller
+[2.093s] writing list of installed files to '/home/rasp/humanoid/robot_ws/build/my_servo_controller/install.log'
+[2.175s] Invoked command in '/home/rasp/humanoid/robot_ws/src/my_servo_controller' returned '0': AMENT_PREFIX_PATH=/home/rasp/humanoid/robot_ws/install/servo_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rasp/humanoid/robot_ws/install/servo_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/rasp/humanoid/robot_ws/install/servo_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rasp/humanoid/robot_ws/build/my_servo_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rasp/humanoid/robot_ws/install/my_servo_controller/lib/python3.12/site-packages:/home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_servo_controller build --build-base /home/rasp/humanoid/robot_ws/build/my_servo_controller/build install --record /home/rasp/humanoid/robot_ws/build/my_servo_controller/install.log --single-version-externally-managed install_data

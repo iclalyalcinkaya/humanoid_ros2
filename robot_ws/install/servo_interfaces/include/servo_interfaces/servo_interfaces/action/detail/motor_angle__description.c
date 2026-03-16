@@ -203,9 +203,9 @@ servo_interfaces__action__MotorAngle_FeedbackMessage__get_type_hash(
 #include <string.h>
 
 // Include directives for referenced types
-#include "unique_identifier_msgs/msg/detail/uuid__functions.h"
-#include "builtin_interfaces/msg/detail/time__functions.h"
 #include "service_msgs/msg/detail/service_event_info__functions.h"
+#include "builtin_interfaces/msg/detail/time__functions.h"
+#include "unique_identifier_msgs/msg/detail/uuid__functions.h"
 
 // Hashes for external referenced types
 #ifndef NDEBUG
@@ -426,6 +426,7 @@ static char servo_interfaces__action__MotorAngle_Goal__DEFAULT_VALUE__ki[] = "0.
 static char servo_interfaces__action__MotorAngle_Goal__FIELD_NAME__kd[] = "kd";
 static char servo_interfaces__action__MotorAngle_Goal__DEFAULT_VALUE__kd[] = "0.0";
 static char servo_interfaces__action__MotorAngle_Goal__FIELD_NAME__speed[] = "speed";
+static char servo_interfaces__action__MotorAngle_Goal__DEFAULT_VALUE__speed[] = "1";
 static char servo_interfaces__action__MotorAngle_Goal__FIELD_NAME__client_id[] = "client_id";
 
 static rosidl_runtime_c__type_description__Field servo_interfaces__action__MotorAngle_Goal__FIELDS[] = {
@@ -487,7 +488,7 @@ static rosidl_runtime_c__type_description__Field servo_interfaces__action__Motor
       0,
       {NULL, 0, 0},
     },
-    {NULL, 0, 0},
+    {servo_interfaces__action__MotorAngle_Goal__DEFAULT_VALUE__speed, 1, 1},
   },
   {
     {servo_interfaces__action__MotorAngle_Goal__FIELD_NAME__client_id, 9, 9},
@@ -1240,7 +1241,7 @@ static char toplevel_type_raw_source[] =
   "float32 kp 0.03\n"
   "float32 ki 0.0\n"
   "float32 kd 0.0\n"
-  "uint8 speed\n"
+  "uint8 speed 1\n"
   "string client_id\n"
   "---\n"
   "bool success\n"
@@ -1260,7 +1261,7 @@ servo_interfaces__action__MotorAngle__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {servo_interfaces__action__MotorAngle__TYPE_NAME, 34, 34},
     {action_encoding, 6, 6},
-    {toplevel_type_raw_source, 156, 156},
+    {toplevel_type_raw_source, 158, 158},
   };
   return &source;
 }

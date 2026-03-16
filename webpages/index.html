@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>12-Motor Servo Action Control</title>
+    <title>Humanoid Robot Servo Motor Action Control</title>
     
     <script src="https://unpkg.com/eventemitter3@latest/dist/eventemitter3.umd.min.js"></script>
     <script>
@@ -30,15 +30,16 @@
         .step-btn { padding: 2px 6px; cursor: pointer; border: 1px solid #cbd5e1; border-radius: 4px; background: #e2e8f0; font-size: 12px; font-weight: bold; color: #334155; transition: 0.1s;}
         .step-btn:hover { background: #cbd5e1; }
         .pid-group { display: flex; align-items: center; gap: 4px; margin: 0 10px; }
+
     </style>
 </head>
 
 <body>
     <div class="card">
-        <h1>Servo Action Interface</h1>
+        <h1>Humanoid Robot Servo Motor Action Control</h1>
         
         <div id="statusIndicator" class="status disconnected">
-            <span id="connecting">Connecting to 192.168.137.72...</span>
+            <span id="connecting">Connecting...</span>
             <span id="connected" style="display:none;">Connected to Robot</span>
             <span id="error" style="display:none;">Error in backend!</span>
             <span id="closed" style="display:none;">Connection closed.</span>
@@ -83,7 +84,19 @@
         </div>
 
         <div class="control-row" style="justify-content: center; gap: 20px;">
-            <button class="btn" onclick="cancelAll()" style="background: #a855f7;">STOP ALL</button>
+            <button class="btn" onclick="cancelAll()">STOP ALL</button>
+            <div class="pid-group">
+                <label for="speed">Speed:</label>
+                <button class="step-btn" onclick="adjustSpeed('speed', -10)">-10</button>
+                <button class="step-btn" onclick="adjustSpeed('speed', -1)">-1</button>
+                <input type="number" id="speed" value="5" step="0.1" style="width:65px; text-align:center;">
+                <button class="step-btn" onclick="adjustSpeed('speed', 1)">+1</button>
+                <button class="step-btn" onclick="adjustSpeed('speed', 10)">+10</button>
+            </div>
+            <div class="pid-group">
+                <input type="text" id="robotIp" value="10.225.237.128" style="padding: 5px; width: 120px;">
+                <button class="btn" onclick="connectToROS()">Connect</button>
+            </div>
         </div>
 
         <hr>
@@ -92,14 +105,15 @@
     </div>
 
     <script>
+        //Randomize a client ID
         const myClientId = "client_" + Math.random().toString(36).substr(2, 9);
         console.log("My Client ID is:", myClientId);
 
         // --- 1. PRESET CONFIGURATION ---
         const modeAngles = {
-            1: [90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90], 
-            2: [90, 90, 90, 90, 90, 80, 60, 20, 80, 90, 90, 90], 
-            3: [80, 110, 50, 50, 90, 80, 70, 130, 50, 90, 90, 90],
+            1: [10, 81, 40, 90, 90, 170, 100, 60, 80, 90, 90, 90], 
+            2: [90, 90, 90, 90, 90, 20, 60, 80, 80, 90, 90, 90], 
+            3: [60, 105, 60, 60, 90, 120, 75, 60, 60, 90, 90, 90],
             4: [90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90],
         };
 
@@ -107,6 +121,12 @@
             let inputField = document.getElementById(paramId);
             let newVal = parseFloat(inputField.value) + delta;
             inputField.value = newVal.toFixed(3); // Keep it strictly to 3 decimal places
+        }
+
+        function adjustSpeed(paramId, delta) {
+            let inputField = document.getElementById(paramId);
+            let newVal = parseFloat(inputField.value) + delta;
+            inputField.value = newVal.toFixed(0); // Keep it strictly to 3 decimal places
         }
 
         function adjustMotor(motorId, delta) {
@@ -143,38 +163,45 @@
 
         // --- 3. CONNECT TO ROS ---
         //192.168.137.72
-        var ros = new ROSLIB.Ros({ url : 'ws://10.225.237.128:9090' });
+        let ros;
+        let moveService;
+        let servoActionClient;
 
-        ros.on('error', function(error) {
-            document.getElementById('statusIndicator').className = "status disconnected";
-            document.getElementById('connecting').style.display = 'none';
-            document.getElementById('connected').style.display = 'none';
-            document.getElementById('closed').style.display = 'none';
-            document.getElementById('error').style.display = 'inline';
-        });
+        function connectToROS() {
+            const ip = document.getElementById('robotIp').value;
+            if(!ip) { alert("Please enter an IP address"); return; }        
+            ros = new ROSLIB.Ros({ url: 'ws://' + ip + ':9090' });
 
-        ros.on('connection', function() {
-            document.getElementById('statusIndicator').className = "status connected";
-            document.getElementById('connecting').style.display = 'none';
-            document.getElementById('error').style.display = 'none';
-            document.getElementById('closed').style.display = 'none';
-            document.getElementById('connected').style.display = 'inline';
-        });
+            ros.on('error', function(error) {
+                document.getElementById('statusIndicator').className = "status disconnected";
+                document.getElementById('connecting').style.display = 'none';
+                document.getElementById('connected').style.display = 'none';
+                document.getElementById('closed').style.display = 'none';
+                document.getElementById('error').style.display = 'inline';
+            });
 
-        ros.on('close', function() {
-            document.getElementById('statusIndicator').className = "status disconnected";
-            document.getElementById('connecting').style.display = 'none';
-            document.getElementById('connected').style.display = 'none';
-            document.getElementById('closed').style.display = 'inline';
-        });
+            ros.on('connection', function() {
+                document.getElementById('statusIndicator').className = "status connected";
+                document.getElementById('connecting').style.display = 'none';
+                document.getElementById('error').style.display = 'none';
+                document.getElementById('closed').style.display = 'none';
+                document.getElementById('connected').style.display = 'inline';
+            });
 
-        // --- 4. DEFINE THE ACTION CLIENT ---
-        var servoActionClient = new ROSLIB.Action({
-            ros : ros,
-            name : '/move_servo',
-            actionType : 'servo_interfaces/action/MotorAngle' 
-        });
-        
+            ros.on('close', function() {
+                document.getElementById('statusIndicator').className = "status disconnected";
+                document.getElementById('connecting').style.display = 'none';
+                document.getElementById('connected').style.display = 'none';
+                document.getElementById('closed').style.display = 'inline';
+            });
+
+            // --- 4. DEFINE THE ACTION CLIENT ---
+            servoActionClient = new ROSLIB.Action({
+                ros : ros,
+                name : '/move_servo',
+                actionType : 'servo_interfaces/action/MotorAngle' 
+            });
+        }
         /*
         var statusSub = new ROSLIB.Topic({
             ros: ros,
@@ -182,26 +209,20 @@
             messageType: 'action_msgs/msg/GoalStatusArray'
         });
 
-        let accept = 0;
         statusSub.subscribe(function(message) {
             let length = message.status_list.length;
-            //console.log(length);
             let goalData = message.status_list[length-1];
-            //console.log(goalData);
             let statusCode = goalData.status;
-            let rawByteArray = goalData.goal_info.goal_id.uuid; 
             
-            if (statusCode === 6) { // 6 = ABORTED
+            if (statusCode === 6) {
                 console.error(`SERVER ALERT: Goal ABORTED! ${rawByteArray}`); 
                 cancelAll();
             }else if (statusCode === 3) { 
                 console.warn(`SERVER ALERT: Goal CANCELING. ${rawByteArray}`);
             }else if (statusCode === 1) { 
                 console.log(`Goal ACCEPTED. ${rawByteArray}`);
-                accept = 1;
             }
-        });
-        */
+        });*/
 
         let activeGoals = {};
         let currentSequenceToken = 0; // Tracks the currently active sequence
@@ -226,26 +247,16 @@
                     ki: parseFloat(document.getElementById('ki').value),
                     kd: parseFloat(document.getElementById('kd').value),
                     client_id: myClientId,
-                    //speed: 5
+                    speed: parseFloat(document.getElementById('speed').value),
                 };
 
-                /*
-                let rejectionWatchdog = setTimeout(() => {
-                    console.error(`Motor ${motorId} was REJECTED or dropped by the server!`);
-                    document.getElementById(`label${motorId}`).innerText = "REJECTED";
-                    document.getElementById(`label${motorId}`).style.color = "#dc3545"; 
-                    delete activeGoals[motorId];
-                    resolve(false); // Resolve so the loop doesn't freeze
-                }, 2000);
-                */
-
-                activeGoals[motorId] = servoActionClient.sendGoal(goal,  
+                activeGoals[motorId] = servoActionClient.sendGoal(goal,
                     function(result) {
                         // Action finished!
                         document.getElementById(`label${motorId}`).innerText = pos + "°";
                         document.getElementById(`label${motorId}`).style.color = "#22c55e";
                         delete activeGoals[motorId]; // Clear active goal
-                        if(myToken && i <= 12 && currentSequenceToken === myToken) i++;
+                        //if(myToken && i <= 12 && currentSequenceToken === myToken) i++;
                         resolve(true); // Tell the Promise we are done so the next motor can start
                     },
                     function(feedback) {
@@ -253,10 +264,6 @@
                         var currentPos = feedback.current_position !== undefined ? feedback.current_position : feedback.feedback.current_position;
                         document.getElementById(`label${motorId}`).innerText = currentPos + "°";
                         document.getElementById(`label${motorId}`).style.color = "#f59e0b";
-                        if(myToken && currentSequenceToken !== myToken) {
-                            // If the token doesn't match, it means a new command has taken over, so we should stop this motor immediately
-                            servoActionClient.cancelGoal(activeGoals[motorId]);
-                        }                       
                     },
                     function(failedMsg) {//????
                         console.error(`Motor ${motorId} goal was explicitly REJECTED!`, failedMsg);
@@ -280,33 +287,44 @@
             document.getElementById(`btnMode${modeNum}`).classList.add('active');
 
             console.log(`Applying Mode ${modeNum} Sequentially...`);
-            if(modeNum === 1) { //In mode 1 first move the left arm
-                i = 8;
-                while (currentSequenceToken === myToken && i<=12) {
-                    let targetAngle = angles[i - 1]; 
-                    // Pause and wait for the motor to finish
-                    await sendMotorGoal(i, targetAngle, myToken);
-                }
+           
+            if(modeNum == 1){
+                i = 12;
+            }else{
+                i = 1;
             }
-            i = 1;
-            while (currentSequenceToken === myToken && i<=12 && (modeNum !== 1 || i <= 7)) {
+            while (currentSequenceToken === myToken && i<=12 && (modeNum !== 1 || i >= 1)) {
                 let targetAngle = angles[i - 1];
                 await sendMotorGoal(i, targetAngle, myToken);
+                if(modeNum == 1){
+                    i--;
+                }else{
+                    i++;
+                }
             }
             if(modeNum === 2 && currentSequenceToken === myToken) {
                 let wave = angles[8]
                 while (currentSequenceToken === myToken) {
-                    wave = wave === 80 ? 60 : 80; // Toggle between two angles
+                    wave = wave === 80 ? 50 : 80; // Toggle between two angles
                     await sendMotorGoal(9, wave, myToken);
                 }
             }else if(modeNum === 3 && currentSequenceToken === myToken) {
-                let elbow = angles[3]
-                let sholder_roll = angles[2]
+                let L_elbow = angles[3]
+                let L_sholder_pitch = angles[2]
+                let R_elbow = angles[8]
+                let R_sholder_pitch = angles[7]
+                let neck_pitch = angles[10]
                 while (currentSequenceToken === myToken) {
-                    elbow = elbow === 0 ? 10 : 0;
-                    sholder_roll = sholder_roll === 80 ? 60 : 80; 
-                    sendMotorGoal(4, elbow, myToken);
-                    await sendMotorGoal(3, sholder_roll, myToken);
+                    L_elbow = L_elbow === 60 ? 65 : 60;
+                    L_sholder_pitch = L_sholder_pitch === 60 ? 50 : 60;
+                    R_elbow = R_elbow === 60 ? 65 : 60;
+                    R_sholder_pitch = R_sholder_pitch === 60 ? 50 : 60;
+                    neck_pitch = neck_pitch === 90 ? 80 : 90;  
+                    sendMotorGoal(4, L_elbow, myToken);
+                    sendMotorGoal(9, R_elbow, myToken);
+                    sendMotorGoal(3, L_sholder_pitch, myToken);
+                    sendMotorGoal(8, R_sholder_pitch, myToken);                    
+                    await sendMotorGoal(11, neck_pitch, myToken);
                 }
             }
             // Un-highlight the button only if THIS sequence actually finished uninterrupted
@@ -325,11 +343,10 @@
         function cancelAll(isInternal = false) {
             console.log("Canceling active goals...");
             if (!isInternal) {
-                currentSequenceToken = 0; // Break any active loops if the user clicked "STOP ALL"
+                currentSequenceToken = 0; // Break any active loops
                 document.querySelectorAll('.mode-btn').forEach(btn => btn.classList.remove('active'));
             }
             for (let motorId in activeGoals) {
-                //console.log(`ID =  ${activeGoals[motorId]}, motorId = ${motorId}`);
                 servoActionClient.cancelGoal(activeGoals[motorId]);      
                 delete activeGoals[motorId];
             }

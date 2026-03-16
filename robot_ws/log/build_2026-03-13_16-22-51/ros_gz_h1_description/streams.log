@@ -1,0 +1,140 @@
+[0.019s] Invoking command in '/home/rasp/humanoid/robot_ws/build/ros_gz_h1_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/rasp/humanoid/robot_ws/src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_description -DCMAKE_INSTALL_PREFIX=/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description
+[0.135s] -- The C compiler identification is GNU 13.3.0
+[0.250s] -- The CXX compiler identification is GNU 13.3.0
+[0.279s] -- Detecting C compiler ABI info
+[0.462s] -- Detecting C compiler ABI info - done
+[0.478s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.478s] -- Detecting C compile features
+[0.479s] -- Detecting C compile features - done
+[0.494s] -- Detecting CXX compiler ABI info
+[0.706s] -- Detecting CXX compiler ABI info - done
+[0.723s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.723s] -- Detecting CXX compile features
+[0.723s] -- Detecting CXX compile features - done
+[0.729s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.998s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.230s] -- Found ament_lint_auto: 0.17.4 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[1.385s] -- Configuring done (1.4s)
+[1.389s] -- Generating done (0.0s)
+[1.392s] -- Build files have been written to: /home/rasp/humanoid/robot_ws/build/ros_gz_h1_description
+[1.401s] Invoked command in '/home/rasp/humanoid/robot_ws/build/ros_gz_h1_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/rasp/humanoid/robot_ws/src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_description -DCMAKE_INSTALL_PREFIX=/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description
+[1.403s] Invoking command in '/home/rasp/humanoid/robot_ws/build/ros_gz_h1_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/rasp/humanoid/robot_ws/build/ros_gz_h1_description -- -j4 -l4
+[1.480s] Invoked command in '/home/rasp/humanoid/robot_ws/build/ros_gz_h1_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/rasp/humanoid/robot_ws/build/ros_gz_h1_description -- -j4 -l4
+[1.500s] Invoking command in '/home/rasp/humanoid/robot_ws/build/ros_gz_h1_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/rasp/humanoid/robot_ws/build/ros_gz_h1_description
+[1.517s] -- Install configuration: ""
+[1.517s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models
+[1.517s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign
+[1.517s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/h1_2_handless.urdf
+[1.517s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/model_original_collision.sdf
+[1.517s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/model.sdf
+[1.518s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes
+[1.518s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/L_thumb_intermediate.STL
+[1.519s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/L_thumb_distal.STL
+[1.520s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/link14_L.STL
+[1.520s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/right_shoulder_yaw_link.STL
+[1.524s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/left_ankle_A_rod_link.STL
+[1.525s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/left_ankle_A_link.STL
+[1.525s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/left_hand_link.STL
+[1.526s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/R_pinky_intermediate.STL
+[1.527s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/R_ring_proximal.STL
+[1.530s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/link21_L.STL
+[1.530s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/L_ring_intermediate.STL
+[1.530s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/R_index_intermediate.STL
+[1.530s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/L_middle_proximal.STL
+[1.537s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/right_ankle_B_rod_link.STL
+[1.537s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/link22_L.STL
+[1.537s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/link11_R.STL
+[1.537s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/torso_link.STL
+[1.538s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/wrist_yaw_link.STL
+[1.538s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/L_pinky_intermediate.STL
+[1.539s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/left_ankle_roll_link.STL
+[1.539s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/R_middle_proximal.STL
+[1.540s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/right_wrist_roll_link.STL
+[1.543s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/left_ankle_pitch_link.STL
+[1.543s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/L_thumb_proximal.STL
+[1.545s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/link16_R.STL
+[1.546s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/R_ring_intermediate.STL
+[1.546s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/R_thumb_distal.STL
+[1.547s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/R_index_proximal.STL
+[1.553s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/R_thumb_proximal_base.STL
+[1.553s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/L_ring_proximal.STL
+[1.553s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/link19_L.STL
+[1.553s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/L_middle_intermediate.STL
+[1.554s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/right_wrist_pitch_link.STL
+[1.554s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/left_wrist_pitch_link.STL
+[1.554s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/link13_R.STL
+[1.554s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/link15_R.STL
+[1.555s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/link18_L.STL
+[1.556s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/link11_L.STL
+[1.556s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/logo_link.STL
+[1.556s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/link19_R.STL
+[1.557s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/right_ankle_roll_link.STL
+[1.557s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/R_hand_base_link.STL
+[1.560s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/right_pitch_link.STL
+[1.561s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/R_thumb_proximal.STL
+[1.563s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/right_ankle_B_link.STL
+[1.563s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/left_shoulder_yaw_link.STL
+[1.566s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/link17_L.STL
+[1.568s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/left_ankle_B_link.STL
+[1.568s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/link20_L.STL
+[1.569s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/link20_R.STL
+[1.570s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/right_ankle_A_rod_link.STL
+[1.570s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/left_shoulder_pitch_link.STL
+[1.573s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/right_shoulder_roll_link.STL
+[1.577s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/left_elbow_link.STL
+[1.579s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/link12_L.STL
+[1.582s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/right_hip_pitch_link.STL
+[1.585s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/link17_R.STL
+[1.585s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/left_ankle_B_rod_link.STL
+[1.585s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/link15_L.STL
+[1.587s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/right_knee_link.STL
+[1.588s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/R_middle_intermediate.STL
+[1.588s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/link12_R.STL
+[1.591s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/right_ankle_pitch_link.STL
+[1.593s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/right_shoulder_pitch_link.STL
+[1.596s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/R_thumb_intermediate.STL
+[1.597s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/left_hip_pitch_link.STL
+[1.599s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/right_hand_link.STL
+[1.599s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/left_knee_link.STL
+[1.600s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/L_index_proximal.STL
+[1.601s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/L_hand_base_link.STL
+[1.603s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/link18_R.STL
+[1.604s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/pelvis.STL
+[1.605s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/left_shoulder_roll_link.STL
+[1.609s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/right_hip_yaw_link.STL
+[1.610s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/link22_R.STL
+[1.611s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/link16_L.STL
+[1.612s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/L_thumb_proximal_base.STL
+[1.612s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/R_pinky_proximal.STL
+[1.613s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/right_ankle_link.STL
+[1.614s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/link14_R.STL
+[1.615s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/L_index_intermediate.STL
+[1.616s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/link21_R.STL
+[1.617s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/link13_L.STL
+[1.618s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/left_hip_yaw_link.STL
+[1.619s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/right_hip_roll_link.STL
+[1.620s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/left_hip_roll_link.STL
+[1.621s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/left_wrist_roll_link.STL
+[1.623s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/right_elbow_link.STL
+[1.625s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/right_ankle_A_link.STL
+[1.626s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/meshes/L_pinky_proximal.STL
+[1.626s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/model.config
+[1.627s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models/h1_ign/h1_2.urdf
+[1.627s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/environment/ros_gz_h1_description.dsv
+[1.627s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/environment/ros_gz_h1_description.sh
+[1.628s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ament_index/resource_index/package_run_dependencies/ros_gz_h1_description
+[1.628s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ament_index/resource_index/parent_prefix_path/ros_gz_h1_description
+[1.628s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/environment/ament_prefix_path.sh
+[1.628s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/environment/ament_prefix_path.dsv
+[1.628s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/environment/path.sh
+[1.629s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/environment/path.dsv
+[1.629s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/local_setup.bash
+[1.629s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/local_setup.sh
+[1.629s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/local_setup.zsh
+[1.629s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/local_setup.dsv
+[1.630s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/package.dsv
+[1.630s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ament_index/resource_index/packages/ros_gz_h1_description
+[1.630s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/cmake/ros_gz_h1_descriptionConfig.cmake
+[1.630s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/cmake/ros_gz_h1_descriptionConfig-version.cmake
+[1.630s] -- Installing: /home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/package.xml
+[1.634s] Invoked command in '/home/rasp/humanoid/robot_ws/build/ros_gz_h1_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/rasp/humanoid/robot_ws/build/ros_gz_h1_description

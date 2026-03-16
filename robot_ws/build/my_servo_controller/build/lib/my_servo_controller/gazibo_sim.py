@@ -16,21 +16,20 @@ import time
 
 # --- CONFIGURATION ---
 MOTOR_COUNT = 12
-ANGLE_FILE = "angle.json"
 MOTOR_ANGLE_LIMITS = [[0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180]]
 MOTOR_START_ANGLES = {'1': 90, '2': 90, '3': 90, '4': 90, '5': 90, '6': 90, '7': 90, '8': 90, '9': 90, '10': 90, '11': 180, '12': 90}
 
 # NEW: Map your 14 motor indices (0-13) to the Gazebo H1 joint names
 # You will need to verify the exact joint names in the URDF file
 GAZEBO_JOINT_MAP = {
-    0: "left_shoulder_pitch_joint",
+    0: "left_shoulder_yaw_joint",
     1: "left_shoulder_roll_joint",
-    2: "left_shoulder_yaw_joint",
+    2: "left_shoulder_pitch_joint",
     3: "left_elbow_joint",
     4: "left_wrist_roll_joint",
-    5: "right_shoulder_pitch_joint",
+    5: "right_shoulder_yaw_joint",
     6: "right_shoulder_roll_joint", 
-    7: "right_shoulder_yaw_joint",
+    7: "right_shoulder_pitch_joint",
     8: "right_elbow_joint",
     9: "right_wrist_roll_joint",
     10: "neck_pan_joint",
@@ -106,41 +105,27 @@ class GaziboSimServer(Node):
         motor_num = request.motor_num - 1
         target_position = float(request.target_position)
 
-        '''
-        if motor_num == 98:
-            self.get_logger().info("Dummy goal received. Keeping websocket connection alive.")
-            while not goal_handle.is_cancel_requested:
-                time.sleep(1.0)
-            goal_handle.canceled()
-            self.active_client_id = None
-            result.success = False
-            return result
-        '''
         current_an = float(self.current_angles.get(str(motor_num+1), 90))
         min_angle, max_angle = MOTOR_ANGLE_LIMITS[motor_num]
         
         if 0 <= motor_num < MOTOR_COUNT and min_angle <= target_position <= max_angle:
             Kp, Ki, Kd = request.kp, request.ki, request.kd
+            Speed = request.speed
             Ts = 0.1
-            error_1 = In_1 = 0.0
             error = target_position - current_an
-            
             while abs(error) > 0.1:
                 if goal_handle.is_cancel_requested or self.active_client_id is None:
                     goal_handle.canceled()
                     self.get_logger().info(f'Goal canceled by client: Motor {motor_num+1} -> {target_position}')
                     result.success = False
                     return result
-           
-                Pn = Kp * error
-                In = In_1 + (Ki * error * Ts)
-                Dn = Kd * (error - error_1) / Ts
-                control = int(Pn + In + Dn)
                 
-                if control == 0 and abs(error) > 0:
-                    control = 1 if error > 0 else -1
+                if(abs(error) < abs(Speed) and abs(Speed) != 1):
+                    Speed = 1
+                if(error < 0 and Speed > 0):
+                    Speed *= -1
                 
-                current_an = max(min_angle, min(max_angle, current_an + control))
+                current_an = max(min_angle, min(max_angle, current_an + Speed))
                 
                 if motor_num in self.gazebo_pubs:
                     msg = Float64()
@@ -152,7 +137,6 @@ class GaziboSimServer(Node):
                 goal_handle.publish_feedback(feedback_msg)
 
                 self.current_angles[str(motor_num+1)] = int(current_an)
-                In_1, error_1 = In, error
                 error = target_position - current_an
                 time.sleep(Ts)
 
@@ -171,7 +155,7 @@ class GaziboSimServer(Node):
 def main(args=None):
     rclpy.init(args=args)
     node = GaziboSimServer()
-    executor = MultiThreadedExecutor(num_threads=MOTOR_COUNT+1) 
+    executor = MultiThreadedExecutor(num_threads=MOTOR_COUNT) 
     executor.add_node(node)
     try:
         executor.spin()

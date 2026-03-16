@@ -45,6 +45,7 @@ struct MotorAngle_Goal_
       this->kp = 0.03f;
       this->ki = 0.0f;
       this->kd = 0.0f;
+      this->speed = 1;
     } else if (rosidl_runtime_cpp::MessageInitialization::ZERO == _init) {
       this->motor_num = 0;
       this->target_position = 0;
@@ -59,7 +60,6 @@ struct MotorAngle_Goal_
     {
       this->motor_num = 0;
       this->target_position = 0;
-      this->speed = 0;
       this->client_id = "";
     }
   }
@@ -73,6 +73,7 @@ struct MotorAngle_Goal_
       this->kp = 0.03f;
       this->ki = 0.0f;
       this->kd = 0.0f;
+      this->speed = 1;
     } else if (rosidl_runtime_cpp::MessageInitialization::ZERO == _init) {
       this->motor_num = 0;
       this->target_position = 0;
@@ -87,7 +88,6 @@ struct MotorAngle_Goal_
     {
       this->motor_num = 0;
       this->target_position = 0;
-      this->speed = 0;
       this->client_id = "";
     }
   }

@@ -656,7 +656,7 @@ ros_gz_h1_gazebo_BINARY_DIR:STATIC=/home/rasp/humanoid/robot_ws/build/ros_gz_h1_
 ros_gz_h1_gazebo_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-ros_gz_h1_gazebo_SOURCE_DIR:STATIC=/home/rasp/humanoid/robot_ws/src/ros2_heinz/h1_gazebo_sim/ros_gz_h1_gazebo
+ros_gz_h1_gazebo_SOURCE_DIR:STATIC=/home/rasp/humanoid/robot_ws/src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_gazebo
 
 //The directory containing a CMake configuration file for sdformat14.
 sdformat14_DIR:PATH=/opt/ros/jazzy/opt/sdformat_vendor/lib/cmake/sdformat14
@@ -895,7 +895,7 @@ CMAKE_GENERATOR_TOOLSET:INTERNAL=
 CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=/home/rasp/humanoid/robot_ws/src/ros2_heinz/h1_gazebo_sim/ros_gz_h1_gazebo
+CMAKE_HOME_DIRECTORY:INTERNAL=/home/rasp/humanoid/robot_ws/src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_gazebo
 //Install .so files without execute permission.
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER

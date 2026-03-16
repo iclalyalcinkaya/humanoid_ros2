@@ -12,6 +12,8 @@ ros2 launch my_servo_controller action_controller_launch.py
 ```
 [Web sayfası](http://localhost:8000/)
 
+IP adresini gir ve bağlan.
+
 ## ROS2LIBJS
 HTML yazarken eski roslibjs kullanıldığında action veri paket isimlendirme şekli ROS’tan ROS2’ye değiştiğinden hata veriyordu. Bu yüzden farklı bir paket kullanılması gerekiyordu.
 

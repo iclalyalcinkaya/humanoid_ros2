@@ -1662,8 +1662,8 @@
       <geometry>
         <sphere radius="0.08"/>
       </geometry>
-      <material name="white">
-        <color rgba="0.9 0.9 0.9 1"/> 
+      <material name="dark">
+        <color rgba="0.1 0.1 0.1 1"/> 
       </material>
     </visual>
   </link>

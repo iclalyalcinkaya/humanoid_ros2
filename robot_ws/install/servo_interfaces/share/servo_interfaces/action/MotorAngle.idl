@@ -19,6 +19,7 @@ module servo_interfaces {
       @default (value=0.0)
       float kd;
 
+      @default (value=1)
       uint8 speed;
 
       string client_id;
