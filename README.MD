@@ -3,6 +3,12 @@
 [<img src="https://github.com/iclalyalcinkaya/humanoid_ros2/raw/main/assets/gazibo_mod_ss.png" width="50%">](https://github.com/iclalyalcinkaya/humanoid_ros2/raw/main/assets/gazibo_mods_1.mp4)
 
 ## LAUNCHING
+# GEREKSİNİMLER
+* ROS2
+* Gazebo (Eğer simülasyon çalıştırılacaksa)
+* `rosbridge_suite` paketi
+* Python kütüphanesi: `pip install adafruit-circuitpython-servokit`
+
 ```
 git clone https://github.com/iclalyalcinkaya/humanoid_ros2.git
 ```
@@ -99,3 +105,9 @@ IP adresini gir ve bağlan.
 Çarpmayı algılayamadan devam edebilir. Onun için bir hata durumu koymalı veya acil durum butonu yeterli olur.
 
 Launch dosyası olarak çalıştırınca ve düzgün bir şekilde kapatılmaz ise node durmuyor. Hayalet olarak çalışmaya devam ediyor.
+
+## DAHA FAZLA
+Orijinal Unitree H1 simülasyon modeline eklemeler yapılmıştır.
+* **Özel Boyun Eklemi:** Orijinal modelde bulunmayan, 2 eksenli (Pan/Tilt) özel bir boyun ve kafa (cylinder/sphere) sisteme fiziksel ve görsel olarak entegre edildi.
+* **Bileklerin Serbest Bırakılması:** İşlemci yükünü azaltmak için orijinal repository'de `fixed` (sabit) olarak ayarlanan bilek eklemleri `revolute` olarak değiştirilip aktifleştirildi.
+* **PID Tuning:** Düşük ataletli (low-inertia) bileklerin yerçekimi altında düşmemesi ve titrememesi (oscillation) için Gazebo'nun `JointPositionController` eklentileri sisteme dahil edildi. Kp (Yay) ve Kd (Sönümleyici) değerleri optimize edilerek simülasyon stabil hale getirildi.
