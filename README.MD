@@ -1,6 +1,6 @@
 # HUMANOID ROBOT WITH ROS2
 
-[![Watch the video](https://github.com/iclalyalcinkaya/humanoid_ros2/blob/main/assets/gazivo_mod_ss.png)](https://github.com/iclalyalcinkaya/humanoid_ros2/blob/main/assets/gazibo_mods_1.mp4)
+[![Watch the video](https://github.com/iclalyalcinkaya/humanoid_ros2/blob/main/assets/gazibo_mod_ss.png)](https://github.com/iclalyalcinkaya/humanoid_ros2/blob/main/assets/gazibo_mods_1.mp4)
 
 ## LAUNCHING
 ```
@@ -87,7 +87,8 @@ Ardından adım hızı belirlenerek belirli iki açı arasında dirsek eklemi gi
 ```
 cd robot_ws/
 colcon build
-source install/setup.bash 
+source install/setup.bash
+ros2 launch ros_gz_h1_bringup h1_gazebo_sim.launch.py 
 ros2 launch my_servo_controller gazibo_sim_launch.py
 ```
 [Web sayfası](http://localhost:8000/)
