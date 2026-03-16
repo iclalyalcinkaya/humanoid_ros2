@@ -1,6 +1,6 @@
 # HUMANOID ROBOT WITH ROS2
 
-    [![Gazibo Sim](https://raw.githubusercontent.com/iclalyalcinkaya/humanoid_ros2/blob/main/assets/gazivo_mod_ss.png)](https://raw.githubusercontent.com/iclalyalcinkaya/humanoid_ros2/blob/main/assets/gazibo_mods_1.mp4)
+[![Watch the video](https://github.com/iclalyalcinkaya/humanoid_ros2/blob/main/assets/gazivo_mod_ss.png)](https://github.com/iclalyalcinkaya/humanoid_ros2/blob/main/assets/gazibo_mods_1.mp4)
 
 ## LAUNCHING
 ```
