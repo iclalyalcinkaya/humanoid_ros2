@@ -166,41 +166,44 @@
         let ros;
         let moveService;
         let servoActionClient;
-
+        let checked = 1;
         function connectToROS() {
-            const ip = document.getElementById('robotIp').value;
-            if(!ip) { alert("Please enter an IP address"); return; }        
-            ros = new ROSLIB.Ros({ url: 'ws://' + ip + ':9090' });
+            if(checked == 1){
+                const ip = document.getElementById('robotIp').value;
+                if(!ip) { alert("Please enter an IP address"); return; }        
+                ros = new ROSLIB.Ros({ url: 'ws://' + ip + ':9090' });
 
-            ros.on('error', function(error) {
-                document.getElementById('statusIndicator').className = "status disconnected";
-                document.getElementById('connecting').style.display = 'none';
-                document.getElementById('connected').style.display = 'none';
-                document.getElementById('closed').style.display = 'none';
-                document.getElementById('error').style.display = 'inline';
-            });
+                ros.on('error', function(error) {
+                    document.getElementById('statusIndicator').className = "status disconnected";
+                    document.getElementById('connecting').style.display = 'none';
+                    document.getElementById('connected').style.display = 'none';
+                    document.getElementById('closed').style.display = 'none';
+                    document.getElementById('error').style.display = 'inline';
+                });
 
-            ros.on('connection', function() {
-                document.getElementById('statusIndicator').className = "status connected";
-                document.getElementById('connecting').style.display = 'none';
-                document.getElementById('error').style.display = 'none';
-                document.getElementById('closed').style.display = 'none';
-                document.getElementById('connected').style.display = 'inline';
-            });
+                ros.on('connection', function() {
+                    document.getElementById('statusIndicator').className = "status connected";
+                    document.getElementById('connecting').style.display = 'none';
+                    document.getElementById('error').style.display = 'none';
+                    document.getElementById('closed').style.display = 'none';
+                    document.getElementById('connected').style.display = 'inline';
+                });
 
-            ros.on('close', function() {
-                document.getElementById('statusIndicator').className = "status disconnected";
-                document.getElementById('connecting').style.display = 'none';
-                document.getElementById('connected').style.display = 'none';
-                document.getElementById('closed').style.display = 'inline';
-            });
+                ros.on('close', function() {
+                    document.getElementById('statusIndicator').className = "status disconnected";
+                    document.getElementById('connecting').style.display = 'none';
+                    document.getElementById('connected').style.display = 'none';
+                    document.getElementById('closed').style.display = 'inline';
+                });
 
-            // --- 4. DEFINE THE ACTION CLIENT ---
-            servoActionClient = new ROSLIB.Action({
-                ros : ros,
-                name : '/move_servo',
-                actionType : 'servo_interfaces/action/MotorAngle' 
-            });
+                // --- 4. DEFINE THE ACTION CLIENT ---
+                servoActionClient = new ROSLIB.Action({
+                    ros : ros,
+                    name : '/move_servo',
+                    actionType : 'servo_interfaces/action/MotorAngle' 
+                });
+                checked = 0;
+            }
         }
         /*
         var statusSub = new ROSLIB.Topic({
@@ -256,8 +259,12 @@
                         document.getElementById(`label${motorId}`).innerText = pos + "°";
                         document.getElementById(`label${motorId}`).style.color = "#22c55e";
                         delete activeGoals[motorId]; // Clear active goal
-                        //if(myToken && i <= 12 && currentSequenceToken === myToken) i++;
-                        resolve(true); // Tell the Promise we are done so the next motor can start
+                        console.log(result);
+                        if(result.success){
+                            resolve(true); // Tell the Promise we are done so the next motor can start
+                        }else{
+                            console.error(`Motor ${motorId} goal was explicitly REJECTED!`);
+                        }
                     },
                     function(feedback) {
                         // Action is moving!
@@ -266,6 +273,7 @@
                         document.getElementById(`label${motorId}`).style.color = "#f59e0b";
                     },
                     function(failedMsg) {//????
+                        console.log(failedMsg);
                         console.error(`Motor ${motorId} goal was explicitly REJECTED!`, failedMsg);
                         resolve(false); 
                     }

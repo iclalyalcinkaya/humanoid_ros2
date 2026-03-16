@@ -44,6 +44,30 @@ API istenilen posizyon verilerini goal olarak ros’a gönderiyor. Ros PID ile m
 
 Action kullanılmasının nedeni yeni bir goal geldiğinde eskisini terk edebilmek.
 
+## ACTION SERVER
+Motor sınırlarını ve motor başlangıç değerleri buradan ayarlanabilir.
+
+Hedef mesajının içinde bir client id gönderilir ve bir id tanımlıyken başka bir client tarafından gönderilen hedefleri reddeder. Aynı zamanda rosbridge server tarafına bağlı olan client bilgilerini kontrol eder. Bağlantı sayısında bir değişim olduğunda bağlı olduğu client hala aktif mi doğrular. Aktif değil ise tanımlı client değiştirilir. Tanımlı cihaz değiştirilirse aktif olan hedefler iptal edilir.
+
+Mesajda yer alan bilgileri motor sınırları açısından kontrol eder. Motoru istenilen adım boyutuyla hedefe ilerletir. 
+
+Birden fazla motorun aynı anda hareketi için MultiThreadedExecutor ve 
+ReentrantCallbackGroup mantıkları kullanılıyor. 
+
+Başlangıçta motor açılarından oluşan bir Dictionary oluşturulur. Değişen motor açı değeri buraya kaydedilerek motorlar paralel çalıştırılabilirler.
+
+## ACTION CLIENT
+API client olarak davranır. Buradan Kullanılacaksa PID parametreleri veya adım hızı ayarlanabilir.
+
+Bağlanılacak olan Raspberry Pi IP adresi girilerek bağlantı başlatılır. İlk bağlantı sırasında bir client id oluşturularak gönderilir.
+
+Robotun belirli modlar için motor açılar "modeAngles" olarak burada bulunur. 
+Modları etkinleştiren, robotu durduran butonlar ve bütün motorların tek tek ayarlanabileceği elemanlar bulunur. 
+
+Komut döngüsü içerisinde aynı anda hareket etmeleri gerekmiyorsa bir birlerinin hareketinin bitmesini bekler. Aynı zamanda alınan feedback sayesinde motor konumu ekrana anlık olarak yazdırılır.
+
+Verilen komuta göre server’a bir hedef gönderir. Bir hedefin ortasında yeni bir hedef gönderilirse önceki hedef iptal edilir.
+
 ## POZ VERME
 Sürekli bir hareket olmadığından motorlar belirlenen açılara götürülür.
 
@@ -59,10 +83,6 @@ Ardından adım hızı belirlenerek belirli iki açı arasında dirsek eklemi gi
 ## KONUŞMA
 Önce belirlenen pozisyona getirilir. Ardından omuz ve dirsek beraber oynatılır.
 
-Birden fazla motorun aynı anda hareketi için MultiThreadedExecutor kullanılıyor. 
-
-Başlangıçta motor açılarından oluşan bir Dictionary oluşturulur. Değişen motor açı değeri buraya kaydedilerek motorlar paralel çalıştırılabilirler.
-
 ## SİMÜLASYON
 ```
 cd robot_ws/
@@ -73,16 +93,6 @@ ros2 launch my_servo_controller gazibo_sim_launch.py
 [Web sayfası](http://localhost:8000/)
 
 IP adresini gir ve bağlan.
-
-## GÜVENLİK ÖNLEMLERİ
-
-Motor sınırlarını [action_controller.py](https://github.com/iclalyalcinkaya/humanoid_ros2/blob/main/robot_ws/src/my_servo_controller/my_servo_controller/action_controller.py) içinde yer alan "MOTOR_ANGLE_LIMITS" matris değerlerini değiştirerek ayarlanabilir.
-
-Robot Başlangış konumları [action_controller.py](https://github.com/iclalyalcinkaya/humanoid_ros2/blob/main/robot_ws/src/my_servo_controller/my_servo_controller/action_controller.py) içinde yer alan "MOTOR_START_ANGLES" dictionary değerlerini değiştirerek ayarlanabilir.
-
-Goal mesajının içinde bir client id gönderilir ve bir id tanımlıyken başka bir client tarafından gönderilen hedefleri reddeder. Aynı zamanda rosbridge server tarafına bağlı olan client bilgilerini kontrol eder. Bağlantı sayısında bir değişim olduğunda bağlı olduğu client hala aktif mi doğrular. Aktif değil ise tanımlı client değiştirilir.
-
-
 
 ## OLUŞABİLECEK SORUNLAR  
 Çarpmayı algılayamadan devam edebilir. Onun için bir hata durumu koymalı veya acil durum butonu yeterli olur.
