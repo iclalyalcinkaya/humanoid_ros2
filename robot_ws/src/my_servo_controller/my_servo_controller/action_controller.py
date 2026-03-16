@@ -65,6 +65,7 @@ class ServoActionServer(Node):
         if self.active_client_id is None:
             self.active_client_id = incoming_id
             self.get_logger().info(f"Control locked to new client: {incoming_id}")
+            self.get_logger().info(f"Goal request: Motor {goal_request.motor_num} to {goal_request.target_position}")
             return GoalResponse.ACCEPT
 
         elif self.active_client_id == incoming_id:
@@ -92,7 +93,7 @@ class ServoActionServer(Node):
         min_angle, max_angle = MOTOR_ANGLE_LIMITS[motor_num]
         
         if 0 <= motor_num < MOTOR_COUNT and min_angle <= target_position <= max_angle:
-            Speed = request.speed
+            Step = request.speed
             Ts = 0.1
             error = target_position - current_an
 
@@ -103,18 +104,20 @@ class ServoActionServer(Node):
                     result.success = False
                     return result
 
-                if(abs(error) < abs(Speed) and abs(Speed) != 1):
-                    Speed = 1
-                if(error < 0 and Speed > 0):
-                    Speed *= -1
+                #while(abs(error) < abs(Step) and abs(Step) != 1):
+                    #Step -= 1
+                if(abs(error) < abs(Step) and abs(Step) != 1): #If Step is biggerden error make step smaller
+                    Step = 1
+                if(error < 0 and Step > 0):
+                    Step *= -1
 
-                current_an = max(min_angle, min(max_angle, current_an + Speed)) #To stay between angle limits
-                self.kit.servo[motor_num].angle = current_an
+                current_an = max(min_angle, min(max_angle, current_an + Step)) #To stay between angle limits
+                self.kit.servo[motor_num].angle = current_an    #Move servo
                 
                 feedback_msg.current_position = int(current_an)
                 goal_handle.publish_feedback(feedback_msg)
 
-                self.current_angles[str(motor_num+1)] = int(current_an)
+                self.current_angles[str(motor_num+1)] = int(current_an) #Update dict
                 error = target_position - current_an
                 
                 time.sleep(Ts)
@@ -143,7 +146,8 @@ def main(args=None):
         pass
     finally:
         node.destroy_node()
-        rclpy.shutdown()
+        if rclpy.ok():
+            rclpy.shutdown()
 
 if __name__ == '__main__':
     main()

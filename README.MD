@@ -1,5 +1,7 @@
 # HUMANOID ROBOT WITH ROS2
 
+    [![Gazibo Sim](https://github.com/iclalyalcinkaya/humanoid_ros2/blob/main/assets/gazivo_mod_ss.png)](https://github.com/iclalyalcinkaya/humanoid_ros2/blob/main/assets/gazibo_mods_1.mp4)
+
 ## LAUNCHING
 ```
 git clone https://github.com/iclalyalcinkaya/humanoid_ros2.git
@@ -77,6 +79,8 @@ IP adresini gir ve bağlan.
 Motor sınırlarını [action_controller.py](https://github.com/iclalyalcinkaya/humanoid_ros2/blob/main/robot_ws/src/my_servo_controller/my_servo_controller/action_controller.py) içinde yer alan "MOTOR_ANGLE_LIMITS" matris değerlerini değiştirerek ayarlanabilir.
 
 Robot Başlangış konumları [action_controller.py](https://github.com/iclalyalcinkaya/humanoid_ros2/blob/main/robot_ws/src/my_servo_controller/my_servo_controller/action_controller.py) içinde yer alan "MOTOR_START_ANGLES" dictionary değerlerini değiştirerek ayarlanabilir.
+
+Goal mesajının içinde bir client id gönderilir ve bir id tanımlıyken başka bir client tarafından gönderilen hedefleri reddeder. Aynı zamanda rosbridge server tarafına bağlı olan client bilgilerini kontrol eder. Bağlantı sayısında bir değişim olduğunda bağlı olduğu client hala aktif mi doğrular. Aktif değil ise tanımlı client değiştirilir.
 
 
 
