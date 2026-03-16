@@ -123,10 +123,10 @@
             inputField.value = newVal.toFixed(3); // Keep it strictly to 3 decimal places
         }
 
-        function adjustSpeed(paramId, delta) {
+        function adjustSpeed(paramId, delta, adj = true) {
             let inputField = document.getElementById(paramId);
-            let newVal = parseFloat(inputField.value) + delta;
-            inputField.value = newVal.toFixed(0); // Keep it strictly to 3 decimal places
+            let newVal = adj === true ? parseFloat(inputField.value) + delta : delta;
+            inputField.value = newVal.toFixed(0);
         }
 
         function adjustMotor(motorId, delta) {
@@ -243,9 +243,9 @@
                 var goal = {
                     motor_num: motorId,
                     target_position: pos,
-                    kp: parseFloat(document.getElementById('kp').value),
-                    ki: parseFloat(document.getElementById('ki').value),
-                    kd: parseFloat(document.getElementById('kd').value),
+                    //kp: parseFloat(document.getElementById('kp').value),
+                    //ki: parseFloat(document.getElementById('ki').value),
+                    //kd: parseFloat(document.getElementById('kd').value),
                     client_id: myClientId,
                     speed: parseFloat(document.getElementById('speed').value),
                 };
@@ -287,7 +287,7 @@
             document.getElementById(`btnMode${modeNum}`).classList.add('active');
 
             console.log(`Applying Mode ${modeNum} Sequentially...`);
-           
+            adjustSpeed('speed', 5, false);
             if(modeNum == 1){
                 i = 12;
             }else{
@@ -303,12 +303,14 @@
                 }
             }
             if(modeNum === 2 && currentSequenceToken === myToken) {
+                adjustSpeed('speed', 2, false);
                 let wave = angles[8]
                 while (currentSequenceToken === myToken) {
                     wave = wave === 80 ? 50 : 80; // Toggle between two angles
                     await sendMotorGoal(9, wave, myToken);
                 }
             }else if(modeNum === 3 && currentSequenceToken === myToken) {
+                adjustSpeed('speed', 2, false);
                 let L_elbow = angles[3]
                 let L_sholder_pitch = angles[2]
                 let R_elbow = angles[8]

@@ -109,7 +109,6 @@ class GaziboSimServer(Node):
         min_angle, max_angle = MOTOR_ANGLE_LIMITS[motor_num]
         
         if 0 <= motor_num < MOTOR_COUNT and min_angle <= target_position <= max_angle:
-            Kp, Ki, Kd = request.kp, request.ki, request.kd
             Speed = request.speed
             Ts = 0.1
             error = target_position - current_an

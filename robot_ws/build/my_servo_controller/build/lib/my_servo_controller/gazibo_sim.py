@@ -109,14 +109,13 @@ class GaziboSimServer(Node):
         min_angle, max_angle = MOTOR_ANGLE_LIMITS[motor_num]
         
         if 0 <= motor_num < MOTOR_COUNT and min_angle <= target_position <= max_angle:
-            Kp, Ki, Kd = request.kp, request.ki, request.kd
             Speed = request.speed
             Ts = 0.1
             error = target_position - current_an
             while abs(error) > 0.1:
                 if goal_handle.is_cancel_requested or self.active_client_id is None:
                     goal_handle.canceled()
-                    self.get_logger().info(f'Goal canceled by client: Motor {motor_num+1} -> {target_position}')
+                    self.get_logger().info(f'Goal canceled by client: Motor {motor_num+1} to {target_position}')
                     result.success = False
                     return result
                 

@@ -47,30 +47,40 @@ Sürekli bir hareket olmadığından motorlar belirlenen açılara götürülür
 
 Pozdan sonra diğer hareketlere geçerken eklemlerin oynatma sıralarına dikkat edilmeli. Aksi halde çarpışma gerçekleşebilir.
 
-Diğer durumlarda sağ koldan harekete başlarken bunda sol koldan harekete başlıyor.
-
-Sağ kol aynı anda sol kol aynı anda ama bir kol diğer kolun hareketinin bitirmesini bekleyecek şeklinde ilerleyebilir.
+Diğer durumlarda sol koldan harekete başlarken bunda sağ koldan harekete başlıyor.
 
 ## EL SALLAMA
-PID sayesinde yavaş hareket ettiğinden belirli iki açı arasında dirsek git gel yaptırılabilir.
+Önce belirlenen başlangıç konumuna getirilir.
 
-Veya bir sin dalgası şeklinde belli aralıklarla açılar gönderilebilir.
+Ardından adım hızı belirlenerek belirli iki açı arasında dirsek eklemi git gel yaptırılır.
 
 ## KONUŞMA
-Önce belirlenen pozisyona getirilir. Ardından omuz ve dirsek beraber dairesel olarak oynatılır.
+Önce belirlenen pozisyona getirilir. Ardından omuz ve dirsek beraber oynatılır.
 
-Birden fazla motorun aynı anda hareketi için MultiThreadedExecutor kullanılıyor. Başlangıçta motor açılarından oluşan bir Dictionary oluşturuyor. Sadece açısı değişen motorun değerini değiştirerek paralel çalışıyorlar.
+Birden fazla motorun aynı anda hareketi için MultiThreadedExecutor kullanılıyor. 
 
-İşlem sonunda bir json dosyasına motor açılarını yazıyor. Yazdığı dosyanın içindeki açıları okuyarak işlem yapmıyor.
+Başlangıçta motor açılarından oluşan bir Dictionary oluşturulur. Değişen motor açı değeri buraya kaydedilerek motorlar paralel çalıştırılabilirler.
+
+## SİMÜLASYON
+```
+cd robot_ws/
+colcon build
+source install/setup.bash 
+ros2 launch my_servo_controller gazibo_sim_launch.py
+```
+[Web sayfası](http://localhost:8000/)
+
+IP adresini gir ve bağlan.
+
+## GÜVENLİK ÖNLEMLERİ
+
+Motor sınırlarını [action_controller.py](https://github.com/iclalyalcinkaya/humanoid_ros2/blob/main/robot_ws/src/my_servo_controller/my_servo_controller/action_controller.py) içinde yer alan "MOTOR_ANGLE_LIMITS" matris değerlerini değiştirerek ayarlanabilir.
+
+Robot Başlangış konumları [action_controller.py](https://github.com/iclalyalcinkaya/humanoid_ros2/blob/main/robot_ws/src/my_servo_controller/my_servo_controller/action_controller.py) içinde yer alan "MOTOR_START_ANGLES" dictionary değerlerini değiştirerek ayarlanabilir.
+
+
 
 ## OLUŞABİLECEK SORUNLAR  
-Son konumlarını bir dosyanın içine kaydediyor. Robot kapalı iken elle oynatılırsa terar açıldığında kayıtlı noktaya ivmeli bir hareket yapar.
-Home pozisyonuna gitmesini sağlayacak bir tuş eklendi. Bu durumda açılmadan önce elle home pozisyonunun yakınlarına elle getirilmesi durumunda çarpışma yaşama ihtimali azalır. İlk çalıştırıldığında dosyaya home pozisyon açılarını yazıyor.
-
 Çarpmayı algılayamadan devam edebilir. Onun için bir hata durumu koymalı veya acil durum butonu yeterli olur.
 
 Launch dosyası olarak çalıştırınca ve düzgün bir şekilde kapatılmaz ise node durmuyor. Hayalet olarak çalışmaya devam ediyor.
-
-İki farklı client aynı motor için istek göndermesine karşı hedefle beraber client id bilgisi de gönderiliyor.
-
-Çok fazla goal peş peşe gönderilince rosbridge server client bağlantısını tekrar tekrar kurup silmeye çalışıyor. Ancak hızına yetişemeyince hata veriyordu. Bunu önlemek başlangışta adına hiç bir motoru hareket ettirmeyecek ve bağlantıyı sürdürecek bir dummy goal gönderiliyor.

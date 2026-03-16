@@ -37,7 +37,7 @@ class ServoActionServer(Node):
             callback_group=self.action_cb_group
         )
 
-        self._client_sub = self.create_subscription( 
+        self._client_sub = self.create_subscription( #Rosbridge server client information
             ConnectedClients,
             '/connected_clients',
             self.listener_callback,
