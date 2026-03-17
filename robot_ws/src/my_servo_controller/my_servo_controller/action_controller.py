@@ -21,13 +21,13 @@ class ServoActionServer(Node):
         super().__init__('servo_action_server')
         self.get_logger().info("Servo Action Server has been started.")
         self.kit = ServoKit(channels=16, frequency=50)
-        self.action_cb_group = ReentrantCallbackGroup()
+        self.action_cb_group = ReentrantCallbackGroup() #So callbacks can work parallelly
         self.first_id = None
         self.active_client_id = None
         self.old_leng = 0
-        self.current_angles = MOTOR_START_ANGLES
+        self.current_angles = MOTOR_START_ANGLES #Starts with default angles
 
-        self._action_server = ActionServer(
+        self._action_server = ActionServer( 
             self,
             MotorAngle,
             'move_servo',
@@ -60,7 +60,7 @@ class ServoActionServer(Node):
                 else:
                     self.first_id = None
 
-    def goal_callback(self, goal_request):
+    def goal_callback(self, goal_request): #Checks the client id and accept or rejects goals
         incoming_id = goal_request.client_id
         if self.active_client_id is None:
             self.active_client_id = incoming_id
@@ -87,11 +87,11 @@ class ServoActionServer(Node):
 
         motor_num = request.motor_num - 1
         target_position = float(request.target_position)
-
-        current_an = float(self.current_angles.get(str(motor_num+1), 90))
+        current_an = float(self.current_angles[str(motor_num+1)])
         
         min_angle, max_angle = MOTOR_ANGLE_LIMITS[motor_num]
-        
+
+        #Checks the goal limits
         if 0 <= motor_num < MOTOR_COUNT and min_angle <= target_position <= max_angle:
             Step = request.speed
             Ts = 0.1
@@ -104,6 +104,7 @@ class ServoActionServer(Node):
                     result.success = False
                     return result
 
+                #If step is to big take smaller step
                 while(abs(error) < abs(Step) and abs(Step) != 1):
                     Step = int(Step / 2)
                 #if(abs(error) < abs(Step) and abs(Step) != 1): #If Step is biggerden error make step smaller
@@ -112,22 +113,22 @@ class ServoActionServer(Node):
                     Step *= -1
 
                 current_an = max(min_angle, min(max_angle, current_an + Step)) #To stay between angle limits
-                self.kit.servo[motor_num].angle = current_an    #Move servo
+                self.kit.servo[motor_num].angle = current_an #Move servo motors
                 
                 feedback_msg.current_position = int(current_an)
-                goal_handle.publish_feedback(feedback_msg)
+                goal_handle.publish_feedback(feedback_msg) #Send current angle as feedback
 
                 self.current_angles[str(motor_num+1)] = int(current_an) #Update dict
                 error = target_position - current_an
                 
-                time.sleep(Ts)
+                time.sleep(Ts) #wait for motor to move
 
             goal_handle.succeed()
             self.get_logger().info(f"Goal Succeeded: Motor {motor_num+1} arrived at {target_position}")
 
             result.success = True
             return result
-            
+        #If the goal is out of limits, abort the goal
         else:
             self.get_logger().error(f"Goal Aborted: Motor or Angle out of bounds")
             goal_handle.abort()
@@ -146,7 +147,7 @@ def main(args=None):
         pass
     finally:
         node.destroy_node()
-        if rclpy.ok():
+        if rclpy.ok(): #Dont try to shutdown multiple times
             rclpy.shutdown()
 
 if __name__ == '__main__':

@@ -36,6 +36,7 @@
 
 <body>
     <div class="card">
+        <!-- Visual indicators-->
         <h1>Humanoid Robot Servo Motor Action Control</h1>
         
         <div id="statusIndicator" class="status disconnected">
@@ -162,7 +163,7 @@
         }
 
         // --- 3. CONNECT TO ROS ---
-        //192.168.137.72
+        //192.168.137.72 old IP
         let ros;
         let moveService;
         let servoActionClient;
@@ -205,7 +206,7 @@
                 checked = 0;
             }
         }
-        /*
+        /* //uncomment if you want to get goal status massage
         var statusSub = new ROSLIB.Topic({
             ros: ros,
             name: '/move_servo/_action/status',
@@ -227,8 +228,8 @@
             }
         });*/
 
-        let activeGoals = {};
-        let currentSequenceToken = 0; // Tracks the currently active sequence
+        let activeGoals = {};           // Tracks the currently active goals
+        let currentSequenceToken = 0;   // Tracks the currently active sequence
         let i = 1;
         // --- 5. SEND GOAL LOGIC (Now returns a Promise) ---
         function sendMotorGoal(motorId, forcedPos = null, myToken = null) {
@@ -260,7 +261,7 @@
                         document.getElementById(`label${motorId}`).style.color = "#22c55e";
                         delete activeGoals[motorId]; // Clear active goal
                         resolve(true);
-                        /*if(result.success){
+                        /*if(result.success){ //gets an error in rosbridge
                             resolve(true); // Tell the Promise we are done so the next motor can start
                         }else{
                             console.error(`Motor ${motorId} goal was explicitly REJECTED! ${result.success}`);
@@ -273,9 +274,9 @@
                         document.getElementById(`label${motorId}`).innerText = currentPos + "°";
                         document.getElementById(`label${motorId}`).style.color = "#f59e0b";
                     },
-                    function(failedMsg) {//????
+                    function(failedMsg) {
                         console.log(failedMsg);
-                        console.error(`Motor ${motorId} goal was explicitly REJECTED!`, failedMsg);
+                        console.error(`Motor ${motorId} goal was failed.`, failedMsg);
                         resolve(false); 
                     }
                 );
@@ -297,11 +298,12 @@
 
             console.log(`Applying Mode ${modeNum} Sequentially...`);
             adjustSpeed('speed', 5, false);
-            if(modeNum == 1){
+            if(modeNum == 1){ //Depending on the mode choose a starting point
                 i = 12;
             }else{
                 i = 1;
             }
+            //Move motors one by one
             while (currentSequenceToken === myToken && i<=12 && (modeNum !== 1 || i >= 1)) {
                 let targetAngle = angles[i - 1];
                 await sendMotorGoal(i, targetAngle, myToken);
@@ -311,6 +313,7 @@
                     i++;
                 }
             }
+            //Until says otherwise continue
             if(modeNum === 2 && currentSequenceToken === myToken) {
                 adjustSpeed('speed', 2, false);
                 let wave = angles[8]
@@ -319,6 +322,7 @@
                     await sendMotorGoal(9, wave, myToken);
                 }
             }else if(modeNum === 3 && currentSequenceToken === myToken) {
+                //Move joints together
                 adjustSpeed('speed', 2, false);
                 let L_elbow = angles[3]
                 let L_sholder_pitch = angles[2]
@@ -357,6 +361,7 @@
                 currentSequenceToken = 0; // Break any active loops
                 document.querySelectorAll('.mode-btn').forEach(btn => btn.classList.remove('active'));
             }
+            //Cancel all the active goals
             for (let motorId in activeGoals) {
                 servoActionClient.cancelGoal(activeGoals[motorId]);      
                 delete activeGoals[motorId];
