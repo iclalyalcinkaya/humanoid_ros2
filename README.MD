@@ -1,6 +1,6 @@
 # HUMANOID ROBOT WITH ROS2
 
-[<img src="https://img.youtube.com/vi/22f95dgRXwM/0.jpg" width="50%">](https://youtube.com/shorts/22f95dgRXwM)
+[![Watch the video](https://img.youtube.com/vi/22f95dgRXwM/0.jpg)](https://youtube.com/shorts/22f95dgRXwM)
 
 ## LAUNCHING
 # GEREKSİNİMLER
