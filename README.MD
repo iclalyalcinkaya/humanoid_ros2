@@ -20,7 +20,7 @@ ros2 launch my_servo_controller action_controller_launch.py
 ```
 [Web sayfası](http://localhost:8000/)
 
-<img src="(https://github.com/iclalyalcinkaya/humanoid_ros2/blob/main/assets/API_visual.png)" alt="Webpage" width="50%"/>
+<img src="https://github.com/iclalyalcinkaya/humanoid_ros2/blob/main/assets/API_visual.png" alt="Webpage" width="50%"/>
 
 IP adresini gir ve bağlan.
 
