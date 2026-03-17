@@ -259,12 +259,13 @@
                         document.getElementById(`label${motorId}`).innerText = pos + "°";
                         document.getElementById(`label${motorId}`).style.color = "#22c55e";
                         delete activeGoals[motorId]; // Clear active goal
-                        console.log(result);
-                        if(result.success){
+                        resolve(true);
+                        /*if(result.success){
                             resolve(true); // Tell the Promise we are done so the next motor can start
                         }else{
-                            console.error(`Motor ${motorId} goal was explicitly REJECTED!`);
-                        }
+                            console.error(`Motor ${motorId} goal was explicitly REJECTED! ${result.success}`);
+                            resolve(false);
+                        }*/
                     },
                     function(feedback) {
                         // Action is moving!

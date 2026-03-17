@@ -13,7 +13,7 @@ import time
 from rosbridge_msgs.msg import ConnectedClients
 
 MOTOR_COUNT = 12
-MOTOR_ANGLE_LIMITS = [[0, 180], [0, 80], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180]]
+MOTOR_ANGLE_LIMITS = [[0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180]]
 MOTOR_START_ANGLES = {'1': 90, '2': 90, '3': 90, '4': 90, '5': 90, '6': 90, '7': 90, '8': 90, '9': 90, '10': 90, '11': 90, '12': 90}
 
 class ServoActionServer(Node):
@@ -104,10 +104,10 @@ class ServoActionServer(Node):
                     result.success = False
                     return result
 
-                #while(abs(error) < abs(Step) and abs(Step) != 1):
-                    #Step /= 2
-                if(abs(error) < abs(Step) and abs(Step) != 1): #If Step is biggerden error make step smaller
-                    Step = 1
+                while(abs(error) < abs(Step) and abs(Step) != 1):
+                    Step = int(Step / 2)
+                #if(abs(error) < abs(Step) and abs(Step) != 1): #If Step is biggerden error make step smaller
+                #    Step = 1
                 if(error < 0 and Step > 0):
                     Step *= -1
 

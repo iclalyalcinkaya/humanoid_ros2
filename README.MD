@@ -107,7 +107,7 @@ IP adresini gir ve bağlan.
 Launch dosyası olarak çalıştırınca ve düzgün bir şekilde kapatılmaz ise node durmuyor. Hayalet olarak çalışmaya devam ediyor.
 
 ## DAHA FAZLA
-Orijinal Unitree H1 simülasyon modeline eklemeler yapılmıştır.
+[Orijinal](https://github.com/K-d4wg/ros2_heinz) Unitree H1 simülasyon modeline eklemeler yapılmıştır.
 * **Özel Boyun Eklemi:** Orijinal modelde bulunmayan, 2 eksenli (Pan/Tilt) özel bir boyun ve kafa (cylinder/sphere) sisteme fiziksel ve görsel olarak entegre edildi.
 * **Bileklerin Serbest Bırakılması:** İşlemci yükünü azaltmak için orijinal repository'de `fixed` (sabit) olarak ayarlanan bilek eklemleri `revolute` olarak değiştirilip aktifleştirildi.
 * **PID Tuning:** Düşük ataletli (low-inertia) bileklerin yerçekimi altında düşmemesi ve titrememesi (oscillation) için Gazebo'nun `JointPositionController` eklentileri sisteme dahil edildi. Kp (Yay) ve Kd (Sönümleyici) değerleri optimize edilerek simülasyon stabil hale getirildi.

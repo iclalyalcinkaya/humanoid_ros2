@@ -17,7 +17,7 @@ import time
 # --- CONFIGURATION ---
 MOTOR_COUNT = 12
 MOTOR_ANGLE_LIMITS = [[0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180]]
-MOTOR_START_ANGLES = {'1': 90, '2': 90, '3': 90, '4': 90, '5': 90, '6': 90, '7': 90, '8': 90, '9': 90, '10': 90, '11': 180, '12': 90}
+MOTOR_START_ANGLES = {'1': 90,  '2': 90,  '3': 90,  '4': 90,  '5': 90,  '6': 90,  '7': 90,  '8': 90,  '9': 90,  '10': 90, '11': 90, '12': 90}
 
 # NEW: Map your 14 motor indices (0-13) to the Gazebo H1 joint names
 # You will need to verify the exact joint names in the URDF file
@@ -75,6 +75,7 @@ class GaziboSimServer(Node):
             self.old_leng = leng
             if not any(client.connection_time.sec == self.first_id for client in msg.clients):
                 self.active_client_id = None
+                self.get_logger().info(f"Deleted client ID")
                 if (leng != 0):
                     self.first_id = msg.clients[leng-1].connection_time.sec
                     self.get_logger().info(f"Working client ID= {self.first_id}")
@@ -86,6 +87,7 @@ class GaziboSimServer(Node):
         if self.active_client_id is None:
             self.active_client_id = incoming_id
             self.get_logger().info(f"Control locked to new client: {incoming_id}")
+            self.get_logger().info(f"Goal request: Motor {goal_request.motor_num} to {goal_request.target_position}")
             return GoalResponse.ACCEPT
         elif self.active_client_id == incoming_id:
             self.get_logger().info(f"Goal request: Motor {goal_request.motor_num} to {goal_request.target_position}")
@@ -95,6 +97,7 @@ class GaziboSimServer(Node):
             return GoalResponse.REJECT
 
     def cancel_callback(self, goal_handle):
+        self.get_logger().info("Cancel request accepted")
         return CancelResponse.ACCEPT
 
     def execute_callback(self, goal_handle):
@@ -119,8 +122,10 @@ class GaziboSimServer(Node):
                     result.success = False
                     return result
                 
-                if(abs(error) < abs(Speed) and abs(Speed) != 1):
-                    Speed = 1
+                while(abs(error) < abs(Speed) and abs(Speed) != 1):
+                    Speed = int(Speed / 2)
+                #if(abs(error) < abs(Speed) and abs(Speed) != 1):
+                #    Speed = 1
                 if(error < 0 and Speed > 0):
                     Speed *= -1
                 
@@ -131,6 +136,7 @@ class GaziboSimServer(Node):
                     # Convert 0-180 (UI) to -pi/2 to pi/2 (Gazebo)
                     msg.data = math.radians(current_an - 90.0) 
                     self.gazebo_pubs[motor_num].publish(msg)
+                    #self.get_logger().info(f"Speed {Speed}, error: {error}, degree: {current_an}, rad: {msg.data}")
                 
                 feedback_msg.current_position = int(current_an)
                 goal_handle.publish_feedback(feedback_msg)
@@ -142,6 +148,7 @@ class GaziboSimServer(Node):
             goal_handle.succeed()
             self.get_logger().info(f"Goal Succeeded: Motor {motor_num+1} arrived at {target_position}")
             result.success = True
+            self.get_logger().info(f"Goal Success: {result.success}")
             return result
             
         else:
