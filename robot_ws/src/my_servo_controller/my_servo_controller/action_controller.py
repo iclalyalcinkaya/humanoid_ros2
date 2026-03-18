@@ -109,7 +109,7 @@ class ServoActionServer(Node):
             return GoalResponse.ACCEPT
 
         else:
-            self.get_logger().warn(f"Goal rejected: Robot is currently locked by {self.active_client_id}")
+            self.get_logger().warn(f"Goal rejected: Rejected robot id {incoming_id}")
             return GoalResponse.REJECT
 
     def cancel_callback(self, goal_handle):

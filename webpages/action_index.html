@@ -172,6 +172,11 @@
         let servoActionClient;
         let statusSub;
         let checked = 1;
+        let reject = false;
+        let activeGoals = {};           // Tracks the currently active goals
+        let currentSequenceToken = 0;   // Tracks the currently active sequence
+        let i = 1;
+
         function connectToROS() {
             if(checked == 1){
                 const ip = document.getElementById('robotIp').value;
@@ -217,24 +222,8 @@
                 //uncomment if you want to get goal status massage
                 statusSub = new ROSLIB.Topic({
                     ros: ros,
-                    name: '/move_servo/_action/status',
-                    messageType: 'action_msgs/msg/GoalStatusArray'
-                });
-                statusSub.subscribe(function(message) {
-                    let length = message.status_list.length;
-                    let goalData = message.status_list[length-1];
-                    let statusCode = goalData.status;
-                    
-                    if (statusCode === 6) {
-                        console.error(`SERVER ALERT: Goal ABORTED!`); 
-                        cancelAll();
-                    }else if (statusCode === 3) { 
-                        console.warn(`SERVER ALERT: Goal CANCELING.`);
-                    }else if (statusCode === 1) { 
-                        console.log(`Goal ACCEPTED.`);
-                    }else if(statusCode === 4){
-
-                    }
+                    name: '/rosout',
+                    messageType: 'rcl_interfaces/msg/Log'
                 });
             }
         }
@@ -257,9 +246,7 @@
             }
         }
 
-        let activeGoals = {};           // Tracks the currently active goals
-        let currentSequenceToken = 0;   // Tracks the currently active sequence
-        let i = 1;
+        
         // --- 5. SEND GOAL LOGIC (Now returns a Promise) ---
         function sendMotorGoal(motorId, forcedPos = null, myToken = null) {
             return new Promise((resolve) => {
@@ -290,13 +277,6 @@
                         document.getElementById(`label${motorId}`).style.color = "#22c55e";
                         delete activeGoals[motorId]; // Clear active goal
                         resolve(true);
-                        /*if(result.success){ //gets an error in rosbridge
-                            console.log(result.success)
-                            resolve(true); // Tell the Promise we are done so the next motor can start
-                        }else{
-                            console.error(`Motor ${motorId} goal was explicitly REJECTED! ${result.success}`);
-                            resolve(true);
-                        }*/
                     },
                     function(feedback) {
                         // Action is moving!
@@ -310,6 +290,29 @@
                         resolve(false); 
                     }
                 );
+                statusSub.subscribe(function(message) {
+                    let text = message.msg
+                    if( text.includes("rejected") && text.includes(myClientId)){
+                        console.error(`SERVER ALERT: Goal REJECTED!`);
+                        cancelAll();
+                        reject = true;
+                        resolve(false);
+                    }
+                    /*
+                    let length = message.status_list.length;
+                    let goalData = message.status_list[length-1];
+                    let statusCode = goalData.status;
+                    
+                    if (statusCode === 6) {
+                        console.error(`SERVER ALERT: Goal ABORTED!`); 
+                        cancelAll();
+                    }else if (statusCode === 3) { 
+                        console.warn(`SERVER ALERT: Goal CANCELING.`);
+                    }else if (statusCode === 1) { 
+                        console.log(`Goal ACCEPTED.`);
+                    }
+                    */
+                });
             });
         }
 
@@ -336,12 +339,15 @@
             //Move motors one by one
             while (currentSequenceToken === myToken && i<=12 && (modeNum !== 1 || i >= 1)) {
                 let targetAngle = angles[i - 1];
-                await sendMotorGoal(i, targetAngle, myToken);
-                
-                if(modeNum == 1){
-                    i--;
+                if (await sendMotorGoal(i, targetAngle, myToken)){
+                    if(modeNum == 1){
+                        i--;
+                    }else{
+                        i++;
+                    }
                 }else{
-                    i++;
+                    
+                    break;
                 }
             }
             //Until says otherwise continue
