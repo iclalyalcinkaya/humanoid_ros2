@@ -23,12 +23,14 @@
         .val-display { width: 35px; text-align: right; font-family: monospace; font-weight: bold; color: #8c00ff; }
         .btn { padding: 8px 12px; cursor: pointer; border: none; border-radius: 4px; background: #8c00ff; color: white; font-weight: bold; transition: 0.2s; }
         .btn:hover { background: #7300d1; }
-        .mode-btn { background: #3b82f6; width: 120px; }
-        .mode-btn.active { background: #1e3a8a; outline: 2px solid #000; }
+        .mode-btn { background: #8c00ff; width: 120px; }
+        .mode-btn.active { background: #57009e; outline: 2px solid #000; }
     
         .step-btn { padding: 2px 6px; cursor: pointer; border: 1px solid #cbd5e1; border-radius: 4px; background: #e2e8f0; font-size: 12px; font-weight: bold; color: #334155; transition: 0.1s;}
         .step-btn:hover { background: #cbd5e1; }
         .pid-group { display: flex; align-items: center; gap: 4px; margin: 0 10px; }
+        .sim-btn{ background: #8c00ff; width: 120px; }
+        .sim-btn.active { background: #57009e; outline: 2px solid #000; }
 
     </style>
 </head>
@@ -81,6 +83,7 @@
             <button class="btn mode-btn" id="btnMode2" onclick="setMode(2)">Wave</button>
             <button class="btn mode-btn" id="btnMode3" onclick="setMode(3)">Speak</button>
             <button class="btn mode-btn" id="btnMode4" onclick="setMode(4)">Home</button>
+            <button class="btn sim-btn" id="btnSim" onclick="simActive()">Sim Active</button>
         </div>
 
         <div class="control-row" style="justify-content: center; gap: 20px;">
@@ -204,6 +207,11 @@
                     name : '/move_servo',
                     actionType : 'servo_interfaces/action/MotorAngle' 
                 });
+                simActiveTopic = new ROSLIB.Topic({
+                    ros : ros,
+                    name : '/sim_active',
+                    messageType : 'std_msgs/msg/Bool'
+                });
                 checked = 0;
 
                 //uncomment if you want to get goal status massage
@@ -228,6 +236,24 @@
 
                     }
                 });
+            }
+        }
+
+        let sim = true;
+        function simActive(){
+            if(sim){
+                sim = false;
+                document.getElementById(`btnSim`).classList.add('active');
+            }else{
+                sim = true;
+                document.getElementById(`btnSim`).classList.remove('active');
+            }
+            if(simActiveTopic) {
+                var msg = {
+                    data: sim
+                };
+                simActiveTopic.publish(msg);
+                console.log(`Simulation: ${sim}`);
             }
         }
 
@@ -333,18 +359,18 @@
                 let L_sholder_pitch = angles[2]
                 let R_elbow = angles[8]
                 let R_sholder_pitch = angles[7]
-                let neck_pitch = angles[10]
+                let neck_pitch = angles[11]
                 while (currentSequenceToken === myToken) {
                     L_elbow = L_elbow === 60 ? 65 : 60;
                     L_sholder_pitch = L_sholder_pitch === 60 ? 50 : 60;
                     R_elbow = R_elbow === 60 ? 65 : 60;
                     R_sholder_pitch = R_sholder_pitch === 60 ? 50 : 60;
-                    neck_pitch = neck_pitch === 90 ? 80 : 90;  
+                    neck_pitch = neck_pitch === 90 ? 100 : 90;  
                     sendMotorGoal(4, L_elbow, myToken);
                     sendMotorGoal(9, R_elbow, myToken);
                     sendMotorGoal(3, L_sholder_pitch, myToken);
                     sendMotorGoal(8, R_sholder_pitch, myToken);                    
-                    await sendMotorGoal(11, neck_pitch, myToken);
+                    await sendMotorGoal(12, neck_pitch, myToken);
                 }
             }
             // Un-highlight the button only if THIS sequence actually finished uninterrupted

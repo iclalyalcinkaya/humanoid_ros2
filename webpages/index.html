@@ -23,13 +23,13 @@
         .val-display { width: 35px; text-align: right; font-family: monospace; font-weight: bold; color: #8c00ff; }
         .btn { padding: 8px 12px; cursor: pointer; border: none; border-radius: 4px; background: #8c00ff; color: #ffffff; font-weight: bold; transition: 0.2s; }
         .btn:hover { background: #7300d1; }
-        .mode-btn { background: #3b82f6; width: 120px; }
-        .mode-btn.active { background: #1e3a8a; outline: 2px solid #000; }
+        .mode-btn { background: #8c00ff; width: 120px; }
+        .mode-btn.active { background: #57009e; outline: 2px solid #000; }
         .step-btn { padding: 2px 6px; cursor: pointer; border: 1px solid #cbd5e1; border-radius: 4px; background: #e2e8f0; font-size: 12px; font-weight: bold; color: #334155; transition: 0.1s;}
         .step-btn:hover { background: #cbd5e1; }
         .pid-group { display: flex; align-items: center; gap: 4px; margin: 0 10px; }
-        .sim-btn{ background: #3b82f6; width: 120px; }
-        .sim-btn.active { background: #1e3a8a; outline: 2px solid #000; }
+        .sim-btn{ background: #8c00ff; width: 120px; }
+        .sim-btn.active { background: #57009e; outline: 2px solid #000; }
     </style>
 </head>
 
@@ -118,53 +118,57 @@
         let modeTopic;
         let manualCmdTopic;
         let simActiveTopic;
+        let checked = true;
 
         function connectToROS() {
-            const ip = document.getElementById('robotIp').value;
-            if(!ip) { alert("Please enter an IP address"); return; }        
-            ros = new ROSLIB.Ros({ url: 'ws://' + ip + ':9090' });
+            if(checked){
+                const ip = document.getElementById('robotIp').value;
+                if(!ip) { alert("Please enter an IP address"); return; }        
+                ros = new ROSLIB.Ros({ url: 'ws://' + ip + ':9090' });
 
-            ros.on('error', function(error) {
-                document.getElementById('statusIndicator').className = "status disconnected";
-                document.getElementById('connecting').style.display = 'none';
-                document.getElementById('connected').style.display = 'none';
-                document.getElementById('closed').style.display = 'none';
-                document.getElementById('error').style.display = 'inline';
-            });
+                ros.on('error', function(error) {
+                    document.getElementById('statusIndicator').className = "status disconnected";
+                    document.getElementById('connecting').style.display = 'none';
+                    document.getElementById('connected').style.display = 'none';
+                    document.getElementById('closed').style.display = 'none';
+                    document.getElementById('error').style.display = 'inline';
+                });
 
-            ros.on('connection', function() {
-                document.getElementById('statusIndicator').className = "status connected";
-                document.getElementById('connecting').style.display = 'none';
-                document.getElementById('error').style.display = 'none';
-                document.getElementById('closed').style.display = 'none';
-                document.getElementById('connected').style.display = 'inline';
-            });
+                ros.on('connection', function() {
+                    document.getElementById('statusIndicator').className = "status connected";
+                    document.getElementById('connecting').style.display = 'none';
+                    document.getElementById('error').style.display = 'none';
+                    document.getElementById('closed').style.display = 'none';
+                    document.getElementById('connected').style.display = 'inline';
+                });
 
-            ros.on('close', function() {
-                document.getElementById('statusIndicator').className = "status disconnected";
-                document.getElementById('connecting').style.display = 'none';
-                document.getElementById('connected').style.display = 'none';
-                document.getElementById('closed').style.display = 'inline';
-            });
+                ros.on('close', function() {
+                    document.getElementById('statusIndicator').className = "status disconnected";
+                    document.getElementById('connecting').style.display = 'none';
+                    document.getElementById('connected').style.display = 'none';
+                    document.getElementById('closed').style.display = 'inline';
+                });
 
-            // --- DEFINE TOPICS (No more Action Clients!) ---
-            modeTopic = new ROSLIB.Topic({
-                ros : ros,
-                name : '/set_mode',
-                messageType : 'servo_interfaces/msg/SetMode' 
-            });
+                // --- DEFINE TOPICS (No more Action Clients!) ---
+                modeTopic = new ROSLIB.Topic({
+                    ros : ros,
+                    name : '/set_mode',
+                    messageType : 'servo_interfaces/msg/SetMode' 
+                });
 
-            manualCmdTopic = new ROSLIB.Topic({
-                ros : ros,
-                name : '/web_cmd',
-                messageType : 'std_msgs/msg/Float32MultiArray' 
-            });
+                manualCmdTopic = new ROSLIB.Topic({
+                    ros : ros,
+                    name : '/web_cmd',
+                    messageType : 'std_msgs/msg/Float32MultiArray' 
+                });
 
-            simActiveTopic = new ROSLIB.Topic({
-                ros : ros,
-                name : '/sim_active',
-                messageType : 'std_msgs/msg/Bool'
-            });
+                simActiveTopic = new ROSLIB.Topic({
+                    ros : ros,
+                    name : '/sim_active',
+                    messageType : 'std_msgs/msg/Bool'
+                });
+                checked = false;
+            }
         }
 
         // --- SEND COMMANDS ---

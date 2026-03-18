@@ -8,11 +8,6 @@ from launch_xml.launch_description_sources import XMLLaunchDescriptionSource
 
 def generate_launch_description():
     return LaunchDescription([
-        ExecuteProcess(
-            cmd=['python3', '-m', 'http.server'],
-            cwd='../webpages', #html folder
-            output='screen'
-        ),
         Node(
             package='my_servo_controller',
             namespace='',
@@ -27,5 +22,10 @@ def generate_launch_description():
                     "launch/rosbridge_websocket_launch.xml",
                 )
             )
+        ),
+        ExecuteProcess(
+            cmd=['python3', '-m', 'http.server'],
+            cwd='../webpages', #html folder
+            output='screen'
         ),
     ])

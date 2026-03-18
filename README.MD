@@ -97,7 +97,7 @@ cd robot_ws/
 colcon build
 source install/setup.bash
 ros2 launch ros_gz_h1_bringup h1_gazebo_sim.launch.py 
-ros2 launch my_servo_controller gazibo_sim_launch.py
+ros2 launch my_servo_controller action_controller_launch.py
 ```
 [Web sayfası](http://localhost:8000/)
 

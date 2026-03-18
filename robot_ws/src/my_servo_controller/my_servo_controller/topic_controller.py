@@ -45,7 +45,7 @@ class ServoTopicNode(Node):
         self.current_angles = MOTOR_START_ANGLES.copy()
         self.current_angles_sim = MOTOR_START_ANGLES.copy()
 
-        self.sim_ac = 1
+        self.sim_ac = True
 
         self.active_mode = 0
         self.mode_thread = None
@@ -63,7 +63,7 @@ class ServoTopicNode(Node):
 
     def sim_active_callback(self, msg):
         self.active_mode = 0
-        self.sim_ac = 1 if msg.data else 0
+        self.sim_ac = msg.data
 
     def web_cmd_callback(self, msg):
         if len(msg.data) >= 3:
@@ -117,7 +117,7 @@ class ServoTopicNode(Node):
         if mode_num not in MODE_ANGLES: return
         angles = MODE_ANGLES[mode_num]
 
-        # 1. POSE / INITIALIZATION MODE
+        # 1. POSE MODE
         if mode_num == 1:
             self.speed = 5
             for i in range(11, -1, -1):
@@ -142,14 +142,14 @@ class ServoTopicNode(Node):
             self.speed = 2
             L_elbow, L_shoulder_pitch = angles[3], angles[2]
             R_elbow, R_shoulder_pitch = angles[8], angles[7]
-            neck_pitch = angles[10]
+            neck_pitch = angles[11]
             
             while self.active_mode == mode_num:
-                L_elbow = 65 if L_elbow == 60 else 60
+                L_elbow = 66 if L_elbow == 60 else 60
                 L_shoulder_pitch = 50 if L_shoulder_pitch == 60 else 60
-                R_elbow = 65 if R_elbow == 60 else 60
+                R_elbow = 66 if R_elbow == 60 else 60
                 R_shoulder_pitch = 50 if R_shoulder_pitch == 60 else 60
-                neck_pitch = 80 if neck_pitch == 90 else 90 
+                neck_pitch = 90 if neck_pitch == 100 else 100 
                 
                 # Move them sequentially (or you could multi-thread these if you want simultaneous movement)
                 target_group = {
@@ -157,7 +157,7 @@ class ServoTopicNode(Node):
                     8: R_elbow,
                     2: L_shoulder_pitch,
                     7: R_shoulder_pitch,
-                    10: neck_pitch
+                    11: neck_pitch
                 }
                 
                 # Move them all at the exact same time!
@@ -183,11 +183,11 @@ class ServoTopicNode(Node):
 
         # Loop until it reaches target OR the mode is changed by the user
         while abs(error) > 0.1 and self.active_mode != 0:
-            if abs(error) < abs(Step) and abs(Step) != 1:
+            while abs(error) < abs(Step) and abs(Step) != 1:
                 Step = int(Step / 2)
-            if error < 0 and Step > 0:
+            if error*Step < 0:
                 Step *= -1
-
+            
             current_an = max(min_angle, min(max_angle, current_an + Step))
             if(self.sim_ac):
                 if motor_num in self.gazebo_pubs:
@@ -196,6 +196,7 @@ class ServoTopicNode(Node):
                     msg.data = math.radians(current_an - 90.0) 
                     self.gazebo_pubs[motor_num].publish(msg)
                     self.current_angles_sim[str(motor_num+1)] = int(current_an)
+                    #self.get_logger().info(f"error: {error}, step: {Step}, degree: {current_an}, rad: {msg.data}")
             else: 
                 self.kit.servo[motor_num].angle = current_an 
                 self.current_angles[str(motor_num+1)] = int(current_an)
@@ -232,9 +233,9 @@ class ServoTopicNode(Node):
                     all_reached = False # We still have moving to do!
                     
                     Step = speed
-                    if abs(error) < abs(Step) and abs(Step) != 1:
-                        Step = 1  # Take a tiny step if we are super close
-                    if error < 0 and Step > 0:
+                    while abs(error) < abs(Step) and abs(Step) != 1:
+                        Step = int(Step / 2)
+                    if error * Step < 0:
                         Step *= -1
 
                     current_an = max(min_angle, min(max_angle, current_an + Step))

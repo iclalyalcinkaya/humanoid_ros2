@@ -1,0 +1,421 @@
+[0.378s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.378s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0xffffb6e0e150>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffffb6fc2810>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffffb6fc2810>>, mixin_verb=('build',))
+[0.520s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.521s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.521s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.521s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.521s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.521s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.521s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/rasp/humanoid/robot_ws'
+[0.522s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.522s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.523s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.523s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.524s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.524s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.524s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.524s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.525s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.618s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.618s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.618s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.618s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.618s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.619s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.619s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.619s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.620s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.620s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.620s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.621s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.622s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.622s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.622s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.623s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.623s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.624s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.624s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.625s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.625s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.625s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.625s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.626s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.626s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.626s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.626s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.626s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.627s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_servo_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.628s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_servo_controller) by extension 'ignore'
+[0.628s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_servo_controller) by extension 'ignore_ament_install'
+[0.629s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_servo_controller) by extensions ['colcon_pkg']
+[0.629s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_servo_controller) by extension 'colcon_pkg'
+[0.630s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_servo_controller) by extensions ['colcon_meta']
+[0.630s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_servo_controller) by extension 'colcon_meta'
+[0.630s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_servo_controller) by extensions ['ros']
+[0.630s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_servo_controller) by extension 'ros'
+[0.639s] DEBUG:colcon.colcon_core.package_identification:Package 'src/my_servo_controller' with type 'ros.ament_python' and name 'my_servo_controller'
+[0.640s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me) by extensions ['ignore', 'ignore_ament_install']
+[0.641s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me) by extension 'ignore'
+[0.641s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me) by extension 'ignore_ament_install'
+[0.641s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me) by extensions ['colcon_pkg']
+[0.641s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me) by extension 'colcon_pkg'
+[0.641s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me) by extensions ['colcon_meta']
+[0.642s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me) by extension 'colcon_meta'
+[0.642s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me) by extensions ['ros']
+[0.642s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me) by extension 'ros'
+[0.642s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me) by extensions ['cmake', 'python']
+[0.642s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me) by extension 'cmake'
+[0.642s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me) by extension 'python'
+[0.642s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me) by extensions ['python_setup_py']
+[0.642s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me) by extension 'python_setup_py'
+[0.643s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim) by extensions ['ignore', 'ignore_ament_install']
+[0.643s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim) by extension 'ignore'
+[0.644s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim) by extension 'ignore_ament_install'
+[0.644s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim) by extensions ['colcon_pkg']
+[0.645s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim) by extension 'colcon_pkg'
+[0.645s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim) by extensions ['colcon_meta']
+[0.646s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim) by extension 'colcon_meta'
+[0.646s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim) by extensions ['ros']
+[0.646s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim) by extension 'ros'
+[0.647s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim) by extensions ['cmake', 'python']
+[0.647s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim) by extension 'cmake'
+[0.648s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim) by extension 'python'
+[0.648s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim) by extensions ['python_setup_py']
+[0.648s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim) by extension 'python_setup_py'
+[0.648s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.649s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_bringup) by extension 'ignore'
+[0.649s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_bringup) by extension 'ignore_ament_install'
+[0.649s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_bringup) by extensions ['colcon_pkg']
+[0.649s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_bringup) by extension 'colcon_pkg'
+[0.649s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_bringup) by extensions ['colcon_meta']
+[0.649s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_bringup) by extension 'colcon_meta'
+[0.650s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_bringup) by extensions ['ros']
+[0.650s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_bringup) by extension 'ros'
+[0.653s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_bringup' with type 'ros.ament_cmake' and name 'ros_gz_h1_bringup'
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_description) by extensions ['ignore', 'ignore_ament_install']
+[0.654s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_description) by extension 'ignore'
+[0.655s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_description) by extension 'ignore_ament_install'
+[0.655s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_description) by extensions ['colcon_pkg']
+[0.655s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_description) by extension 'colcon_pkg'
+[0.655s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_description) by extensions ['colcon_meta']
+[0.655s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_description) by extension 'colcon_meta'
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_description) by extensions ['ros']
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_description) by extension 'ros'
+[0.658s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_description' with type 'ros.ament_cmake' and name 'ros_gz_h1_description'
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_gazebo) by extension 'ignore'
+[0.660s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_gazebo) by extension 'ignore_ament_install'
+[0.660s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_gazebo) by extensions ['colcon_pkg']
+[0.660s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_gazebo) by extension 'colcon_pkg'
+[0.660s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_gazebo) by extensions ['colcon_meta']
+[0.660s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_gazebo) by extension 'colcon_meta'
+[0.660s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_gazebo) by extensions ['ros']
+[0.660s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_gazebo) by extension 'ros'
+[0.663s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_gazebo' with type 'ros.ament_cmake' and name 'ros_gz_h1_gazebo'
+[0.664s] Level 1:colcon.colcon_core.package_identification:_identify(src/servo_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.665s] Level 1:colcon.colcon_core.package_identification:_identify(src/servo_interfaces) by extension 'ignore'
+[0.666s] Level 1:colcon.colcon_core.package_identification:_identify(src/servo_interfaces) by extension 'ignore_ament_install'
+[0.666s] Level 1:colcon.colcon_core.package_identification:_identify(src/servo_interfaces) by extensions ['colcon_pkg']
+[0.667s] Level 1:colcon.colcon_core.package_identification:_identify(src/servo_interfaces) by extension 'colcon_pkg'
+[0.667s] Level 1:colcon.colcon_core.package_identification:_identify(src/servo_interfaces) by extensions ['colcon_meta']
+[0.667s] Level 1:colcon.colcon_core.package_identification:_identify(src/servo_interfaces) by extension 'colcon_meta'
+[0.667s] Level 1:colcon.colcon_core.package_identification:_identify(src/servo_interfaces) by extensions ['ros']
+[0.667s] Level 1:colcon.colcon_core.package_identification:_identify(src/servo_interfaces) by extension 'ros'
+[0.669s] DEBUG:colcon.colcon_core.package_identification:Package 'src/servo_interfaces' with type 'ros.ament_cmake' and name 'servo_interfaces'
+[0.670s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.671s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.671s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.671s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.672s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.731s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.732s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.740s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 5 installed packages in /home/rasp/humanoid/robot_ws/install
+[0.745s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 448 installed packages in /opt/ros/jazzy
+[0.753s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.972s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_h1_description' build argument 'cmake_args' from command line to 'None'
+[0.972s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_h1_description' build argument 'cmake_target' from command line to 'None'
+[0.972s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_h1_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.972s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_h1_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.972s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_h1_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.972s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_h1_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.972s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_h1_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.972s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_h1_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.972s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_h1_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.973s] DEBUG:colcon.colcon_core.verb:Building package 'ros_gz_h1_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rasp/humanoid/robot_ws/build/ros_gz_h1_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description', 'merge_install': False, 'path': '/home/rasp/humanoid/robot_ws/src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_description', 'symlink_install': False, 'test_result_base': None}
+[0.974s] Level 5:colcon.colcon_core.verb:set package 'servo_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.974s] Level 5:colcon.colcon_core.verb:set package 'servo_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.974s] Level 5:colcon.colcon_core.verb:set package 'servo_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.974s] Level 5:colcon.colcon_core.verb:set package 'servo_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.974s] Level 5:colcon.colcon_core.verb:set package 'servo_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.974s] Level 5:colcon.colcon_core.verb:set package 'servo_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.974s] Level 5:colcon.colcon_core.verb:set package 'servo_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.974s] Level 5:colcon.colcon_core.verb:set package 'servo_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.974s] Level 5:colcon.colcon_core.verb:set package 'servo_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.974s] DEBUG:colcon.colcon_core.verb:Building package 'servo_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rasp/humanoid/robot_ws/build/servo_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rasp/humanoid/robot_ws/install/servo_interfaces', 'merge_install': False, 'path': '/home/rasp/humanoid/robot_ws/src/servo_interfaces', 'symlink_install': False, 'test_result_base': None}
+[0.975s] Level 5:colcon.colcon_core.verb:set package 'my_servo_controller' build argument 'cmake_args' from command line to 'None'
+[0.976s] Level 5:colcon.colcon_core.verb:set package 'my_servo_controller' build argument 'cmake_target' from command line to 'None'
+[0.976s] Level 5:colcon.colcon_core.verb:set package 'my_servo_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.976s] Level 5:colcon.colcon_core.verb:set package 'my_servo_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[0.976s] Level 5:colcon.colcon_core.verb:set package 'my_servo_controller' build argument 'cmake_clean_first' from command line to 'False'
+[0.976s] Level 5:colcon.colcon_core.verb:set package 'my_servo_controller' build argument 'cmake_force_configure' from command line to 'False'
+[0.976s] Level 5:colcon.colcon_core.verb:set package 'my_servo_controller' build argument 'ament_cmake_args' from command line to 'None'
+[0.976s] Level 5:colcon.colcon_core.verb:set package 'my_servo_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[0.976s] Level 5:colcon.colcon_core.verb:set package 'my_servo_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.976s] DEBUG:colcon.colcon_core.verb:Building package 'my_servo_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rasp/humanoid/robot_ws/build/my_servo_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rasp/humanoid/robot_ws/install/my_servo_controller', 'merge_install': False, 'path': '/home/rasp/humanoid/robot_ws/src/my_servo_controller', 'symlink_install': False, 'test_result_base': None}
+[0.977s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_h1_gazebo' build argument 'cmake_args' from command line to 'None'
+[0.977s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_h1_gazebo' build argument 'cmake_target' from command line to 'None'
+[0.977s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_h1_gazebo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.977s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_h1_gazebo' build argument 'cmake_clean_cache' from command line to 'False'
+[0.977s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_h1_gazebo' build argument 'cmake_clean_first' from command line to 'False'
+[0.977s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_h1_gazebo' build argument 'cmake_force_configure' from command line to 'False'
+[0.978s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_h1_gazebo' build argument 'ament_cmake_args' from command line to 'None'
+[0.978s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_h1_gazebo' build argument 'catkin_cmake_args' from command line to 'None'
+[0.978s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_h1_gazebo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.979s] DEBUG:colcon.colcon_core.verb:Building package 'ros_gz_h1_gazebo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rasp/humanoid/robot_ws/build/ros_gz_h1_gazebo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo', 'merge_install': False, 'path': '/home/rasp/humanoid/robot_ws/src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_gazebo', 'symlink_install': False, 'test_result_base': None}
+[0.980s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_h1_bringup' build argument 'cmake_args' from command line to 'None'
+[0.980s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_h1_bringup' build argument 'cmake_target' from command line to 'None'
+[0.980s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_h1_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.980s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_h1_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.980s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_h1_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.980s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_h1_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.980s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_h1_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.980s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_h1_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.980s] Level 5:colcon.colcon_core.verb:set package 'ros_gz_h1_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.980s] DEBUG:colcon.colcon_core.verb:Building package 'ros_gz_h1_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rasp/humanoid/robot_ws/build/ros_gz_h1_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup', 'merge_install': False, 'path': '/home/rasp/humanoid/robot_ws/src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_bringup', 'symlink_install': False, 'test_result_base': None}
+[0.981s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.985s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.986s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rasp/humanoid/robot_ws/src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_description' with build type 'ament_cmake'
+[0.986s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rasp/humanoid/robot_ws/src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_description'
+[0.994s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.996s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.996s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.011s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rasp/humanoid/robot_ws/src/servo_interfaces' with build type 'ament_cmake'
+[1.011s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rasp/humanoid/robot_ws/src/servo_interfaces'
+[1.012s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.012s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.045s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rasp/humanoid/robot_ws/build/ros_gz_h1_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rasp/humanoid/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/rasp/humanoid/robot_ws/build/ros_gz_h1_description -- -j4 -l4
+[1.070s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rasp/humanoid/robot_ws/build/servo_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rasp/humanoid/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/rasp/humanoid/robot_ws/build/servo_interfaces -- -j4 -l4
+[1.246s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rasp/humanoid/robot_ws/build/ros_gz_h1_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rasp/humanoid/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/rasp/humanoid/robot_ws/build/ros_gz_h1_description -- -j4 -l4
+[1.342s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rasp/humanoid/robot_ws/build/ros_gz_h1_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rasp/humanoid/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/rasp/humanoid/robot_ws/build/ros_gz_h1_description
+[1.401s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros_gz_h1_description)
+[1.449s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description' for CMake module files
+[1.456s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description' for CMake config files
+[1.457s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros_gz_h1_description', 'cmake_prefix_path')
+[1.460s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/hook/cmake_prefix_path.ps1'
+[1.469s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/hook/cmake_prefix_path.dsv'
+[1.482s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/hook/cmake_prefix_path.sh'
+[1.506s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/bin'
+[1.506s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/lib/pkgconfig/ros_gz_h1_description.pc'
+[1.507s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/lib/python3.12/site-packages'
+[1.508s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/bin'
+[1.517s] INFO:colcon.colcon_core.shell:Creating package script '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/package.ps1'
+[1.550s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/package.dsv'
+[1.563s] INFO:colcon.colcon_core.shell:Creating package script '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/package.sh'
+[1.573s] INFO:colcon.colcon_core.shell:Creating package script '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/package.bash'
+[1.579s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rasp/humanoid/robot_ws/build/ros_gz_h1_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rasp/humanoid/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/rasp/humanoid/robot_ws/build/ros_gz_h1_description
+[1.585s] INFO:colcon.colcon_core.shell:Creating package script '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/package.zsh'
+[1.588s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/colcon-core/packages/ros_gz_h1_description)
+[1.598s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros_gz_h1_description)
+[1.599s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description' for CMake module files
+[1.603s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description' for CMake config files
+[1.604s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros_gz_h1_description', 'cmake_prefix_path')
+[1.607s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/hook/cmake_prefix_path.ps1'
+[1.612s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/hook/cmake_prefix_path.dsv'
+[1.616s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/hook/cmake_prefix_path.sh'
+[1.621s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/bin'
+[1.622s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/lib/pkgconfig/ros_gz_h1_description.pc'
+[1.623s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/lib/python3.12/site-packages'
+[1.624s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/bin'
+[1.627s] INFO:colcon.colcon_core.shell:Creating package script '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/package.ps1'
+[1.629s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/package.dsv'
+[1.632s] INFO:colcon.colcon_core.shell:Creating package script '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/package.sh'
+[1.634s] INFO:colcon.colcon_core.shell:Creating package script '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/package.bash'
+[1.635s] INFO:colcon.colcon_core.shell:Creating package script '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/package.zsh'
+[1.637s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/colcon-core/packages/ros_gz_h1_description)
+[1.637s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rasp/humanoid/robot_ws/src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_gazebo' with build type 'ament_cmake'
+[1.638s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rasp/humanoid/robot_ws/src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_gazebo'
+[1.639s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.639s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.687s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rasp/humanoid/robot_ws/build/ros_gz_h1_gazebo': CMAKE_PREFIX_PATH=/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description:/home/rasp/humanoid/robot_ws/install/servo_interfaces:/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup:/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/rasp/humanoid/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com GZ_SIM_RESOURCE_PATH=/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models:${GZ_SIM_RESOURCE_PATH} /usr/bin/cmake --build /home/rasp/humanoid/robot_ws/build/ros_gz_h1_gazebo -- -j4 -l4
+[1.932s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rasp/humanoid/robot_ws/build/ros_gz_h1_gazebo' returned '0': CMAKE_PREFIX_PATH=/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description:/home/rasp/humanoid/robot_ws/install/servo_interfaces:/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup:/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/rasp/humanoid/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com GZ_SIM_RESOURCE_PATH=/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models:${GZ_SIM_RESOURCE_PATH} /usr/bin/cmake --build /home/rasp/humanoid/robot_ws/build/ros_gz_h1_gazebo -- -j4 -l4
+[1.945s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rasp/humanoid/robot_ws/build/ros_gz_h1_gazebo': CMAKE_PREFIX_PATH=/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description:/home/rasp/humanoid/robot_ws/install/servo_interfaces:/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup:/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/rasp/humanoid/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com GZ_SIM_RESOURCE_PATH=/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models:${GZ_SIM_RESOURCE_PATH} /usr/bin/cmake --install /home/rasp/humanoid/robot_ws/build/ros_gz_h1_gazebo
+[2.034s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros_gz_h1_gazebo)
+[2.036s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo' for CMake module files
+[2.040s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rasp/humanoid/robot_ws/build/ros_gz_h1_gazebo' returned '0': CMAKE_PREFIX_PATH=/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description:/home/rasp/humanoid/robot_ws/install/servo_interfaces:/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup:/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/rasp/humanoid/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com GZ_SIM_RESOURCE_PATH=/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models:${GZ_SIM_RESOURCE_PATH} /usr/bin/cmake --install /home/rasp/humanoid/robot_ws/build/ros_gz_h1_gazebo
+[2.043s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo' for CMake config files
+[2.045s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros_gz_h1_gazebo', 'cmake_prefix_path')
+[2.049s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo/share/ros_gz_h1_gazebo/hook/cmake_prefix_path.ps1'
+[2.052s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo/share/ros_gz_h1_gazebo/hook/cmake_prefix_path.dsv'
+[2.056s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo/share/ros_gz_h1_gazebo/hook/cmake_prefix_path.sh'
+[2.062s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo/bin'
+[2.063s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo/lib/pkgconfig/ros_gz_h1_gazebo.pc'
+[2.063s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo/lib/python3.12/site-packages'
+[2.065s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo/bin'
+[2.066s] INFO:colcon.colcon_core.shell:Creating package script '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo/share/ros_gz_h1_gazebo/package.ps1'
+[2.069s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo/share/ros_gz_h1_gazebo/package.dsv'
+[2.071s] INFO:colcon.colcon_core.shell:Creating package script '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo/share/ros_gz_h1_gazebo/package.sh'
+[2.073s] INFO:colcon.colcon_core.shell:Creating package script '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo/share/ros_gz_h1_gazebo/package.bash'
+[2.075s] INFO:colcon.colcon_core.shell:Creating package script '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo/share/ros_gz_h1_gazebo/package.zsh'
+[2.078s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo/share/colcon-core/packages/ros_gz_h1_gazebo)
+[2.080s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros_gz_h1_gazebo)
+[2.081s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo' for CMake module files
+[2.083s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo' for CMake config files
+[2.083s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros_gz_h1_gazebo', 'cmake_prefix_path')
+[2.085s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo/share/ros_gz_h1_gazebo/hook/cmake_prefix_path.ps1'
+[2.087s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo/share/ros_gz_h1_gazebo/hook/cmake_prefix_path.dsv'
+[2.089s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo/share/ros_gz_h1_gazebo/hook/cmake_prefix_path.sh'
+[2.091s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo/bin'
+[2.091s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo/lib/pkgconfig/ros_gz_h1_gazebo.pc'
+[2.092s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo/lib/python3.12/site-packages'
+[2.093s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo/bin'
+[2.095s] INFO:colcon.colcon_core.shell:Creating package script '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo/share/ros_gz_h1_gazebo/package.ps1'
+[2.098s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo/share/ros_gz_h1_gazebo/package.dsv'
+[2.102s] INFO:colcon.colcon_core.shell:Creating package script '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo/share/ros_gz_h1_gazebo/package.sh'
+[2.105s] INFO:colcon.colcon_core.shell:Creating package script '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo/share/ros_gz_h1_gazebo/package.bash'
+[2.107s] INFO:colcon.colcon_core.shell:Creating package script '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo/share/ros_gz_h1_gazebo/package.zsh'
+[2.112s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo/share/colcon-core/packages/ros_gz_h1_gazebo)
+[2.116s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rasp/humanoid/robot_ws/src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_bringup' with build type 'ament_cmake'
+[2.117s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rasp/humanoid/robot_ws/src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_bringup'
+[2.119s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.122s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.175s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rasp/humanoid/robot_ws/build/ros_gz_h1_bringup': CMAKE_PREFIX_PATH=/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo:/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description:/home/rasp/humanoid/robot_ws/install/servo_interfaces:/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/rasp/humanoid/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com GZ_SIM_PLUGIN_PATH=/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo/lib/ros_gz_h1_gazebo GZ_SIM_RESOURCE_PATH=/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models:${GZ_SIM_RESOURCE_PATH} /usr/bin/cmake --build /home/rasp/humanoid/robot_ws/build/ros_gz_h1_bringup -- -j4 -l4
+[2.414s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rasp/humanoid/robot_ws/build/ros_gz_h1_bringup' returned '0': CMAKE_PREFIX_PATH=/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo:/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description:/home/rasp/humanoid/robot_ws/install/servo_interfaces:/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/rasp/humanoid/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com GZ_SIM_PLUGIN_PATH=/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo/lib/ros_gz_h1_gazebo GZ_SIM_RESOURCE_PATH=/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models:${GZ_SIM_RESOURCE_PATH} /usr/bin/cmake --build /home/rasp/humanoid/robot_ws/build/ros_gz_h1_bringup -- -j4 -l4
+[2.421s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rasp/humanoid/robot_ws/build/ros_gz_h1_bringup': CMAKE_PREFIX_PATH=/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo:/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description:/home/rasp/humanoid/robot_ws/install/servo_interfaces:/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/rasp/humanoid/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com GZ_SIM_PLUGIN_PATH=/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo/lib/ros_gz_h1_gazebo GZ_SIM_RESOURCE_PATH=/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models:${GZ_SIM_RESOURCE_PATH} /usr/bin/cmake --install /home/rasp/humanoid/robot_ws/build/ros_gz_h1_bringup
+[2.500s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros_gz_h1_bringup)
+[2.501s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup' for CMake module files
+[2.511s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup' for CMake config files
+[2.515s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rasp/humanoid/robot_ws/build/ros_gz_h1_bringup' returned '0': CMAKE_PREFIX_PATH=/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo:/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description:/home/rasp/humanoid/robot_ws/install/servo_interfaces:/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/rasp/humanoid/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com GZ_SIM_PLUGIN_PATH=/home/rasp/humanoid/robot_ws/install/ros_gz_h1_gazebo/lib/ros_gz_h1_gazebo GZ_SIM_RESOURCE_PATH=/home/rasp/humanoid/robot_ws/install/ros_gz_h1_description/share/ros_gz_h1_description/models:${GZ_SIM_RESOURCE_PATH} /usr/bin/cmake --install /home/rasp/humanoid/robot_ws/build/ros_gz_h1_bringup
+[2.516s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros_gz_h1_bringup', 'cmake_prefix_path')
+[2.525s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup/share/ros_gz_h1_bringup/hook/cmake_prefix_path.ps1'
+[2.532s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup/share/ros_gz_h1_bringup/hook/cmake_prefix_path.dsv'
+[2.535s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup/share/ros_gz_h1_bringup/hook/cmake_prefix_path.sh'
+[2.536s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup/bin'
+[2.537s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup/lib/pkgconfig/ros_gz_h1_bringup.pc'
+[2.542s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup/lib/python3.12/site-packages'
+[2.544s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup/bin'
+[2.546s] INFO:colcon.colcon_core.shell:Creating package script '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup/share/ros_gz_h1_bringup/package.ps1'
+[2.549s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup/share/ros_gz_h1_bringup/package.dsv'
+[2.551s] INFO:colcon.colcon_core.shell:Creating package script '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup/share/ros_gz_h1_bringup/package.sh'
+[2.555s] INFO:colcon.colcon_core.shell:Creating package script '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup/share/ros_gz_h1_bringup/package.bash'
+[2.558s] INFO:colcon.colcon_core.shell:Creating package script '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup/share/ros_gz_h1_bringup/package.zsh'
+[2.559s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup/share/colcon-core/packages/ros_gz_h1_bringup)
+[2.566s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros_gz_h1_bringup)
+[2.567s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup' for CMake module files
+[2.579s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup' for CMake config files
+[2.580s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros_gz_h1_bringup', 'cmake_prefix_path')
+[2.582s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup/share/ros_gz_h1_bringup/hook/cmake_prefix_path.ps1'
+[2.585s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup/share/ros_gz_h1_bringup/hook/cmake_prefix_path.dsv'
+[2.586s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup/share/ros_gz_h1_bringup/hook/cmake_prefix_path.sh'
+[2.590s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup/bin'
+[2.591s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup/lib/pkgconfig/ros_gz_h1_bringup.pc'
+[2.591s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup/lib/python3.12/site-packages'
+[2.592s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup/bin'
+[2.593s] INFO:colcon.colcon_core.shell:Creating package script '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup/share/ros_gz_h1_bringup/package.ps1'
+[2.595s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup/share/ros_gz_h1_bringup/package.dsv'
+[2.600s] INFO:colcon.colcon_core.shell:Creating package script '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup/share/ros_gz_h1_bringup/package.sh'
+[2.602s] INFO:colcon.colcon_core.shell:Creating package script '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup/share/ros_gz_h1_bringup/package.bash'
+[2.615s] INFO:colcon.colcon_core.shell:Creating package script '/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup/share/ros_gz_h1_bringup/package.zsh'
+[2.620s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rasp/humanoid/robot_ws/install/ros_gz_h1_bringup/share/colcon-core/packages/ros_gz_h1_bringup)
+[4.417s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rasp/humanoid/robot_ws/build/servo_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rasp/humanoid/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/rasp/humanoid/robot_ws/build/servo_interfaces -- -j4 -l4
+[4.423s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rasp/humanoid/robot_ws/build/servo_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rasp/humanoid/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/rasp/humanoid/robot_ws/build/servo_interfaces
+[4.744s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(servo_interfaces)
+[4.748s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/servo_interfaces' for CMake module files
+[4.763s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/servo_interfaces' for CMake config files
+[4.776s] Level 1:colcon.colcon_core.shell:create_environment_hook('servo_interfaces', 'cmake_prefix_path')
+[4.777s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/hook/cmake_prefix_path.ps1'
+[4.784s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/hook/cmake_prefix_path.dsv'
+[4.791s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/hook/cmake_prefix_path.sh'
+[4.796s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/servo_interfaces/lib'
+[4.807s] Level 1:colcon.colcon_core.shell:create_environment_hook('servo_interfaces', 'ld_library_path_lib')
+[4.808s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/hook/ld_library_path_lib.ps1'
+[4.813s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rasp/humanoid/robot_ws/build/servo_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rasp/humanoid/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/rasp/humanoid/robot_ws/build/servo_interfaces
+[4.818s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/hook/ld_library_path_lib.dsv'
+[4.820s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/hook/ld_library_path_lib.sh'
+[4.822s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/servo_interfaces/bin'
+[4.830s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/pkgconfig/servo_interfaces.pc'
+[4.835s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages'
+[4.835s] Level 1:colcon.colcon_core.shell:create_environment_hook('servo_interfaces', 'pythonpath')
+[4.842s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/hook/pythonpath.ps1'
+[4.849s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/hook/pythonpath.dsv'
+[4.854s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/hook/pythonpath.sh'
+[4.858s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/servo_interfaces/bin'
+[4.860s] INFO:colcon.colcon_core.shell:Creating package script '/home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/package.ps1'
+[4.863s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/package.dsv'
+[4.865s] INFO:colcon.colcon_core.shell:Creating package script '/home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/package.sh'
+[4.867s] INFO:colcon.colcon_core.shell:Creating package script '/home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/package.bash'
+[4.869s] INFO:colcon.colcon_core.shell:Creating package script '/home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/package.zsh'
+[4.871s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rasp/humanoid/robot_ws/install/servo_interfaces/share/colcon-core/packages/servo_interfaces)
+[4.874s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(servo_interfaces)
+[4.875s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/servo_interfaces' for CMake module files
+[4.877s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/servo_interfaces' for CMake config files
+[4.879s] Level 1:colcon.colcon_core.shell:create_environment_hook('servo_interfaces', 'cmake_prefix_path')
+[4.880s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/hook/cmake_prefix_path.ps1'
+[4.884s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/hook/cmake_prefix_path.dsv'
+[4.889s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/hook/cmake_prefix_path.sh'
+[4.896s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/servo_interfaces/lib'
+[4.897s] Level 1:colcon.colcon_core.shell:create_environment_hook('servo_interfaces', 'ld_library_path_lib')
+[4.898s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/hook/ld_library_path_lib.ps1'
+[4.904s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/hook/ld_library_path_lib.dsv'
+[4.905s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/hook/ld_library_path_lib.sh'
+[4.907s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/servo_interfaces/bin'
+[4.907s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/pkgconfig/servo_interfaces.pc'
+[4.907s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages'
+[4.908s] Level 1:colcon.colcon_core.shell:create_environment_hook('servo_interfaces', 'pythonpath')
+[4.909s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/hook/pythonpath.ps1'
+[4.912s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/hook/pythonpath.dsv'
+[4.914s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/hook/pythonpath.sh'
+[4.918s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/servo_interfaces/bin'
+[4.919s] INFO:colcon.colcon_core.shell:Creating package script '/home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/package.ps1'
+[4.922s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/package.dsv'
+[4.924s] INFO:colcon.colcon_core.shell:Creating package script '/home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/package.sh'
+[4.927s] INFO:colcon.colcon_core.shell:Creating package script '/home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/package.bash'
+[4.928s] INFO:colcon.colcon_core.shell:Creating package script '/home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/package.zsh'
+[4.931s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rasp/humanoid/robot_ws/install/servo_interfaces/share/colcon-core/packages/servo_interfaces)
+[4.932s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/rasp/humanoid/robot_ws/src/my_servo_controller' with build type 'ament_python'
+[4.933s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_servo_controller', 'ament_prefix_path')
+[4.934s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rasp/humanoid/robot_ws/install/my_servo_controller/share/my_servo_controller/hook/ament_prefix_path.ps1'
+[4.939s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rasp/humanoid/robot_ws/install/my_servo_controller/share/my_servo_controller/hook/ament_prefix_path.dsv'
+[4.944s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rasp/humanoid/robot_ws/install/my_servo_controller/share/my_servo_controller/hook/ament_prefix_path.sh'
+[4.948s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.948s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.933s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/rasp/humanoid/robot_ws/src/my_servo_controller'
+[5.934s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[5.935s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[8.214s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rasp/humanoid/robot_ws/src/my_servo_controller': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rasp/humanoid/robot_ws/build/my_servo_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rasp/humanoid/robot_ws/install/my_servo_controller/lib/python3.12/site-packages:/home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages:/home/rasp/humanoid/robot_ws/install/my_servo_controller/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_servo_controller build --build-base /home/rasp/humanoid/robot_ws/build/my_servo_controller/build install --record /home/rasp/humanoid/robot_ws/build/my_servo_controller/install.log --single-version-externally-managed install_data
+[10.510s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/my_servo_controller' for CMake module files
+[10.512s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rasp/humanoid/robot_ws/src/my_servo_controller' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rasp/humanoid/robot_ws/build/my_servo_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rasp/humanoid/robot_ws/install/my_servo_controller/lib/python3.12/site-packages:/home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages:/home/rasp/humanoid/robot_ws/install/my_servo_controller/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_servo_controller build --build-base /home/rasp/humanoid/robot_ws/build/my_servo_controller/build install --record /home/rasp/humanoid/robot_ws/build/my_servo_controller/install.log --single-version-externally-managed install_data
+[10.513s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/my_servo_controller' for CMake config files
+[10.516s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/my_servo_controller/lib'
+[10.516s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/my_servo_controller/bin'
+[10.517s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/my_servo_controller/lib/pkgconfig/my_servo_controller.pc'
+[10.518s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/my_servo_controller/lib/python3.12/site-packages'
+[10.519s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_servo_controller', 'pythonpath')
+[10.521s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rasp/humanoid/robot_ws/install/my_servo_controller/share/my_servo_controller/hook/pythonpath.ps1'
+[10.526s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rasp/humanoid/robot_ws/install/my_servo_controller/share/my_servo_controller/hook/pythonpath.dsv'
+[10.530s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rasp/humanoid/robot_ws/install/my_servo_controller/share/my_servo_controller/hook/pythonpath.sh'
+[10.537s] Level 1:colcon.colcon_core.environment:checking '/home/rasp/humanoid/robot_ws/install/my_servo_controller/bin'
+[10.537s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_servo_controller)
+[10.538s] INFO:colcon.colcon_core.shell:Creating package script '/home/rasp/humanoid/robot_ws/install/my_servo_controller/share/my_servo_controller/package.ps1'
+[10.540s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rasp/humanoid/robot_ws/install/my_servo_controller/share/my_servo_controller/package.dsv'
+[10.541s] INFO:colcon.colcon_core.shell:Creating package script '/home/rasp/humanoid/robot_ws/install/my_servo_controller/share/my_servo_controller/package.sh'
+[10.543s] INFO:colcon.colcon_core.shell:Creating package script '/home/rasp/humanoid/robot_ws/install/my_servo_controller/share/my_servo_controller/package.bash'
+[10.544s] INFO:colcon.colcon_core.shell:Creating package script '/home/rasp/humanoid/robot_ws/install/my_servo_controller/share/my_servo_controller/package.zsh'
+[10.545s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rasp/humanoid/robot_ws/install/my_servo_controller/share/colcon-core/packages/my_servo_controller)
+[10.547s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[10.547s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[10.547s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[10.547s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[10.573s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[10.575s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[10.576s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[10.640s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[10.642s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rasp/humanoid/robot_ws/install/local_setup.ps1'
+[10.645s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/rasp/humanoid/robot_ws/install/_local_setup_util_ps1.py'
+[10.649s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rasp/humanoid/robot_ws/install/setup.ps1'
+[10.652s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rasp/humanoid/robot_ws/install/local_setup.sh'
+[10.654s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/rasp/humanoid/robot_ws/install/_local_setup_util_sh.py'
+[10.657s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rasp/humanoid/robot_ws/install/setup.sh'
+[10.661s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rasp/humanoid/robot_ws/install/local_setup.bash'
+[10.665s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rasp/humanoid/robot_ws/install/setup.bash'
+[10.668s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rasp/humanoid/robot_ws/install/local_setup.zsh'
+[10.675s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rasp/humanoid/robot_ws/install/setup.zsh'

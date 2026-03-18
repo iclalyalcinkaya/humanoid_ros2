@@ -45,7 +45,7 @@ class GaziboSimServer(Node):
         self.first_id = None
         self.active_client_id = None
         self.old_leng = 0
-        self.current_angles = MOTOR_START_ANGLES #self.load_angles()
+        self.current_angles = MOTOR_START_ANGLES.copy() #self.load_angles()
         # NEW: Initialize all the Gazebo publishers
         self.gazebo_pubs = {}
         for motor_idx, joint_name in GAZEBO_JOINT_MAP.items():
@@ -126,7 +126,7 @@ class GaziboSimServer(Node):
                     Speed = int(Speed / 2)
                 #if(abs(error) < abs(Speed) and abs(Speed) != 1):
                 #    Speed = 1
-                if(error < 0 and Speed > 0):
+                if(error * Speed < 0):
                     Speed *= -1
                 
                 current_an = max(min_angle, min(max_angle, current_an + Speed))
