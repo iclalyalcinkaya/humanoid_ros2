@@ -11,6 +11,7 @@ find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/SetPwm.msg"
+  "msg/SetMode.msg"
   "srv/MotorAngle.srv"
   "action/MotorAngle.action"
 )

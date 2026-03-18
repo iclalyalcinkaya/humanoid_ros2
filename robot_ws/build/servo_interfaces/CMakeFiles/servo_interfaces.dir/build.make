@@ -67,6 +67,7 @@ include CMakeFiles/servo_interfaces.dir/compiler_depend.make
 include CMakeFiles/servo_interfaces.dir/progress.make
 
 CMakeFiles/servo_interfaces: /home/rasp/humanoid/robot_ws/src/servo_interfaces/msg/SetPwm.msg
+CMakeFiles/servo_interfaces: /home/rasp/humanoid/robot_ws/src/servo_interfaces/msg/SetMode.msg
 CMakeFiles/servo_interfaces: /home/rasp/humanoid/robot_ws/src/servo_interfaces/srv/MotorAngle.srv
 CMakeFiles/servo_interfaces: /home/rasp/humanoid/robot_ws/src/servo_interfaces/action/MotorAngle.action
 CMakeFiles/servo_interfaces: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl

@@ -71,6 +71,11 @@ CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/deta
 CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/set_pwm__struct.hpp
 CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/set_pwm__traits.hpp
 CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/set_pwm__type_support.hpp
+CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/set_mode.hpp
+CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/set_mode__builder.hpp
+CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/set_mode__struct.hpp
+CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/set_mode__traits.hpp
+CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/set_mode__type_support.hpp
 CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/srv/motor_angle.hpp
 CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/srv/detail/motor_angle__builder.hpp
 CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/srv/detail/motor_angle__struct.hpp
@@ -103,6 +108,7 @@ rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/rosi
 rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
 rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/srv__type_support.hpp.em
 rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: rosidl_adapter/servo_interfaces/msg/SetPwm.idl
+rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: rosidl_adapter/servo_interfaces/msg/SetMode.idl
 rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: rosidl_adapter/servo_interfaces/srv/MotorAngle.idl
 rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: rosidl_adapter/servo_interfaces/action/MotorAngle.idl
 rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
@@ -127,6 +133,21 @@ rosidl_generator_cpp/servo_interfaces/msg/detail/set_pwm__traits.hpp: rosidl_gen
 
 rosidl_generator_cpp/servo_interfaces/msg/detail/set_pwm__type_support.hpp: rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/servo_interfaces/msg/detail/set_pwm__type_support.hpp
+
+rosidl_generator_cpp/servo_interfaces/msg/set_mode.hpp: rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/servo_interfaces/msg/set_mode.hpp
+
+rosidl_generator_cpp/servo_interfaces/msg/detail/set_mode__builder.hpp: rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/servo_interfaces/msg/detail/set_mode__builder.hpp
+
+rosidl_generator_cpp/servo_interfaces/msg/detail/set_mode__struct.hpp: rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/servo_interfaces/msg/detail/set_mode__struct.hpp
+
+rosidl_generator_cpp/servo_interfaces/msg/detail/set_mode__traits.hpp: rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/servo_interfaces/msg/detail/set_mode__traits.hpp
+
+rosidl_generator_cpp/servo_interfaces/msg/detail/set_mode__type_support.hpp: rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/servo_interfaces/msg/detail/set_mode__type_support.hpp
 
 rosidl_generator_cpp/servo_interfaces/srv/motor_angle.hpp: rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/servo_interfaces/srv/motor_angle.hpp
@@ -167,11 +188,16 @@ servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/action/detail/motor
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/action/detail/motor_angle__traits.hpp
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/action/detail/motor_angle__type_support.hpp
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/action/motor_angle.hpp
+servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/set_mode__builder.hpp
+servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/set_mode__struct.hpp
+servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/set_mode__traits.hpp
+servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/set_mode__type_support.hpp
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/set_pwm__builder.hpp
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/set_pwm__struct.hpp
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/set_pwm__traits.hpp
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/set_pwm__type_support.hpp
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/set_mode.hpp
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/srv/detail/motor_angle__builder.hpp
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/srv/detail/motor_angle__struct.hpp

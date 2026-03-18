@@ -6,6 +6,8 @@ file(REMOVE_RECURSE
   "/home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_generator_py/servo_interfaces/action/_motor_angle.py"
   "/home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_generator_py/servo_interfaces/action/_motor_angle_s.c"
   "/home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_generator_py/servo_interfaces/msg/__init__.py"
+  "/home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_generator_py/servo_interfaces/msg/_set_mode.py"
+  "/home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_generator_py/servo_interfaces/msg/_set_mode_s.c"
   "/home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_generator_py/servo_interfaces/msg/_set_pwm.py"
   "/home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_generator_py/servo_interfaces/msg/_set_pwm_s.c"
   "/home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_generator_py/servo_interfaces/srv/__init__.py"

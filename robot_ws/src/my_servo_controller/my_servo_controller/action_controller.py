@@ -65,11 +65,11 @@ class ServoActionServer(Node):
         if self.active_client_id is None:
             self.active_client_id = incoming_id
             self.get_logger().info(f"Control locked to new client: {incoming_id}")
-            self.get_logger().info(f"Goal request: Motor {goal_request.motor_num} to {goal_request.target_position}")
+            self.get_logger().info(f"Goal request: Motor {goal_request.motor_num+1} to {goal_request.target_position}")
             return GoalResponse.ACCEPT
 
         elif self.active_client_id == incoming_id:
-            self.get_logger().info(f"Goal request: Motor {goal_request.motor_num} to {goal_request.target_position}")
+            self.get_logger().info(f"Goal request: Motor {goal_request.motor_num+1} to {goal_request.target_position}")
             return GoalResponse.ACCEPT
 
         else:
@@ -85,7 +85,7 @@ class ServoActionServer(Node):
         feedback_msg = MotorAngle.Feedback()
         result = MotorAngle.Result()
 
-        motor_num = request.motor_num - 1
+        motor_num = request.motor_num #- 1
         target_position = float(request.target_position)
         current_an = float(self.current_angles[str(motor_num+1)])
         
@@ -124,7 +124,7 @@ class ServoActionServer(Node):
                 time.sleep(Ts) #wait for motor to move
 
             goal_handle.succeed()
-            self.get_logger().info(f"Goal Succeeded: Motor {motor_num+1} arrived at {target_position}")
+            self.get_logger().info(f"Goal Succeeded: Motor {motor_num+1} arrived at {int(target_position)}")
 
             result.success = True
             return result

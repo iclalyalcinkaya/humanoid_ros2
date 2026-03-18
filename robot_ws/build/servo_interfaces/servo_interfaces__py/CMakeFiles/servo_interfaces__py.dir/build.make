@@ -70,12 +70,14 @@ include /home/rasp/humanoid/robot_ws/build/servo_interfaces/servo_interfaces__py
 /home/rasp/humanoid/robot_ws/build/servo_interfaces/servo_interfaces__py/CMakeFiles/servo_interfaces__py: rosidl_generator_py/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_introspection_c.c
 /home/rasp/humanoid/robot_ws/build/servo_interfaces/servo_interfaces__py/CMakeFiles/servo_interfaces__py: rosidl_generator_py/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_c.c
 /home/rasp/humanoid/robot_ws/build/servo_interfaces/servo_interfaces__py/CMakeFiles/servo_interfaces__py: rosidl_generator_py/servo_interfaces/msg/_set_pwm.py
+/home/rasp/humanoid/robot_ws/build/servo_interfaces/servo_interfaces__py/CMakeFiles/servo_interfaces__py: rosidl_generator_py/servo_interfaces/msg/_set_mode.py
 /home/rasp/humanoid/robot_ws/build/servo_interfaces/servo_interfaces__py/CMakeFiles/servo_interfaces__py: rosidl_generator_py/servo_interfaces/srv/_motor_angle.py
 /home/rasp/humanoid/robot_ws/build/servo_interfaces/servo_interfaces__py/CMakeFiles/servo_interfaces__py: rosidl_generator_py/servo_interfaces/action/_motor_angle.py
 /home/rasp/humanoid/robot_ws/build/servo_interfaces/servo_interfaces__py/CMakeFiles/servo_interfaces__py: rosidl_generator_py/servo_interfaces/msg/__init__.py
 /home/rasp/humanoid/robot_ws/build/servo_interfaces/servo_interfaces__py/CMakeFiles/servo_interfaces__py: rosidl_generator_py/servo_interfaces/srv/__init__.py
 /home/rasp/humanoid/robot_ws/build/servo_interfaces/servo_interfaces__py/CMakeFiles/servo_interfaces__py: rosidl_generator_py/servo_interfaces/action/__init__.py
 /home/rasp/humanoid/robot_ws/build/servo_interfaces/servo_interfaces__py/CMakeFiles/servo_interfaces__py: rosidl_generator_py/servo_interfaces/msg/_set_pwm_s.c
+/home/rasp/humanoid/robot_ws/build/servo_interfaces/servo_interfaces__py/CMakeFiles/servo_interfaces__py: rosidl_generator_py/servo_interfaces/msg/_set_mode_s.c
 /home/rasp/humanoid/robot_ws/build/servo_interfaces/servo_interfaces__py/CMakeFiles/servo_interfaces__py: rosidl_generator_py/servo_interfaces/srv/_motor_angle_s.c
 /home/rasp/humanoid/robot_ws/build/servo_interfaces/servo_interfaces__py/CMakeFiles/servo_interfaces__py: rosidl_generator_py/servo_interfaces/action/_motor_angle_s.c
 
@@ -93,6 +95,7 @@ rosidl_generator_py/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_f
 rosidl_generator_py/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/rosidl_generator_py/resource/_srv_pkg_typesupport_entry_point.c.em
 rosidl_generator_py/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/rosidl_generator_py/resource/_srv.py.em
 rosidl_generator_py/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/servo_interfaces/msg/SetPwm.idl
+rosidl_generator_py/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/servo_interfaces/msg/SetMode.idl
 rosidl_generator_py/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/servo_interfaces/srv/MotorAngle.idl
 rosidl_generator_py/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/servo_interfaces/action/MotorAngle.idl
 rosidl_generator_py/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
@@ -115,6 +118,9 @@ rosidl_generator_py/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_c
 rosidl_generator_py/servo_interfaces/msg/_set_pwm.py: rosidl_generator_py/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/servo_interfaces/msg/_set_pwm.py
 
+rosidl_generator_py/servo_interfaces/msg/_set_mode.py: rosidl_generator_py/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/servo_interfaces/msg/_set_mode.py
+
 rosidl_generator_py/servo_interfaces/srv/_motor_angle.py: rosidl_generator_py/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/servo_interfaces/srv/_motor_angle.py
 
@@ -133,6 +139,9 @@ rosidl_generator_py/servo_interfaces/action/__init__.py: rosidl_generator_py/ser
 rosidl_generator_py/servo_interfaces/msg/_set_pwm_s.c: rosidl_generator_py/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/servo_interfaces/msg/_set_pwm_s.c
 
+rosidl_generator_py/servo_interfaces/msg/_set_mode_s.c: rosidl_generator_py/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/servo_interfaces/msg/_set_mode_s.c
+
 rosidl_generator_py/servo_interfaces/srv/_motor_angle_s.c: rosidl_generator_py/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/servo_interfaces/srv/_motor_angle_s.c
 
@@ -146,6 +155,8 @@ servo_interfaces__py: rosidl_generator_py/servo_interfaces/action/__init__.py
 servo_interfaces__py: rosidl_generator_py/servo_interfaces/action/_motor_angle.py
 servo_interfaces__py: rosidl_generator_py/servo_interfaces/action/_motor_angle_s.c
 servo_interfaces__py: rosidl_generator_py/servo_interfaces/msg/__init__.py
+servo_interfaces__py: rosidl_generator_py/servo_interfaces/msg/_set_mode.py
+servo_interfaces__py: rosidl_generator_py/servo_interfaces/msg/_set_mode_s.c
 servo_interfaces__py: rosidl_generator_py/servo_interfaces/msg/_set_pwm.py
 servo_interfaces__py: rosidl_generator_py/servo_interfaces/msg/_set_pwm_s.c
 servo_interfaces__py: rosidl_generator_py/servo_interfaces/srv/__init__.py

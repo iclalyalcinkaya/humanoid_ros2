@@ -232,6 +232,9 @@ CMakeFiles/servo_interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_gen
  /home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/msg/rosidl_generator_c__visibility_control.h \
  /home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/msg/detail/set_pwm__struct.h \
  /home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/msg/detail/set_pwm__functions.h \
+ /home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/msg/detail/set_mode__type_support.h \
+ /home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/msg/detail/set_mode__struct.h \
+ /home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/msg/detail/set_mode__functions.h \
  /home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__type_support.h \
  /home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__struct.h \
  /opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.h \

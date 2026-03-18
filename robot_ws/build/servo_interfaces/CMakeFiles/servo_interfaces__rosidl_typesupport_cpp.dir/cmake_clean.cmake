@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/servo_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/servo_interfaces/action/motor_angle__type_support.cpp.o"
   "CMakeFiles/servo_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/servo_interfaces/action/motor_angle__type_support.cpp.o.d"
+  "CMakeFiles/servo_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/servo_interfaces/msg/set_mode__type_support.cpp.o"
+  "CMakeFiles/servo_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/servo_interfaces/msg/set_mode__type_support.cpp.o.d"
   "CMakeFiles/servo_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/servo_interfaces/msg/set_pwm__type_support.cpp.o"
   "CMakeFiles/servo_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/servo_interfaces/msg/set_pwm__type_support.cpp.o.d"
   "CMakeFiles/servo_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/servo_interfaces/srv/motor_angle__type_support.cpp.o"
@@ -8,6 +10,7 @@ file(REMOVE_RECURSE
   "libservo_interfaces__rosidl_typesupport_cpp.pdb"
   "libservo_interfaces__rosidl_typesupport_cpp.so"
   "rosidl_typesupport_cpp/servo_interfaces/action/motor_angle__type_support.cpp"
+  "rosidl_typesupport_cpp/servo_interfaces/msg/set_mode__type_support.cpp"
   "rosidl_typesupport_cpp/servo_interfaces/msg/set_pwm__type_support.cpp"
   "rosidl_typesupport_cpp/servo_interfaces/srv/motor_angle__type_support.cpp"
 )

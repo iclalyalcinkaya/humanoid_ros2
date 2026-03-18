@@ -1,5 +1,7 @@
 action/MotorAngle.action
 action/MotorAngle.idl
+msg/SetMode.idl
+msg/SetMode.msg
 msg/SetPwm.idl
 msg/SetPwm.msg
 srv/MotorAngle.idl

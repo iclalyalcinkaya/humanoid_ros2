@@ -78,6 +78,7 @@ rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_pwm__rosidl_t
 rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_introspection_c.h: /opt/ros/jazzy/share/rosidl_typesupport_introspection_c/resource/srv__rosidl_typesupport_introspection_c.h.em
 rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_introspection_c.h: /opt/ros/jazzy/share/rosidl_typesupport_introspection_c/resource/srv__type_support.c.em
 rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_introspection_c.h: rosidl_adapter/servo_interfaces/msg/SetPwm.idl
+rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_introspection_c.h: rosidl_adapter/servo_interfaces/msg/SetMode.idl
 rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_introspection_c.h: rosidl_adapter/servo_interfaces/srv/MotorAngle.idl
 rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_introspection_c.h: rosidl_adapter/servo_interfaces/action/MotorAngle.idl
 rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_introspection_c.h: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
@@ -91,6 +92,9 @@ rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_pwm__rosidl_t
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/rasp/humanoid/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C introspection for ROS interfaces"
 	/usr/bin/python3 /opt/ros/jazzy/lib/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c --generator-arguments-file /home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_typesupport_introspection_c__arguments.json
 
+rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_mode__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_mode__rosidl_typesupport_introspection_c.h
+
 rosidl_typesupport_introspection_c/servo_interfaces/srv/detail/motor_angle__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/servo_interfaces/srv/detail/motor_angle__rosidl_typesupport_introspection_c.h
 
@@ -99,6 +103,9 @@ rosidl_typesupport_introspection_c/servo_interfaces/action/detail/motor_angle__r
 
 rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_pwm__type_support.c: rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_pwm__type_support.c
+
+rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_mode__type_support.c: rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_mode__type_support.c
 
 rosidl_typesupport_introspection_c/servo_interfaces/srv/detail/motor_angle__type_support.c: rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/servo_interfaces/srv/detail/motor_angle__type_support.c
@@ -120,10 +127,24 @@ CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_types
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_pwm__type_support.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_pwm__type_support.c -o CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_pwm__type_support.c.s
 
+CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_mode__type_support.c.o: CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/flags.make
+CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_mode__type_support.c.o: rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_mode__type_support.c
+CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_mode__type_support.c.o: CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rasp/humanoid/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_mode__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_mode__type_support.c.o -MF CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_mode__type_support.c.o.d -o CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_mode__type_support.c.o -c /home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_mode__type_support.c
+
+CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_mode__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_mode__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_mode__type_support.c > CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_mode__type_support.c.i
+
+CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_mode__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_mode__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_mode__type_support.c -o CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_mode__type_support.c.s
+
 CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/srv/detail/motor_angle__type_support.c.o: CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/flags.make
 CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/srv/detail/motor_angle__type_support.c.o: rosidl_typesupport_introspection_c/servo_interfaces/srv/detail/motor_angle__type_support.c
 CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/srv/detail/motor_angle__type_support.c.o: CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rasp/humanoid/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/srv/detail/motor_angle__type_support.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rasp/humanoid/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/srv/detail/motor_angle__type_support.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/srv/detail/motor_angle__type_support.c.o -MF CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/srv/detail/motor_angle__type_support.c.o.d -o CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/srv/detail/motor_angle__type_support.c.o -c /home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_typesupport_introspection_c/servo_interfaces/srv/detail/motor_angle__type_support.c
 
 CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/srv/detail/motor_angle__type_support.c.i: cmake_force
@@ -137,7 +158,7 @@ CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_types
 CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/action/detail/motor_angle__type_support.c.o: CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/flags.make
 CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/action/detail/motor_angle__type_support.c.o: rosidl_typesupport_introspection_c/servo_interfaces/action/detail/motor_angle__type_support.c
 CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/action/detail/motor_angle__type_support.c.o: CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rasp/humanoid/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/action/detail/motor_angle__type_support.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rasp/humanoid/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/action/detail/motor_angle__type_support.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/action/detail/motor_angle__type_support.c.o -MF CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/action/detail/motor_angle__type_support.c.o.d -o CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/action/detail/motor_angle__type_support.c.o -c /home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_typesupport_introspection_c/servo_interfaces/action/detail/motor_angle__type_support.c
 
 CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/action/detail/motor_angle__type_support.c.i: cmake_force
@@ -151,6 +172,7 @@ CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_types
 # Object files for target servo_interfaces__rosidl_typesupport_introspection_c
 servo_interfaces__rosidl_typesupport_introspection_c_OBJECTS = \
 "CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_pwm__type_support.c.o" \
+"CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_mode__type_support.c.o" \
 "CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/srv/detail/motor_angle__type_support.c.o" \
 "CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/action/detail/motor_angle__type_support.c.o"
 
@@ -158,6 +180,7 @@ servo_interfaces__rosidl_typesupport_introspection_c_OBJECTS = \
 servo_interfaces__rosidl_typesupport_introspection_c_EXTERNAL_OBJECTS =
 
 libservo_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_pwm__type_support.c.o
+libservo_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_mode__type_support.c.o
 libservo_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/srv/detail/motor_angle__type_support.c.o
 libservo_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/action/detail/motor_angle__type_support.c.o
 libservo_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/build.make
@@ -174,7 +197,7 @@ libservo_interfaces__rosidl_typesupport_introspection_c.so: /opt/ros/jazzy/lib/l
 libservo_interfaces__rosidl_typesupport_introspection_c.so: /opt/ros/jazzy/lib/librosidl_runtime_c.so
 libservo_interfaces__rosidl_typesupport_introspection_c.so: /opt/ros/jazzy/lib/librcutils.so
 libservo_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/rasp/humanoid/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C shared library libservo_interfaces__rosidl_typesupport_introspection_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/rasp/humanoid/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C shared library libservo_interfaces__rosidl_typesupport_introspection_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -187,6 +210,8 @@ CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/clean:
 
 CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/servo_interfaces/action/detail/motor_angle__rosidl_typesupport_introspection_c.h
 CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/servo_interfaces/action/detail/motor_angle__type_support.c
+CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_mode__rosidl_typesupport_introspection_c.h
+CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_mode__type_support.c
 CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_introspection_c.h
 CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_pwm__type_support.c
 CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/servo_interfaces/srv/detail/motor_angle__rosidl_typesupport_introspection_c.h

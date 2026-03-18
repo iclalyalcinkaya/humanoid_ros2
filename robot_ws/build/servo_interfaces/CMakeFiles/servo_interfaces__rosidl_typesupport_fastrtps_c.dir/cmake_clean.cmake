@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/action/detail/motor_angle__type_support_c.cpp.o"
   "CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/action/detail/motor_angle__type_support_c.cpp.o.d"
+  "CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_mode__type_support_c.cpp.o"
+  "CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_mode__type_support_c.cpp.o.d"
   "CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_pwm__type_support_c.cpp.o"
   "CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_pwm__type_support_c.cpp.o.d"
   "CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/srv/detail/motor_angle__type_support_c.cpp.o"
@@ -9,6 +11,8 @@ file(REMOVE_RECURSE
   "libservo_interfaces__rosidl_typesupport_fastrtps_c.so"
   "rosidl_typesupport_fastrtps_c/servo_interfaces/action/detail/motor_angle__rosidl_typesupport_fastrtps_c.h"
   "rosidl_typesupport_fastrtps_c/servo_interfaces/action/detail/motor_angle__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_mode__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_mode__type_support_c.cpp"
   "rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_fastrtps_c.h"
   "rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_pwm__type_support_c.cpp"
   "rosidl_typesupport_fastrtps_c/servo_interfaces/srv/detail/motor_angle__rosidl_typesupport_fastrtps_c.h"

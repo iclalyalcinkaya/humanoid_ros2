@@ -19,7 +19,7 @@ MOTOR_COUNT = 12
 MOTOR_ANGLE_LIMITS = [[0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180]]
 MOTOR_START_ANGLES = {'1': 90,  '2': 90,  '3': 90,  '4': 90,  '5': 90,  '6': 90,  '7': 90,  '8': 90,  '9': 90,  '10': 90, '11': 90, '12': 90}
 
-# NEW: Map your 14 motor indices (0-13) to the Gazebo H1 joint names
+# NEW: Map your 12 motor indices (0-11) to the Gazebo H1 joint names
 # You will need to verify the exact joint names in the URDF file
 GAZEBO_JOINT_MAP = {
     0: "left_shoulder_yaw_joint",
@@ -87,10 +87,10 @@ class GaziboSimServer(Node):
         if self.active_client_id is None:
             self.active_client_id = incoming_id
             self.get_logger().info(f"Control locked to new client: {incoming_id}")
-            self.get_logger().info(f"Goal request: Motor {goal_request.motor_num} to {goal_request.target_position}")
+            self.get_logger().info(f"Goal request: Motor {goal_request.motor_num+1} to {goal_request.target_position}")
             return GoalResponse.ACCEPT
         elif self.active_client_id == incoming_id:
-            self.get_logger().info(f"Goal request: Motor {goal_request.motor_num} to {goal_request.target_position}")
+            self.get_logger().info(f"Goal request: Motor {goal_request.motor_num+1} to {goal_request.target_position}")
             return GoalResponse.ACCEPT
         else:
             self.get_logger().warn(f"Goal rejected: Robot is currently locked by {self.active_client_id}")
@@ -105,7 +105,7 @@ class GaziboSimServer(Node):
         feedback_msg = MotorAngle.Feedback()
         result = MotorAngle.Result()
 
-        motor_num = request.motor_num - 1
+        motor_num = request.motor_num #- 1
         target_position = float(request.target_position)
 
         current_an = float(self.current_angles.get(str(motor_num+1), 90))
@@ -146,9 +146,8 @@ class GaziboSimServer(Node):
                 time.sleep(Ts)
 
             goal_handle.succeed()
-            self.get_logger().info(f"Goal Succeeded: Motor {motor_num+1} arrived at {target_position}")
+            self.get_logger().info(f"Goal Succeeded: Motor {motor_num+1} arrived at {int(target_position)}")
             result.success = True
-            self.get_logger().info(f"Goal Success: {result.success}")
             return result
             
         else:

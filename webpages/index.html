@@ -2,8 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Humanoid Robot Servo Motor Action Control</title>
-    
+    <title>Humanoid Robot Servo Topic Control</title>
     <script src="https://unpkg.com/eventemitter3@latest/dist/eventemitter3.umd.min.js"></script>
     <script>
     // Trick the ROS UMD bundler into finding what it expects
@@ -22,58 +21,27 @@
         .motors-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; }
         input[type=range] { flex-grow: 1; margin: 0 10px; accent-color: #8c00ff; }
         .val-display { width: 35px; text-align: right; font-family: monospace; font-weight: bold; color: #8c00ff; }
-        .btn { padding: 8px 12px; cursor: pointer; border: none; border-radius: 4px; background: #8c00ff; color: white; font-weight: bold; transition: 0.2s; }
+        .btn { padding: 8px 12px; cursor: pointer; border: none; border-radius: 4px; background: #8c00ff; color: #ffffff; font-weight: bold; transition: 0.2s; }
         .btn:hover { background: #7300d1; }
         .mode-btn { background: #3b82f6; width: 120px; }
         .mode-btn.active { background: #1e3a8a; outline: 2px solid #000; }
-    
         .step-btn { padding: 2px 6px; cursor: pointer; border: 1px solid #cbd5e1; border-radius: 4px; background: #e2e8f0; font-size: 12px; font-weight: bold; color: #334155; transition: 0.1s;}
         .step-btn:hover { background: #cbd5e1; }
         .pid-group { display: flex; align-items: center; gap: 4px; margin: 0 10px; }
-
+        .sim-btn{ background: #3b82f6; width: 120px; }
+        .sim-btn.active { background: #1e3a8a; outline: 2px solid #000; }
     </style>
 </head>
 
 <body>
     <div class="card">
-        <!-- Visual indicators-->
-        <h1>Humanoid Robot Servo Motor Action Control</h1>
-        
+        <h1>Humanoid Robot Servo Topic Control</h1>
+
         <div id="statusIndicator" class="status disconnected">
             <span id="connecting">Connecting...</span>
             <span id="connected" style="display:none;">Connected to Robot</span>
             <span id="error" style="display:none;">Error in backend!</span>
             <span id="closed" style="display:none;">Connection closed.</span>
-        </div>
-
-        <div class="control-row" style="justify-content: center; gap: 5px;">
-            <span><strong>PID Param</strong></span>
-            <div class="pid-group">
-                <label for="kp">Kp:</label>
-                <button class="step-btn" onclick="adjustPID('kp', -1)">-1</button>
-                <button class="step-btn" onclick="adjustPID('kp', -0.01)">-.01</button>
-                <input type="number" id="kp" value="0.030" step="0.001" style="width:65px; text-align:center;">
-                <button class="step-btn" onclick="adjustPID('kp', 0.01)">+.01</button>
-                <button class="step-btn" onclick="adjustPID('kp', 1)">+1</button>
-            </div>
-
-            <div class="pid-group">
-                <label for="ki">Ki:</label>
-                <button class="step-btn" onclick="adjustPID('ki', -1)">-1</button>
-                <button class="step-btn" onclick="adjustPID('ki', -0.01)">-.01</button>
-                <input type="number" id="ki" value="0.000" step="0.001" style="width:65px; text-align:center;">
-                <button class="step-btn" onclick="adjustPID('ki', 0.01)">+.01</button>
-                <button class="step-btn" onclick="adjustPID('ki', 1)">+1</button>
-            </div>
-
-            <div class="pid-group">
-                <label for="kd">Kd:</label>
-                <button class="step-btn" onclick="adjustPID('kd', -1)">-1</button>
-                <button class="step-btn" onclick="adjustPID('kd', -0.01)">-.01</button>
-                <input type="number" id="kd" value="0.000" step="0.001" style="width:65px; text-align:center;">
-                <button class="step-btn" onclick="adjustPID('kd', 0.01)">+.01</button>
-                <button class="step-btn" onclick="adjustPID('kd', 1)">+1</button>
-            </div>    
         </div>
 
         <div class="control-row" style="justify-content: center; gap: 20px;">
@@ -82,9 +50,11 @@
             <button class="btn mode-btn" id="btnMode2" onclick="setMode(2)">Wave</button>
             <button class="btn mode-btn" id="btnMode3" onclick="setMode(3)">Speak</button>
             <button class="btn mode-btn" id="btnMode4" onclick="setMode(4)">Home</button>
+            <button class="btn sim-btn" id="btnSim" onclick="simActive()">Sim Active</button>
         </div>
 
         <div class="control-row" style="justify-content: center; gap: 20px;">
+            <button class="btn"><a href="action_index.html" style="color: #ffffff;">Action Page</a></button>
             <button class="btn" onclick="cancelAll()">STOP ALL</button>
             <div class="pid-group">
                 <label for="speed">Speed:</label>
@@ -101,28 +71,13 @@
         </div>
 
         <hr>
-        <h3>Motor Positions</h3>
+        <h3>Motor Positions (Manual Override)</h3>
         <div id="motorsContainer" class="motors-grid"></div>
     </div>
 
     <script>
-        //Randomize a client ID
         const myClientId = "client_" + Math.random().toString(36).substr(2, 9);
         console.log("My Client ID is:", myClientId);
-
-        // --- 1. PRESET CONFIGURATION ---
-        const modeAngles = {
-            1: [10, 81, 40, 90, 90, 170, 100, 60, 80, 90, 90, 90], 
-            2: [90, 90, 90, 90, 90, 20, 60, 80, 80, 90, 90, 90], 
-            3: [60, 105, 60, 60, 90, 120, 75, 60, 60, 90, 90, 90],
-            4: [90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90],
-        };
-
-        function adjustPID(paramId, delta) {
-            let inputField = document.getElementById(paramId);
-            let newVal = parseFloat(inputField.value) + delta;
-            inputField.value = newVal.toFixed(3); // Keep it strictly to 3 decimal places
-        }
 
         function adjustSpeed(paramId, delta, adj = true) {
             let inputField = document.getElementById(paramId);
@@ -133,19 +88,15 @@
         function adjustMotor(motorId, delta) {
             let slider = document.getElementById(`slider${motorId}`);
             let newVal = parseInt(slider.value) + delta;
-            
-            // Prevent the buttons from pushing the slider out of bounds
             if (newVal > 180) newVal = 180;
             if (newVal < 0) newVal = 0;
             
             slider.value = newVal;
             document.getElementById(`label${motorId}`).innerText = newVal + '°';
-            
-            // Automatically send the goal to ROS when the button is clicked
-            sendMotorGoal(motorId);
+            sendMotorGoal(motorId); // Publish to Topic
         }
 
-        // --- 2. BUILD THE UI ---
+        // --- BUILD THE UI ---
         const container = document.getElementById("motorsContainer");
         for (let i = 1; i <= 12; i++) {
             container.innerHTML += `
@@ -162,209 +113,119 @@
                 </div>`;
         }
 
-        // --- 3. CONNECT TO ROS ---
-        //192.168.137.72 old IP
+        // --- CONNECT TO ROS ---
         let ros;
-        let moveService;
-        let servoActionClient;
-        let checked = 1;
+        let modeTopic;
+        let manualCmdTopic;
+        let simActiveTopic;
+
         function connectToROS() {
-            if(checked == 1){
-                const ip = document.getElementById('robotIp').value;
-                if(!ip) { alert("Please enter an IP address"); return; }        
-                ros = new ROSLIB.Ros({ url: 'ws://' + ip + ':9090' });
+            const ip = document.getElementById('robotIp').value;
+            if(!ip) { alert("Please enter an IP address"); return; }        
+            ros = new ROSLIB.Ros({ url: 'ws://' + ip + ':9090' });
 
-                ros.on('error', function(error) {
-                    document.getElementById('statusIndicator').className = "status disconnected";
-                    document.getElementById('connecting').style.display = 'none';
-                    document.getElementById('connected').style.display = 'none';
-                    document.getElementById('closed').style.display = 'none';
-                    document.getElementById('error').style.display = 'inline';
-                });
+            ros.on('error', function(error) {
+                document.getElementById('statusIndicator').className = "status disconnected";
+                document.getElementById('connecting').style.display = 'none';
+                document.getElementById('connected').style.display = 'none';
+                document.getElementById('closed').style.display = 'none';
+                document.getElementById('error').style.display = 'inline';
+            });
 
-                ros.on('connection', function() {
-                    document.getElementById('statusIndicator').className = "status connected";
-                    document.getElementById('connecting').style.display = 'none';
-                    document.getElementById('error').style.display = 'none';
-                    document.getElementById('closed').style.display = 'none';
-                    document.getElementById('connected').style.display = 'inline';
-                });
+            ros.on('connection', function() {
+                document.getElementById('statusIndicator').className = "status connected";
+                document.getElementById('connecting').style.display = 'none';
+                document.getElementById('error').style.display = 'none';
+                document.getElementById('closed').style.display = 'none';
+                document.getElementById('connected').style.display = 'inline';
+            });
 
-                ros.on('close', function() {
-                    document.getElementById('statusIndicator').className = "status disconnected";
-                    document.getElementById('connecting').style.display = 'none';
-                    document.getElementById('connected').style.display = 'none';
-                    document.getElementById('closed').style.display = 'inline';
-                });
+            ros.on('close', function() {
+                document.getElementById('statusIndicator').className = "status disconnected";
+                document.getElementById('connecting').style.display = 'none';
+                document.getElementById('connected').style.display = 'none';
+                document.getElementById('closed').style.display = 'inline';
+            });
 
-                // --- 4. DEFINE THE ACTION CLIENT ---
-                servoActionClient = new ROSLIB.Action({
-                    ros : ros,
-                    name : '/move_servo',
-                    actionType : 'servo_interfaces/action/MotorAngle' 
-                });
-                checked = 0;
-            }
-        }
-        /* //uncomment if you want to get goal status massage
-        var statusSub = new ROSLIB.Topic({
-            ros: ros,
-            name: '/move_servo/_action/status',
-            messageType: 'action_msgs/msg/GoalStatusArray'
-        });
+            // --- DEFINE TOPICS (No more Action Clients!) ---
+            modeTopic = new ROSLIB.Topic({
+                ros : ros,
+                name : '/set_mode',
+                messageType : 'servo_interfaces/msg/SetMode' 
+            });
 
-        statusSub.subscribe(function(message) {
-            let length = message.status_list.length;
-            let goalData = message.status_list[length-1];
-            let statusCode = goalData.status;
-            
-            if (statusCode === 6) {
-                console.error(`SERVER ALERT: Goal ABORTED! ${rawByteArray}`); 
-                cancelAll();
-            }else if (statusCode === 3) { 
-                console.warn(`SERVER ALERT: Goal CANCELING. ${rawByteArray}`);
-            }else if (statusCode === 1) { 
-                console.log(`Goal ACCEPTED. ${rawByteArray}`);
-            }
-        });*/
+            manualCmdTopic = new ROSLIB.Topic({
+                ros : ros,
+                name : '/web_cmd',
+                messageType : 'std_msgs/msg/Float32MultiArray' 
+            });
 
-        let activeGoals = {};           // Tracks the currently active goals
-        let currentSequenceToken = 0;   // Tracks the currently active sequence
-        let i = 1;
-        // --- 5. SEND GOAL LOGIC (Now returns a Promise) ---
-        function sendMotorGoal(motorId, forcedPos = null, myToken = null) {
-            return new Promise((resolve) => {
-                // If forcedPos is given, use it. Otherwise, read the slider.
-                var pos = forcedPos !== null ? forcedPos : parseInt(document.getElementById(`slider${motorId}`).value);
-                
-                if (forcedPos !== null) {
-                    document.getElementById(`slider${motorId}`).value = pos; // Update slider visually
-                }else if(activeGoals[motorId]) {
-                    servoActionClient.cancelGoal(activeGoals[motorId]);
-                }
-                if(!myToken) console.log(`Moving motor ${motorId} to ${pos}`);
-
-                var goal = {
-                    motor_num: motorId,
-                    target_position: pos,
-                    //kp: parseFloat(document.getElementById('kp').value),
-                    //ki: parseFloat(document.getElementById('ki').value),
-                    //kd: parseFloat(document.getElementById('kd').value),
-                    client_id: myClientId,
-                    speed: parseFloat(document.getElementById('speed').value),
-                };
-
-                activeGoals[motorId] = servoActionClient.sendGoal(goal,
-                    function(result) {
-                        // Action finished!
-                        document.getElementById(`label${motorId}`).innerText = pos + "°";
-                        document.getElementById(`label${motorId}`).style.color = "#22c55e";
-                        delete activeGoals[motorId]; // Clear active goal
-                        resolve(true);
-                        /*if(result.success){ //gets an error in rosbridge
-                            resolve(true); // Tell the Promise we are done so the next motor can start
-                        }else{
-                            console.error(`Motor ${motorId} goal was explicitly REJECTED! ${result.success}`);
-                            resolve(false);
-                        }*/
-                    },
-                    function(feedback) {
-                        // Action is moving!
-                        var currentPos = feedback.current_position !== undefined ? feedback.current_position : feedback.feedback.current_position;
-                        document.getElementById(`label${motorId}`).innerText = currentPos + "°";
-                        document.getElementById(`label${motorId}`).style.color = "#f59e0b";
-                    },
-                    function(failedMsg) {
-                        console.log(failedMsg);
-                        console.error(`Motor ${motorId} goal was failed.`, failedMsg);
-                        resolve(false); 
-                    }
-                );
+            simActiveTopic = new ROSLIB.Topic({
+                ros : ros,
+                name : '/sim_active',
+                messageType : 'std_msgs/msg/Bool'
             });
         }
 
-        // --- 6. SEQUENTIAL MODE TOGGLE LOGIC ---
-        async function setMode(modeNum) {
-            // 1. Generate a unique ID for this specific button click
-            let myToken = Date.now(); 
-            currentSequenceToken = myToken; // Update the global tracker
-            cancelAll(true); 
-
-            const angles = modeAngles[modeNum];
-            if (!angles) return;
-
-            document.querySelectorAll('.mode-btn').forEach(btn => btn.classList.remove('active'));
-            document.getElementById(`btnMode${modeNum}`).classList.add('active');
-
-            console.log(`Applying Mode ${modeNum} Sequentially...`);
-            adjustSpeed('speed', 5, false);
-            if(modeNum == 1){ //Depending on the mode choose a starting point
-                i = 12;
+        // --- SEND COMMANDS ---
+        let sim = true;
+        function simActive(){
+            if(sim){
+                sim = false;
+                document.getElementById(`btnSim`).classList.add('active');
             }else{
-                i = 1;
+                sim = true;
+                document.getElementById(`btnSim`).classList.remove('active');
             }
-            //Move motors one by one
-            while (currentSequenceToken === myToken && i<=12 && (modeNum !== 1 || i >= 1)) {
-                let targetAngle = angles[i - 1];
-                await sendMotorGoal(i, targetAngle, myToken);
-                if(modeNum == 1){
-                    i--;
-                }else{
-                    i++;
-                }
-            }
-            //Until says otherwise continue
-            if(modeNum === 2 && currentSequenceToken === myToken) {
-                adjustSpeed('speed', 2, false);
-                let wave = angles[8]
-                while (currentSequenceToken === myToken) {
-                    wave = wave === 80 ? 50 : 80; // Toggle between two angles
-                    await sendMotorGoal(9, wave, myToken);
-                }
-            }else if(modeNum === 3 && currentSequenceToken === myToken) {
-                //Move joints together
-                adjustSpeed('speed', 2, false);
-                let L_elbow = angles[3]
-                let L_sholder_pitch = angles[2]
-                let R_elbow = angles[8]
-                let R_sholder_pitch = angles[7]
-                let neck_pitch = angles[10]
-                while (currentSequenceToken === myToken) {
-                    L_elbow = L_elbow === 60 ? 65 : 60;
-                    L_sholder_pitch = L_sholder_pitch === 60 ? 50 : 60;
-                    R_elbow = R_elbow === 60 ? 65 : 60;
-                    R_sholder_pitch = R_sholder_pitch === 60 ? 50 : 60;
-                    neck_pitch = neck_pitch === 90 ? 80 : 90;  
-                    sendMotorGoal(4, L_elbow, myToken);
-                    sendMotorGoal(9, R_elbow, myToken);
-                    sendMotorGoal(3, L_sholder_pitch, myToken);
-                    sendMotorGoal(8, R_sholder_pitch, myToken);                    
-                    await sendMotorGoal(11, neck_pitch, myToken);
-                }
-            }
-            // Un-highlight the button only if THIS sequence actually finished uninterrupted
-            if (currentSequenceToken === myToken) {
-                document.getElementById(`btnMode${modeNum}`).classList.remove('active');
-                currentSequenceToken = 0; // Sequence is done
-                console.log("Sequence Complete!");
-            }else{
-                console.log(`Mode ${modeNum} sequence was interrupted before completion.`);
+            if(simActiveTopic) {
+                var msg = {
+                    data: sim
+                };
+                simActiveTopic.publish(msg);
+                console.log(`Simulation: ${sim}`);
             }
         }
 
-        // --- 7. CANCEL LOGIC ---
-        // I added the 'isInternal' flag so the UI doesn't visually clear the mode buttons 
-        // if the cancel is just happening to make way for a new mode.
-        function cancelAll(isInternal = false) {
-            console.log("Canceling active goals...");
-            if (!isInternal) {
-                currentSequenceToken = 0; // Break any active loops
-                document.querySelectorAll('.mode-btn').forEach(btn => btn.classList.remove('active'));
+        function setMode(modeNum) {
+            document.querySelectorAll('.mode-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(`btnMode${modeNum}`).classList.add('active');
+
+            if(modeTopic) {
+                var msg = {
+                    mode: modeNum,
+                    client_id: myClientId
+                };
+                modeTopic.publish(msg);
+                console.log(`Sent Mode: ${modeNum}`);
             }
-            //Cancel all the active goals
-            for (let motorId in activeGoals) {
-                servoActionClient.cancelGoal(activeGoals[motorId]);      
-                delete activeGoals[motorId];
+        }
+
+        function cancelAll() {
+            document.querySelectorAll('.mode-btn').forEach(btn => btn.classList.remove('active'));
+            
+            // Sending Mode 0 tells Python to break the background loop and stop
+            if(modeTopic) {
+                var msg = {
+                    mode: 0, 
+                    client_id: myClientId
+                };
+                modeTopic.publish(msg);
+                console.log("Sent STOP ALL (Mode 0)");
+            }
+        }
+
+        function sendMotorGoal(motorId) {
+            // Sends manual slider adjustments to Python
+            if(manualCmdTopic) {
+                let pos = parseInt(document.getElementById(`slider${motorId}`).value);
+                let currentSpeed = parseFloat(document.getElementById('speed').value);
+                
+                var msg = {
+                    // Data array format: [motor_num, target_angle, speed]
+                    data: [motorId, pos, currentSpeed]
+                };
+                manualCmdTopic.publish(msg);
+                console.log(`Manual Override: Motor ${motorId} -> ${pos}°`);
             }
         }
     </script>

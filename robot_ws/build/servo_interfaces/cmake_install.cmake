@@ -51,6 +51,10 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/msg" TYPE FILE FILES "/home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_generator_type_description/servo_interfaces/msg/SetMode.json")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/srv" TYPE FILE FILES "/home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_generator_type_description/servo_interfaces/srv/MotorAngle.json")
 endif()
 
@@ -375,6 +379,10 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/msg" TYPE FILE FILES "/home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces/msg/SetMode.idl")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/srv" TYPE FILE FILES "/home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces/srv/MotorAngle.idl")
 endif()
 
@@ -384,6 +392,10 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/msg" TYPE FILE FILES "/home/rasp/humanoid/robot_ws/src/servo_interfaces/msg/SetPwm.msg")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/msg" TYPE FILE FILES "/home/rasp/humanoid/robot_ws/src/servo_interfaces/msg/SetMode.msg")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
