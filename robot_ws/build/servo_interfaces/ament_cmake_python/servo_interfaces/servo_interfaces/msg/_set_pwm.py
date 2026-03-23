@@ -83,6 +83,7 @@ class SetPwm(metaclass=Metaclass_SetPwm):
         '_motor_num',
         '_target_position',
         '_speed',
+        '_client_id',
         '_check_fields',
     ]
 
@@ -90,6 +91,7 @@ class SetPwm(metaclass=Metaclass_SetPwm):
         'motor_num': 'uint8',
         'target_position': 'uint8',
         'speed': 'uint8',
+        'client_id': 'string',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
@@ -98,6 +100,7 @@ class SetPwm(metaclass=Metaclass_SetPwm):
         rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
+        rosidl_parser.definition.UnboundedString(),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -115,6 +118,7 @@ class SetPwm(metaclass=Metaclass_SetPwm):
             'target_position', SetPwm.TARGET_POSITION__DEFAULT)
         self.speed = kwargs.get(
             'speed', SetPwm.SPEED__DEFAULT)
+        self.client_id = kwargs.get('client_id', str())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -151,6 +155,8 @@ class SetPwm(metaclass=Metaclass_SetPwm):
         if self.target_position != other.target_position:
             return False
         if self.speed != other.speed:
+            return False
+        if self.client_id != other.client_id:
             return False
         return True
 
@@ -203,3 +209,16 @@ class SetPwm(metaclass=Metaclass_SetPwm):
             assert value >= 0 and value < 256, \
                 "The 'speed' field must be an unsigned integer in [0, 255]"
         self._speed = value
+
+    @builtins.property
+    def client_id(self):
+        """Message field 'client_id'."""
+        return self._client_id
+
+    @client_id.setter
+    def client_id(self, value):
+        if self._check_fields:
+            assert \
+                isinstance(value, str), \
+                "The 'client_id' field must be of type 'str'"
+        self._client_id = value

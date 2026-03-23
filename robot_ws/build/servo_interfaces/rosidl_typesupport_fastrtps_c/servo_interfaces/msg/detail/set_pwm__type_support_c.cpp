@@ -36,6 +36,8 @@ extern "C"
 {
 #endif
 
+#include "rosidl_runtime_c/string.h"  // client_id
+#include "rosidl_runtime_c/string_functions.h"  // client_id
 
 // forward declare type support functions
 
@@ -63,6 +65,20 @@ bool cdr_serialize_servo_interfaces__msg__SetPwm(
     cdr << ros_message->speed;
   }
 
+  // Field name: client_id
+  {
+    const rosidl_runtime_c__String * str = &ros_message->client_id;
+    if (str->capacity == 0 || str->capacity <= str->size) {
+      fprintf(stderr, "string capacity not greater than size\n");
+      return false;
+    }
+    if (str->data[str->size] != '\0') {
+      fprintf(stderr, "string not null-terminated\n");
+      return false;
+    }
+    cdr << str->data;
+  }
+
   return true;
 }
 
@@ -84,6 +100,22 @@ bool cdr_deserialize_servo_interfaces__msg__SetPwm(
   // Field name: speed
   {
     cdr >> ros_message->speed;
+  }
+
+  // Field name: client_id
+  {
+    std::string tmp;
+    cdr >> tmp;
+    if (!ros_message->client_id.data) {
+      rosidl_runtime_c__String__init(&ros_message->client_id);
+    }
+    bool succeeded = rosidl_runtime_c__String__assign(
+      &ros_message->client_id,
+      tmp.c_str());
+    if (!succeeded) {
+      fprintf(stderr, "failed to assign string into field 'client_id'\n");
+      return false;
+    }
   }
 
   return true;
@@ -124,6 +156,11 @@ size_t get_serialized_size_servo_interfaces__msg__SetPwm(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
+
+  // Field name: client_id
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message->client_id.size + 1);
 
   return current_alignment - initial_alignment;
 }
@@ -168,6 +205,18 @@ size_t max_serialized_size_servo_interfaces__msg__SetPwm(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
+  // Field name: client_id
+  {
+    size_t array_size = 1;
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -177,7 +226,7 @@ size_t max_serialized_size_servo_interfaces__msg__SetPwm(
     using DataType = servo_interfaces__msg__SetPwm;
     is_plain =
       (
-      offsetof(DataType, speed) +
+      offsetof(DataType, client_id) +
       last_member_size
       ) == ret_val;
   }
@@ -202,6 +251,20 @@ bool cdr_serialize_key_servo_interfaces__msg__SetPwm(
   // Field name: speed
   {
     cdr << ros_message->speed;
+  }
+
+  // Field name: client_id
+  {
+    const rosidl_runtime_c__String * str = &ros_message->client_id;
+    if (str->capacity == 0 || str->capacity <= str->size) {
+      fprintf(stderr, "string capacity not greater than size\n");
+      return false;
+    }
+    if (str->data[str->size] != '\0') {
+      fprintf(stderr, "string not null-terminated\n");
+      return false;
+    }
+    cdr << str->data;
   }
 
   return true;
@@ -242,6 +305,11 @@ size_t get_serialized_size_key_servo_interfaces__msg__SetPwm(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
+
+  // Field name: client_id
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message->client_id.size + 1);
 
   return current_alignment - initial_alignment;
 }
@@ -284,6 +352,18 @@ size_t max_serialized_size_key_servo_interfaces__msg__SetPwm(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
+  // Field name: client_id
+  {
+    size_t array_size = 1;
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
     // All members are plain, and type is not empty.
@@ -292,7 +372,7 @@ size_t max_serialized_size_key_servo_interfaces__msg__SetPwm(
     using DataType = servo_interfaces__msg__SetPwm;
     is_plain =
       (
-      offsetof(DataType, speed) +
+      offsetof(DataType, client_id) +
       last_member_size
       ) == ret_val;
   }

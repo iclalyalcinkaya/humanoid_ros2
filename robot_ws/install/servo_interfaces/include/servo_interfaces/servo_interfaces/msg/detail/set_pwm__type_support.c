@@ -12,6 +12,10 @@
 #include "servo_interfaces/msg/detail/set_pwm__struct.h"
 
 
+// Include directives for member types
+// Member `client_id`
+#include "rosidl_runtime_c/string_functions.h"
+
 #ifdef __cplusplus
 extern "C"
 {
@@ -31,7 +35,7 @@ void servo_interfaces__msg__SetPwm__rosidl_typesupport_introspection_c__SetPwm_f
   servo_interfaces__msg__SetPwm__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember servo_interfaces__msg__SetPwm__rosidl_typesupport_introspection_c__SetPwm_message_member_array[3] = {
+static rosidl_typesupport_introspection_c__MessageMember servo_interfaces__msg__SetPwm__rosidl_typesupport_introspection_c__SetPwm_message_member_array[4] = {
   {
     "motor_num",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
@@ -85,13 +89,31 @@ static rosidl_typesupport_introspection_c__MessageMember servo_interfaces__msg__
     NULL,  // fetch(index, &value) function pointer
     NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
+  },
+  {
+    "client_id",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(servo_interfaces__msg__SetPwm, client_id),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers servo_interfaces__msg__SetPwm__rosidl_typesupport_introspection_c__SetPwm_message_members = {
   "servo_interfaces__msg",  // message namespace
   "SetPwm",  // message name
-  3,  // number of fields
+  4,  // number of fields
   sizeof(servo_interfaces__msg__SetPwm),
   false,  // has_any_key_member_
   servo_interfaces__msg__SetPwm__rosidl_typesupport_introspection_c__SetPwm_message_member_array,  // message members

@@ -227,4 +227,5 @@ CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesuppor
  /usr/include/c++/13/stdlib.h \
  /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/action_type_support_struct.h \
  /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h \
- /home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/msg/rosidl_generator_c__visibility_control.h
+ /home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/msg/rosidl_generator_c__visibility_control.h \
+ /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h

@@ -11,6 +11,10 @@
 #include "rcutils/allocator.h"
 
 
+// Include directives for member types
+// Member `client_id`
+#include "rosidl_runtime_c/string_functions.h"
+
 bool
 servo_interfaces__msg__SetPwm__init(servo_interfaces__msg__SetPwm * msg)
 {
@@ -23,6 +27,11 @@ servo_interfaces__msg__SetPwm__init(servo_interfaces__msg__SetPwm * msg)
   msg->target_position = 90;
   // speed
   msg->speed = 5;
+  // client_id
+  if (!rosidl_runtime_c__String__init(&msg->client_id)) {
+    servo_interfaces__msg__SetPwm__fini(msg);
+    return false;
+  }
   return true;
 }
 
@@ -35,6 +44,8 @@ servo_interfaces__msg__SetPwm__fini(servo_interfaces__msg__SetPwm * msg)
   // motor_num
   // target_position
   // speed
+  // client_id
+  rosidl_runtime_c__String__fini(&msg->client_id);
 }
 
 bool
@@ -55,6 +66,12 @@ servo_interfaces__msg__SetPwm__are_equal(const servo_interfaces__msg__SetPwm * l
   if (lhs->speed != rhs->speed) {
     return false;
   }
+  // client_id
+  if (!rosidl_runtime_c__String__are_equal(
+      &(lhs->client_id), &(rhs->client_id)))
+  {
+    return false;
+  }
   return true;
 }
 
@@ -72,6 +89,12 @@ servo_interfaces__msg__SetPwm__copy(
   output->target_position = input->target_position;
   // speed
   output->speed = input->speed;
+  // client_id
+  if (!rosidl_runtime_c__String__copy(
+      &(input->client_id), &(output->client_id)))
+  {
+    return false;
+  }
   return true;
 }
 

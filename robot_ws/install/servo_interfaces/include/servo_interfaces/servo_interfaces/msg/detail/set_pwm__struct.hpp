@@ -49,12 +49,18 @@ struct SetPwm_
       this->motor_num = 0;
       this->target_position = 0;
       this->speed = 0;
+      this->client_id = "";
+    }
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->client_id = "";
     }
   }
 
   explicit SetPwm_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : client_id(_alloc)
   {
-    (void)_alloc;
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::DEFAULTS_ONLY == _init)
     {
@@ -65,6 +71,12 @@ struct SetPwm_
       this->motor_num = 0;
       this->target_position = 0;
       this->speed = 0;
+      this->client_id = "";
+    }
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->client_id = "";
     }
   }
 
@@ -78,6 +90,9 @@ struct SetPwm_
   using _speed_type =
     uint8_t;
   _speed_type speed;
+  using _client_id_type =
+    std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
+  _client_id_type client_id;
 
   // setters for named parameter idiom
   Type & set__motor_num(
@@ -96,6 +111,12 @@ struct SetPwm_
     const uint8_t & _arg)
   {
     this->speed = _arg;
+    return *this;
+  }
+  Type & set__client_id(
+    const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
+  {
+    this->client_id = _arg;
     return *this;
   }
 
@@ -148,6 +169,9 @@ struct SetPwm_
       return false;
     }
     if (this->speed != other.speed) {
+      return false;
+    }
+    if (this->client_id != other.client_id) {
       return false;
     }
     return true;

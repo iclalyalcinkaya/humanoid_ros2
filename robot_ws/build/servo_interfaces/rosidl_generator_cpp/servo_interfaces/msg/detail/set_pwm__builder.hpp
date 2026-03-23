@@ -24,16 +24,32 @@ namespace msg
 namespace builder
 {
 
+class Init_SetPwm_client_id
+{
+public:
+  explicit Init_SetPwm_client_id(::servo_interfaces::msg::SetPwm & msg)
+  : msg_(msg)
+  {}
+  ::servo_interfaces::msg::SetPwm client_id(::servo_interfaces::msg::SetPwm::_client_id_type arg)
+  {
+    msg_.client_id = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::servo_interfaces::msg::SetPwm msg_;
+};
+
 class Init_SetPwm_speed
 {
 public:
   explicit Init_SetPwm_speed(::servo_interfaces::msg::SetPwm & msg)
   : msg_(msg)
   {}
-  ::servo_interfaces::msg::SetPwm speed(::servo_interfaces::msg::SetPwm::_speed_type arg)
+  Init_SetPwm_client_id speed(::servo_interfaces::msg::SetPwm::_speed_type arg)
   {
     msg_.speed = std::move(arg);
-    return std::move(msg_);
+    return Init_SetPwm_client_id(msg_);
   }
 
 private:

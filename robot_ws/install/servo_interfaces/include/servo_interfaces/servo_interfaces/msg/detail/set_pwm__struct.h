@@ -19,6 +19,10 @@ extern "C"
 
 // Constants defined in the message
 
+// Include directives for member types
+// Member 'client_id'
+#include "rosidl_runtime_c/string.h"
+
 /// Struct defined in msg/SetPwm in the package servo_interfaces.
 typedef struct servo_interfaces__msg__SetPwm
 {
@@ -27,6 +31,7 @@ typedef struct servo_interfaces__msg__SetPwm
   /// Taarget position of the servo motor (degrees)
   uint8_t target_position;
   uint8_t speed;
+  rosidl_runtime_c__String client_id;
 } servo_interfaces__msg__SetPwm;
 
 // Struct for a sequence of servo_interfaces__msg__SetPwm.

@@ -18,6 +18,8 @@ module servo_interfaces {
 
       @default (value=5)
       uint8 speed;
+
+      string client_id;
     };
   };
 };

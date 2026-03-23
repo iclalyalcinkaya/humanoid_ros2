@@ -6,8 +6,8 @@ from adafruit_servokit import ServoKit
 import time
 import threading
 from rosbridge_msgs.msg import ConnectedClients
-from servo_interfaces.msg import SetMode
-from std_msgs.msg import Float32MultiArray, Float64, Bool
+from servo_interfaces.msg import SetMode, SetPwm
+from std_msgs.msg import Float64, Bool
 import math
 
 MOTOR_COUNT = 12
@@ -50,6 +50,9 @@ class ServoTopicNode(Node):
         self.active_mode = 0
         self.mode_thread = None
         self.speed = 5
+        self.motor_thread = None
+        self.old_motor_num = None
+
 
         self.gazebo_pubs = {}
         for motor_idx, joint_name in GAZEBO_JOINT_MAP.items():
@@ -58,7 +61,7 @@ class ServoTopicNode(Node):
 
         self.client_sub = self.create_subscription(ConnectedClients, '/connected_clients', self.client_sub_callback, 10)
         self.mode_sub = self.create_subscription(SetMode, '/set_mode', self.mode_sub_callback, 10)
-        self.cmd_sub = self.create_subscription(Float32MultiArray, '/web_cmd', self.web_cmd_callback, 10)
+        self.cmd_sub = self.create_subscription(SetPwm, '/web_cmd', self.web_cmd_callback, 10)
         self.simulation_sub = self.create_subscription(Bool, '/sim_active', self.sim_active_callback, 10)
 
     def sim_active_callback(self, msg):
@@ -66,20 +69,33 @@ class ServoTopicNode(Node):
         self.sim_ac = msg.data
 
     def web_cmd_callback(self, msg):
-        if len(msg.data) >= 3:
-            motor_num = int(msg.data[0]) - 1
-            target_pos = float(msg.data[1])
-            self.speed = float(msg.data[2])
+        incoming_id = msg.client_id
+
+        if self.active_client_id is None:
+            self.active_client_id = incoming_id
+            self.get_logger().info(f"Control locked to new client: {incoming_id}")
+        elif self.active_client_id != incoming_id:
+            self.get_logger().warn("Mode rejected: Robot is locked by another user.")
+            return
+
+        motor_num = msg.motor_num
+        target_pos = msg.target_position
+        self.speed = msg.speed
             
-            # Instantly break any running Mode animation to allow manual control
-            if(self.active_mode != -1):
-                self.active_mode = 0 
-                self.active_mode = -1
-            # Spin up a quick thread to move this specific motor
-            threading.Thread(target=self.sendMotorGoal, args=(motor_num, target_pos)).start()
+        # Instantly break any running Mode animation to allow manual control
+        if(self.active_mode != -1 or (self.active_mode == -1 and motor_num == self.old_motor_num)):
+            self.active_mode = 0                
+        # Spin up a quick thread to move specific motor
+        #threading.Thread(target=self.sendMotorGoal, args=(motor_num, target_pos)).start()
+        self.old_motor_num = motor_num
+        if self.motor_thread is not None:
+            self.motor_thread.join(timeout=0.5)
+        self.get_logger().info(f"Goal Accepted: Motor {motor_num +1} to {int(target_pos)}")
+        self.active_mode = -1
+        self.motor_thread = threading.Thread(target=self.sendMotorGoal, args=(motor_num, target_pos))
+        self.motor_thread.start()
 
     def client_sub_callback(self, msg):
-        # Simplified heartbeat monitor
         if self.active_client_id is not None:
             if not any(client.connection_time.sec == self.active_client_id for client in msg.clients):
                 self.get_logger().warn("Active client dropped. Halting robot.")
@@ -104,14 +120,17 @@ class ServoTopicNode(Node):
 
         if new_mode != self.active_mode:
             self.get_logger().info(f"Switching to Mode: {new_mode}")
-            self.active_mode = new_mode
+            self.active_mode = 0
             
             # Start the new mode in a background thread so ROS doesn't freeze
             if self.mode_thread is not None:
                 self.mode_thread.join(timeout=0.5)
+            if self.motor_thread is not None:
+                self.motor_thread.join(timeout=0.5)
+            self.active_mode = new_mode
             self.mode_thread = threading.Thread(target=self.run_mode_sequence, args=(new_mode,))
             self.mode_thread.start()
-
+            
     def run_mode_sequence(self, mode_num):
         """This runs in the background, allowing time.sleep() without crashing ROS"""
         if mode_num not in MODE_ANGLES: return
@@ -202,10 +221,15 @@ class ServoTopicNode(Node):
                 self.current_angles[str(motor_num+1)] = int(current_an)
 
             error = target_position - current_an
-            time.sleep(Ts) 
-
-        self.get_logger().info(f"Goal Succeeded: Motor {motor_num+1} arrived at {int(target_position)}")
-        return True
+            time.sleep(Ts)
+        if(error == 0):
+            if(self.active_mode == -1):
+                self.old_motor_num = None
+                self.get_logger().info(f"Goal Succeeded: Motor {motor_num+1} arrived at {int(target_position)}")
+            return True
+        else:
+            self.get_logger().warn(f"Goal Abonded: Motor {motor_num+1} to {int(target_position)}")
+            return False
 
     def sendMultipleMotorGoals(self, targets, speed):
         """Moves multiple motors simultaneously in a single synchronized loop."""

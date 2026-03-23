@@ -32,6 +32,16 @@
             "nested_type_name": ""
           },
           "default_value": "5"
+        },
+        {
+          "name": "client_id",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
         }
       ]
     },
@@ -40,7 +50,7 @@
   "type_hashes": [
     {
       "type_name": "servo_interfaces/msg/SetPwm",
-      "hash_string": "RIHS01_26fa427e9d919f6f410fe4184e5ad08919ff9b348c5c8c13b995f1c13eb4f588"
+      "hash_string": "RIHS01_e1b0e5904d6b1f4ace31f9478f5263567a76223374baf22291a092363d470663"
     }
   ]
 }

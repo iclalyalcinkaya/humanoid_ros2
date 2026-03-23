@@ -1,0 +1,345 @@
+[0.034s] Invoking command in '/home/rasp/humanoid/robot_ws/build/servo_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rasp/humanoid/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/rasp/humanoid/robot_ws/build/servo_interfaces -- -j4 -l4
+[0.150s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.212s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.467s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[0.478s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.613s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.722s] -- Found rosidl_adapter: 4.6.7 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[1.364s] -- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[1.550s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.864s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.868s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[2.342s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[2.392s] -- Configuring done (2.3s)
+[2.581s] -- Generating done (0.2s)
+[2.638s] -- Build files have been written to: /home/rasp/humanoid/robot_ws/build/servo_interfaces
+[2.716s] [  1%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[3.285s] [  1%] Built target servo_interfaces__rosidl_generator_type_description
+[3.370s] [  1%] Built target ament_cmake_python_copy_servo_interfaces
+[3.392s] [  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[5.025s] [  4%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/set_pwm__description.c.o[0m
+[5.315s] [  6%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/set_pwm__functions.c.o[0m
+[5.449s] [  7%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/set_pwm__type_support.c.o[0m
+[5.516s] [  9%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/set_mode__description.c.o[0m
+[5.594s] [ 10%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/set_mode__functions.c.o[0m
+[5.686s] [ 12%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/set_mode__type_support.c.o[0m
+[5.751s] [ 14%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__description.c.o[0m
+[5.851s] [ 15%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__functions.c.o[0m
+[5.988s] [ 17%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__type_support.c.o[0m
+[6.068s] [ 18%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/action/detail/motor_angle__description.c.o[0m
+[6.224s] [ 20%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/action/detail/motor_angle__functions.c.o[0m
+[6.496s] [ 21%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/action/detail/motor_angle__type_support.c.o[0m
+[6.581s] [ 23%] [32m[1mLinking C shared library libservo_interfaces__rosidl_generator_c.so[0m
+[6.767s] [ 23%] Built target servo_interfaces__rosidl_generator_c
+[7.129s] running egg_info
+[7.163s] writing servo_interfaces.egg-info/PKG-INFO
+[7.163s] writing dependency_links to servo_interfaces.egg-info/dependency_links.txt
+[7.165s] writing top-level names to servo_interfaces.egg-info/top_level.txt
+[7.262s] reading manifest file 'servo_interfaces.egg-info/SOURCES.txt'
+[7.263s] writing manifest file 'servo_interfaces.egg-info/SOURCES.txt'
+[7.337s] [ 23%] Built target ament_cmake_python_build_servo_interfaces_egg
+[7.359s] [ 25%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[8.285s] [ 26%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_pwm__type_support.c.o[0m
+[8.366s] [ 28%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_mode__type_support.c.o[0m
+[8.441s] [ 29%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/srv/detail/motor_angle__type_support.c.o[0m
+[8.534s] [ 31%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/action/detail/motor_angle__type_support.c.o[0m
+[8.662s] [ 32%] [32m[1mLinking C shared library libservo_interfaces__rosidl_typesupport_introspection_c.so[0m
+[8.735s] [ 32%] Built target servo_interfaces__rosidl_typesupport_introspection_c
+[8.759s] [ 34%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[9.455s] [ 35%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/servo_interfaces/msg/set_pwm__type_support.cpp.o[0m
+[9.845s] [ 37%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/servo_interfaces/msg/set_mode__type_support.cpp.o[0m
+[9.926s] [ 39%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/servo_interfaces/srv/motor_angle__type_support.cpp.o[0m
+[10.016s] [ 40%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/servo_interfaces/action/motor_angle__type_support.cpp.o[0m
+[10.178s] [ 42%] [32m[1mLinking CXX shared library libservo_interfaces__rosidl_typesupport_c.so[0m
+[10.265s] [ 42%] Built target servo_interfaces__rosidl_typesupport_c
+[10.287s] [ 43%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[11.549s] [ 45%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_pwm__type_support_c.cpp.o[0m
+[12.635s] [ 46%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/srv/detail/motor_angle__type_support_c.cpp.o[0m
+[13.415s] [ 48%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/action/detail/motor_angle__type_support_c.cpp.o[0m
+[14.322s] [ 50%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_mode__type_support_c.cpp.o[0m
+[15.016s] [ 51%] [32m[1mLinking CXX shared library libservo_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[15.175s] [ 51%] Built target servo_interfaces__rosidl_typesupport_fastrtps_c
+[15.222s] [ 53%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[16.555s] [ 53%] Built target servo_interfaces__cpp
+[16.576s] [ 54%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[17.760s] [ 56%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/set_pwm__type_support.cpp.o[0m
+[18.482s] [ 57%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/set_mode__type_support.cpp.o[0m
+[19.174s] [ 59%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/servo_interfaces/srv/detail/dds_fastrtps/motor_angle__type_support.cpp.o[0m
+[20.106s] [ 60%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/servo_interfaces/action/detail/dds_fastrtps/motor_angle__type_support.cpp.o[0m
+[21.717s] [ 62%] [32m[1mLinking CXX shared library libservo_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[21.894s] [ 62%] Built target servo_interfaces__rosidl_typesupport_fastrtps_cpp
+[21.918s] [ 64%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[22.636s] [ 65%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/servo_interfaces/msg/set_pwm__type_support.cpp.o[0m
+[23.099s] [ 67%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/servo_interfaces/srv/motor_angle__type_support.cpp.o[0m
+[23.697s] [ 68%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/servo_interfaces/action/motor_angle__type_support.cpp.o[0m
+[24.727s] [ 70%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/servo_interfaces/msg/set_mode__type_support.cpp.o[0m
+[25.192s] [ 71%] [32m[1mLinking CXX shared library libservo_interfaces__rosidl_typesupport_cpp.so[0m
+[25.358s] [ 71%] Built target servo_interfaces__rosidl_typesupport_cpp
+[25.382s] [ 73%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[26.324s] [ 75%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/set_pwm__type_support.cpp.o[0m
+[26.840s] [ 76%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/servo_interfaces/action/detail/motor_angle__type_support.cpp.o[0m
+[27.961s] [ 78%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/servo_interfaces/srv/detail/motor_angle__type_support.cpp.o[0m
+[28.586s] [ 79%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/set_mode__type_support.cpp.o[0m
+[29.054s] [ 81%] [32m[1mLinking CXX shared library libservo_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[29.223s] [ 81%] Built target servo_interfaces__rosidl_typesupport_introspection_cpp
+[29.267s] [ 81%] Built target servo_interfaces
+[29.311s] [ 82%] [34m[1mGenerating Python code for ROS interfaces[0m
+[31.210s] [ 82%] Built target servo_interfaces__py
+[31.329s] [ 84%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_set_pwm_s.c.o[0m
+[31.619s] [ 85%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/action/_motor_angle_s.c.o[0m
+[31.962s] [ 87%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/srv/_motor_angle_s.c.o[0m
+[32.205s] [ 89%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_set_mode_s.c.o[0m
+[32.408s] [ 90%] [32m[1mLinking C shared library libservo_interfaces__rosidl_generator_py.so[0m
+[32.505s] [ 90%] Built target servo_interfaces__rosidl_generator_py
+[32.556s] [ 92%] [32mBuilding C object CMakeFiles/servo_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[32.802s] [ 93%] [32m[1mLinking C shared module rosidl_generator_py/servo_interfaces/servo_interfaces_s__rosidl_typesupport_fastrtps_c.so[0m
+[32.871s] [ 93%] Built target servo_interfaces_s__rosidl_typesupport_fastrtps_c
+[32.920s] [ 95%] [32mBuilding C object CMakeFiles/servo_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[33.160s] [ 96%] [32m[1mLinking C shared module rosidl_generator_py/servo_interfaces/servo_interfaces_s__rosidl_typesupport_c.so[0m
+[33.225s] [ 96%] Built target servo_interfaces_s__rosidl_typesupport_c
+[33.275s] [ 98%] [32mBuilding C object CMakeFiles/servo_interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[33.512s] [100%] [32m[1mLinking C shared module rosidl_generator_py/servo_interfaces/servo_interfaces_s__rosidl_typesupport_introspection_c.so[0m
+[33.577s] [100%] Built target servo_interfaces_s__rosidl_typesupport_introspection_c
+[33.602s] Invoked command in '/home/rasp/humanoid/robot_ws/build/servo_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rasp/humanoid/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/rasp/humanoid/robot_ws/build/servo_interfaces -- -j4 -l4
+[33.604s] Invoking command in '/home/rasp/humanoid/robot_ws/build/servo_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rasp/humanoid/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/rasp/humanoid/robot_ws/build/servo_interfaces
+[33.622s] -- Install configuration: ""
+[33.622s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/ament_index/resource_index/rosidl_interfaces/servo_interfaces
+[33.622s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/msg/SetPwm.json
+[33.622s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/msg/SetMode.json
+[33.622s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/srv/MotorAngle.json
+[33.623s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/action/MotorAngle.json
+[33.623s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces
+[33.623s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg
+[33.623s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/set_mode.h
+[33.623s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/set_pwm.h
+[33.624s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/rosidl_generator_c__visibility_control.h
+[33.624s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail
+[33.624s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__description.c
+[33.624s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__struct.h
+[33.624s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_mode__functions.h
+[33.624s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_mode__description.c
+[33.624s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__functions.c
+[33.624s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_mode__type_support.h
+[33.625s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_mode__struct.h
+[33.625s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__functions.h
+[33.625s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_mode__type_support.c
+[33.625s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__type_support.h
+[33.625s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_mode__functions.c
+[33.626s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__type_support.c
+[33.626s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv
+[33.626s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/motor_angle.h
+[33.626s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail
+[33.626s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__type_support.h
+[33.626s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__description.c
+[33.626s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__type_support.c
+[33.627s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__functions.h
+[33.627s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__struct.h
+[33.627s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__functions.c
+[33.627s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action
+[33.627s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/motor_angle.h
+[33.627s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail
+[33.627s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail/motor_angle__type_support.h
+[33.628s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail/motor_angle__description.c
+[33.628s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail/motor_angle__type_support.c
+[33.628s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail/motor_angle__functions.h
+[33.628s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail/motor_angle__struct.h
+[33.629s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail/motor_angle__functions.c
+[33.629s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/environment/library_path.sh
+[33.629s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/environment/library_path.dsv
+[33.629s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_generator_c.so
+[33.630s] -- Set non-toolchain portion of runtime path of "/home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_generator_c.so" to ""
+[33.630s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces
+[33.630s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg
+[33.631s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[33.631s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail
+[33.631s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_mode__rosidl_typesupport_fastrtps_c.h
+[33.631s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_fastrtps_c.h
+[33.631s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv
+[33.631s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail
+[33.631s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__rosidl_typesupport_fastrtps_c.h
+[33.631s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action
+[33.631s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail
+[33.631s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail/motor_angle__rosidl_typesupport_fastrtps_c.h
+[33.632s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_fastrtps_c.so
+[33.633s] -- Set non-toolchain portion of runtime path of "/home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[33.633s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces
+[33.633s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg
+[33.633s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[33.633s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail
+[33.633s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_introspection_c.h
+[33.633s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_mode__type_support.c
+[33.633s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_mode__rosidl_typesupport_introspection_c.h
+[33.633s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__type_support.c
+[33.634s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv
+[33.634s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail
+[33.634s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__type_support.c
+[33.634s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__rosidl_typesupport_introspection_c.h
+[33.634s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action
+[33.634s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail
+[33.634s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail/motor_angle__type_support.c
+[33.634s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail/motor_angle__rosidl_typesupport_introspection_c.h
+[33.635s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_introspection_c.so
+[33.636s] -- Set non-toolchain portion of runtime path of "/home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[33.636s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_c.so
+[33.637s] -- Set non-toolchain portion of runtime path of "/home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_c.so" to ""
+[33.637s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces
+[33.637s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg
+[33.637s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[33.637s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/set_pwm.hpp
+[33.637s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/set_mode.hpp
+[33.637s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail
+[33.637s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__traits.hpp
+[33.637s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__struct.hpp
+[33.638s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_mode__builder.hpp
+[33.638s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__builder.hpp
+[33.638s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__type_support.hpp
+[33.638s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_mode__type_support.hpp
+[33.638s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_mode__traits.hpp
+[33.639s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_mode__struct.hpp
+[33.639s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv
+[33.639s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/motor_angle.hpp
+[33.639s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail
+[33.639s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__type_support.hpp
+[33.639s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__builder.hpp
+[33.639s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__traits.hpp
+[33.640s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__struct.hpp
+[33.640s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action
+[33.640s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/motor_angle.hpp
+[33.640s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail
+[33.640s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail/motor_angle__type_support.hpp
+[33.640s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail/motor_angle__builder.hpp
+[33.640s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail/motor_angle__traits.hpp
+[33.641s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail/motor_angle__struct.hpp
+[33.641s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces
+[33.641s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg
+[33.641s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[33.641s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail
+[33.641s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_mode__rosidl_typesupport_fastrtps_cpp.hpp
+[33.641s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_fastrtps_cpp.hpp
+[33.642s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/dds_fastrtps
+[33.642s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv
+[33.642s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail
+[33.642s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/dds_fastrtps
+[33.642s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__rosidl_typesupport_fastrtps_cpp.hpp
+[33.642s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action
+[33.642s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail
+[33.642s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail/dds_fastrtps
+[33.642s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail/motor_angle__rosidl_typesupport_fastrtps_cpp.hpp
+[33.644s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[33.645s] -- Set non-toolchain portion of runtime path of "/home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[33.646s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces
+[33.646s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg
+[33.646s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail
+[33.646s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_mode__rosidl_typesupport_introspection_cpp.hpp
+[33.646s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_introspection_cpp.hpp
+[33.646s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_mode__type_support.cpp
+[33.646s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__type_support.cpp
+[33.646s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv
+[33.646s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail
+[33.647s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__rosidl_typesupport_introspection_cpp.hpp
+[33.647s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__type_support.cpp
+[33.647s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action
+[33.647s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail
+[33.647s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail/motor_angle__rosidl_typesupport_introspection_cpp.hpp
+[33.647s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail/motor_angle__type_support.cpp
+[33.649s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_introspection_cpp.so
+[33.650s] -- Set non-toolchain portion of runtime path of "/home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[33.652s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_cpp.so
+[33.653s] -- Set non-toolchain portion of runtime path of "/home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_cpp.so" to ""
+[33.653s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/environment/pythonpath.sh
+[33.653s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/environment/pythonpath.dsv
+[33.653s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces-0.0.0-py3.12.egg-info
+[33.653s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces-0.0.0-py3.12.egg-info/top_level.txt
+[33.653s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces-0.0.0-py3.12.egg-info/PKG-INFO
+[33.653s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces-0.0.0-py3.12.egg-info/SOURCES.txt
+[33.654s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces-0.0.0-py3.12.egg-info/dependency_links.txt
+[33.654s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces
+[33.654s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[33.654s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/msg
+[33.654s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/msg/__init__.py
+[33.654s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/msg/_set_pwm_s.c
+[33.655s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/msg/_set_mode_s.c
+[33.655s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/msg/_set_mode.py
+[33.655s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/msg/_set_pwm.py
+[33.655s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/__init__.py
+[33.655s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/srv
+[33.655s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/srv/__init__.py
+[33.656s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/srv/_motor_angle.py
+[33.656s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/srv/_motor_angle_s.c
+[33.656s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_c.c
+[33.656s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[33.657s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/servo_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[33.657s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/servo_interfaces_s__rosidl_typesupport_introspection_c.so
+[33.657s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/action
+[33.657s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/action/__init__.py
+[33.657s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/action/_motor_angle.py
+[33.658s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/action/_motor_angle_s.c
+[33.658s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/servo_interfaces_s__rosidl_typesupport_c.so
+[33.758s] Listing '/home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces'...
+[33.758s] Compiling '/home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/__init__.py'...
+[33.758s] Listing '/home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/action'...
+[33.758s] Compiling '/home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/action/__init__.py'...
+[33.758s] Compiling '/home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/action/_motor_angle.py'...
+[33.758s] Listing '/home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/msg'...
+[33.758s] Compiling '/home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/msg/__init__.py'...
+[33.758s] Compiling '/home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/msg/_set_mode.py'...
+[33.760s] Compiling '/home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/msg/_set_pwm.py'...
+[33.760s] Listing '/home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/srv'...
+[33.760s] Compiling '/home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/srv/__init__.py'...
+[33.760s] Compiling '/home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/srv/_motor_angle.py'...
+[33.772s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/servo_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[33.772s] -- Set non-toolchain portion of runtime path of "/home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/servo_interfaces_s__rosidl_typesupport_fastrtps_c.so" to ""
+[33.773s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/servo_interfaces_s__rosidl_typesupport_introspection_c.so
+[33.773s] -- Set non-toolchain portion of runtime path of "/home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/servo_interfaces_s__rosidl_typesupport_introspection_c.so" to ""
+[33.774s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/servo_interfaces_s__rosidl_typesupport_c.so
+[33.774s] -- Set non-toolchain portion of runtime path of "/home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/servo_interfaces_s__rosidl_typesupport_c.so" to ""
+[33.775s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_generator_py.so
+[33.776s] -- Set non-toolchain portion of runtime path of "/home/rasp/humanoid/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_generator_py.so" to ""
+[33.776s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/msg/SetPwm.idl
+[33.776s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/msg/SetMode.idl
+[33.776s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/srv/MotorAngle.idl
+[33.776s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/action/MotorAngle.idl
+[33.776s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/msg/SetPwm.msg
+[33.777s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/msg/SetMode.msg
+[33.777s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/srv/MotorAngle.srv
+[33.777s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/action/MotorAngle.action
+[33.777s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/ament_index/resource_index/package_run_dependencies/servo_interfaces
+[33.777s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/ament_index/resource_index/parent_prefix_path/servo_interfaces
+[33.777s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/environment/ament_prefix_path.sh
+[33.778s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/environment/ament_prefix_path.dsv
+[33.778s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/environment/path.sh
+[33.778s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/environment/path.dsv
+[33.778s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/local_setup.bash
+[33.778s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/local_setup.sh
+[33.778s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/local_setup.zsh
+[33.778s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/local_setup.dsv
+[33.778s] -- Installing: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/package.dsv
+[33.778s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/ament_index/resource_index/packages/servo_interfaces
+[33.779s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_generator_cExport.cmake
+[33.779s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_generator_cExport-noconfig.cmake
+[33.779s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[33.780s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[33.780s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[33.780s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[33.781s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfaces__rosidl_typesupport_cExport.cmake
+[33.781s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[33.781s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_generator_cppExport.cmake
+[33.782s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[33.782s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[33.782s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[33.782s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[33.783s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfaces__rosidl_typesupport_cppExport.cmake
+[33.783s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[33.784s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_generator_pyExport.cmake
+[33.784s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[33.784s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/rosidl_cmake-extras.cmake
+[33.784s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[33.784s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[33.784s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[33.784s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[33.784s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[33.784s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[33.785s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfacesConfig.cmake
+[33.785s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfacesConfig-version.cmake
+[33.785s] -- Up-to-date: /home/rasp/humanoid/robot_ws/install/servo_interfaces/share/servo_interfaces/package.xml
+[33.789s] Invoked command in '/home/rasp/humanoid/robot_ws/build/servo_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rasp/humanoid/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/rasp/humanoid/robot_ws/build/servo_interfaces

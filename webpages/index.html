@@ -76,8 +76,8 @@
     </div>
 
     <script>
-        const myClientId = "client_" + Math.random().toString(36).substr(2, 9);
-        console.log("My Client ID is:", myClientId);
+        //const myClientId = "client_" + Math.random().toString(36).substr(2, 9);
+        //console.log("My Client ID is:", myClientId);
 
         function adjustSpeed(paramId, delta, adj = true) {
             let inputField = document.getElementById(paramId);
@@ -119,6 +119,8 @@
         let manualCmdTopic;
         let simActiveTopic;
         let checked = true;
+        let ID;
+        let myClientId;
 
         function connectToROS() {
             if(checked){
@@ -132,6 +134,7 @@
                     document.getElementById('connected').style.display = 'none';
                     document.getElementById('closed').style.display = 'none';
                     document.getElementById('error').style.display = 'inline';
+                    console.log(error);
                 });
 
                 ros.on('connection', function() {
@@ -139,7 +142,7 @@
                     document.getElementById('connecting').style.display = 'none';
                     document.getElementById('error').style.display = 'none';
                     document.getElementById('closed').style.display = 'none';
-                    document.getElementById('connected').style.display = 'inline';
+                    document.getElementById('connected').style.display = 'inline';                    
                 });
 
                 ros.on('close', function() {
@@ -159,13 +162,25 @@
                 manualCmdTopic = new ROSLIB.Topic({
                     ros : ros,
                     name : '/web_cmd',
-                    messageType : 'std_msgs/msg/Float32MultiArray' 
+                    messageType : 'servo_interfaces/msg/SetPwm' 
                 });
 
                 simActiveTopic = new ROSLIB.Topic({
                     ros : ros,
                     name : '/sim_active',
                     messageType : 'std_msgs/msg/Bool'
+                });
+
+                ID = new ROSLIB.Topic({
+                    ros : ros,
+                    name : '/connected_clients',
+                    messageType : 'rosbridge_msgs/msg/ConnectedClients'
+                });
+
+                ID.subscribe(function(msg) {
+                    myClientId = String(msg.clients[msg.clients.length -1].connection_time.sec);
+                    console.log("My Client ID is:", myClientId);
+                    ID.unsubscribe();
                 });
                 checked = false;
             }
@@ -223,10 +238,12 @@
             if(manualCmdTopic) {
                 let pos = parseInt(document.getElementById(`slider${motorId}`).value);
                 let currentSpeed = parseFloat(document.getElementById('speed').value);
-                
+
                 var msg = {
-                    // Data array format: [motor_num, target_angle, speed]
-                    data: [motorId, pos, currentSpeed]
+                    motor_num: motorId,
+                    target_position: pos,
+                    speed: currentSpeed,
+                    client_id: myClientId
                 };
                 manualCmdTopic.publish(msg);
                 console.log(`Manual Override: Motor ${motorId} -> ${pos}°`);

@@ -11,10 +11,10 @@ servo_interfaces__msg__SetPwm__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x26, 0xfa, 0x42, 0x7e, 0x9d, 0x91, 0x9f, 0x6f,
-      0x41, 0x0f, 0xe4, 0x18, 0x4e, 0x5a, 0xd0, 0x89,
-      0x19, 0xff, 0x9b, 0x34, 0x8c, 0x5c, 0x8c, 0x13,
-      0xb9, 0x95, 0xf1, 0xc1, 0x3e, 0xb4, 0xf5, 0x88,
+      0xe1, 0xb0, 0xe5, 0x90, 0x4d, 0x6b, 0x1f, 0x4a,
+      0xce, 0x31, 0xf9, 0x47, 0x8f, 0x52, 0x63, 0x56,
+      0x7a, 0x76, 0x22, 0x33, 0x74, 0xba, 0xf2, 0x22,
+      0x91, 0xa0, 0x92, 0x36, 0x3d, 0x47, 0x06, 0x63,
     }};
   return &hash;
 }
@@ -37,6 +37,7 @@ static char servo_interfaces__msg__SetPwm__FIELD_NAME__target_position[] = "targ
 static char servo_interfaces__msg__SetPwm__DEFAULT_VALUE__target_position[] = "90";
 static char servo_interfaces__msg__SetPwm__FIELD_NAME__speed[] = "speed";
 static char servo_interfaces__msg__SetPwm__DEFAULT_VALUE__speed[] = "5";
+static char servo_interfaces__msg__SetPwm__FIELD_NAME__client_id[] = "client_id";
 
 static rosidl_runtime_c__type_description__Field servo_interfaces__msg__SetPwm__FIELDS[] = {
   {
@@ -69,6 +70,16 @@ static rosidl_runtime_c__type_description__Field servo_interfaces__msg__SetPwm__
     },
     {servo_interfaces__msg__SetPwm__DEFAULT_VALUE__speed, 1, 1},
   },
+  {
+    {servo_interfaces__msg__SetPwm__FIELD_NAME__client_id, 9, 9},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_STRING,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
 };
 
 const rosidl_runtime_c__type_description__TypeDescription *
@@ -80,7 +91,7 @@ servo_interfaces__msg__SetPwm__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {servo_interfaces__msg__SetPwm__TYPE_NAME, 27, 27},
-      {servo_interfaces__msg__SetPwm__FIELDS, 3, 3},
+      {servo_interfaces__msg__SetPwm__FIELDS, 4, 4},
     },
     {NULL, 0, 0},
   };
@@ -93,7 +104,8 @@ servo_interfaces__msg__SetPwm__get_type_description(
 static char toplevel_type_raw_source[] =
   "uint8 motor_num 1           # PCA9685 channel number\n"
   "uint8 target_position 90     # Taarget position of the servo motor (degrees)\n"
-  "uint8 speed 5";
+  "uint8 speed 5\n"
+  "string client_id";
 
 static char msg_encoding[] = "msg";
 
@@ -107,7 +119,7 @@ servo_interfaces__msg__SetPwm__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {servo_interfaces__msg__SetPwm__TYPE_NAME, 27, 27},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 143, 143},
+    {toplevel_type_raw_source, 160, 160},
   };
   return &source;
 }
