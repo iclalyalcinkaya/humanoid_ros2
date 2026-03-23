@@ -81,20 +81,10 @@ class ServoActionServer(Node):
         self.sim_ac = msg.data
 
     def listener_callback(self, msg): #To learn if the old Rosbridge client still active
-        leng = len(msg.clients)
-        if(self.first_id == None and leng != 0):
-            self.first_id = msg.clients[leng-1].connection_time.sec
-            self.old_leng = leng
-            self.get_logger().info(f"Working client ID= {self.first_id}")
-        elif(self.old_leng != leng):
-            self.old_leng = leng
-            if not any(client.connection_time.sec == self.first_id for client in msg.clients):
+        if self.active_client_id is not None:
+            if not any(client.connection_time.sec == self.active_client_id for client in msg.clients):
+                self.get_logger().warn("Active client dropped. Halting robot.")
                 self.active_client_id = None
-                if (leng != 0):
-                    self.first_id = msg.clients[leng-1].connection_time.sec
-                    self.get_logger().info(f"Working client ID= {self.first_id}")
-                else:
-                    self.first_id = None
 
     def goal_callback(self, goal_request): #Checks the client id and accept or rejects goals
         incoming_id = goal_request.client_id

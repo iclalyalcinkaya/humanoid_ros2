@@ -9,6 +9,7 @@ from rosbridge_msgs.msg import ConnectedClients
 from servo_interfaces.msg import SetMode, SetPwm
 from std_msgs.msg import Float64, Bool
 import math
+from flask import Flask, request, jsonify
 
 MOTOR_COUNT = 12
 MOTOR_ANGLE_LIMITS = [[0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180]]
@@ -78,7 +79,7 @@ class ServoTopicNode(Node):
             self.get_logger().warn("Mode rejected: Robot is locked by another user.")
             return
 
-        motor_num = msg.motor_num
+        motor_num = msg.motor_num - 1
         target_pos = msg.target_position
         self.speed = msg.speed
             
@@ -196,7 +197,7 @@ class ServoTopicNode(Node):
             self.get_logger().error(f"Goal Aborted: Motor {motor_num} or Angle out of bounds")
             return False
 
-        Ts = 0.1
+        Ts = 0.05
         error = target_position - current_an
         Step = self.speed
 

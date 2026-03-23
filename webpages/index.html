@@ -24,12 +24,12 @@
         .btn { padding: 8px 12px; cursor: pointer; border: none; border-radius: 4px; background: #8c00ff; color: #ffffff; font-weight: bold; transition: 0.2s; }
         .btn:hover { background: #7300d1; }
         .mode-btn { background: #8c00ff; width: 120px; }
-        .mode-btn.active { background: #57009e; outline: 2px solid #000; }
+        .mode-btn.active { background: #57009e; outline: 2px solid #2d0051; }
         .step-btn { padding: 2px 6px; cursor: pointer; border: 1px solid #cbd5e1; border-radius: 4px; background: #e2e8f0; font-size: 12px; font-weight: bold; color: #334155; transition: 0.1s;}
         .step-btn:hover { background: #cbd5e1; }
         .pid-group { display: flex; align-items: center; gap: 4px; margin: 0 10px; }
-        .sim-btn{ background: #8c00ff; width: 120px; }
-        .sim-btn.active { background: #57009e; outline: 2px solid #000; }
+        .sim-btn{ background: #8c00ff; width: 120px;}
+        .sim-btn.active{ background: #57009e; outline: 2px solid #2d0051; }
     </style>
 </head>
 
@@ -50,7 +50,8 @@
             <button class="btn mode-btn" id="btnMode2" onclick="setMode(2)">Wave</button>
             <button class="btn mode-btn" id="btnMode3" onclick="setMode(3)">Speak</button>
             <button class="btn mode-btn" id="btnMode4" onclick="setMode(4)">Home</button>
-            <button class="btn sim-btn" id="btnSim" onclick="simActive()">Sim Active</button>
+            <button class="btn sim-btn" id="btnSimDeactive" onclick="simActive()">Sim Deactive</button>
+            <button class="btn sim-btn" id="btnSimActive" onclick="simActive()" style="display:none;">Sim Active</button>
         </div>
 
         <div class="control-row" style="justify-content: center; gap: 20px;">
@@ -142,7 +143,7 @@
                     document.getElementById('connecting').style.display = 'none';
                     document.getElementById('error').style.display = 'none';
                     document.getElementById('closed').style.display = 'none';
-                    document.getElementById('connected').style.display = 'inline';                    
+                    document.getElementById('connected').style.display = 'inline';                
                 });
 
                 ros.on('close', function() {
@@ -187,14 +188,18 @@
         }
 
         // --- SEND COMMANDS ---
-        let sim = true;
+        let sim = false;
         function simActive(){
             if(sim){
                 sim = false;
-                document.getElementById(`btnSim`).classList.add('active');
+                document.getElementById('btnSimDeactive').style.display = 'inline';
+                document.getElementById('btnSimActive').style.display = 'none';
+
             }else{
                 sim = true;
-                document.getElementById(`btnSim`).classList.remove('active');
+                document.getElementById(`btnSimActive`).classList.add('active');
+                document.getElementById('btnSimDeactive').style.display = 'none';
+                document.getElementById('btnSimActive').style.display = 'inline';
             }
             if(simActiveTopic) {
                 var msg = {
