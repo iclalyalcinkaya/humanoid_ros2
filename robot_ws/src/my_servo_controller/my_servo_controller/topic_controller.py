@@ -25,14 +25,14 @@ GAZEBO_JOINT_MAP = {
     1: "left_shoulder_roll_joint",
     2: "left_shoulder_pitch_joint",
     3: "left_elbow_joint",
-    4: "left_wrist_roll_joint",
+    4: "left_wrist_roll_joint", #mid 90, - out, + in
     5: "right_shoulder_yaw_joint", #40-180
     6: "right_shoulder_roll_joint", 
     7: "right_shoulder_pitch_joint",
     8: "right_elbow_joint",
-    9: "right_wrist_roll_joint",
-    10: "neck_pan_joint",
-    11: "neck_tilt_joint"
+    9: "right_wrist_roll_joint", #mid 90, + out, - in
+    10: "neck_pan_joint", #mid 130/135
+    11: "neck_tilt_joint" #90/100-120
     }
 
 class ServoTopicNode(Node):
@@ -40,13 +40,15 @@ class ServoTopicNode(Node):
         super().__init__('servo_topic_server')
         self.get_logger().info("Servo Topic Server has been started.")
         self.kit = ServoKit(channels=16, frequency=50)
+        for i in range(MOTOR_COUNT): #Not all servos support 270, but set it just in case. The code will still respect the MOTOR_ANGLE_LIMITS for safety.
+            self.kit.servo[i].actuation_range = 270
         
         self.active_client_id = None
         self.current_angles = MOTOR_START_ANGLES.copy()
         self.current_angles_sim = MOTOR_START_ANGLES.copy()
+        self.i2c_lock = threading.Lock()
 
         self.sim_ac = False
-
         self.active_mode = 0
         self.mode_thread = None
         self.speed = 5
@@ -214,9 +216,10 @@ class ServoTopicNode(Node):
                     self.gazebo_pubs[motor_num].publish(msg)
                     self.current_angles_sim[str(motor_num+1)] = int(current_an)
             else: 
-                self.kit.servo[motor_num].angle = current_an 
+                with self.i2c_lock:
+                    self.kit.servo[motor_num].angle = current_an 
                 self.current_angles[str(motor_num+1)] = int(current_an)
-
+            self.get_logger().info(f"Current angle: {current_an}")
             error = target_position - current_an
             time.sleep(Ts)
         if(error == 0):
@@ -269,7 +272,8 @@ class ServoTopicNode(Node):
                             self.gazebo_pubs[motor_num].publish(msg)
                             self.current_angles_sim[str(motor_num+1)] = int(current_an)
                     else: 
-                        self.kit.servo[motor_num].angle = current_an 
+                        with self.i2c_lock:
+                            self.kit.servo[motor_num].angle = current_an 
                         self.current_angles[str(motor_num+1)] = int(current_an)
 
             if all_reached:

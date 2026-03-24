@@ -84,8 +84,6 @@
     </div>
 
     <script>
-        //const myClientId = "client_" + Math.random().toString(36).substr(2, 9);
-        //console.log("My Client ID is:", myClientId);
 
         function adjustSpeed(paramId, delta, adj = true) {
             let inputField = document.getElementById(paramId);
@@ -96,7 +94,7 @@
         function adjustMotor(motorId, delta) {
             let slider = document.getElementById(`slider${motorId}`);
             let newVal = parseInt(slider.value) + delta;
-            if (newVal > 180) newVal = 180;
+            if (newVal > 270) newVal = 270;
             if (newVal < 0) newVal = 0;
             
             slider.value = newVal;
@@ -112,7 +110,7 @@
                     <label for="slider${i}" style="width: 35px; text-align: left; font-weight: bold;">M${i}</label>
                     <button class="step-btn" onclick="adjustMotor(${i}, -10)">-10</button>
                     <button class="step-btn" onclick="adjustMotor(${i}, -1)">-1</button>
-                    <input type="range" id="slider${i}" min="0" max="180" value="90" 
+                    <input type="range" id="slider${i}" min="0" max="270" value="90" 
                            oninput="document.getElementById('label${i}').innerText = this.value + '°'"
                            onchange="sendMotorGoal(${i})">
                     <button class="step-btn" onclick="adjustMotor(${i}, 1)">+1</button>
