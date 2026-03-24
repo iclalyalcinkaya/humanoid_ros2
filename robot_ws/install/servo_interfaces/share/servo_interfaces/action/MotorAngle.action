@@ -1,9 +1,9 @@
 uint8 motor_num
 uint8 target_position
-float32 kp 0.03
-float32 ki 0.0
-float32 kd 0.0
-uint8 speed 1
+float32 kp 
+float32 ki 
+float32 kd 
+uint8 speed 
 string client_id
 ---
 bool success

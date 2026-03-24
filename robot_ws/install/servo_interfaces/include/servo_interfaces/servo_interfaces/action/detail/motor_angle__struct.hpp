@@ -40,26 +40,14 @@ struct MotorAngle_Goal_
   explicit MotorAngle_Goal_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
-      rosidl_runtime_cpp::MessageInitialization::DEFAULTS_ONLY == _init)
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->kp = 0.03f;
-      this->ki = 0.0f;
-      this->kd = 0.0f;
-      this->speed = 1;
-    } else if (rosidl_runtime_cpp::MessageInitialization::ZERO == _init) {
       this->motor_num = 0;
       this->target_position = 0;
       this->kp = 0.0f;
       this->ki = 0.0f;
       this->kd = 0.0f;
       this->speed = 0;
-      this->client_id = "";
-    }
-    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
-      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
-    {
-      this->motor_num = 0;
-      this->target_position = 0;
       this->client_id = "";
     }
   }
@@ -68,26 +56,14 @@ struct MotorAngle_Goal_
   : client_id(_alloc)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
-      rosidl_runtime_cpp::MessageInitialization::DEFAULTS_ONLY == _init)
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->kp = 0.03f;
-      this->ki = 0.0f;
-      this->kd = 0.0f;
-      this->speed = 1;
-    } else if (rosidl_runtime_cpp::MessageInitialization::ZERO == _init) {
       this->motor_num = 0;
       this->target_position = 0;
       this->kp = 0.0f;
       this->ki = 0.0f;
       this->kd = 0.0f;
       this->speed = 0;
-      this->client_id = "";
-    }
-    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
-      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
-    {
-      this->motor_num = 0;
-      this->target_position = 0;
       this->client_id = "";
     }
   }

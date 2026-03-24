@@ -57,31 +57,7 @@ class Metaclass_MotorAngle_Goal(type):
         # the message class under "Data and other attributes defined here:"
         # as well as populate each message instance
         return {
-            'KP__DEFAULT': 0.03,
-            'KI__DEFAULT': 0.0,
-            'KD__DEFAULT': 0.0,
-            'SPEED__DEFAULT': 1,
         }
-
-    @property
-    def KP__DEFAULT(cls):
-        """Return default value for message field 'kp'."""
-        return 0.03
-
-    @property
-    def KI__DEFAULT(cls):
-        """Return default value for message field 'ki'."""
-        return 0.0
-
-    @property
-    def KD__DEFAULT(cls):
-        """Return default value for message field 'kd'."""
-        return 0.0
-
-    @property
-    def SPEED__DEFAULT(cls):
-        """Return default value for message field 'speed'."""
-        return 1
 
 
 class MotorAngle_Goal(metaclass=Metaclass_MotorAngle_Goal):
@@ -131,14 +107,10 @@ class MotorAngle_Goal(metaclass=Metaclass_MotorAngle_Goal):
                 ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.motor_num = kwargs.get('motor_num', int())
         self.target_position = kwargs.get('target_position', int())
-        self.kp = kwargs.get(
-            'kp', MotorAngle_Goal.KP__DEFAULT)
-        self.ki = kwargs.get(
-            'ki', MotorAngle_Goal.KI__DEFAULT)
-        self.kd = kwargs.get(
-            'kd', MotorAngle_Goal.KD__DEFAULT)
-        self.speed = kwargs.get(
-            'speed', MotorAngle_Goal.SPEED__DEFAULT)
+        self.kp = kwargs.get('kp', float())
+        self.ki = kwargs.get('ki', float())
+        self.kd = kwargs.get('kd', float())
+        self.speed = kwargs.get('speed', int())
         self.client_id = kwargs.get('client_id', str())
 
     def __repr__(self):

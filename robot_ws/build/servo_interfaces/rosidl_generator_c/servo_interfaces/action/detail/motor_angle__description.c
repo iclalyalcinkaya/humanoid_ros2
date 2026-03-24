@@ -420,13 +420,9 @@ servo_interfaces__action__MotorAngle__get_type_description(
 static char servo_interfaces__action__MotorAngle_Goal__FIELD_NAME__motor_num[] = "motor_num";
 static char servo_interfaces__action__MotorAngle_Goal__FIELD_NAME__target_position[] = "target_position";
 static char servo_interfaces__action__MotorAngle_Goal__FIELD_NAME__kp[] = "kp";
-static char servo_interfaces__action__MotorAngle_Goal__DEFAULT_VALUE__kp[] = "0.03";
 static char servo_interfaces__action__MotorAngle_Goal__FIELD_NAME__ki[] = "ki";
-static char servo_interfaces__action__MotorAngle_Goal__DEFAULT_VALUE__ki[] = "0.0";
 static char servo_interfaces__action__MotorAngle_Goal__FIELD_NAME__kd[] = "kd";
-static char servo_interfaces__action__MotorAngle_Goal__DEFAULT_VALUE__kd[] = "0.0";
 static char servo_interfaces__action__MotorAngle_Goal__FIELD_NAME__speed[] = "speed";
-static char servo_interfaces__action__MotorAngle_Goal__DEFAULT_VALUE__speed[] = "1";
 static char servo_interfaces__action__MotorAngle_Goal__FIELD_NAME__client_id[] = "client_id";
 
 static rosidl_runtime_c__type_description__Field servo_interfaces__action__MotorAngle_Goal__FIELDS[] = {
@@ -458,7 +454,7 @@ static rosidl_runtime_c__type_description__Field servo_interfaces__action__Motor
       0,
       {NULL, 0, 0},
     },
-    {servo_interfaces__action__MotorAngle_Goal__DEFAULT_VALUE__kp, 4, 4},
+    {NULL, 0, 0},
   },
   {
     {servo_interfaces__action__MotorAngle_Goal__FIELD_NAME__ki, 2, 2},
@@ -468,7 +464,7 @@ static rosidl_runtime_c__type_description__Field servo_interfaces__action__Motor
       0,
       {NULL, 0, 0},
     },
-    {servo_interfaces__action__MotorAngle_Goal__DEFAULT_VALUE__ki, 3, 3},
+    {NULL, 0, 0},
   },
   {
     {servo_interfaces__action__MotorAngle_Goal__FIELD_NAME__kd, 2, 2},
@@ -478,7 +474,7 @@ static rosidl_runtime_c__type_description__Field servo_interfaces__action__Motor
       0,
       {NULL, 0, 0},
     },
-    {servo_interfaces__action__MotorAngle_Goal__DEFAULT_VALUE__kd, 3, 3},
+    {NULL, 0, 0},
   },
   {
     {servo_interfaces__action__MotorAngle_Goal__FIELD_NAME__speed, 5, 5},
@@ -488,7 +484,7 @@ static rosidl_runtime_c__type_description__Field servo_interfaces__action__Motor
       0,
       {NULL, 0, 0},
     },
-    {servo_interfaces__action__MotorAngle_Goal__DEFAULT_VALUE__speed, 1, 1},
+    {NULL, 0, 0},
   },
   {
     {servo_interfaces__action__MotorAngle_Goal__FIELD_NAME__client_id, 9, 9},
@@ -1238,10 +1234,10 @@ servo_interfaces__action__MotorAngle_FeedbackMessage__get_type_description(
 static char toplevel_type_raw_source[] =
   "uint8 motor_num\n"
   "uint8 target_position\n"
-  "float32 kp 0.03\n"
-  "float32 ki 0.0\n"
-  "float32 kd 0.0\n"
-  "uint8 speed 1\n"
+  "float32 kp \n"
+  "float32 ki \n"
+  "float32 kd \n"
+  "uint8 speed \n"
   "string client_id\n"
   "---\n"
   "bool success\n"
@@ -1261,7 +1257,7 @@ servo_interfaces__action__MotorAngle__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {servo_interfaces__action__MotorAngle__TYPE_NAME, 34, 34},
     {action_encoding, 6, 6},
-    {toplevel_type_raw_source, 158, 158},
+    {toplevel_type_raw_source, 147, 147},
   };
   return &source;
 }

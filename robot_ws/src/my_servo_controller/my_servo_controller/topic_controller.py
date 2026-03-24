@@ -53,7 +53,6 @@ class ServoTopicNode(Node):
         self.motor_thread = None
         self.old_motor_num = None
 
-
         self.gazebo_pubs = {}
         for motor_idx, joint_name in GAZEBO_JOINT_MAP.items():
             topic_name = f'/h1/{joint_name}/cmd_pos'
@@ -170,7 +169,6 @@ class ServoTopicNode(Node):
                 R_shoulder_pitch = 50 if R_shoulder_pitch == 60 else 60
                 neck_pitch = 90 if neck_pitch == 100 else 100 
                 
-                # Move them sequentially (or you could multi-thread these if you want simultaneous movement)
                 target_group = {
                     3: L_elbow,
                     8: R_elbow,

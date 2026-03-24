@@ -57,7 +57,7 @@
               "string_capacity": 0,
               "nested_type_name": ""
             },
-            "default_value": "0.03"
+            "default_value": ""
           },
           {
             "name": "ki",
@@ -67,7 +67,7 @@
               "string_capacity": 0,
               "nested_type_name": ""
             },
-            "default_value": "0.0"
+            "default_value": ""
           },
           {
             "name": "kd",
@@ -77,7 +77,7 @@
               "string_capacity": 0,
               "nested_type_name": ""
             },
-            "default_value": "0.0"
+            "default_value": ""
           },
           {
             "name": "speed",
@@ -87,7 +87,7 @@
               "string_capacity": 0,
               "nested_type_name": ""
             },
-            "default_value": "1"
+            "default_value": ""
           },
           {
             "name": "client_id",

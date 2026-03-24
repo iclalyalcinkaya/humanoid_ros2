@@ -9,7 +9,6 @@ from rosbridge_msgs.msg import ConnectedClients
 from servo_interfaces.msg import SetMode, SetPwm
 from std_msgs.msg import Float64, Bool
 import math
-from flask import Flask, request, jsonify
 
 MOTOR_COUNT = 12
 MOTOR_ANGLE_LIMITS = [[0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180]]
@@ -22,12 +21,12 @@ MODE_ANGLES = {
 }
 
 GAZEBO_JOINT_MAP = {
-    0: "left_shoulder_yaw_joint",
+    0: "left_shoulder_yaw_joint", #0-110
     1: "left_shoulder_roll_joint",
     2: "left_shoulder_pitch_joint",
     3: "left_elbow_joint",
     4: "left_wrist_roll_joint",
-    5: "right_shoulder_yaw_joint",
+    5: "right_shoulder_yaw_joint", #40-180
     6: "right_shoulder_roll_joint", 
     7: "right_shoulder_pitch_joint",
     8: "right_elbow_joint",
@@ -46,7 +45,7 @@ class ServoTopicNode(Node):
         self.current_angles = MOTOR_START_ANGLES.copy()
         self.current_angles_sim = MOTOR_START_ANGLES.copy()
 
-        self.sim_ac = True
+        self.sim_ac = False
 
         self.active_mode = 0
         self.mode_thread = None
@@ -99,9 +98,9 @@ class ServoTopicNode(Node):
     def client_sub_callback(self, msg):
         if self.active_client_id is not None:
             if not any(client.connection_time.sec == self.active_client_id for client in msg.clients):
-                self.get_logger().warn("Active client dropped. Halting robot.")
+                self.get_logger().warn("Active client dropped.")
                 self.active_client_id = None
-                self.active_mode = 0 # This breaks any active sequence loops
+                #self.active_mode = 0 # This breaks any active sequence loops
 
     def mode_sub_callback(self, msg):
         incoming_id = msg.client_id
@@ -133,7 +132,7 @@ class ServoTopicNode(Node):
             self.mode_thread.start()
             
     def run_mode_sequence(self, mode_num):
-        """This runs in the background, allowing time.sleep() without crashing ROS"""
+        """This runs in the background"""
         if mode_num not in MODE_ANGLES: return
         angles = MODE_ANGLES[mode_num]
 
@@ -184,7 +183,7 @@ class ServoTopicNode(Node):
                 self.sendMultipleMotorGoals(target_group, self.speed)
 
     def sendMotorGoal(self, motor_num, target_angle):
-        """Standard blocking function. Moves the motor in steps."""
+        """Moves the motor in steps."""
         target_position = float(target_angle)
         if(self.sim_ac):
             current_an = float(self.current_angles_sim[str(motor_num+1)])
@@ -212,11 +211,10 @@ class ServoTopicNode(Node):
             if(self.sim_ac):
                 if motor_num in self.gazebo_pubs:
                     msg = Float64()
-                    # Convert 0-180 (UI) to -pi/2 to pi/2 (Gazebo)
+                    # Convert 0-180 (UI) to -pi/2 to pi/2 (for Gazebo)
                     msg.data = math.radians(current_an - 90.0) 
                     self.gazebo_pubs[motor_num].publish(msg)
                     self.current_angles_sim[str(motor_num+1)] = int(current_an)
-                    #self.get_logger().info(f"error: {error}, step: {Step}, degree: {current_an}, rad: {msg.data}")
             else: 
                 self.kit.servo[motor_num].angle = current_an 
                 self.current_angles[str(motor_num+1)] = int(current_an)
@@ -237,7 +235,7 @@ class ServoTopicNode(Node):
         Ts = 0.1
         Step = self.speed
         while self.active_mode != 0:
-            all_reached = True # Assume we are done until proven otherwise
+            all_reached = True # Assume done until proven otherwise
             
             for motor_num, target_angle in targets.items():
                 target_position = float(target_angle)
@@ -255,7 +253,7 @@ class ServoTopicNode(Node):
                 
                 # If this specific motor hasn't reached its target yet
                 if abs(error) > 0.1:
-                    all_reached = False # We still have moving to do!
+                    all_reached = False # At least one motor still needs to move
                     
                     Step = speed
                     while abs(error) < abs(Step) and abs(Step) != 1:
@@ -268,7 +266,7 @@ class ServoTopicNode(Node):
                     if(self.sim_ac):
                         if motor_num in self.gazebo_pubs:
                             msg = Float64()
-                            # Convert 0-180 (UI) to -pi/2 to pi/2 (Gazebo)
+                            # Convert 0-180 (UI) to -pi/2 to pi/2 (for Gazebo)
                             msg.data = math.radians(current_an - 90.0) 
                             self.gazebo_pubs[motor_num].publish(msg)
                             self.current_angles_sim[str(motor_num+1)] = int(current_an)
@@ -276,18 +274,15 @@ class ServoTopicNode(Node):
                         self.kit.servo[motor_num].angle = current_an 
                         self.current_angles[str(motor_num+1)] = int(current_an)
 
-            # If NO motors triggered the (abs(error) > 0.1) check, we are finished!
             if all_reached:
                 break
-                
-            # Wait once per group step
+            
             time.sleep(Ts)
 
 def main(args=None):
     rclpy.init(args=args)
     node = ServoTopicNode()
     try:
-        # Standard spin is fine here because Threading handles the blocking loops!
         rclpy.spin(node)
     except KeyboardInterrupt:
         pass

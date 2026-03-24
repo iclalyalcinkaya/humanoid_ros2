@@ -45,7 +45,7 @@ class ServoActionServer(Node):
         self.old_leng = 0
         self.current_angles = MOTOR_START_ANGLES.copy() #Starts with default angles
         self.current_angles_sim = MOTOR_START_ANGLES.copy()
-        self.sim_ac = True
+        self.sim_ac = False
         
         self.gazebo_pubs = {}
         for motor_idx, joint_name in GAZEBO_JOINT_MAP.items():
@@ -77,7 +77,6 @@ class ServoActionServer(Node):
         )
     
     def sim_active_callback(self, msg):
-        self.active_mode = 0
         self.sim_ac = msg.data
 
     def listener_callback(self, msg): #To learn if the old Rosbridge client still active
@@ -123,10 +122,13 @@ class ServoActionServer(Node):
 
         #Checks the goal limits
         if 0 <= motor_num < MOTOR_COUNT and min_angle <= target_position <= max_angle:
-            Step = request.speed
             Ts = 0.1
-            error = target_position - current_an
-
+            error = target_position - current_an        
+            if(request.speed):
+                Step = request.speed
+            else:                
+                Kp, Ki, Kd = request.kp, request.ki, request.kd
+            
             while abs(error) > 0.1:
                 if goal_handle.is_cancel_requested or self.active_client_id is None:
                     goal_handle.canceled()
@@ -134,13 +136,16 @@ class ServoActionServer(Node):
                     result.success = False
                     return result
 
-                #If step is to big take smaller step
-                while(abs(error) < abs(Step) and abs(Step) != 1):
-                    Step = int(Step / 2)
-                #if(abs(error) < abs(Step) and abs(Step) != 1): #If Step is biggerden error make step smaller
-                #    Step = 1
-                if(error * Step < 0):
-                    Step *= -1
+                if(request.speed):
+                    #If step is to big take smaller step
+                    while(abs(error) < abs(Step) and abs(Step) != 1):
+                        Step = int(Step / 2)
+                    #if(abs(error) < abs(Step) and abs(Step) != 1): #If Step is biggerden error make step smaller
+                    #    Step = 1
+                    if(error * Step < 0):
+                        Step *= -1
+                else:
+                    Step = Kp * error #+ Ki * integral + Kd * derivative #Simple P controller, can be extended to PID if needed
 
                 current_an = max(min_angle, min(max_angle, current_an + Step)) #To stay between angle limits
                 if(self.sim_ac):

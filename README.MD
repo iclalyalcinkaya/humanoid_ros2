@@ -16,7 +16,14 @@ git clone https://github.com/iclalyalcinkaya/humanoid_ros2.git
 cd robot_ws/
 colcon build
 source install/setup.bash 
+```
+Action mantığı ile çalıştırmak isteniliyorsa:
+```
 ros2 launch my_servo_controller action_controller_launch.py
+```
+Topic mantığı ile çalıştırmak isteniliyorsa:
+```
+ros2 launch my_servo_controller topic_controller_launch.py
 ```
 [Web sayfası](http://localhost:8000/)
 
@@ -39,10 +46,13 @@ PWM frekansı ayarlanabilir.
 
 [ServoKit API](https://docs.circuitpython.org/projects/servokit/en/latest/index.html)
 
-## SERVICE VEYA ACTION
+## SERVICE VEYA ACTION VEYA TOPİC
 Motor açılarının komutlarını göndermek için action kullanmak daha mantıklı oluyor. Services senkron olarak çalışır ve bir sonraki isteği göndermek için öncekinin bitmesi bekler. İsteği gönderdikten sonra süreç hakkında bir bilgisi olmaz. 
 
 Actions asenkron olarak çalışır, bir hedef gönderdikten sonra farklı şeylerle uğraşabilir. Farklı bir hedef gönderebilir veya önceki hedefi durdurabilir. Süreç sırasında ise server sürekli bir feedback gönderebilir.
+
+Action çalışma şeklinde modların çalışma iç algoritmaları API tarafından yapılmakta. Topic kontrolde ise mod algoritmalarını Raspberry Pi yapmakta. Böylelikle robota sadece hangi modda çalışmasını istediğini söylemek yeterli oluyor ve robot kendi içinde mod algoritmsını çalıştırıyor. 
+Bu Rosbridge üzerinde oluşabilecek hataları önlemek, daha hızlı mesaj iletimi sağlaması ve tek yönlü çalışması (feedback yok) nedeniyle daha az internet ve CPU gücü kullanması adına güzel bir yöntem ancak topic kontrolde hazırda bir feedback ve cancel sistemi bulunmaz. Bunlar için ayrıyetten koda eklemeler yapılması gerekir.
 
 ## ACTION SERVER CLIENT BAĞLANTISI
 Veri iletiminde API action client gibi davranırken ros server gibi davranıyor.
@@ -97,11 +107,19 @@ cd robot_ws/
 colcon build
 source install/setup.bash
 ros2 launch ros_gz_h1_bringup h1_gazebo_sim.launch.py 
+```
+Action mantığı ile çalıştırmak isteniliyorsa farklı bir terminalde:
+```
 ros2 launch my_servo_controller action_controller_launch.py
+```
+Topic mantığı ile çalıştırmak isteniliyorsa farklı bir terminalde:
+```
+ros2 launch my_servo_controller topic_controller_launch.py
 ```
 [Web sayfası](http://localhost:8000/)
 
 IP adresini gir ve bağlan.
+Simülasyon aktivasyon butonuna bas.
 
 ## OLUŞABİLECEK SORUNLAR  
 Çarpmayı algılayamadan devam edebilir. Onun için bir hata durumu koymalı veya acil durum butonu yeterli olur.
@@ -113,3 +131,4 @@ Launch dosyası olarak çalıştırınca ve düzgün bir şekilde kapatılmaz is
 * **Özel Boyun Eklemi:** Orijinal modelde bulunmayan, 2 eksenli (Pan/Tilt) özel bir boyun ve kafa (cylinder/sphere) sisteme fiziksel ve görsel olarak entegre edildi.
 * **Bileklerin Serbest Bırakılması:** İşlemci yükünü azaltmak için orijinal repository'de `fixed` (sabit) olarak ayarlanan bilek eklemleri `revolute` olarak değiştirilip aktifleştirildi.
 * **PID Tuning:** Düşük ataletli (low-inertia) bileklerin yerçekimi altında düşmemesi ve titrememesi (oscillation) için Gazebo'nun `JointPositionController` eklentileri sisteme dahil edildi. Kp (Yay) ve Kd (Sönümleyici) değerleri optimize edilerek simülasyon stabil hale getirildi.
+

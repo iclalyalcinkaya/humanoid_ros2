@@ -57,16 +57,16 @@ class Metaclass_MotorAngle_Goal(type):
         # the message class under "Data and other attributes defined here:"
         # as well as populate each message instance
         return {
-            'KP__DEFAULT': 0.03,
+            'KP__DEFAULT': 0.0,
             'KI__DEFAULT': 0.0,
             'KD__DEFAULT': 0.0,
-            'SPEED__DEFAULT': 1,
+            'SPEED__DEFAULT': 0,
         }
 
     @property
     def KP__DEFAULT(cls):
         """Return default value for message field 'kp'."""
-        return 0.03
+        return 0.0
 
     @property
     def KI__DEFAULT(cls):
@@ -81,7 +81,7 @@ class Metaclass_MotorAngle_Goal(type):
     @property
     def SPEED__DEFAULT(cls):
         """Return default value for message field 'speed'."""
-        return 1
+        return 0
 
 
 class MotorAngle_Goal(metaclass=Metaclass_MotorAngle_Goal):

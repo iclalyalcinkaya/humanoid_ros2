@@ -123,7 +123,14 @@ class ServoActionServer(Node):
 
         #Checks the goal limits
         if 0 <= motor_num < MOTOR_COUNT and min_angle <= target_position <= max_angle:
-            Step = request.speed
+                       
+            if(request.speed != 0):
+                Step = request.speed
+                self.get_logger().info(f"Step: {request.speed} Kp: {request.kp}")             
+            else:                
+                Kp, Ki, Kd = request.kp, request.ki, request.kd
+                self.get_logger().info(f"Kp: {request.kp} Step: {request.speed}")
+                Step = Kp * (target_position - current_an) #+ Ki * integral + Kd * derivative #Simple P controller, can be extended to PID if needed
             Ts = 0.1
             error = target_position - current_an
 
