@@ -19,6 +19,8 @@ MODE_ANGLES = {
     3: [60, 105, 60, 60, 90, 120, 75, 60, 60, 90, 90, 90],
     4: [90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90],
 }
+MOVE_ORDER = [14, 5, 2, 4, 13, 8, 7, 6, 9, 10, 11, 3] # The conncected order of the servos in the physical robot, starting with the left shoulder yaw and ending with the neck tilt.
+
 
 GAZEBO_JOINT_MAP = {
     0: "left_shoulder_yaw_joint", #0-110
@@ -39,10 +41,11 @@ class ServoTopicNode(Node):
     def __init__(self):
         super().__init__('servo_topic_server')
         self.get_logger().info("Servo Topic Server has been started.")
-        self.kit = ServoKit(channels=16, frequency=50)
+        self.kit = ServoKit(channels=16, frequency=333)
         for i in range(MOTOR_COUNT): #Not all servos support 270, but set it just in case. The code will still respect the MOTOR_ANGLE_LIMITS for safety.
-            self.kit.servo[i].actuation_range = 270
-        
+            self.kit.servo[i].actuation_range = 180
+            self.kit.servo[i].set_pulse_width_range(500, 2500)
+      
         self.active_client_id = None
         self.current_angles = MOTOR_START_ANGLES.copy()
         self.current_angles_sim = MOTOR_START_ANGLES.copy()
@@ -202,8 +205,8 @@ class ServoTopicNode(Node):
 
         # Loop until it reaches target OR the mode is changed by the user
         while abs(error) > 0.1 and self.active_mode != 0:
-            while abs(error) < abs(Step) and abs(Step) != 1:
-                Step = int(Step / 2)
+            if abs(error) < abs(Step) and abs(Step) != 1:
+                Step = error
             if error*Step < 0:
                 Step *= -1
             
@@ -217,7 +220,8 @@ class ServoTopicNode(Node):
                     self.current_angles_sim[str(motor_num+1)] = int(current_an)
             else: 
                 with self.i2c_lock:
-                    self.kit.servo[motor_num].angle = current_an 
+                    self.kit.servo[motor_num].angle = current_an
+                    # self.kit.servo[MOVE_ORDER[motor_num]].angle = current_an 
                 self.current_angles[str(motor_num+1)] = int(current_an)
             self.get_logger().info(f"Current angle: {current_an}")
             error = target_position - current_an
@@ -257,8 +261,8 @@ class ServoTopicNode(Node):
                     all_reached = False # At least one motor still needs to move
                     
                     Step = speed
-                    while abs(error) < abs(Step) and abs(Step) != 1:
-                        Step = int(Step / 2)
+                    if abs(error) < abs(Step) and abs(Step) != 1:
+                        Step = error
                     if error * Step < 0:
                         Step *= -1
 
@@ -273,7 +277,8 @@ class ServoTopicNode(Node):
                             self.current_angles_sim[str(motor_num+1)] = int(current_an)
                     else: 
                         with self.i2c_lock:
-                            self.kit.servo[motor_num].angle = current_an 
+                            self.kit.servo[motor_num].angle = current_an
+                            # self.kit.servo[MOVE_ORDER[motor_num]].angle = current_an 
                         self.current_angles[str(motor_num+1)] = int(current_an)
 
             if all_reached:
