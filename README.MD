@@ -8,7 +8,12 @@
 * Gazebo (Eğer simülasyon çalıştırılacaksa)
 * `rosbridge_suite` paketi
 * Python kütüphanesi: `pip install adafruit-circuitpython-servokit`
-
+* HTML için [ROS2 kütüphanesi (ROS2LIBJS)](https://github.com/6RiverSystems/ros2libjs)
+* Çalıştırmadan önce rosbridge için firewall izni eklemeniz gerekebilir.
+```
+sudo ufw allow 9090/tcp
+sudo ufw reload
+```
 ```
 git clone https://github.com/iclalyalcinkaya/humanoid_ros2.git
 ```

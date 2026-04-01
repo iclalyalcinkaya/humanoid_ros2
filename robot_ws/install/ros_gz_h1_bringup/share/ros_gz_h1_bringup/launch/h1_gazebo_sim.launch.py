@@ -33,15 +33,19 @@ def generate_launch_description():
     gz_sim = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(pkg_ros_gz_sim, 'launch', 'gz_sim.launch.py')),
-        launch_arguments={'gz_args': PathJoinSubstitution([
+        launch_arguments={'gz_args': ['-s ','-r ', PathJoinSubstitution([
             pkg_project_gazebo,
             'worlds',
             'empty_h1.sdf'
-        ])}.items(),
+        ])]}.items(),
     )
 
-    set_gpu_env = SetEnvironmentVariable(name='__NV_PRIME_RENDER_OFFLOAD', value='1')
-    set_glx_env = SetEnvironmentVariable(name='__GLX_VENDOR_LIBRARY_NAME', value='nvidia')
+    #set_gpu_env = SetEnvironmentVariable(name='__NV_PRIME_RENDER_OFFLOAD', value='1')
+    #set_glx_env = SetEnvironmentVariable(name='__GLX_VENDOR_LIBRARY_NAME', value='nvidia')
+
+    # Force Gazebo and the Bridge to use the internal loopback network
+    set_gz_ip = SetEnvironmentVariable(name='GZ_IP', value='127.0.0.1')
+    set_gz_partition = SetEnvironmentVariable(name='GZ_PARTITION', value='h1_sim')
 
     # Takes the description and joint angles as inputs and publishes the 3D poses of the robot links
     robot_state_publisher = Node(
@@ -75,8 +79,10 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
-        set_gpu_env,
-        set_glx_env,
+        #set_gpu_env,
+        #set_glx_env,
+        set_gz_ip,
+        set_gz_partition,
         gz_sim,
         DeclareLaunchArgument('rviz', default_value='true',
                               description='Open RViz.'), 
