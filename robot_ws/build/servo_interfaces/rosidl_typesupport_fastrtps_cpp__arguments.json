@@ -1,12 +1,12 @@
 {
   "package_name": "servo_interfaces",
-  "output_dir": "/home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_typesupport_fastrtps_cpp/servo_interfaces",
+  "output_dir": "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_typesupport_fastrtps_cpp/servo_interfaces",
   "template_dir": "/opt/ros/jazzy/share/rosidl_typesupport_fastrtps_cpp/resource",
   "idl_tuples": [
-    "/home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces:msg/SetPwm.idl",
-    "/home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces:msg/SetMode.idl",
-    "/home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces:srv/MotorAngle.idl",
-    "/home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces:action/MotorAngle.idl"
+    "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces:msg/SetPwm.idl",
+    "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces:msg/SetMode.idl",
+    "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces:srv/MotorAngle.idl",
+    "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces:action/MotorAngle.idl"
   ],
   "ros_interface_dependencies": [
     "service_msgs:/opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl",
@@ -27,10 +27,10 @@
     "/opt/ros/jazzy/share/rosidl_typesupport_fastrtps_cpp/resource/msg__type_support.cpp.em",
     "/opt/ros/jazzy/share/rosidl_typesupport_fastrtps_cpp/resource/srv__rosidl_typesupport_fastrtps_cpp.hpp.em",
     "/opt/ros/jazzy/share/rosidl_typesupport_fastrtps_cpp/resource/srv__type_support.cpp.em",
-    "/home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces/msg/SetPwm.idl",
-    "/home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces/msg/SetMode.idl",
-    "/home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces/srv/MotorAngle.idl",
-    "/home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces/action/MotorAngle.idl",
+    "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces/msg/SetPwm.idl",
+    "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces/msg/SetMode.idl",
+    "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces/srv/MotorAngle.idl",
+    "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces/action/MotorAngle.idl",
     "/opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl",
     "/opt/ros/jazzy/share/builtin_interfaces/msg/Duration.idl",
     "/opt/ros/jazzy/share/builtin_interfaces/msg/Time.idl",

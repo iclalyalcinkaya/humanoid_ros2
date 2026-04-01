@@ -1,4 +1,4 @@
-/home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces:msg/SetPwm.idl
-/home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces:msg/SetMode.idl
-/home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces:srv/MotorAngle.idl
-/home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces:action/MotorAngle.idl
+/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces:msg/SetPwm.idl
+/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces:msg/SetMode.idl
+/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces:srv/MotorAngle.idl
+/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces:action/MotorAngle.idl

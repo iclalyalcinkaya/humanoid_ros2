@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rasp/humanoid/robot_ws/src/servo_interfaces
+CMAKE_SOURCE_DIR = /home/rasp/humanoid_ros2/robot_ws/src/servo_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rasp/humanoid/robot_ws/build/servo_interfaces
+CMAKE_BINARY_DIR = /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/rasp/humanoid/robot_ws/build/servo_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rasp/humanoid/robot_ws/src/servo_interfaces /home/rasp/humanoid/robot_ws/src/servo_interfaces /home/rasp/humanoid/robot_ws/build/servo_interfaces /home/rasp/humanoid/robot_ws/build/servo_interfaces /home/rasp/humanoid/robot_ws/build/servo_interfaces/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rasp/humanoid_ros2/robot_ws/src/servo_interfaces /home/rasp/humanoid_ros2/robot_ws/src/servo_interfaces /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/uninstall.dir/depend
 

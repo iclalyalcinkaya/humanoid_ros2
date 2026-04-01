@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rasp/humanoid/robot_ws/src/servo_interfaces
+CMAKE_SOURCE_DIR = /home/rasp/humanoid_ros2/robot_ws/src/servo_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rasp/humanoid/robot_ws/build/servo_interfaces
+CMAKE_BINARY_DIR = /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces
 
 # Utility rule file for ament_cmake_python_copy_servo_interfaces.
 
@@ -67,7 +67,7 @@ include CMakeFiles/ament_cmake_python_copy_servo_interfaces.dir/compiler_depend.
 include CMakeFiles/ament_cmake_python_copy_servo_interfaces.dir/progress.make
 
 CMakeFiles/ament_cmake_python_copy_servo_interfaces:
-	/usr/bin/cmake -E copy_directory /home/rasp/humanoid/robot_ws/build/servo_interfaces/rosidl_generator_py/servo_interfaces /home/rasp/humanoid/robot_ws/build/servo_interfaces/ament_cmake_python/servo_interfaces/servo_interfaces
+	/usr/bin/cmake -E copy_directory /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_py/servo_interfaces /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/ament_cmake_python/servo_interfaces/servo_interfaces
 
 ament_cmake_python_copy_servo_interfaces: CMakeFiles/ament_cmake_python_copy_servo_interfaces
 ament_cmake_python_copy_servo_interfaces: CMakeFiles/ament_cmake_python_copy_servo_interfaces.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/ament_cmake_python_copy_servo_interfaces.dir/clean:
 .PHONY : CMakeFiles/ament_cmake_python_copy_servo_interfaces.dir/clean
 
 CMakeFiles/ament_cmake_python_copy_servo_interfaces.dir/depend:
-	cd /home/rasp/humanoid/robot_ws/build/servo_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rasp/humanoid/robot_ws/src/servo_interfaces /home/rasp/humanoid/robot_ws/src/servo_interfaces /home/rasp/humanoid/robot_ws/build/servo_interfaces /home/rasp/humanoid/robot_ws/build/servo_interfaces /home/rasp/humanoid/robot_ws/build/servo_interfaces/CMakeFiles/ament_cmake_python_copy_servo_interfaces.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rasp/humanoid_ros2/robot_ws/src/servo_interfaces /home/rasp/humanoid_ros2/robot_ws/src/servo_interfaces /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles/ament_cmake_python_copy_servo_interfaces.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/ament_cmake_python_copy_servo_interfaces.dir/depend
 
