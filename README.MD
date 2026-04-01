@@ -36,6 +36,61 @@ ros2 launch my_servo_controller topic_controller_launch.py
 
 IP adresini gir ve bağlan.
 
+## GÜÇ ALDIĞI ANDA ÇALIŞMASI İÇİN
+Terminalde:
+```
+nano /home/<username>/start_controller.sh
+```
+Dosya içine:
+```
+#!/bin/bash
+
+# 1. Source the core ROS 2 Jazzy installation
+source /opt/ros/jazzy/setup.bash
+
+# 2. Source your specific robot workspace
+source /home/<username>/humanoid_ros2/robot_ws/install/setup.bash
+
+# 4. Launch your servo controller
+ros2 launch my_servo_controller topic_controller_launch.py
+```
+Terminalde:
+```
+sudo nano /etc/systemd/system/servo_controller.service
+```
+Dosya içine:
+```
+[Unit]
+Description=ROS 2 Servo Topic Controller
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=<username>
+WorkingDirectory=/home/<username>/humanoid_ros2/robot_ws
+ExecStart=/bin/bash /home/<username>/start_controller.sh
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+```
+Terminalde:
+```
+sudo systemctl daemon-reload
+sudo systemctl enable servo_controller.service
+sudo systemctl start servo_controller.service
+```
+
+### KULLANILABİLECEK KOMUTLAR
+* Çıktıları okuyabilmek için: ```journalctl -u servo_controller.service -f```
+* Başlangıçta çalışmasını durdurmak için(istenildiğinde tekrar enable edilebilir): ```sudo systemctl disable servo_controller.service```
+* Anlık çalışma durumunu öğrenmek için: ```sudo systemctl status servo_controller.service```
+* Başlatmak için: `sudo systemctl start servo_controller.service`
+* Durdurmak için: `sudo systemctl stop servo_controller.service`
+* Durdurup başlatmak için:`sudo systemctl restart servo_controller.service`
+
 ## ROS2LIBJS
 HTML yazarken eski roslibjs kullanıldığında action veri paket isimlendirme şekli ROS’tan ROS2’ye değiştiğinden hata veriyordu. Bu yüzden farklı bir paket kullanılması gerekiyordu.
 
