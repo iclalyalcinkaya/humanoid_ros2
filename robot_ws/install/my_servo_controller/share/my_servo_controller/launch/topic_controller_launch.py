@@ -7,6 +7,7 @@ from launch.actions import IncludeLaunchDescription, ExecuteProcess
 from launch_xml.launch_description_sources import XMLLaunchDescriptionSource
 
 def generate_launch_description():
+    html_folder_path = '/home/rasp/humanoid_ros2/webpages'
     return LaunchDescription([
         Node(
             package='my_servo_controller',
@@ -24,8 +25,8 @@ def generate_launch_description():
             )
         ),
         ExecuteProcess(
-            cmd=['python3', '-m', 'http.server'],
-            cwd='../webpages', #html folder
+            cmd=['python3', '-m', 'http.server','8000', '--bind',  '0.0.0.0'],
+            cwd=html_folder_path, #html folder
             output='screen'
         ),
     ])

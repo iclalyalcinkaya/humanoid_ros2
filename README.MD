@@ -7,7 +7,7 @@
 * ROS2
 * Gazebo (Eğer simülasyon çalıştırılacaksa)
 * `rosbridge_suite` paketi
-* Python kütüphanesi: `pip install adafruit-circuitpython-servokit`
+* Python kütüphanesi: `sudo pip3 install adafruit-circuitpython-servokit`
 * HTML için [ROS2 kütüphanesi (ROS2LIBJS)](https://github.com/6RiverSystems/ros2libjs)
 * Çalıştırmadan önce rosbridge için firewall izni eklemeniz gerekebilir.
 ```
@@ -18,7 +18,7 @@ sudo ufw reload
 git clone https://github.com/iclalyalcinkaya/humanoid_ros2.git
 ```
 ```
-cd robot_ws/
+cd humanoid_ros2/robot_ws/
 colcon build
 source install/setup.bash 
 ```
@@ -84,9 +84,10 @@ sudo systemctl start servo_controller.service
 ```
 
 ### KULLANILABİLECEK KOMUTLAR
-* Çıktıları okuyabilmek için: ```journalctl -u servo_controller.service -f```
-* Başlangıçta çalışmasını durdurmak için(istenildiğinde tekrar enable edilebilir): ```sudo systemctl disable servo_controller.service```
-* Anlık çalışma durumunu öğrenmek için: ```sudo systemctl status servo_controller.service```
+* Çıktıları okuyabilmek için: `journalctl -u servo_controller.service -f`
+* Başlangıçta çalışmasını durdurmak için: `sudo systemctl disable servo_controller.service`
+* Başlangıçta çalışmasını başlatmak için: `sudo systemctl enable servo_controller.service`
+* Anlık çalışma durumunu öğrenmek için: `sudo systemctl status servo_controller.service`
 * Başlatmak için: `sudo systemctl start servo_controller.service`
 * Durdurmak için: `sudo systemctl stop servo_controller.service`
 * Durdurup başlatmak için:`sudo systemctl restart servo_controller.service`
@@ -104,6 +105,7 @@ Referans saat hızı hertz cinsinden belirtilebilir
 PWM frekansı ayarlanabilir.
 İstenilen kanaldaki servonun açısı değiştirilebilir.
 
+[ServoKit GitHub](https://github.com/adafruit/Adafruit_CircuitPython_ServoKit)
 [ServoKit API](https://docs.circuitpython.org/projects/servokit/en/latest/index.html)
 
 ## SERVICE VEYA ACTION VEYA TOPİC
