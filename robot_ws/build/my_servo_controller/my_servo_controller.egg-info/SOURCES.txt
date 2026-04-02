@@ -19,7 +19,11 @@ my_servo_controller/gazibo_sim.py
 my_servo_controller/servo_controller.py
 my_servo_controller/servo_mover.py
 my_servo_controller/topic_controller.py
+my_servo_controller.egg-info/PKG-INFO
+my_servo_controller.egg-info/SOURCES.txt
+my_servo_controller.egg-info/dependency_links.txt
+my_servo_controller.egg-info/entry_points.txt
+my_servo_controller.egg-info/requires.txt
+my_servo_controller.egg-info/top_level.txt
+my_servo_controller.egg-info/zip-safe
 resource/my_servo_controller
-test/test_copyright.py
-test/test_flake8.py
-test/test_pep257.py

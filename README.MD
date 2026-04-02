@@ -5,9 +5,10 @@
 ## LAUNCHING
 ### GEREKSİNİMLER
 * ROS2
+* Colcon
 * Gazebo (Eğer simülasyon çalıştırılacaksa)
 * `rosbridge_suite` paketi
-* Python kütüphanesi: `sudo pip3 install adafruit-circuitpython-servokit`
+* Python kütüphanesi: `adafruit-circuitpython-servokit` ve `lgpio`
 * HTML için [ROS2 kütüphanesi (ROS2LIBJS)](https://github.com/6RiverSystems/ros2libjs)
 * Çalıştırmadan önce rosbridge için firewall izni eklemeniz gerekebilir.
 ```

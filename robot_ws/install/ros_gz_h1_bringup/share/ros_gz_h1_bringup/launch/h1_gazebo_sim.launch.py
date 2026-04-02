@@ -17,7 +17,6 @@ from launch_ros.actions import Node
 def generate_launch_description():
     # Configure ROS nodes for launch
 
-  
     # Setup project paths
     pkg_project_bringup = get_package_share_directory('ros_gz_h1_bringup')
     pkg_project_gazebo = get_package_share_directory('ros_gz_h1_gazebo')
@@ -44,8 +43,8 @@ def generate_launch_description():
     #set_glx_env = SetEnvironmentVariable(name='__GLX_VENDOR_LIBRARY_NAME', value='nvidia')
 
     # Force Gazebo and the Bridge to use the internal loopback network
-    set_gz_ip = SetEnvironmentVariable(name='GZ_IP', value='127.0.0.1')
-    set_gz_partition = SetEnvironmentVariable(name='GZ_PARTITION', value='h1_sim')
+    #set_gz_ip = SetEnvironmentVariable(name='GZ_IP', value='127.0.0.1')
+    #set_gz_partition = SetEnvironmentVariable(name='GZ_PARTITION', value='h1_sim')
 
     # Takes the description and joint angles as inputs and publishes the 3D poses of the robot links
     robot_state_publisher = Node(
@@ -79,10 +78,6 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
-        #set_gpu_env,
-        #set_glx_env,
-        set_gz_ip,
-        set_gz_partition,
         gz_sim,
         DeclareLaunchArgument('rviz', default_value='true',
                               description='Open RViz.'), 
