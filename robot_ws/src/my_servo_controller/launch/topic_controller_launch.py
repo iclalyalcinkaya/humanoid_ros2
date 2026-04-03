@@ -25,8 +25,8 @@ def generate_launch_description():
             )
         ),
         ExecuteProcess(
-            cmd=['python3', '-m', 'http.server','8000', '--bind',  '0.0.0.0'],
-            cwd=html_folder_path, #html folder
+            cmd=['python3', '-m', 'http.server', '--directory', html_folder_path],
+            #cwd=html_folder_path, #html folder
             output='screen'
         ),
     ])

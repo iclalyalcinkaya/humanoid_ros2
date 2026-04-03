@@ -57,6 +57,7 @@ class ServoTopicNode(Node):
         self.speed = 5
         self.motor_thread = None
         self.old_motor_num = None
+        self.active_motor = [False] * MOTOR_COUNT
 
         self.gazebo_pubs = {}
         for motor_idx, joint_name in GAZEBO_JOINT_MAP.items():
@@ -87,8 +88,10 @@ class ServoTopicNode(Node):
         self.speed = msg.speed
             
         # Instantly break any running Mode animation to allow manual control
-        if(self.active_mode != -1 or (self.active_mode == -1 and motor_num == self.old_motor_num)):
-            self.active_mode = 0                
+        if(self.active_mode != -1):
+            self.active_mode = 0
+        if (self.active_mode == -1 and self.active_motor[motor_num]):
+            self.active_motor[motor_num] = False
         # Spin up a quick thread to move specific motor
         #threading.Thread(target=self.sendMotorGoal, args=(motor_num, target_pos)).start()
         self.old_motor_num = motor_num
@@ -96,6 +99,7 @@ class ServoTopicNode(Node):
             self.motor_thread.join(timeout=0.5)
         self.get_logger().info(f"Goal Accepted: Motor {motor_num +1} to {int(target_pos)}")
         self.active_mode = -1
+        self.active_motor[motor_num] = True
         self.motor_thread = threading.Thread(target=self.sendMotorGoal, args=(motor_num, target_pos))
         self.motor_thread.start()
 
@@ -204,7 +208,7 @@ class ServoTopicNode(Node):
         Step = self.speed
 
         # Loop until it reaches target OR the mode is changed by the user
-        while abs(error) > 0.1 and self.active_mode != 0:
+        while abs(error) > 0.1 and self.active_mode != 0 and (self.active_mode != -1 or self.active_motor[motor_num]):
             if abs(error) < abs(Step) and abs(Step) != 1:
                 Step = error
             if error*Step < 0:
@@ -229,6 +233,7 @@ class ServoTopicNode(Node):
         if(error == 0):
             if(self.active_mode == -1):
                 self.old_motor_num = None
+                self.active_motor[motor_num] = False
                 self.get_logger().info(f"Goal Succeeded: Motor {motor_num+1} arrived at {int(target_position)}")
             return True
         else:
