@@ -41,8 +41,8 @@ class ServoTopicNode(Node):
     def __init__(self):
         super().__init__('servo_topic_server')
         self.get_logger().info("Servo Topic Server has been started.")
-        self.kit = ServoKit(channels=16, frequency=333)
-        for i in range(MOTOR_COUNT): #Not all servos support 270, but set it just in case. The code will still respect the MOTOR_ANGLE_LIMITS for safety.
+        self.kit = ServoKit(channels=16, frequency=50)
+        for i in range(MOTOR_COUNT): 
             self.kit.servo[i].actuation_range = 180
             self.kit.servo[i].set_pulse_width_range(500, 2500)
       
@@ -224,12 +224,15 @@ class ServoTopicNode(Node):
                 if motor_num in self.gazebo_pubs:
                     msg = Float64()
                     # Convert 0-180 (UI) to -pi/2 to pi/2 (for Gazebo)
-                    msg.data = math.radians(current_an - 90.0) 
+                    msg.data = math.radians(current_an - 90.0)                    
                     self.gazebo_pubs[motor_num].publish(msg)
                     self.current_angles_sim[str(motor_num+1)] = int(current_an)
             else: 
                 with self.i2c_lock:
-                    self.kit.servo[motor_num].angle = current_an
+                    if motor_num == 9 or motor_num == 11:
+                        self.kit.servo[motor_num+2].angle = current_an
+                    else:
+                        self.kit.servo[motor_num].angle = current_an
                     # self.kit.servo[MOVE_ORDER[motor_num]].angle = current_an 
                 self.current_angles[str(motor_num+1)] = int(current_an)
             #self.get_logger().info(f"Motor: {motor_num+1} angle: {current_an}")
@@ -286,7 +289,10 @@ class ServoTopicNode(Node):
                             self.current_angles_sim[str(motor_num+1)] = int(current_an)
                     else: 
                         with self.i2c_lock:
-                            self.kit.servo[motor_num].angle = current_an
+                            if motor_num == 9 or motor_num == 11:
+                                self.kit.servo[motor_num+2].angle = current_an
+                            else:
+                                self.kit.servo[motor_num].angle = current_an
                             # self.kit.servo[MOVE_ORDER[motor_num]].angle = current_an 
                         self.current_angles[str(motor_num+1)] = int(current_an)
 
