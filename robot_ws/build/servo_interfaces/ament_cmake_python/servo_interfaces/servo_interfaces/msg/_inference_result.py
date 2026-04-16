@@ -67,7 +67,7 @@ class InferenceResult(metaclass=Metaclass_InferenceResult):
         '_left',
         '_bottom',
         '_right',
-        '_id',
+        '_id_n',
         '_check_fields',
     ]
 
@@ -77,7 +77,7 @@ class InferenceResult(metaclass=Metaclass_InferenceResult):
         'left': 'int64',
         'bottom': 'int64',
         'right': 'int64',
-        'id': 'int64',
+        'id_n': 'int64',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
@@ -105,7 +105,7 @@ class InferenceResult(metaclass=Metaclass_InferenceResult):
         self.left = kwargs.get('left', int())
         self.bottom = kwargs.get('bottom', int())
         self.right = kwargs.get('right', int())
-        self.id = kwargs.get('id', int())
+        self.id_n = kwargs.get('id_n', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -147,7 +147,7 @@ class InferenceResult(metaclass=Metaclass_InferenceResult):
             return False
         if self.right != other.right:
             return False
-        if self.id != other.id:
+        if self.id_n != other.id_n:
             return False
         return True
 
@@ -229,17 +229,17 @@ class InferenceResult(metaclass=Metaclass_InferenceResult):
                 "The 'right' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._right = value
 
-    @builtins.property  # noqa: A003
-    def id(self):  # noqa: A003
-        """Message field 'id'."""
-        return self._id
+    @builtins.property
+    def id_n(self):
+        """Message field 'id_n'."""
+        return self._id_n
 
-    @id.setter  # noqa: A003
-    def id(self, value):  # noqa: A003
+    @id_n.setter
+    def id_n(self, value):
         if self._check_fields:
             assert \
                 isinstance(value, int), \
-                "The 'id' field must be of type 'int'"
+                "The 'id_n' field must be of type 'int'"
             assert value >= -9223372036854775808 and value < 9223372036854775808, \
-                "The 'id' field must be an integer in [-9223372036854775808, 9223372036854775807]"
-        self._id = value
+                "The 'id_n' field must be an integer in [-9223372036854775808, 9223372036854775807]"
+        self._id_n = value

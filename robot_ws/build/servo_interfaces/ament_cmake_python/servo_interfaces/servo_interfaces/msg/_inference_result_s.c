@@ -104,13 +104,13 @@ bool servo_interfaces__msg__inference_result__convert_from_py(PyObject * _pymsg,
     ros_message->right = PyLong_AsLongLong(field);
     Py_DECREF(field);
   }
-  {  // id
-    PyObject * field = PyObject_GetAttrString(_pymsg, "id");
+  {  // id_n
+    PyObject * field = PyObject_GetAttrString(_pymsg, "id_n");
     if (!field) {
       return false;
     }
     assert(PyLong_Check(field));
-    ros_message->id = PyLong_AsLongLong(field);
+    ros_message->id_n = PyLong_AsLongLong(field);
     Py_DECREF(field);
   }
 
@@ -196,11 +196,11 @@ PyObject * servo_interfaces__msg__inference_result__convert_to_py(void * raw_ros
       }
     }
   }
-  {  // id
+  {  // id_n
     PyObject * field = NULL;
-    field = PyLong_FromLongLong(ros_message->id);
+    field = PyLong_FromLongLong(ros_message->id_n);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "id", field);
+      int rc = PyObject_SetAttrString(_pymessage, "id_n", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

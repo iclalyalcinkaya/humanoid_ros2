@@ -1,0 +1,47 @@
+[7.828s] Invoking command in '/home/rasp/humanoid_ros2/robot_ws/src/my_servo_controller': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rasp/humanoid_ros2/robot_ws/build/my_servo_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/python3.12/site-packages:/home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages:/home/rasp/humanoid_ros2/yolo_env/lib/python3.12/site-packages:/home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages VIRTUAL_ENV_PROMPT=(yolo_env) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_servo_controller build --build-base /home/rasp/humanoid_ros2/robot_ws/build/my_servo_controller/build install --record /home/rasp/humanoid_ros2/robot_ws/build/my_servo_controller/install.log --single-version-externally-managed install_data
+[10.268s] running egg_info
+[10.405s] writing ../../build/my_servo_controller/my_servo_controller.egg-info/PKG-INFO
+[10.413s] writing dependency_links to ../../build/my_servo_controller/my_servo_controller.egg-info/dependency_links.txt
+[10.414s] writing entry points to ../../build/my_servo_controller/my_servo_controller.egg-info/entry_points.txt
+[10.416s] writing requirements to ../../build/my_servo_controller/my_servo_controller.egg-info/requires.txt
+[10.418s] writing top-level names to ../../build/my_servo_controller/my_servo_controller.egg-info/top_level.txt
+[10.681s] reading manifest file '../../build/my_servo_controller/my_servo_controller.egg-info/SOURCES.txt'
+[10.688s] writing manifest file '../../build/my_servo_controller/my_servo_controller.egg-info/SOURCES.txt'
+[10.690s] running build
+[10.691s] running build_py
+[10.692s] copying my_servo_controller/gazibo_sim.py -> /home/rasp/humanoid_ros2/robot_ws/build/my_servo_controller/build/lib/my_servo_controller
+[10.693s] copying my_servo_controller/action_controller.py -> /home/rasp/humanoid_ros2/robot_ws/build/my_servo_controller/build/lib/my_servo_controller
+[10.694s] copying my_servo_controller/yolov8_ros2_pt.py -> /home/rasp/humanoid_ros2/robot_ws/build/my_servo_controller/build/lib/my_servo_controller
+[10.694s] copying my_servo_controller/topic_controller.py -> /home/rasp/humanoid_ros2/robot_ws/build/my_servo_controller/build/lib/my_servo_controller
+[10.694s] copying my_servo_controller/__init__.py -> /home/rasp/humanoid_ros2/robot_ws/build/my_servo_controller/build/lib/my_servo_controller
+[10.695s] copying my_servo_controller/servo_controller.py -> /home/rasp/humanoid_ros2/robot_ws/build/my_servo_controller/build/lib/my_servo_controller
+[10.702s] copying my_servo_controller/yolov8_ros2_video.py -> /home/rasp/humanoid_ros2/robot_ws/build/my_servo_controller/build/lib/my_servo_controller
+[10.706s] copying my_servo_controller/servo_mover.py -> /home/rasp/humanoid_ros2/robot_ws/build/my_servo_controller/build/lib/my_servo_controller
+[10.706s] copying my_servo_controller/yolov8_ros2_subscriber.py -> /home/rasp/humanoid_ros2/robot_ws/build/my_servo_controller/build/lib/my_servo_controller
+[10.706s] copying my_servo_controller/flask_controller.py -> /home/rasp/humanoid_ros2/robot_ws/build/my_servo_controller/build/lib/my_servo_controller
+[10.708s] running install
+[10.719s] running install_lib
+[10.858s] copying /home/rasp/humanoid_ros2/robot_ws/build/my_servo_controller/build/lib/my_servo_controller/yolov8_ros2_pt.py -> /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller
+[10.859s] byte-compiling /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller/yolov8_ros2_pt.py to yolov8_ros2_pt.cpython-312.pyc
+[10.869s] running install_data
+[10.872s] copying resource/my_servo_controller -> /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/share/ament_index/resource_index/packages
+[10.873s] copying package.xml -> /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/share/my_servo_controller
+[10.873s] copying launch/flask_controller_launch.py -> /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/share/my_servo_controller/launch
+[10.874s] copying launch/topic_controller_launch.py -> /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/share/my_servo_controller/launch
+[10.874s] copying launch/gazibo_sim_launch.py -> /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/share/my_servo_controller/launch
+[10.877s] copying launch/action_controller_launch.py -> /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/share/my_servo_controller/launch
+[10.878s] running install_egg_info
+[11.046s] removing '/home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller-0.0.0-py3.12.egg-info' (and everything under it)
+[11.049s] Copying ../../build/my_servo_controller/my_servo_controller.egg-info to /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller-0.0.0-py3.12.egg-info
+[11.058s] running install_scripts
+[11.334s] Installing action_controller_node script to /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/my_servo_controller
+[11.335s] Installing flask_controller_node script to /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/my_servo_controller
+[11.338s] Installing gazibo_sim_node script to /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/my_servo_controller
+[11.345s] Installing servo_controller_node script to /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/my_servo_controller
+[11.351s] Installing servo_mover_node script to /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/my_servo_controller
+[11.353s] Installing topic_controller_node script to /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/my_servo_controller
+[11.354s] Installing yolov8_ros2_pt_node script to /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/my_servo_controller
+[11.354s] Installing yolov8_ros2_video_node script to /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/my_servo_controller
+[11.358s] Installing yolov8_subscriber_node script to /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/my_servo_controller
+[11.365s] writing list of installed files to '/home/rasp/humanoid_ros2/robot_ws/build/my_servo_controller/install.log'
+[11.749s] Invoked command in '/home/rasp/humanoid_ros2/robot_ws/src/my_servo_controller' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rasp/humanoid_ros2/robot_ws/build/my_servo_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/python3.12/site-packages:/home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages:/home/rasp/humanoid_ros2/yolo_env/lib/python3.12/site-packages:/home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages VIRTUAL_ENV_PROMPT=(yolo_env) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_servo_controller build --build-base /home/rasp/humanoid_ros2/robot_ws/build/my_servo_controller/build install --record /home/rasp/humanoid_ros2/robot_ws/build/my_servo_controller/install.log --single-version-externally-managed install_data
