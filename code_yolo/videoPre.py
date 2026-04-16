@@ -1,14 +1,14 @@
 from ultralytics import YOLO
 
 locked_id = None
-
+old_lock = []
 model = YOLO('yolov8n.pt')
 #model = YOLO('yolov8n-cls.pt')
 
 #model.predict(source='1', save=True, conf=0.5, save_txt=False)
 
 #results = model(source='walking_people.mp4', save=True, conf=0.5, save_txt=False, stream=True)
-results = model.track(source='walking_people.mp4', save_frames=True, stream=True, persist=True, classes=[0])  # Tracking with default tracker
+results = model.track(source='walking4.mp4',save=True, save_frames=True, conf=0.6, stream=True, persist=True, classes=[0])  # Tracking with default tracker
 #results = model.track("https://youtu.be/LNwODJXcvt4", show=True, tracker="bytetrack.yaml")  # with ByteTrack
 
 
@@ -25,20 +25,21 @@ for result in results:
 
             # lock after moving to home position
             # locked_id = result.boxes.id[-1]
-            locked_id = sorted_lower_boxes[0][0]  # Lock the ID of the person with the highest box
-        print(f"Locked ID: {locked_id}")
-        print(f"Current IDs: {result.boxes.id}")
+            locked_id = sorted_hight_boxes[0][0]  # Lock the ID of the person with the highest box
+            old_lock.append(locked_id)
+        #print(f"Locked ID: {locked_id}")
+        #print(f"Current IDs: {result.boxes.id}")
     else:
         print("Tracking is not enabled for these boxes.")
 
     for i in range(len(result.boxes.id)):
         if locked_id is not None and result.boxes.id[i] == locked_id:
             x, y, w, h = result.boxes.xywh[i]
-            print(f"Locked person position: ({x}, {y}), size: ({w}, {h})")
+            #print(f"Locked person position: ({x}, {y}), size: ({w}, {h})")
             break  # Exit the loop after finding the locked ID
 
     #print(result.orig_shape) (1080, 1920)
-
+print(f"Old locked IDs: {old_lock}")
 #print(xywh)
 #print(xywhn)
 #print(names)

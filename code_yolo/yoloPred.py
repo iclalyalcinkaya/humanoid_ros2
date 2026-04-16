@@ -5,7 +5,7 @@ model = YOLO('yolov8n.pt')
 
 #model.predict(source='bus.jpg', save=True, conf=0.5, save_txt=False)
 
-results = model(source='bus.jpg', save=True, conf=0.5, save_txt=False, classes=[0])
+results = model.track(source='walk1.jpg', save=True, conf=0.5, save_txt=False, classes=[0])
 
 #print(results)
 
@@ -22,7 +22,8 @@ for result in results:
 
     #print(result.orig_shape)
 
-print(result.boxes.cls.int())
-#print(xywh)
+#print(result.boxes.cls.int())
+print(xywh)
+print(f"Current IDs: {result.boxes.id}")
 #print(xywhn)
 #print(names)
