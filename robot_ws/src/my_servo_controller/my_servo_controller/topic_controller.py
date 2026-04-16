@@ -19,7 +19,7 @@ MODE_ANGLES = {
     3: [60, 105, 60, 60, 90, 120, 75, 60, 60, 90, 90, 90],
     4: [90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90],
 }
-MOVE_ORDER = [14, 5, 2, 4, 13, 8, 7, 6, 9, 10, 11, 3] # The conncected order of the servos in the physical robot, starting with the left shoulder yaw and ending with the neck tilt.
+MOVE_ORDER = [14, 5, 2, 4, 13, 8, 7, 6, 9, 10, 11, 3] # The conncected order of the servos in the physical robot
 
 
 GAZEBO_JOINT_MAP = {

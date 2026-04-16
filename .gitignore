@@ -1,0 +1,5 @@
+yolo_env
+code_yolo/*.pt
+code_yolo/*.jpg
+code_yolo/*.mp4
+runs
