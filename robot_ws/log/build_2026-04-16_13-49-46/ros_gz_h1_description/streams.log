@@ -1,0 +1,34 @@
+[0.018s] Invoking command in '/home/rasp/humanoid_ros2/robot_ws/build/ros_gz_h1_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com VIRTUAL_ENV_PROMPT=(yolo_env) /usr/bin/cmake /home/rasp/humanoid_ros2/robot_ws/src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_description -DCMAKE_INSTALL_PREFIX=/home/rasp/humanoid_ros2/robot_ws/install/ros_gz_h1_description
+[0.169s] -- The C compiler identification is GNU 13.3.0
+[0.305s] -- The CXX compiler identification is GNU 13.3.0
+[0.338s] -- Detecting C compiler ABI info
+[0.580s] -- Detecting C compiler ABI info - done
+[0.594s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.595s] -- Detecting C compile features
+[0.597s] -- Detecting C compile features - done
+[0.614s] -- Detecting CXX compiler ABI info
+[0.834s] -- Detecting CXX compiler ABI info - done
+[0.848s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.849s] -- Detecting CXX compile features
+[0.849s] -- Detecting CXX compile features - done
+[0.856s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.077s] -- Found Python3: /home/rasp/humanoid_ros2/yolo_env/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.308s] -- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[1.341s] Traceback (most recent call last):
+[1.341s]   File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 22, in <module>
+[1.341s]     from catkin_pkg.package import parse_package_string
+[1.341s] ModuleNotFoundError: No module named 'catkin_pkg'
+[1.348s] [31mCMake Error at /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:95 (message):
+[1.348s]   execute_process(/home/rasp/humanoid_ros2/yolo_env/bin/python3
+[1.348s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py
+[1.348s]   /home/rasp/humanoid_ros2/robot_ws/src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_description/package.xml
+[1.348s]   /home/rasp/humanoid_ros2/robot_ws/build/ros_gz_h1_description/ament_cmake_core/package.cmake)
+[1.348s]   returned error code 1
+[1.348s] Call Stack (most recent call first):
+[1.348s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[1.348s]   /opt/ros/jazzy/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:31 (ament_package_xml)
+[1.348s]   CMakeLists.txt:9 (ament_lint_auto_find_test_dependencies)
+[1.349s] 
+[1.349s] [0m
+[1.349s] -- Configuring incomplete, errors occurred!
+[1.359s] Invoked command in '/home/rasp/humanoid_ros2/robot_ws/build/ros_gz_h1_description' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com VIRTUAL_ENV_PROMPT=(yolo_env) /usr/bin/cmake /home/rasp/humanoid_ros2/robot_ws/src/ros2_heinz_me/h1_gazebo_sim/ros_gz_h1_description -DCMAKE_INSTALL_PREFIX=/home/rasp/humanoid_ros2/robot_ws/install/ros_gz_h1_description

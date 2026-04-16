@@ -55,6 +55,14 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/msg" TYPE FILE FILES "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_type_description/servo_interfaces/msg/InferenceResult.json")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/msg" TYPE FILE FILES "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_type_description/servo_interfaces/msg/Yolov8Inference.json")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/srv" TYPE FILE FILES "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_type_description/servo_interfaces/srv/MotorAngle.json")
 endif()
 
@@ -125,6 +133,37 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/servo_interfaces/servo_interfaces" TYPE DIRECTORY FILES "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_cpp/servo_interfaces/" REGEX "/[^/]*\\.hpp$")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/servo_interfaces/servo_interfaces" TYPE DIRECTORY FILES "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_typesupport_fastrtps_cpp/servo_interfaces/" REGEX "/[^/]*\\.cpp$" EXCLUDE)
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libservo_interfaces__rosidl_typesupport_fastrtps_cpp.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libservo_interfaces__rosidl_typesupport_fastrtps_cpp.so")
+    file(RPATH_CHECK
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libservo_interfaces__rosidl_typesupport_fastrtps_cpp.so"
+         RPATH "")
+  endif()
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/libservo_interfaces__rosidl_typesupport_fastrtps_cpp.so")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libservo_interfaces__rosidl_typesupport_fastrtps_cpp.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libservo_interfaces__rosidl_typesupport_fastrtps_cpp.so")
+    file(RPATH_CHANGE
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libservo_interfaces__rosidl_typesupport_fastrtps_cpp.so"
+         OLD_RPATH "/opt/ros/jazzy/lib:/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces:"
+         NEW_RPATH "")
+    if(CMAKE_INSTALL_DO_STRIP)
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libservo_interfaces__rosidl_typesupport_fastrtps_cpp.so")
+    endif()
+  endif()
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/servo_interfaces/servo_interfaces" TYPE DIRECTORY FILES "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_typesupport_introspection_c/servo_interfaces/" REGEX "/[^/]*\\.h$")
 endif()
 
@@ -167,37 +206,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libservo_interfaces__rosidl_typesupport_c.so")
-    endif()
-  endif()
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/servo_interfaces/servo_interfaces" TYPE DIRECTORY FILES "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_cpp/servo_interfaces/" REGEX "/[^/]*\\.hpp$")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/servo_interfaces/servo_interfaces" TYPE DIRECTORY FILES "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_typesupport_fastrtps_cpp/servo_interfaces/" REGEX "/[^/]*\\.cpp$" EXCLUDE)
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libservo_interfaces__rosidl_typesupport_fastrtps_cpp.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libservo_interfaces__rosidl_typesupport_fastrtps_cpp.so")
-    file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libservo_interfaces__rosidl_typesupport_fastrtps_cpp.so"
-         RPATH "")
-  endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/libservo_interfaces__rosidl_typesupport_fastrtps_cpp.so")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libservo_interfaces__rosidl_typesupport_fastrtps_cpp.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libservo_interfaces__rosidl_typesupport_fastrtps_cpp.so")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libservo_interfaces__rosidl_typesupport_fastrtps_cpp.so"
-         OLD_RPATH "/opt/ros/jazzy/lib:/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces:"
-         NEW_RPATH "")
-    if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libservo_interfaces__rosidl_typesupport_fastrtps_cpp.so")
     endif()
   endif()
 endif()
@@ -274,7 +282,7 @@ endif()
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   execute_process(
         COMMAND
-        "/usr/bin/python3" "-m" "compileall"
+        "/home/rasp/humanoid_ros2/yolo_env/bin/python3" "-m" "compileall"
         "/home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces"
       )
 endif()
@@ -375,11 +383,27 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/rust_packages" TYPE FILE FILES "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/ament_cmake_index/share/ament_index/resource_index/rust_packages/servo_interfaces")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/servo_interfaces" TYPE DIRECTORY FILES "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_rs/servo_interfaces/rust")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/msg" TYPE FILE FILES "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces/msg/SetPwm.idl")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/msg" TYPE FILE FILES "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces/msg/SetMode.idl")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/msg" TYPE FILE FILES "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces/msg/InferenceResult.idl")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/msg" TYPE FILE FILES "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces/msg/Yolov8Inference.idl")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -396,6 +420,14 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/msg" TYPE FILE FILES "/home/rasp/humanoid_ros2/robot_ws/src/servo_interfaces/msg/SetMode.msg")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/msg" TYPE FILE FILES "/home/rasp/humanoid_ros2/robot_ws/src/servo_interfaces/msg/InferenceResult.msg")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/msg" TYPE FILE FILES "/home/rasp/humanoid_ros2/robot_ws/src/servo_interfaces/msg/Yolov8Inference.msg")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -501,6 +533,49 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_generator_cppExport.cmake")
+    file(DIFFERENT _cmake_export_file_changed FILES
+         "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_generator_cppExport.cmake"
+         "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles/Export/1ed30e7aae1004b40ac56d32826fcdad/export_servo_interfaces__rosidl_generator_cppExport.cmake")
+    if(_cmake_export_file_changed)
+      file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_generator_cppExport-*.cmake")
+      if(_cmake_old_config_files)
+        string(REPLACE ";" ", " _cmake_old_config_files_text "${_cmake_old_config_files}")
+        message(STATUS "Old export file \"$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_generator_cppExport.cmake\" will be replaced.  Removing files [${_cmake_old_config_files_text}].")
+        unset(_cmake_old_config_files_text)
+        file(REMOVE ${_cmake_old_config_files})
+      endif()
+      unset(_cmake_old_config_files)
+    endif()
+    unset(_cmake_export_file_changed)
+  endif()
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/cmake" TYPE FILE FILES "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles/Export/1ed30e7aae1004b40ac56d32826fcdad/export_servo_interfaces__rosidl_generator_cppExport.cmake")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake")
+    file(DIFFERENT _cmake_export_file_changed FILES
+         "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake"
+         "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles/Export/1ed30e7aae1004b40ac56d32826fcdad/export_servo_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake")
+    if(_cmake_export_file_changed)
+      file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_typesupport_fastrtps_cppExport-*.cmake")
+      if(_cmake_old_config_files)
+        string(REPLACE ";" ", " _cmake_old_config_files_text "${_cmake_old_config_files}")
+        message(STATUS "Old export file \"$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\" will be replaced.  Removing files [${_cmake_old_config_files_text}].")
+        unset(_cmake_old_config_files_text)
+        file(REMOVE ${_cmake_old_config_files})
+      endif()
+      unset(_cmake_old_config_files)
+    endif()
+    unset(_cmake_export_file_changed)
+  endif()
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/cmake" TYPE FILE FILES "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles/Export/1ed30e7aae1004b40ac56d32826fcdad/export_servo_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake")
+  if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^()$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/cmake" TYPE FILE FILES "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles/Export/1ed30e7aae1004b40ac56d32826fcdad/export_servo_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake")
+  endif()
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/cmake/servo_interfaces__rosidl_typesupport_introspection_cExport.cmake")
     file(DIFFERENT _cmake_export_file_changed FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/cmake/servo_interfaces__rosidl_typesupport_introspection_cExport.cmake"
@@ -543,49 +618,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/cmake" TYPE FILE FILES "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles/Export/1ed30e7aae1004b40ac56d32826fcdad/servo_interfaces__rosidl_typesupport_cExport.cmake")
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^()$")
     file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/cmake" TYPE FILE FILES "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles/Export/1ed30e7aae1004b40ac56d32826fcdad/servo_interfaces__rosidl_typesupport_cExport-noconfig.cmake")
-  endif()
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_generator_cppExport.cmake")
-    file(DIFFERENT _cmake_export_file_changed FILES
-         "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_generator_cppExport.cmake"
-         "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles/Export/1ed30e7aae1004b40ac56d32826fcdad/export_servo_interfaces__rosidl_generator_cppExport.cmake")
-    if(_cmake_export_file_changed)
-      file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_generator_cppExport-*.cmake")
-      if(_cmake_old_config_files)
-        string(REPLACE ";" ", " _cmake_old_config_files_text "${_cmake_old_config_files}")
-        message(STATUS "Old export file \"$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_generator_cppExport.cmake\" will be replaced.  Removing files [${_cmake_old_config_files_text}].")
-        unset(_cmake_old_config_files_text)
-        file(REMOVE ${_cmake_old_config_files})
-      endif()
-      unset(_cmake_old_config_files)
-    endif()
-    unset(_cmake_export_file_changed)
-  endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/cmake" TYPE FILE FILES "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles/Export/1ed30e7aae1004b40ac56d32826fcdad/export_servo_interfaces__rosidl_generator_cppExport.cmake")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake")
-    file(DIFFERENT _cmake_export_file_changed FILES
-         "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake"
-         "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles/Export/1ed30e7aae1004b40ac56d32826fcdad/export_servo_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake")
-    if(_cmake_export_file_changed)
-      file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_typesupport_fastrtps_cppExport-*.cmake")
-      if(_cmake_old_config_files)
-        string(REPLACE ";" ", " _cmake_old_config_files_text "${_cmake_old_config_files}")
-        message(STATUS "Old export file \"$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\" will be replaced.  Removing files [${_cmake_old_config_files_text}].")
-        unset(_cmake_old_config_files_text)
-        file(REMOVE ${_cmake_old_config_files})
-      endif()
-      unset(_cmake_old_config_files)
-    endif()
-    unset(_cmake_export_file_changed)
-  endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/cmake" TYPE FILE FILES "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles/Export/1ed30e7aae1004b40ac56d32826fcdad/export_servo_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake")
-  if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^()$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/servo_interfaces/cmake" TYPE FILE FILES "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles/Export/1ed30e7aae1004b40ac56d32826fcdad/export_servo_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake")
   endif()
 endif()
 
@@ -700,6 +732,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/servo_interfaces__py/cmake_install.cmake")
+  include("/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/servo_interfaces__rs/cmake_install.cmake")
 
 endif()
 

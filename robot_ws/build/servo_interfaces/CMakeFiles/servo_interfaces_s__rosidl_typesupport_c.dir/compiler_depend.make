@@ -5,12 +5,18 @@ CMakeFiles/servo_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/serv
   rosidl_generator_c/servo_interfaces/action/detail/motor_angle__functions.h \
   rosidl_generator_c/servo_interfaces/action/detail/motor_angle__struct.h \
   rosidl_generator_c/servo_interfaces/action/detail/motor_angle__type_support.h \
+  rosidl_generator_c/servo_interfaces/msg/detail/inference_result__functions.h \
+  rosidl_generator_c/servo_interfaces/msg/detail/inference_result__struct.h \
+  rosidl_generator_c/servo_interfaces/msg/detail/inference_result__type_support.h \
   rosidl_generator_c/servo_interfaces/msg/detail/set_mode__functions.h \
   rosidl_generator_c/servo_interfaces/msg/detail/set_mode__struct.h \
   rosidl_generator_c/servo_interfaces/msg/detail/set_mode__type_support.h \
   rosidl_generator_c/servo_interfaces/msg/detail/set_pwm__functions.h \
   rosidl_generator_c/servo_interfaces/msg/detail/set_pwm__struct.h \
   rosidl_generator_c/servo_interfaces/msg/detail/set_pwm__type_support.h \
+  rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__functions.h \
+  rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__struct.h \
+  rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__type_support.h \
   rosidl_generator_c/servo_interfaces/msg/rosidl_generator_c__visibility_control.h \
   rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__functions.h \
   rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__struct.h \
@@ -36,6 +42,7 @@ CMakeFiles/servo_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/serv
   /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
   /opt/ros/jazzy/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h \
   /opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.h \
+  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__struct.h \
   /opt/ros/jazzy/include/unique_identifier_msgs/unique_identifier_msgs/msg/detail/uuid__struct.h \
   /usr/include/aarch64-linux-gnu/asm/bitsperlong.h \
   /usr/include/aarch64-linux-gnu/asm/errno.h \
@@ -319,9 +326,15 @@ CMakeFiles/servo_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/serv
 
 /usr/include/python3.12/sysmodule.h:
 
-/usr/include/aarch64-linux-gnu/bits/wchar.h:
+/usr/include/python3.12/sliceobject.h:
 
-/usr/include/aarch64-linux-gnu/bits/waitflags.h:
+/usr/include/python3.12/setobject.h:
+
+/usr/include/python3.12/pythread.h:
+
+/usr/include/python3.12/pythonrun.h:
+
+/usr/include/python3.12/pystrtod.h:
 
 /usr/include/aarch64-linux-gnu/bits/unistd_ext.h:
 
@@ -391,10 +404,6 @@ rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__functions.h:
 
 rosidl_generator_c/servo_interfaces/msg/detail/set_pwm__functions.h:
 
-/usr/include/aarch64-linux-gnu/bits/types/cookie_io_functions_t.h:
-
-/usr/include/linux/limits.h:
-
 /usr/include/aarch64-linux-gnu/bits/stat.h:
 
 /usr/include/aarch64-linux-gnu/bits/struct_rwlock.h:
@@ -402,10 +411,6 @@ rosidl_generator_c/servo_interfaces/msg/detail/set_pwm__functions.h:
 /usr/include/aarch64-linux-gnu/bits/pthread_stack_min-dynamic.h:
 
 /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/field__struct.h:
-
-/usr/include/aarch64-linux-gnu/bits/pthreadtypes-arch.h:
-
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h:
 
 /usr/include/aarch64-linux-gnu/bits/sched.h:
 
@@ -423,29 +428,41 @@ rosidl_generator_c/servo_interfaces/msg/detail/set_pwm__functions.h:
 
 /usr/include/aarch64-linux-gnu/bits/posix2_lim.h:
 
+/usr/include/python3.12/rangeobject.h:
+
+/usr/include/python3.12/bytearrayobject.h:
+
 /usr/include/aarch64-linux-gnu/gnu/stubs.h:
 
 /usr/include/aarch64-linux-gnu/bits/math-vector.h:
 
-/opt/ros/jazzy/include/rcutils/rcutils/types/rcutils_ret.h:
-
 /usr/include/aarch64-linux-gnu/bits/libm-simd-decl-stubs.h:
 
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
+/opt/ros/jazzy/include/rcutils/rcutils/types/rcutils_ret.h:
 
-rosidl_generator_py/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_c.c:
+/usr/include/aarch64-linux-gnu/bits/getopt_core.h:
 
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/field_type__struct.h:
+/usr/include/aarch64-linux-gnu/bits/stdint-intn.h:
 
-/usr/include/aarch64-linux-gnu/bits/wordsize.h:
-
-/usr/include/asm-generic/errno-base.h:
+/usr/include/aarch64-linux-gnu/bits/fp-logb.h:
 
 rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__type_support.h:
 
 /usr/include/python3.12/warnings.h:
 
 /usr/include/aarch64-linux-gnu/bits/libc-header-start.h:
+
+/usr/include/aarch64-linux-gnu/bits/posix1_lim.h:
+
+/usr/include/aarch64-linux-gnu/bits/long-double.h:
+
+rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__struct.h:
+
+/usr/include/python3.12/floatobject.h:
+
+/usr/include/aarch64-linux-gnu/bits/types/FILE.h:
+
+/usr/include/aarch64-linux-gnu/bits/fp-fast.h:
 
 /usr/include/python3.12/structseq.h:
 
@@ -467,45 +484,45 @@ rosidl_generator_c/servo_interfaces/msg/rosidl_generator_c__visibility_control.h
 
 /opt/ros/jazzy/include/rcutils/rcutils/sha256.h:
 
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/individual_type_description__struct.h:
-
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h:
-
-/usr/include/aarch64-linux-gnu/bits/types/__sigset_t.h:
-
-/usr/include/aarch64-linux-gnu/bits/mathcalls-narrow.h:
-
-/usr/include/aarch64-linux-gnu/bits/types/struct_itimerspec.h:
-
-/usr/include/aarch64-linux-gnu/bits/confname.h:
-
-/usr/include/aarch64-linux-gnu/bits/types/clock_t.h:
-
-/usr/include/aarch64-linux-gnu/bits/types/locale_t.h:
-
-/usr/include/python3.12/sliceobject.h:
-
-/usr/include/aarch64-linux-gnu/bits/stdlib-float.h:
-
-/opt/ros/jazzy/include/rcutils/rcutils/visibility_control.h:
+/usr/include/aarch64-linux-gnu/bits/mathcalls-helper-functions.h:
 
 rosidl_generator_c/servo_interfaces/msg/detail/set_mode__struct.h:
 
 /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/type_source__struct.h:
 
+/usr/include/aarch64-linux-gnu/sys/stat.h:
+
 /opt/ros/jazzy/include/rcutils/rcutils/visibility_control_macros.h:
 
 /usr/include/python3.12/fileobject.h:
 
-/usr/include/aarch64-linux-gnu/bits/mathcalls-helper-functions.h:
+/usr/include/python3.12/pytypedefs.h:
 
-/usr/include/aarch64-linux-gnu/bits/getopt_posix.h:
+rosidl_generator_c/servo_interfaces/msg/detail/inference_result__type_support.h:
 
-rosidl_generator_c/servo_interfaces/action/detail/motor_angle__struct.h:
+rosidl_generator_py/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_c.c:
 
-/usr/include/asm-generic/types.h:
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
 
-/usr/include/asm-generic/bitsperlong.h:
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/field_type__struct.h:
+
+/usr/include/aarch64-linux-gnu/bits/types/cookie_io_functions_t.h:
+
+/usr/include/linux/limits.h:
+
+rosidl_generator_c/servo_interfaces/msg/detail/inference_result__functions.h:
+
+/usr/include/python3.12/cpython/pythonrun.h:
+
+/usr/include/aarch64-linux-gnu/bits/types/__mbstate_t.h:
+
+/usr/include/aarch64-linux-gnu/bits/local_lim.h:
+
+/usr/include/aarch64-linux-gnu/bits/endianness.h:
+
+/usr/include/ctype.h:
+
+rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__struct.h:
 
 /usr/include/aarch64-linux-gnu/bits/types/__fpos_t.h:
 
@@ -513,9 +530,15 @@ rosidl_generator_c/servo_interfaces/action/detail/motor_angle__struct.h:
 
 /usr/include/python3.12/pyconfig.h:
 
-/usr/include/aarch64-linux-gnu/bits/stdint-intn.h:
+rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__functions.h:
 
-/usr/include/aarch64-linux-gnu/bits/fp-logb.h:
+/usr/include/python3.12/cpython/pyctype.h:
+
+/usr/include/python3.12/memoryobject.h:
+
+rosidl_generator_c/servo_interfaces/msg/detail/set_pwm__struct.h:
+
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/type_description__struct.h:
 
 rosidl_generator_c/servo_interfaces/msg/detail/set_mode__type_support.h:
 
@@ -535,6 +558,12 @@ rosidl_generator_c/servo_interfaces/action/detail/motor_angle__functions.h:
 
 /usr/include/inttypes.h:
 
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h:
+
+/usr/include/aarch64-linux-gnu/bits/types/__sigset_t.h:
+
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/individual_type_description__struct.h:
+
 /usr/include/aarch64-linux-gnu/bits/setjmp.h:
 
 /usr/include/aarch64-linux-gnu/asm/posix_types.h:
@@ -543,25 +572,27 @@ rosidl_generator_c/servo_interfaces/action/detail/motor_angle__functions.h:
 
 /usr/include/python3.12/import.h:
 
-/usr/include/python3.12/setobject.h:
+/usr/include/aarch64-linux-gnu/bits/types/struct_itimerspec.h:
 
-/usr/include/aarch64-linux-gnu/bits/posix1_lim.h:
+rosidl_generator_c/servo_interfaces/action/detail/motor_angle__struct.h:
 
-/usr/include/aarch64-linux-gnu/bits/long-double.h:
+/usr/include/aarch64-linux-gnu/bits/getopt_posix.h:
 
-rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__struct.h:
+/usr/include/aarch64-linux-gnu/bits/types/locale_t.h:
 
-/usr/include/python3.12/floatobject.h:
+/usr/include/aarch64-linux-gnu/bits/types/clock_t.h:
 
-/usr/include/aarch64-linux-gnu/bits/types/FILE.h:
+/usr/include/aarch64-linux-gnu/bits/confname.h:
 
-/usr/include/aarch64-linux-gnu/bits/fp-fast.h:
+/usr/include/aarch64-linux-gnu/bits/stdlib-float.h:
 
-/usr/include/aarch64-linux-gnu/bits/xopen_lim.h:
+/opt/ros/jazzy/include/rcutils/rcutils/visibility_control.h:
 
-rosidl_generator_c/servo_interfaces/msg/detail/set_pwm__struct.h:
+/usr/include/aarch64-linux-gnu/bits/mathcalls-narrow.h:
 
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/type_description__struct.h:
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h:
+
+/usr/include/aarch64-linux-gnu/bits/pthreadtypes-arch.h:
 
 /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_hash.h:
 
@@ -585,13 +616,7 @@ rosidl_generator_c/servo_interfaces/msg/detail/set_pwm__struct.h:
 
 /usr/include/aarch64-linux-gnu/bits/environments.h:
 
-/usr/include/aarch64-linux-gnu/bits/types/__mbstate_t.h:
-
-/usr/include/aarch64-linux-gnu/bits/local_lim.h:
-
-/usr/include/aarch64-linux-gnu/bits/endianness.h:
-
-/usr/include/ctype.h:
+/opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__struct.h:
 
 /opt/ros/jazzy/include/unique_identifier_msgs/unique_identifier_msgs/msg/detail/uuid__struct.h:
 
@@ -621,15 +646,25 @@ rosidl_generator_c/servo_interfaces/msg/detail/set_pwm__struct.h:
 
 /usr/include/aarch64-linux-gnu/bits/floatn-common.h:
 
-/usr/include/aarch64-linux-gnu/bits/getopt_core.h:
+/usr/include/aarch64-linux-gnu/bits/waitflags.h:
+
+/usr/include/aarch64-linux-gnu/bits/wchar.h:
+
+/usr/include/aarch64-linux-gnu/bits/wordsize.h:
+
+/usr/include/asm-generic/errno-base.h:
+
+/usr/include/asm-generic/bitsperlong.h:
+
+/usr/include/asm-generic/types.h:
+
+/usr/include/aarch64-linux-gnu/bits/xopen_lim.h:
 
 /usr/include/aarch64-linux-gnu/python3.12/pyconfig.h:
 
 /usr/include/aarch64-linux-gnu/gnu/stubs-lp64.h:
 
 /usr/include/aarch64-linux-gnu/sys/select.h:
-
-/usr/include/aarch64-linux-gnu/sys/stat.h:
 
 /usr/include/aarch64-linux-gnu/sys/types.h:
 
@@ -737,6 +772,8 @@ rosidl_generator_c/servo_interfaces/msg/detail/set_mode__functions.h:
 
 /usr/include/aarch64-linux-gnu/bits/cpu-set.h:
 
+rosidl_generator_c/servo_interfaces/msg/detail/inference_result__struct.h:
+
 /usr/include/python3.12/cpython/fileobject.h:
 
 /usr/include/python3.12/cpython/fileutils.h:
@@ -749,6 +786,8 @@ rosidl_generator_c/servo_interfaces/msg/detail/set_mode__functions.h:
 
 /usr/include/python3.12/cpython/listobject.h:
 
+rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__type_support.h:
+
 /usr/include/python3.12/cpython/longobject.h:
 
 /usr/include/python3.12/cpython/pyerrors.h:
@@ -757,17 +796,9 @@ rosidl_generator_c/servo_interfaces/msg/detail/set_mode__functions.h:
 
 /usr/include/python3.12/cpython/object.h:
 
-/usr/include/python3.12/bytearrayobject.h:
-
-/usr/include/python3.12/rangeobject.h:
-
 /usr/include/python3.12/cpython/objimpl.h:
 
 /usr/include/python3.12/cpython/odictobject.h:
-
-/usr/include/python3.12/cpython/pyctype.h:
-
-/usr/include/python3.12/memoryobject.h:
 
 /usr/include/aarch64-linux-gnu/bits/struct_stat.h:
 
@@ -776,8 +807,6 @@ rosidl_generator_c/servo_interfaces/msg/detail/set_mode__functions.h:
 /usr/include/python3.12/cpython/pyframe.h:
 
 /usr/include/python3.12/cpython/pystate.h:
-
-/usr/include/python3.12/cpython/pythonrun.h:
 
 /usr/include/python3.12/cpython/pythread.h:
 
@@ -796,8 +825,6 @@ rosidl_generator_c/servo_interfaces/msg/detail/set_mode__functions.h:
 /usr/include/python3.12/fileutils.h:
 
 /usr/include/python3.12/listobject.h:
-
-/usr/include/python3.12/pystrtod.h:
 
 /usr/include/python3.12/methodobject.h:
 
@@ -842,9 +869,3 @@ rosidl_generator_c/servo_interfaces/msg/detail/set_mode__functions.h:
 /usr/include/stdc-predef.h:
 
 /usr/include/python3.12/pystats.h:
-
-/usr/include/python3.12/pythonrun.h:
-
-/usr/include/python3.12/pythread.h:
-
-/usr/include/python3.12/pytypedefs.h:

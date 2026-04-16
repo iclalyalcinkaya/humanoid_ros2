@@ -1,0 +1,73 @@
+{
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target"
+		],
+		"files" : 
+		[
+			"/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/servo_interfaces__rs/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 35,
+				"parent" : 0
+			}
+		]
+	},
+	"id" : "servo_interfaces__rs::@2ac337343681a7e6a76a",
+	"name" : "servo_interfaces__rs",
+	"paths" : 
+	{
+		"build" : "servo_interfaces__rs",
+		"source" : "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/servo_interfaces__rs"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/servo_interfaces__rs/CMakeFiles/servo_interfaces__rs",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/servo_interfaces__rs/CMakeFiles/servo_interfaces__rs.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_rs/servo_interfaces/rust/src/lib.rs.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

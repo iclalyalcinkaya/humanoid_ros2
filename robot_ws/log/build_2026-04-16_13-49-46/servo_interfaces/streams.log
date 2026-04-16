@@ -1,0 +1,57 @@
+[0.016s] Invoking command in '/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com VIRTUAL_ENV_PROMPT=(yolo_env) /usr/bin/cmake /home/rasp/humanoid_ros2/robot_ws/src/servo_interfaces -DCMAKE_INSTALL_PREFIX=/home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces
+[0.161s] -- The C compiler identification is GNU 13.3.0
+[0.297s] -- The CXX compiler identification is GNU 13.3.0
+[0.330s] -- Detecting C compiler ABI info
+[0.577s] -- Detecting C compiler ABI info - done
+[0.591s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.592s] -- Detecting C compile features
+[0.592s] -- Detecting C compile features - done
+[0.608s] -- Detecting CXX compiler ABI info
+[0.826s] -- Detecting CXX compiler ABI info - done
+[0.840s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.840s] -- Detecting CXX compile features
+[0.843s] -- Detecting CXX compile features - done
+[0.848s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.069s] -- Found Python3: /home/rasp/humanoid_ros2/yolo_env/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.299s] -- Found std_msgs: 5.3.7 (/opt/ros/jazzy/share/std_msgs/cmake)
+[1.380s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.409s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[1.441s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.474s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.529s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[1.570s] -- Found rosidl_adapter: 4.6.7 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[1.829s] [31mCMake Error at /opt/ros/jazzy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:57 (message):
+[1.830s]   execute_process(/home/rasp/humanoid_ros2/yolo_env/bin/python3 -m
+[1.830s]   rosidl_adapter --package-name servo_interfaces --arguments-file
+[1.830s]   /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter__arguments__servo_interfaces.json
+[1.830s]   --output-dir
+[1.830s]   /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces
+[1.830s]   --output-file
+[1.830s]   /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces.idls)
+[1.830s]   returned error code 1:
+[1.830s] 
+[1.830s]   Traceback (most recent call last):
+[1.830s] 
+[1.830s]     File "<frozen runpy>", line 198, in _run_module_as_main
+[1.831s]     File "<frozen runpy>", line 88, in _run_code
+[1.831s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[1.831s]       sys.exit(main())
+[1.831s]                ^^^^^^
+[1.831s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/main.py", line 53, in main
+[1.831s]       abs_idl_file = convert_to_idl(
+[1.831s]                      ^^^^^^^^^^^^^^^
+[1.831s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/__init__.py", line 18, in convert_to_idl
+[1.831s]       from rosidl_adapter.msg import convert_msg_to_idl
+[1.831s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/msg/__init__.py", line 16, in <module>
+[1.831s]       from rosidl_adapter.resource import expand_template
+[1.831s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/resource/__init__.py", line 19, in <module>
+[1.831s]       import em
+[1.832s] 
+[1.832s]   ModuleNotFoundError: No module named 'em'
+[1.832s] 
+[1.832s] Call Stack (most recent call first):
+[1.832s]   /opt/ros/jazzy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:132 (rosidl_adapt_interfaces)
+[1.832s]   CMakeLists.txt:13 (rosidl_generate_interfaces)
+[1.832s] 
+[1.832s] [0m
+[1.832s] -- Configuring incomplete, errors occurred!

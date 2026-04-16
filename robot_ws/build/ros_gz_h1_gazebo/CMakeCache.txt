@@ -995,7 +995,7 @@ FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/usr/lib/aarch64-linux-gnu/libOpen
 //Details about finding Protobuf
 FIND_PACKAGE_MESSAGE_DETAILS_Protobuf:INTERNAL=[/usr/lib/aarch64-linux-gnu/libprotobuf.so][/usr/include][v3.21.12()]
 //Details about finding Python3
-FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/usr/bin/python3][cfound components: Interpreter ][v3.12.3()]
+FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/home/rasp/humanoid_ros2/yolo_env/bin/python3][cfound components: Interpreter ][v3.12.3()]
 //Details about finding SWSCALE
 FIND_PACKAGE_MESSAGE_DETAILS_SWSCALE:INTERNAL=[TRUE][v()]
 //Details about finding UUID
@@ -1344,10 +1344,10 @@ _Python3_Compiler_REASON_FAILURE:INTERNAL=
 //Development reason failure
 _Python3_Development_REASON_FAILURE:INTERNAL=
 //Path to a program.
-_Python3_EXECUTABLE:INTERNAL=/usr/bin/python3
+_Python3_EXECUTABLE:INTERNAL=/home/rasp/humanoid_ros2/yolo_env/bin/python3
 //Python3 Properties
-_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;12;3;64;32;;cpython-312-aarch64-linux-gnu;abi3;/usr/lib/python3.12;/usr/lib/python3.12;/usr/local/lib/python3.12/dist-packages;/usr/local/lib/python3.12/dist-packages
-_Python3_INTERPRETER_SIGNATURE:INTERNAL=4c8bfa8951e99fa32e4000a94f8c04a2
+_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;12;3;64;32;;cpython-312-aarch64-linux-gnu;abi3;/usr/lib/python3.12;/home/rasp/humanoid_ros2/yolo_env/lib/python3.12;/home/rasp/humanoid_ros2/yolo_env/lib/python3.12/site-packages;/home/rasp/humanoid_ros2/yolo_env/lib/python3.12/site-packages
+_Python3_INTERPRETER_SIGNATURE:INTERNAL=26e29477ff35d727971b5c026be79720
 //NumPy reason failure
 _Python3_NumPy_REASON_FAILURE:INTERNAL=
 __pkg_config_arguments_AVCODEC:INTERNAL=libavcodec

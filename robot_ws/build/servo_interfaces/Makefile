@@ -250,32 +250,6 @@ servo_interfaces__rosidl_typesupport_fastrtps_c/fast:
 .PHONY : servo_interfaces__rosidl_typesupport_fastrtps_c/fast
 
 #=============================================================================
-# Target rules for targets named servo_interfaces__rosidl_typesupport_introspection_c
-
-# Build rule for target.
-servo_interfaces__rosidl_typesupport_introspection_c: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 servo_interfaces__rosidl_typesupport_introspection_c
-.PHONY : servo_interfaces__rosidl_typesupport_introspection_c
-
-# fast build rule for target.
-servo_interfaces__rosidl_typesupport_introspection_c/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/build
-.PHONY : servo_interfaces__rosidl_typesupport_introspection_c/fast
-
-#=============================================================================
-# Target rules for targets named servo_interfaces__rosidl_typesupport_c
-
-# Build rule for target.
-servo_interfaces__rosidl_typesupport_c: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 servo_interfaces__rosidl_typesupport_c
-.PHONY : servo_interfaces__rosidl_typesupport_c
-
-# fast build rule for target.
-servo_interfaces__rosidl_typesupport_c/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_c.dir/build
-.PHONY : servo_interfaces__rosidl_typesupport_c/fast
-
-#=============================================================================
 # Target rules for targets named servo_interfaces__cpp
 
 # Build rule for target.
@@ -300,6 +274,32 @@ servo_interfaces__rosidl_typesupport_fastrtps_cpp: cmake_check_build_system
 servo_interfaces__rosidl_typesupport_fastrtps_cpp/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build
 .PHONY : servo_interfaces__rosidl_typesupport_fastrtps_cpp/fast
+
+#=============================================================================
+# Target rules for targets named servo_interfaces__rosidl_typesupport_introspection_c
+
+# Build rule for target.
+servo_interfaces__rosidl_typesupport_introspection_c: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 servo_interfaces__rosidl_typesupport_introspection_c
+.PHONY : servo_interfaces__rosidl_typesupport_introspection_c
+
+# fast build rule for target.
+servo_interfaces__rosidl_typesupport_introspection_c/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/build
+.PHONY : servo_interfaces__rosidl_typesupport_introspection_c/fast
+
+#=============================================================================
+# Target rules for targets named servo_interfaces__rosidl_typesupport_c
+
+# Build rule for target.
+servo_interfaces__rosidl_typesupport_c: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 servo_interfaces__rosidl_typesupport_c
+.PHONY : servo_interfaces__rosidl_typesupport_c
+
+# fast build rule for target.
+servo_interfaces__rosidl_typesupport_c/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_c.dir/build
+.PHONY : servo_interfaces__rosidl_typesupport_c/fast
 
 #=============================================================================
 # Target rules for targets named servo_interfaces__rosidl_typesupport_introspection_cpp
@@ -418,6 +418,19 @@ servo_interfaces__py/fast:
 	$(MAKE) $(MAKESILENT) -f /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/servo_interfaces__py/CMakeFiles/servo_interfaces__py.dir/build.make /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/servo_interfaces__py/CMakeFiles/servo_interfaces__py.dir/build
 .PHONY : servo_interfaces__py/fast
 
+#=============================================================================
+# Target rules for targets named servo_interfaces__rs
+
+# Build rule for target.
+servo_interfaces__rs: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 servo_interfaces__rs
+.PHONY : servo_interfaces__rs
+
+# fast build rule for target.
+servo_interfaces__rs/fast:
+	$(MAKE) $(MAKESILENT) -f /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/servo_interfaces__rs/CMakeFiles/servo_interfaces__rs.dir/build.make /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/servo_interfaces__rs/CMakeFiles/servo_interfaces__rs.dir/build
+.PHONY : servo_interfaces__rs/fast
+
 rosidl_generator_c/servo_interfaces/action/detail/motor_angle__description.o: rosidl_generator_c/servo_interfaces/action/detail/motor_angle__description.c.o
 .PHONY : rosidl_generator_c/servo_interfaces/action/detail/motor_angle__description.o
 
@@ -489,6 +502,78 @@ rosidl_generator_c/servo_interfaces/action/detail/motor_angle__type_support.s: r
 rosidl_generator_c/servo_interfaces/action/detail/motor_angle__type_support.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/action/detail/motor_angle__type_support.c.s
 .PHONY : rosidl_generator_c/servo_interfaces/action/detail/motor_angle__type_support.c.s
+
+rosidl_generator_c/servo_interfaces/msg/detail/inference_result__description.o: rosidl_generator_c/servo_interfaces/msg/detail/inference_result__description.c.o
+.PHONY : rosidl_generator_c/servo_interfaces/msg/detail/inference_result__description.o
+
+# target to build an object file
+rosidl_generator_c/servo_interfaces/msg/detail/inference_result__description.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/inference_result__description.c.o
+.PHONY : rosidl_generator_c/servo_interfaces/msg/detail/inference_result__description.c.o
+
+rosidl_generator_c/servo_interfaces/msg/detail/inference_result__description.i: rosidl_generator_c/servo_interfaces/msg/detail/inference_result__description.c.i
+.PHONY : rosidl_generator_c/servo_interfaces/msg/detail/inference_result__description.i
+
+# target to preprocess a source file
+rosidl_generator_c/servo_interfaces/msg/detail/inference_result__description.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/inference_result__description.c.i
+.PHONY : rosidl_generator_c/servo_interfaces/msg/detail/inference_result__description.c.i
+
+rosidl_generator_c/servo_interfaces/msg/detail/inference_result__description.s: rosidl_generator_c/servo_interfaces/msg/detail/inference_result__description.c.s
+.PHONY : rosidl_generator_c/servo_interfaces/msg/detail/inference_result__description.s
+
+# target to generate assembly for a file
+rosidl_generator_c/servo_interfaces/msg/detail/inference_result__description.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/inference_result__description.c.s
+.PHONY : rosidl_generator_c/servo_interfaces/msg/detail/inference_result__description.c.s
+
+rosidl_generator_c/servo_interfaces/msg/detail/inference_result__functions.o: rosidl_generator_c/servo_interfaces/msg/detail/inference_result__functions.c.o
+.PHONY : rosidl_generator_c/servo_interfaces/msg/detail/inference_result__functions.o
+
+# target to build an object file
+rosidl_generator_c/servo_interfaces/msg/detail/inference_result__functions.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/inference_result__functions.c.o
+.PHONY : rosidl_generator_c/servo_interfaces/msg/detail/inference_result__functions.c.o
+
+rosidl_generator_c/servo_interfaces/msg/detail/inference_result__functions.i: rosidl_generator_c/servo_interfaces/msg/detail/inference_result__functions.c.i
+.PHONY : rosidl_generator_c/servo_interfaces/msg/detail/inference_result__functions.i
+
+# target to preprocess a source file
+rosidl_generator_c/servo_interfaces/msg/detail/inference_result__functions.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/inference_result__functions.c.i
+.PHONY : rosidl_generator_c/servo_interfaces/msg/detail/inference_result__functions.c.i
+
+rosidl_generator_c/servo_interfaces/msg/detail/inference_result__functions.s: rosidl_generator_c/servo_interfaces/msg/detail/inference_result__functions.c.s
+.PHONY : rosidl_generator_c/servo_interfaces/msg/detail/inference_result__functions.s
+
+# target to generate assembly for a file
+rosidl_generator_c/servo_interfaces/msg/detail/inference_result__functions.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/inference_result__functions.c.s
+.PHONY : rosidl_generator_c/servo_interfaces/msg/detail/inference_result__functions.c.s
+
+rosidl_generator_c/servo_interfaces/msg/detail/inference_result__type_support.o: rosidl_generator_c/servo_interfaces/msg/detail/inference_result__type_support.c.o
+.PHONY : rosidl_generator_c/servo_interfaces/msg/detail/inference_result__type_support.o
+
+# target to build an object file
+rosidl_generator_c/servo_interfaces/msg/detail/inference_result__type_support.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/inference_result__type_support.c.o
+.PHONY : rosidl_generator_c/servo_interfaces/msg/detail/inference_result__type_support.c.o
+
+rosidl_generator_c/servo_interfaces/msg/detail/inference_result__type_support.i: rosidl_generator_c/servo_interfaces/msg/detail/inference_result__type_support.c.i
+.PHONY : rosidl_generator_c/servo_interfaces/msg/detail/inference_result__type_support.i
+
+# target to preprocess a source file
+rosidl_generator_c/servo_interfaces/msg/detail/inference_result__type_support.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/inference_result__type_support.c.i
+.PHONY : rosidl_generator_c/servo_interfaces/msg/detail/inference_result__type_support.c.i
+
+rosidl_generator_c/servo_interfaces/msg/detail/inference_result__type_support.s: rosidl_generator_c/servo_interfaces/msg/detail/inference_result__type_support.c.s
+.PHONY : rosidl_generator_c/servo_interfaces/msg/detail/inference_result__type_support.s
+
+# target to generate assembly for a file
+rosidl_generator_c/servo_interfaces/msg/detail/inference_result__type_support.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/inference_result__type_support.c.s
+.PHONY : rosidl_generator_c/servo_interfaces/msg/detail/inference_result__type_support.c.s
 
 rosidl_generator_c/servo_interfaces/msg/detail/set_mode__description.o: rosidl_generator_c/servo_interfaces/msg/detail/set_mode__description.c.o
 .PHONY : rosidl_generator_c/servo_interfaces/msg/detail/set_mode__description.o
@@ -633,6 +718,78 @@ rosidl_generator_c/servo_interfaces/msg/detail/set_pwm__type_support.s: rosidl_g
 rosidl_generator_c/servo_interfaces/msg/detail/set_pwm__type_support.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/set_pwm__type_support.c.s
 .PHONY : rosidl_generator_c/servo_interfaces/msg/detail/set_pwm__type_support.c.s
+
+rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__description.o: rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__description.c.o
+.PHONY : rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__description.o
+
+# target to build an object file
+rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__description.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__description.c.o
+.PHONY : rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__description.c.o
+
+rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__description.i: rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__description.c.i
+.PHONY : rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__description.i
+
+# target to preprocess a source file
+rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__description.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__description.c.i
+.PHONY : rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__description.c.i
+
+rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__description.s: rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__description.c.s
+.PHONY : rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__description.s
+
+# target to generate assembly for a file
+rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__description.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__description.c.s
+.PHONY : rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__description.c.s
+
+rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__functions.o: rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__functions.c.o
+.PHONY : rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__functions.o
+
+# target to build an object file
+rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__functions.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__functions.c.o
+.PHONY : rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__functions.c.o
+
+rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__functions.i: rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__functions.c.i
+.PHONY : rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__functions.i
+
+# target to preprocess a source file
+rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__functions.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__functions.c.i
+.PHONY : rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__functions.c.i
+
+rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__functions.s: rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__functions.c.s
+.PHONY : rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__functions.s
+
+# target to generate assembly for a file
+rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__functions.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__functions.c.s
+.PHONY : rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__functions.c.s
+
+rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__type_support.o: rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__type_support.c.o
+.PHONY : rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__type_support.o
+
+# target to build an object file
+rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__type_support.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__type_support.c.o
+.PHONY : rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__type_support.c.o
+
+rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__type_support.i: rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__type_support.c.i
+.PHONY : rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__type_support.i
+
+# target to preprocess a source file
+rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__type_support.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__type_support.c.i
+.PHONY : rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__type_support.c.i
+
+rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__type_support.s: rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__type_support.c.s
+.PHONY : rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__type_support.s
+
+# target to generate assembly for a file
+rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__type_support.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__type_support.c.s
+.PHONY : rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__type_support.c.s
 
 rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__description.o: rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__description.c.o
 .PHONY : rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__description.o
@@ -802,6 +959,30 @@ rosidl_generator_py/servo_interfaces/action/_motor_angle_s.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/action/_motor_angle_s.c.s
 .PHONY : rosidl_generator_py/servo_interfaces/action/_motor_angle_s.c.s
 
+rosidl_generator_py/servo_interfaces/msg/_inference_result_s.o: rosidl_generator_py/servo_interfaces/msg/_inference_result_s.c.o
+.PHONY : rosidl_generator_py/servo_interfaces/msg/_inference_result_s.o
+
+# target to build an object file
+rosidl_generator_py/servo_interfaces/msg/_inference_result_s.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_inference_result_s.c.o
+.PHONY : rosidl_generator_py/servo_interfaces/msg/_inference_result_s.c.o
+
+rosidl_generator_py/servo_interfaces/msg/_inference_result_s.i: rosidl_generator_py/servo_interfaces/msg/_inference_result_s.c.i
+.PHONY : rosidl_generator_py/servo_interfaces/msg/_inference_result_s.i
+
+# target to preprocess a source file
+rosidl_generator_py/servo_interfaces/msg/_inference_result_s.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_inference_result_s.c.i
+.PHONY : rosidl_generator_py/servo_interfaces/msg/_inference_result_s.c.i
+
+rosidl_generator_py/servo_interfaces/msg/_inference_result_s.s: rosidl_generator_py/servo_interfaces/msg/_inference_result_s.c.s
+.PHONY : rosidl_generator_py/servo_interfaces/msg/_inference_result_s.s
+
+# target to generate assembly for a file
+rosidl_generator_py/servo_interfaces/msg/_inference_result_s.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_inference_result_s.c.s
+.PHONY : rosidl_generator_py/servo_interfaces/msg/_inference_result_s.c.s
+
 rosidl_generator_py/servo_interfaces/msg/_set_mode_s.o: rosidl_generator_py/servo_interfaces/msg/_set_mode_s.c.o
 .PHONY : rosidl_generator_py/servo_interfaces/msg/_set_mode_s.o
 
@@ -849,6 +1030,30 @@ rosidl_generator_py/servo_interfaces/msg/_set_pwm_s.s: rosidl_generator_py/servo
 rosidl_generator_py/servo_interfaces/msg/_set_pwm_s.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_set_pwm_s.c.s
 .PHONY : rosidl_generator_py/servo_interfaces/msg/_set_pwm_s.c.s
+
+rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.o: rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.c.o
+.PHONY : rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.o
+
+# target to build an object file
+rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.c.o
+.PHONY : rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.c.o
+
+rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.i: rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.c.i
+.PHONY : rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.i
+
+# target to preprocess a source file
+rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.c.i
+.PHONY : rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.c.i
+
+rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.s: rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.c.s
+.PHONY : rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.s
+
+# target to generate assembly for a file
+rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.c.s
+.PHONY : rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.c.s
 
 rosidl_generator_py/servo_interfaces/srv/_motor_angle_s.o: rosidl_generator_py/servo_interfaces/srv/_motor_angle_s.c.o
 .PHONY : rosidl_generator_py/servo_interfaces/srv/_motor_angle_s.o
@@ -898,6 +1103,30 @@ rosidl_typesupport_c/servo_interfaces/action/motor_angle__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/servo_interfaces/action/motor_angle__type_support.cpp.s
 .PHONY : rosidl_typesupport_c/servo_interfaces/action/motor_angle__type_support.cpp.s
 
+rosidl_typesupport_c/servo_interfaces/msg/inference_result__type_support.o: rosidl_typesupport_c/servo_interfaces/msg/inference_result__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/servo_interfaces/msg/inference_result__type_support.o
+
+# target to build an object file
+rosidl_typesupport_c/servo_interfaces/msg/inference_result__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/servo_interfaces/msg/inference_result__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/servo_interfaces/msg/inference_result__type_support.cpp.o
+
+rosidl_typesupport_c/servo_interfaces/msg/inference_result__type_support.i: rosidl_typesupport_c/servo_interfaces/msg/inference_result__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/servo_interfaces/msg/inference_result__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_c/servo_interfaces/msg/inference_result__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/servo_interfaces/msg/inference_result__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/servo_interfaces/msg/inference_result__type_support.cpp.i
+
+rosidl_typesupport_c/servo_interfaces/msg/inference_result__type_support.s: rosidl_typesupport_c/servo_interfaces/msg/inference_result__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/servo_interfaces/msg/inference_result__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_c/servo_interfaces/msg/inference_result__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/servo_interfaces/msg/inference_result__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/servo_interfaces/msg/inference_result__type_support.cpp.s
+
 rosidl_typesupport_c/servo_interfaces/msg/set_mode__type_support.o: rosidl_typesupport_c/servo_interfaces/msg/set_mode__type_support.cpp.o
 .PHONY : rosidl_typesupport_c/servo_interfaces/msg/set_mode__type_support.o
 
@@ -945,6 +1174,30 @@ rosidl_typesupport_c/servo_interfaces/msg/set_pwm__type_support.s: rosidl_typesu
 rosidl_typesupport_c/servo_interfaces/msg/set_pwm__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/servo_interfaces/msg/set_pwm__type_support.cpp.s
 .PHONY : rosidl_typesupport_c/servo_interfaces/msg/set_pwm__type_support.cpp.s
+
+rosidl_typesupport_c/servo_interfaces/msg/yolov8_inference__type_support.o: rosidl_typesupport_c/servo_interfaces/msg/yolov8_inference__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/servo_interfaces/msg/yolov8_inference__type_support.o
+
+# target to build an object file
+rosidl_typesupport_c/servo_interfaces/msg/yolov8_inference__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/servo_interfaces/msg/yolov8_inference__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/servo_interfaces/msg/yolov8_inference__type_support.cpp.o
+
+rosidl_typesupport_c/servo_interfaces/msg/yolov8_inference__type_support.i: rosidl_typesupport_c/servo_interfaces/msg/yolov8_inference__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/servo_interfaces/msg/yolov8_inference__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_c/servo_interfaces/msg/yolov8_inference__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/servo_interfaces/msg/yolov8_inference__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/servo_interfaces/msg/yolov8_inference__type_support.cpp.i
+
+rosidl_typesupport_c/servo_interfaces/msg/yolov8_inference__type_support.s: rosidl_typesupport_c/servo_interfaces/msg/yolov8_inference__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/servo_interfaces/msg/yolov8_inference__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_c/servo_interfaces/msg/yolov8_inference__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/servo_interfaces/msg/yolov8_inference__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/servo_interfaces/msg/yolov8_inference__type_support.cpp.s
 
 rosidl_typesupport_c/servo_interfaces/srv/motor_angle__type_support.o: rosidl_typesupport_c/servo_interfaces/srv/motor_angle__type_support.cpp.o
 .PHONY : rosidl_typesupport_c/servo_interfaces/srv/motor_angle__type_support.o
@@ -994,6 +1247,30 @@ rosidl_typesupport_cpp/servo_interfaces/action/motor_angle__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/servo_interfaces/action/motor_angle__type_support.cpp.s
 .PHONY : rosidl_typesupport_cpp/servo_interfaces/action/motor_angle__type_support.cpp.s
 
+rosidl_typesupport_cpp/servo_interfaces/msg/inference_result__type_support.o: rosidl_typesupport_cpp/servo_interfaces/msg/inference_result__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/servo_interfaces/msg/inference_result__type_support.o
+
+# target to build an object file
+rosidl_typesupport_cpp/servo_interfaces/msg/inference_result__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/servo_interfaces/msg/inference_result__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/servo_interfaces/msg/inference_result__type_support.cpp.o
+
+rosidl_typesupport_cpp/servo_interfaces/msg/inference_result__type_support.i: rosidl_typesupport_cpp/servo_interfaces/msg/inference_result__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/servo_interfaces/msg/inference_result__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_cpp/servo_interfaces/msg/inference_result__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/servo_interfaces/msg/inference_result__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/servo_interfaces/msg/inference_result__type_support.cpp.i
+
+rosidl_typesupport_cpp/servo_interfaces/msg/inference_result__type_support.s: rosidl_typesupport_cpp/servo_interfaces/msg/inference_result__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/servo_interfaces/msg/inference_result__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_cpp/servo_interfaces/msg/inference_result__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/servo_interfaces/msg/inference_result__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/servo_interfaces/msg/inference_result__type_support.cpp.s
+
 rosidl_typesupport_cpp/servo_interfaces/msg/set_mode__type_support.o: rosidl_typesupport_cpp/servo_interfaces/msg/set_mode__type_support.cpp.o
 .PHONY : rosidl_typesupport_cpp/servo_interfaces/msg/set_mode__type_support.o
 
@@ -1041,6 +1318,30 @@ rosidl_typesupport_cpp/servo_interfaces/msg/set_pwm__type_support.s: rosidl_type
 rosidl_typesupport_cpp/servo_interfaces/msg/set_pwm__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/servo_interfaces/msg/set_pwm__type_support.cpp.s
 .PHONY : rosidl_typesupport_cpp/servo_interfaces/msg/set_pwm__type_support.cpp.s
+
+rosidl_typesupport_cpp/servo_interfaces/msg/yolov8_inference__type_support.o: rosidl_typesupport_cpp/servo_interfaces/msg/yolov8_inference__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/servo_interfaces/msg/yolov8_inference__type_support.o
+
+# target to build an object file
+rosidl_typesupport_cpp/servo_interfaces/msg/yolov8_inference__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/servo_interfaces/msg/yolov8_inference__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/servo_interfaces/msg/yolov8_inference__type_support.cpp.o
+
+rosidl_typesupport_cpp/servo_interfaces/msg/yolov8_inference__type_support.i: rosidl_typesupport_cpp/servo_interfaces/msg/yolov8_inference__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/servo_interfaces/msg/yolov8_inference__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_cpp/servo_interfaces/msg/yolov8_inference__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/servo_interfaces/msg/yolov8_inference__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/servo_interfaces/msg/yolov8_inference__type_support.cpp.i
+
+rosidl_typesupport_cpp/servo_interfaces/msg/yolov8_inference__type_support.s: rosidl_typesupport_cpp/servo_interfaces/msg/yolov8_inference__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/servo_interfaces/msg/yolov8_inference__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_cpp/servo_interfaces/msg/yolov8_inference__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/servo_interfaces/msg/yolov8_inference__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/servo_interfaces/msg/yolov8_inference__type_support.cpp.s
 
 rosidl_typesupport_cpp/servo_interfaces/srv/motor_angle__type_support.o: rosidl_typesupport_cpp/servo_interfaces/srv/motor_angle__type_support.cpp.o
 .PHONY : rosidl_typesupport_cpp/servo_interfaces/srv/motor_angle__type_support.o
@@ -1090,6 +1391,30 @@ rosidl_typesupport_fastrtps_c/servo_interfaces/action/detail/motor_angle__type_s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/action/detail/motor_angle__type_support_c.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_c/servo_interfaces/action/detail/motor_angle__type_support_c.cpp.s
 
+rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/inference_result__type_support_c.o: rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/inference_result__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/inference_result__type_support_c.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/inference_result__type_support_c.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/inference_result__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/inference_result__type_support_c.cpp.o
+
+rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/inference_result__type_support_c.i: rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/inference_result__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/inference_result__type_support_c.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/inference_result__type_support_c.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/inference_result__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/inference_result__type_support_c.cpp.i
+
+rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/inference_result__type_support_c.s: rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/inference_result__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/inference_result__type_support_c.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/inference_result__type_support_c.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/inference_result__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/inference_result__type_support_c.cpp.s
+
 rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_mode__type_support_c.o: rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_mode__type_support_c.cpp.o
 .PHONY : rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_mode__type_support_c.o
 
@@ -1137,6 +1462,30 @@ rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_pwm__type_support_
 rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_pwm__type_support_c.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_pwm__type_support_c.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_pwm__type_support_c.cpp.s
+
+rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/yolov8_inference__type_support_c.o: rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/yolov8_inference__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/yolov8_inference__type_support_c.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/yolov8_inference__type_support_c.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/yolov8_inference__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/yolov8_inference__type_support_c.cpp.o
+
+rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/yolov8_inference__type_support_c.i: rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/yolov8_inference__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/yolov8_inference__type_support_c.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/yolov8_inference__type_support_c.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/yolov8_inference__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/yolov8_inference__type_support_c.cpp.i
+
+rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/yolov8_inference__type_support_c.s: rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/yolov8_inference__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/yolov8_inference__type_support_c.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/yolov8_inference__type_support_c.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/yolov8_inference__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/yolov8_inference__type_support_c.cpp.s
 
 rosidl_typesupport_fastrtps_c/servo_interfaces/srv/detail/motor_angle__type_support_c.o: rosidl_typesupport_fastrtps_c/servo_interfaces/srv/detail/motor_angle__type_support_c.cpp.o
 .PHONY : rosidl_typesupport_fastrtps_c/servo_interfaces/srv/detail/motor_angle__type_support_c.o
@@ -1186,6 +1535,30 @@ rosidl_typesupport_fastrtps_cpp/servo_interfaces/action/detail/dds_fastrtps/moto
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/servo_interfaces/action/detail/dds_fastrtps/motor_angle__type_support.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_cpp/servo_interfaces/action/detail/dds_fastrtps/motor_angle__type_support.cpp.s
 
+rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/inference_result__type_support.o: rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/inference_result__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/inference_result__type_support.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/inference_result__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/inference_result__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/inference_result__type_support.cpp.o
+
+rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/inference_result__type_support.i: rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/inference_result__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/inference_result__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/inference_result__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/inference_result__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/inference_result__type_support.cpp.i
+
+rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/inference_result__type_support.s: rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/inference_result__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/inference_result__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/inference_result__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/inference_result__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/inference_result__type_support.cpp.s
+
 rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/set_mode__type_support.o: rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/set_mode__type_support.cpp.o
 .PHONY : rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/set_mode__type_support.o
 
@@ -1233,6 +1606,30 @@ rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/set_pwm
 rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/set_pwm__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/set_pwm__type_support.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/set_pwm__type_support.cpp.s
+
+rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/yolov8_inference__type_support.o: rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/yolov8_inference__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/yolov8_inference__type_support.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/yolov8_inference__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/yolov8_inference__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/yolov8_inference__type_support.cpp.o
+
+rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/yolov8_inference__type_support.i: rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/yolov8_inference__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/yolov8_inference__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/yolov8_inference__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/yolov8_inference__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/yolov8_inference__type_support.cpp.i
+
+rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/yolov8_inference__type_support.s: rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/yolov8_inference__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/yolov8_inference__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/yolov8_inference__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/yolov8_inference__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/yolov8_inference__type_support.cpp.s
 
 rosidl_typesupport_fastrtps_cpp/servo_interfaces/srv/detail/dds_fastrtps/motor_angle__type_support.o: rosidl_typesupport_fastrtps_cpp/servo_interfaces/srv/detail/dds_fastrtps/motor_angle__type_support.cpp.o
 .PHONY : rosidl_typesupport_fastrtps_cpp/servo_interfaces/srv/detail/dds_fastrtps/motor_angle__type_support.o
@@ -1282,6 +1679,30 @@ rosidl_typesupport_introspection_c/servo_interfaces/action/detail/motor_angle__t
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/action/detail/motor_angle__type_support.c.s
 .PHONY : rosidl_typesupport_introspection_c/servo_interfaces/action/detail/motor_angle__type_support.c.s
 
+rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/inference_result__type_support.o: rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/inference_result__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/inference_result__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/inference_result__type_support.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/inference_result__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/inference_result__type_support.c.o
+
+rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/inference_result__type_support.i: rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/inference_result__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/inference_result__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/inference_result__type_support.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/inference_result__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/inference_result__type_support.c.i
+
+rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/inference_result__type_support.s: rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/inference_result__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/inference_result__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/inference_result__type_support.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/inference_result__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/inference_result__type_support.c.s
+
 rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_mode__type_support.o: rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_mode__type_support.c.o
 .PHONY : rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_mode__type_support.o
 
@@ -1329,6 +1750,30 @@ rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_pwm__type_sup
 rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_pwm__type_support.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_pwm__type_support.c.s
 .PHONY : rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_pwm__type_support.c.s
+
+rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/yolov8_inference__type_support.o: rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/yolov8_inference__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/yolov8_inference__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/yolov8_inference__type_support.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/yolov8_inference__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/yolov8_inference__type_support.c.o
+
+rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/yolov8_inference__type_support.i: rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/yolov8_inference__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/yolov8_inference__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/yolov8_inference__type_support.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/yolov8_inference__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/yolov8_inference__type_support.c.i
+
+rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/yolov8_inference__type_support.s: rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/yolov8_inference__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/yolov8_inference__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/yolov8_inference__type_support.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/yolov8_inference__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/yolov8_inference__type_support.c.s
 
 rosidl_typesupport_introspection_c/servo_interfaces/srv/detail/motor_angle__type_support.o: rosidl_typesupport_introspection_c/servo_interfaces/srv/detail/motor_angle__type_support.c.o
 .PHONY : rosidl_typesupport_introspection_c/servo_interfaces/srv/detail/motor_angle__type_support.o
@@ -1378,6 +1823,30 @@ rosidl_typesupport_introspection_cpp/servo_interfaces/action/detail/motor_angle_
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/servo_interfaces/action/detail/motor_angle__type_support.cpp.s
 .PHONY : rosidl_typesupport_introspection_cpp/servo_interfaces/action/detail/motor_angle__type_support.cpp.s
 
+rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/inference_result__type_support.o: rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/inference_result__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/inference_result__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/inference_result__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/inference_result__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/inference_result__type_support.cpp.o
+
+rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/inference_result__type_support.i: rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/inference_result__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/inference_result__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/inference_result__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/inference_result__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/inference_result__type_support.cpp.i
+
+rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/inference_result__type_support.s: rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/inference_result__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/inference_result__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/inference_result__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/inference_result__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/inference_result__type_support.cpp.s
+
 rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/set_mode__type_support.o: rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/set_mode__type_support.cpp.o
 .PHONY : rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/set_mode__type_support.o
 
@@ -1426,6 +1895,30 @@ rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/set_pwm__type_s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/set_pwm__type_support.cpp.s
 .PHONY : rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/set_pwm__type_support.cpp.s
 
+rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/yolov8_inference__type_support.o: rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/yolov8_inference__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/yolov8_inference__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/yolov8_inference__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/yolov8_inference__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/yolov8_inference__type_support.cpp.o
+
+rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/yolov8_inference__type_support.i: rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/yolov8_inference__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/yolov8_inference__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/yolov8_inference__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/yolov8_inference__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/yolov8_inference__type_support.cpp.i
+
+rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/yolov8_inference__type_support.s: rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/yolov8_inference__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/yolov8_inference__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/yolov8_inference__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/yolov8_inference__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/yolov8_inference__type_support.cpp.s
+
 rosidl_typesupport_introspection_cpp/servo_interfaces/srv/detail/motor_angle__type_support.o: rosidl_typesupport_introspection_cpp/servo_interfaces/srv/detail/motor_angle__type_support.cpp.o
 .PHONY : rosidl_typesupport_introspection_cpp/servo_interfaces/srv/detail/motor_angle__type_support.o
 
@@ -1469,6 +1962,7 @@ help:
 	@echo "... servo_interfaces__cpp"
 	@echo "... servo_interfaces__py"
 	@echo "... servo_interfaces__rosidl_generator_type_description"
+	@echo "... servo_interfaces__rs"
 	@echo "... servo_interfaces_uninstall"
 	@echo "... uninstall"
 	@echo "... servo_interfaces__rosidl_generator_c"
@@ -1491,6 +1985,15 @@ help:
 	@echo "... rosidl_generator_c/servo_interfaces/action/detail/motor_angle__type_support.o"
 	@echo "... rosidl_generator_c/servo_interfaces/action/detail/motor_angle__type_support.i"
 	@echo "... rosidl_generator_c/servo_interfaces/action/detail/motor_angle__type_support.s"
+	@echo "... rosidl_generator_c/servo_interfaces/msg/detail/inference_result__description.o"
+	@echo "... rosidl_generator_c/servo_interfaces/msg/detail/inference_result__description.i"
+	@echo "... rosidl_generator_c/servo_interfaces/msg/detail/inference_result__description.s"
+	@echo "... rosidl_generator_c/servo_interfaces/msg/detail/inference_result__functions.o"
+	@echo "... rosidl_generator_c/servo_interfaces/msg/detail/inference_result__functions.i"
+	@echo "... rosidl_generator_c/servo_interfaces/msg/detail/inference_result__functions.s"
+	@echo "... rosidl_generator_c/servo_interfaces/msg/detail/inference_result__type_support.o"
+	@echo "... rosidl_generator_c/servo_interfaces/msg/detail/inference_result__type_support.i"
+	@echo "... rosidl_generator_c/servo_interfaces/msg/detail/inference_result__type_support.s"
 	@echo "... rosidl_generator_c/servo_interfaces/msg/detail/set_mode__description.o"
 	@echo "... rosidl_generator_c/servo_interfaces/msg/detail/set_mode__description.i"
 	@echo "... rosidl_generator_c/servo_interfaces/msg/detail/set_mode__description.s"
@@ -1509,6 +2012,15 @@ help:
 	@echo "... rosidl_generator_c/servo_interfaces/msg/detail/set_pwm__type_support.o"
 	@echo "... rosidl_generator_c/servo_interfaces/msg/detail/set_pwm__type_support.i"
 	@echo "... rosidl_generator_c/servo_interfaces/msg/detail/set_pwm__type_support.s"
+	@echo "... rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__description.o"
+	@echo "... rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__description.i"
+	@echo "... rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__description.s"
+	@echo "... rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__functions.o"
+	@echo "... rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__functions.i"
+	@echo "... rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__functions.s"
+	@echo "... rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__type_support.o"
+	@echo "... rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__type_support.i"
+	@echo "... rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__type_support.s"
 	@echo "... rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__description.o"
 	@echo "... rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__description.i"
 	@echo "... rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__description.s"
@@ -1530,84 +2042,126 @@ help:
 	@echo "... rosidl_generator_py/servo_interfaces/action/_motor_angle_s.o"
 	@echo "... rosidl_generator_py/servo_interfaces/action/_motor_angle_s.i"
 	@echo "... rosidl_generator_py/servo_interfaces/action/_motor_angle_s.s"
+	@echo "... rosidl_generator_py/servo_interfaces/msg/_inference_result_s.o"
+	@echo "... rosidl_generator_py/servo_interfaces/msg/_inference_result_s.i"
+	@echo "... rosidl_generator_py/servo_interfaces/msg/_inference_result_s.s"
 	@echo "... rosidl_generator_py/servo_interfaces/msg/_set_mode_s.o"
 	@echo "... rosidl_generator_py/servo_interfaces/msg/_set_mode_s.i"
 	@echo "... rosidl_generator_py/servo_interfaces/msg/_set_mode_s.s"
 	@echo "... rosidl_generator_py/servo_interfaces/msg/_set_pwm_s.o"
 	@echo "... rosidl_generator_py/servo_interfaces/msg/_set_pwm_s.i"
 	@echo "... rosidl_generator_py/servo_interfaces/msg/_set_pwm_s.s"
+	@echo "... rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.o"
+	@echo "... rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.i"
+	@echo "... rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.s"
 	@echo "... rosidl_generator_py/servo_interfaces/srv/_motor_angle_s.o"
 	@echo "... rosidl_generator_py/servo_interfaces/srv/_motor_angle_s.i"
 	@echo "... rosidl_generator_py/servo_interfaces/srv/_motor_angle_s.s"
 	@echo "... rosidl_typesupport_c/servo_interfaces/action/motor_angle__type_support.o"
 	@echo "... rosidl_typesupport_c/servo_interfaces/action/motor_angle__type_support.i"
 	@echo "... rosidl_typesupport_c/servo_interfaces/action/motor_angle__type_support.s"
+	@echo "... rosidl_typesupport_c/servo_interfaces/msg/inference_result__type_support.o"
+	@echo "... rosidl_typesupport_c/servo_interfaces/msg/inference_result__type_support.i"
+	@echo "... rosidl_typesupport_c/servo_interfaces/msg/inference_result__type_support.s"
 	@echo "... rosidl_typesupport_c/servo_interfaces/msg/set_mode__type_support.o"
 	@echo "... rosidl_typesupport_c/servo_interfaces/msg/set_mode__type_support.i"
 	@echo "... rosidl_typesupport_c/servo_interfaces/msg/set_mode__type_support.s"
 	@echo "... rosidl_typesupport_c/servo_interfaces/msg/set_pwm__type_support.o"
 	@echo "... rosidl_typesupport_c/servo_interfaces/msg/set_pwm__type_support.i"
 	@echo "... rosidl_typesupport_c/servo_interfaces/msg/set_pwm__type_support.s"
+	@echo "... rosidl_typesupport_c/servo_interfaces/msg/yolov8_inference__type_support.o"
+	@echo "... rosidl_typesupport_c/servo_interfaces/msg/yolov8_inference__type_support.i"
+	@echo "... rosidl_typesupport_c/servo_interfaces/msg/yolov8_inference__type_support.s"
 	@echo "... rosidl_typesupport_c/servo_interfaces/srv/motor_angle__type_support.o"
 	@echo "... rosidl_typesupport_c/servo_interfaces/srv/motor_angle__type_support.i"
 	@echo "... rosidl_typesupport_c/servo_interfaces/srv/motor_angle__type_support.s"
 	@echo "... rosidl_typesupport_cpp/servo_interfaces/action/motor_angle__type_support.o"
 	@echo "... rosidl_typesupport_cpp/servo_interfaces/action/motor_angle__type_support.i"
 	@echo "... rosidl_typesupport_cpp/servo_interfaces/action/motor_angle__type_support.s"
+	@echo "... rosidl_typesupport_cpp/servo_interfaces/msg/inference_result__type_support.o"
+	@echo "... rosidl_typesupport_cpp/servo_interfaces/msg/inference_result__type_support.i"
+	@echo "... rosidl_typesupport_cpp/servo_interfaces/msg/inference_result__type_support.s"
 	@echo "... rosidl_typesupport_cpp/servo_interfaces/msg/set_mode__type_support.o"
 	@echo "... rosidl_typesupport_cpp/servo_interfaces/msg/set_mode__type_support.i"
 	@echo "... rosidl_typesupport_cpp/servo_interfaces/msg/set_mode__type_support.s"
 	@echo "... rosidl_typesupport_cpp/servo_interfaces/msg/set_pwm__type_support.o"
 	@echo "... rosidl_typesupport_cpp/servo_interfaces/msg/set_pwm__type_support.i"
 	@echo "... rosidl_typesupport_cpp/servo_interfaces/msg/set_pwm__type_support.s"
+	@echo "... rosidl_typesupport_cpp/servo_interfaces/msg/yolov8_inference__type_support.o"
+	@echo "... rosidl_typesupport_cpp/servo_interfaces/msg/yolov8_inference__type_support.i"
+	@echo "... rosidl_typesupport_cpp/servo_interfaces/msg/yolov8_inference__type_support.s"
 	@echo "... rosidl_typesupport_cpp/servo_interfaces/srv/motor_angle__type_support.o"
 	@echo "... rosidl_typesupport_cpp/servo_interfaces/srv/motor_angle__type_support.i"
 	@echo "... rosidl_typesupport_cpp/servo_interfaces/srv/motor_angle__type_support.s"
 	@echo "... rosidl_typesupport_fastrtps_c/servo_interfaces/action/detail/motor_angle__type_support_c.o"
 	@echo "... rosidl_typesupport_fastrtps_c/servo_interfaces/action/detail/motor_angle__type_support_c.i"
 	@echo "... rosidl_typesupport_fastrtps_c/servo_interfaces/action/detail/motor_angle__type_support_c.s"
+	@echo "... rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/inference_result__type_support_c.o"
+	@echo "... rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/inference_result__type_support_c.i"
+	@echo "... rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/inference_result__type_support_c.s"
 	@echo "... rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_mode__type_support_c.o"
 	@echo "... rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_mode__type_support_c.i"
 	@echo "... rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_mode__type_support_c.s"
 	@echo "... rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_pwm__type_support_c.o"
 	@echo "... rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_pwm__type_support_c.i"
 	@echo "... rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_pwm__type_support_c.s"
+	@echo "... rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/yolov8_inference__type_support_c.o"
+	@echo "... rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/yolov8_inference__type_support_c.i"
+	@echo "... rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/yolov8_inference__type_support_c.s"
 	@echo "... rosidl_typesupport_fastrtps_c/servo_interfaces/srv/detail/motor_angle__type_support_c.o"
 	@echo "... rosidl_typesupport_fastrtps_c/servo_interfaces/srv/detail/motor_angle__type_support_c.i"
 	@echo "... rosidl_typesupport_fastrtps_c/servo_interfaces/srv/detail/motor_angle__type_support_c.s"
 	@echo "... rosidl_typesupport_fastrtps_cpp/servo_interfaces/action/detail/dds_fastrtps/motor_angle__type_support.o"
 	@echo "... rosidl_typesupport_fastrtps_cpp/servo_interfaces/action/detail/dds_fastrtps/motor_angle__type_support.i"
 	@echo "... rosidl_typesupport_fastrtps_cpp/servo_interfaces/action/detail/dds_fastrtps/motor_angle__type_support.s"
+	@echo "... rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/inference_result__type_support.o"
+	@echo "... rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/inference_result__type_support.i"
+	@echo "... rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/inference_result__type_support.s"
 	@echo "... rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/set_mode__type_support.o"
 	@echo "... rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/set_mode__type_support.i"
 	@echo "... rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/set_mode__type_support.s"
 	@echo "... rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/set_pwm__type_support.o"
 	@echo "... rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/set_pwm__type_support.i"
 	@echo "... rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/set_pwm__type_support.s"
+	@echo "... rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/yolov8_inference__type_support.o"
+	@echo "... rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/yolov8_inference__type_support.i"
+	@echo "... rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/yolov8_inference__type_support.s"
 	@echo "... rosidl_typesupport_fastrtps_cpp/servo_interfaces/srv/detail/dds_fastrtps/motor_angle__type_support.o"
 	@echo "... rosidl_typesupport_fastrtps_cpp/servo_interfaces/srv/detail/dds_fastrtps/motor_angle__type_support.i"
 	@echo "... rosidl_typesupport_fastrtps_cpp/servo_interfaces/srv/detail/dds_fastrtps/motor_angle__type_support.s"
 	@echo "... rosidl_typesupport_introspection_c/servo_interfaces/action/detail/motor_angle__type_support.o"
 	@echo "... rosidl_typesupport_introspection_c/servo_interfaces/action/detail/motor_angle__type_support.i"
 	@echo "... rosidl_typesupport_introspection_c/servo_interfaces/action/detail/motor_angle__type_support.s"
+	@echo "... rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/inference_result__type_support.o"
+	@echo "... rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/inference_result__type_support.i"
+	@echo "... rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/inference_result__type_support.s"
 	@echo "... rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_mode__type_support.o"
 	@echo "... rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_mode__type_support.i"
 	@echo "... rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_mode__type_support.s"
 	@echo "... rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_pwm__type_support.o"
 	@echo "... rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_pwm__type_support.i"
 	@echo "... rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_pwm__type_support.s"
+	@echo "... rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/yolov8_inference__type_support.o"
+	@echo "... rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/yolov8_inference__type_support.i"
+	@echo "... rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/yolov8_inference__type_support.s"
 	@echo "... rosidl_typesupport_introspection_c/servo_interfaces/srv/detail/motor_angle__type_support.o"
 	@echo "... rosidl_typesupport_introspection_c/servo_interfaces/srv/detail/motor_angle__type_support.i"
 	@echo "... rosidl_typesupport_introspection_c/servo_interfaces/srv/detail/motor_angle__type_support.s"
 	@echo "... rosidl_typesupport_introspection_cpp/servo_interfaces/action/detail/motor_angle__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/servo_interfaces/action/detail/motor_angle__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/servo_interfaces/action/detail/motor_angle__type_support.s"
+	@echo "... rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/inference_result__type_support.o"
+	@echo "... rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/inference_result__type_support.i"
+	@echo "... rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/inference_result__type_support.s"
 	@echo "... rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/set_mode__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/set_mode__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/set_mode__type_support.s"
 	@echo "... rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/set_pwm__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/set_pwm__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/set_pwm__type_support.s"
+	@echo "... rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/yolov8_inference__type_support.o"
+	@echo "... rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/yolov8_inference__type_support.i"
+	@echo "... rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/yolov8_inference__type_support.s"
 	@echo "... rosidl_typesupport_introspection_cpp/servo_interfaces/srv/detail/motor_angle__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/servo_interfaces/srv/detail/motor_angle__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/servo_interfaces/srv/detail/motor_angle__type_support.s"

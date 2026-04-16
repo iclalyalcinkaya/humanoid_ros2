@@ -7,13 +7,17 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
+find_package(std_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/SetPwm.msg"
   "msg/SetMode.msg"
+  "msg/InferenceResult.msg"
+  "msg/Yolov8Inference.msg"
   "srv/MotorAngle.srv"
   "action/MotorAngle.action"
+  DEPENDENCIES std_msgs
 )
 
 ament_export_dependencies(rosidl_default_runtime)

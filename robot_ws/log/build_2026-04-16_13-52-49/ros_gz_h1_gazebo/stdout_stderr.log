@@ -1,0 +1,21 @@
+-- Install configuration: ""
+-- Installing: /home/rasp/humanoid_ros2/robot_ws/install/ros_gz_h1_gazebo/share/ros_gz_h1_gazebo/worlds
+-- Installing: /home/rasp/humanoid_ros2/robot_ws/install/ros_gz_h1_gazebo/share/ros_gz_h1_gazebo/worlds/empty_h1.sdf
+-- Installing: /home/rasp/humanoid_ros2/robot_ws/install/ros_gz_h1_gazebo/share/ros_gz_h1_gazebo/worlds/empty_h1_torque_ctrl.sdf
+-- Installing: /home/rasp/humanoid_ros2/robot_ws/install/ros_gz_h1_gazebo/share/ros_gz_h1_gazebo/environment/ros_gz_h1_gazebo.dsv
+-- Installing: /home/rasp/humanoid_ros2/robot_ws/install/ros_gz_h1_gazebo/share/ros_gz_h1_gazebo/environment/ros_gz_h1_gazebo.sh
+-- Installing: /home/rasp/humanoid_ros2/robot_ws/install/ros_gz_h1_gazebo/share/ament_index/resource_index/package_run_dependencies/ros_gz_h1_gazebo
+-- Installing: /home/rasp/humanoid_ros2/robot_ws/install/ros_gz_h1_gazebo/share/ament_index/resource_index/parent_prefix_path/ros_gz_h1_gazebo
+-- Installing: /home/rasp/humanoid_ros2/robot_ws/install/ros_gz_h1_gazebo/share/ros_gz_h1_gazebo/environment/ament_prefix_path.sh
+-- Installing: /home/rasp/humanoid_ros2/robot_ws/install/ros_gz_h1_gazebo/share/ros_gz_h1_gazebo/environment/ament_prefix_path.dsv
+-- Installing: /home/rasp/humanoid_ros2/robot_ws/install/ros_gz_h1_gazebo/share/ros_gz_h1_gazebo/environment/path.sh
+-- Installing: /home/rasp/humanoid_ros2/robot_ws/install/ros_gz_h1_gazebo/share/ros_gz_h1_gazebo/environment/path.dsv
+-- Installing: /home/rasp/humanoid_ros2/robot_ws/install/ros_gz_h1_gazebo/share/ros_gz_h1_gazebo/local_setup.bash
+-- Installing: /home/rasp/humanoid_ros2/robot_ws/install/ros_gz_h1_gazebo/share/ros_gz_h1_gazebo/local_setup.sh
+-- Installing: /home/rasp/humanoid_ros2/robot_ws/install/ros_gz_h1_gazebo/share/ros_gz_h1_gazebo/local_setup.zsh
+-- Installing: /home/rasp/humanoid_ros2/robot_ws/install/ros_gz_h1_gazebo/share/ros_gz_h1_gazebo/local_setup.dsv
+-- Installing: /home/rasp/humanoid_ros2/robot_ws/install/ros_gz_h1_gazebo/share/ros_gz_h1_gazebo/package.dsv
+-- Installing: /home/rasp/humanoid_ros2/robot_ws/install/ros_gz_h1_gazebo/share/ament_index/resource_index/packages/ros_gz_h1_gazebo
+-- Installing: /home/rasp/humanoid_ros2/robot_ws/install/ros_gz_h1_gazebo/share/ros_gz_h1_gazebo/cmake/ros_gz_h1_gazeboConfig.cmake
+-- Installing: /home/rasp/humanoid_ros2/robot_ws/install/ros_gz_h1_gazebo/share/ros_gz_h1_gazebo/cmake/ros_gz_h1_gazeboConfig-version.cmake
+-- Installing: /home/rasp/humanoid_ros2/robot_ws/install/ros_gz_h1_gazebo/share/ros_gz_h1_gazebo/package.xml

@@ -1,1 +1,0 @@
-/home/rasp/humanoid_ros2/robot_ws/src/my_servo_controller/launch/topic_controller_launch.py

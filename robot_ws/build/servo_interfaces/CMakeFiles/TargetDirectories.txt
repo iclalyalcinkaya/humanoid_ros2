@@ -4,10 +4,10 @@
 /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles/servo_interfaces__rosidl_generator_type_description.dir
 /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles/servo_interfaces__rosidl_generator_c.dir
 /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir
-/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir
-/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles/servo_interfaces__rosidl_typesupport_c.dir
 /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles/servo_interfaces__cpp.dir
 /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_cpp.dir
+/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir
+/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles/servo_interfaces__rosidl_typesupport_c.dir
 /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_cpp.dir
 /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles/servo_interfaces__rosidl_typesupport_cpp.dir
 /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles/ament_cmake_python_copy_servo_interfaces.dir
@@ -31,3 +31,11 @@
 /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/servo_interfaces__py/CMakeFiles/install.dir
 /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/servo_interfaces__py/CMakeFiles/install/local.dir
 /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/servo_interfaces__py/CMakeFiles/install/strip.dir
+/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/servo_interfaces__rs/CMakeFiles/servo_interfaces__rs.dir
+/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/servo_interfaces__rs/CMakeFiles/test.dir
+/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/servo_interfaces__rs/CMakeFiles/edit_cache.dir
+/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/servo_interfaces__rs/CMakeFiles/rebuild_cache.dir
+/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/servo_interfaces__rs/CMakeFiles/list_install_components.dir
+/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/servo_interfaces__rs/CMakeFiles/install.dir
+/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/servo_interfaces__rs/CMakeFiles/install/local.dir
+/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/servo_interfaces__rs/CMakeFiles/install/strip.dir

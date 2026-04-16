@@ -1,0 +1,415 @@
+[0.018s] Invoking command in '/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com VIRTUAL_ENV_PROMPT=(yolo_env) /usr/bin/cmake --build /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces -- -j4 -l4
+[0.132s] [  2%] Built target servo_interfaces__rosidl_generator_type_description
+[0.133s] [  2%] [34m[1mGenerating Rust code for ROS interfaces[0m
+[0.190s] [  2%] Built target ament_cmake_python_copy_servo_interfaces
+[0.190s] [  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[0.228s] [  4%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[0.774s] running egg_info
+[0.801s] writing servo_interfaces.egg-info/PKG-INFO
+[0.802s] writing dependency_links to servo_interfaces.egg-info/dependency_links.txt
+[0.807s] writing top-level names to servo_interfaces.egg-info/top_level.txt
+[0.913s] reading manifest file 'servo_interfaces.egg-info/SOURCES.txt'
+[0.913s] writing manifest file 'servo_interfaces.egg-info/SOURCES.txt'
+[1.058s] [  4%] Built target ament_cmake_python_build_servo_interfaces_egg
+[1.414s] [  4%] Built target servo_interfaces__rs
+[2.197s] [  4%] Built target servo_interfaces__cpp
+[2.237s] [  5%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/set_pwm__description.c.o[0m
+[2.243s] [  7%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/set_mode__description.c.o[0m
+[2.254s] [  8%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/set_pwm__functions.c.o[0m
+[2.254s] [  9%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/set_pwm__type_support.c.o[0m
+[2.343s] [ 10%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/set_mode__functions.c.o[0m
+[2.365s] [ 11%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/set_mode__type_support.c.o[0m
+[2.388s] [ 12%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/inference_result__description.c.o[0m
+[2.451s] [ 14%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/inference_result__functions.c.o[0m
+[2.499s] [ 15%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/inference_result__type_support.c.o[0m
+[2.512s] [ 16%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__description.c.o[0m
+[2.531s] [ 17%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__functions.c.o[0m
+[2.605s] [ 18%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__type_support.c.o[0m
+[2.621s] [ 20%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__description.c.o[0m
+[2.668s] [ 21%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__functions.c.o[0m
+[2.700s] [ 22%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__type_support.c.o[0m
+[2.737s] [ 23%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/action/detail/motor_angle__description.c.o[0m
+[2.807s] [ 24%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/action/detail/motor_angle__functions.c.o[0m
+[2.818s] [ 25%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/action/detail/motor_angle__type_support.c.o[0m
+[3.096s] [ 27%] [32m[1mLinking C shared library libservo_interfaces__rosidl_generator_c.so[0m
+[3.192s] [ 27%] Built target servo_interfaces__rosidl_generator_c
+[3.220s] [ 28%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[3.220s] [ 30%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[3.220s] [ 30%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[3.226s] [ 31%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[4.172s] [ 32%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/servo_interfaces/msg/set_pwm__type_support.cpp.o[0m
+[4.268s] [ 34%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/servo_interfaces/msg/set_mode__type_support.cpp.o[0m
+[4.366s] [ 35%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/servo_interfaces/msg/inference_result__type_support.cpp.o[0m
+[4.458s] [ 36%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/servo_interfaces/msg/yolov8_inference__type_support.cpp.o[0m
+[4.548s] [ 37%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_pwm__type_support.c.o[0m
+[4.565s] [ 38%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/servo_interfaces/srv/motor_angle__type_support.cpp.o[0m
+[4.649s] [ 40%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/set_mode__type_support.c.o[0m
+[4.692s] [ 41%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/servo_interfaces/action/motor_angle__type_support.cpp.o[0m
+[4.732s] [ 42%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/inference_result__type_support.c.o[0m
+[4.815s] [ 43%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/msg/detail/yolov8_inference__type_support.c.o[0m
+[4.827s] [ 45%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/set_pwm__type_support.cpp.o[0m
+[4.827s] [ 45%] [32m[1mLinking CXX shared library libservo_interfaces__rosidl_typesupport_c.so[0m
+[4.910s] [ 47%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/srv/detail/motor_angle__type_support.c.o[0m
+[4.937s] [ 47%] Built target servo_interfaces__rosidl_typesupport_c
+[4.947s] [ 48%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_pwm__type_support_c.cpp.o[0m
+[4.960s] [ 49%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_mode__type_support_c.cpp.o[0m
+[5.022s] [ 50%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/servo_interfaces/action/detail/motor_angle__type_support.c.o[0m
+[5.177s] [ 51%] [32m[1mLinking C shared library libservo_interfaces__rosidl_typesupport_introspection_c.so[0m
+[5.270s] [ 51%] Built target servo_interfaces__rosidl_typesupport_introspection_c
+[5.294s] [ 52%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/set_mode__type_support.cpp.o[0m
+[5.932s] [ 54%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/inference_result__type_support.cpp.o[0m
+[6.032s] [ 55%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[6.089s] [ 56%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/inference_result__type_support_c.cpp.o[0m
+[6.447s] [ 57%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[6.966s] [ 58%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/yolov8_inference__type_support.cpp.o[0m
+[7.045s] [ 60%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/yolov8_inference__type_support_c.cpp.o[0m
+[7.402s] [ 61%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/set_pwm__type_support.cpp.o[0m
+[7.523s] [ 62%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/servo_interfaces/msg/set_pwm__type_support.cpp.o[0m
+[8.074s] [ 63%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/srv/detail/motor_angle__type_support_c.cpp.o[0m
+[8.098s] [ 64%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/set_mode__type_support.cpp.o[0m
+[8.153s] [ 65%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/servo_interfaces/srv/detail/dds_fastrtps/motor_angle__type_support.cpp.o[0m
+[8.311s] [ 67%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/servo_interfaces/msg/set_mode__type_support.cpp.o[0m
+[8.807s] [ 68%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/inference_result__type_support.cpp.o[0m
+[9.023s] [ 69%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/servo_interfaces/msg/inference_result__type_support.cpp.o[0m
+[9.216s] [ 70%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/action/detail/motor_angle__type_support_c.cpp.o[0m
+[9.560s] [ 71%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/yolov8_inference__type_support.cpp.o[0m
+[9.612s] [ 72%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/servo_interfaces/action/detail/dds_fastrtps/motor_angle__type_support.cpp.o[0m
+[9.735s] [ 74%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/servo_interfaces/msg/yolov8_inference__type_support.cpp.o[0m
+[10.397s] [ 75%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/servo_interfaces/srv/detail/motor_angle__type_support.cpp.o[0m
+[10.490s] [ 76%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/servo_interfaces/srv/motor_angle__type_support.cpp.o[0m
+[10.574s] [ 77%] [32m[1mLinking CXX shared library libservo_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[10.807s] [ 77%] Built target servo_interfaces__rosidl_typesupport_fastrtps_c
+[10.834s] [ 78%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/servo_interfaces/action/detail/motor_angle__type_support.cpp.o[0m
+[11.393s] [ 80%] [32mBuilding CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/servo_interfaces/action/motor_angle__type_support.cpp.o[0m
+[12.007s] [ 81%] [32m[1mLinking CXX shared library libservo_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[12.244s] [ 81%] Built target servo_interfaces__rosidl_typesupport_fastrtps_cpp
+[12.472s] [ 82%] [32m[1mLinking CXX shared library libservo_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[12.668s] [ 82%] Built target servo_interfaces__rosidl_typesupport_introspection_cpp
+[12.734s] [ 83%] [32m[1mLinking CXX shared library libservo_interfaces__rosidl_typesupport_cpp.so[0m
+[12.899s] [ 83%] Built target servo_interfaces__rosidl_typesupport_cpp
+[12.937s] [ 83%] Built target servo_interfaces
+[12.976s] [ 84%] [34m[1mGenerating Python code for ROS interfaces[0m
+[14.788s] [ 84%] Built target servo_interfaces__py
+[14.829s] [ 89%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_inference_result_s.c.o[0m
+[14.833s] [ 89%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.c.o[0m
+[14.833s] [ 89%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_set_pwm_s.c.o[0m
+[14.833s] [ 89%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_set_mode_s.c.o[0m
+[15.096s] [ 90%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/srv/_motor_angle_s.c.o[0m
+[15.096s] [ 91%] [32mBuilding C object CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/action/_motor_angle_s.c.o[0m
+[15.443s] [ 92%] [32m[1mLinking C shared library libservo_interfaces__rosidl_generator_py.so[0m
+[15.544s] [ 92%] Built target servo_interfaces__rosidl_generator_py
+[15.589s] [ 96%] [32mBuilding C object CMakeFiles/servo_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[15.589s] [ 96%] [32mBuilding C object CMakeFiles/servo_interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[15.589s] [ 96%] [32mBuilding C object CMakeFiles/servo_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[15.866s] [ 97%] [32m[1mLinking C shared module rosidl_generator_py/servo_interfaces/servo_interfaces_s__rosidl_typesupport_c.so[0m
+[15.871s] [ 98%] [32m[1mLinking C shared module rosidl_generator_py/servo_interfaces/servo_interfaces_s__rosidl_typesupport_introspection_c.so[0m
+[15.875s] [100%] [32m[1mLinking C shared module rosidl_generator_py/servo_interfaces/servo_interfaces_s__rosidl_typesupport_fastrtps_c.so[0m
+[15.938s] [100%] Built target servo_interfaces_s__rosidl_typesupport_c
+[15.943s] [100%] Built target servo_interfaces_s__rosidl_typesupport_introspection_c
+[15.948s] [100%] Built target servo_interfaces_s__rosidl_typesupport_fastrtps_c
+[15.975s] Invoked command in '/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com VIRTUAL_ENV_PROMPT=(yolo_env) /usr/bin/cmake --build /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces -- -j4 -l4
+[15.977s] Invoking command in '/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com VIRTUAL_ENV_PROMPT=(yolo_env) /usr/bin/cmake --install /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces
+[15.992s] -- Install configuration: ""
+[15.992s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/ament_index/resource_index/rosidl_interfaces/servo_interfaces
+[15.993s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/msg/SetPwm.json
+[15.993s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/msg/SetMode.json
+[15.993s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/msg/InferenceResult.json
+[15.993s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/msg/Yolov8Inference.json
+[15.993s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/srv/MotorAngle.json
+[15.994s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/action/MotorAngle.json
+[15.994s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces
+[15.994s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg
+[15.994s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/set_mode.h
+[15.994s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/inference_result.h
+[15.994s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/set_pwm.h
+[15.995s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/yolov8_inference.h
+[15.995s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/rosidl_generator_c__visibility_control.h
+[15.995s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail
+[15.995s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/yolov8_inference__functions.c
+[15.995s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__description.c
+[15.995s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/inference_result__type_support.c
+[15.995s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/inference_result__functions.h
+[15.996s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__struct.h
+[15.996s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_mode__functions.h
+[15.996s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_mode__description.c
+[15.996s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/inference_result__type_support.h
+[15.996s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__functions.c
+[15.996s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_mode__type_support.h
+[15.997s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_mode__struct.h
+[15.997s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/yolov8_inference__struct.h
+[15.997s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/yolov8_inference__description.c
+[15.997s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/yolov8_inference__type_support.h
+[15.997s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__functions.h
+[15.997s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_mode__type_support.c
+[15.998s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/inference_result__description.c
+[15.998s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/inference_result__struct.h
+[15.998s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/yolov8_inference__functions.h
+[15.998s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__type_support.h
+[15.998s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_mode__functions.c
+[15.998s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/yolov8_inference__type_support.c
+[15.999s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/inference_result__functions.c
+[15.999s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__type_support.c
+[15.999s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv
+[15.999s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/motor_angle.h
+[15.999s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail
+[15.999s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__type_support.h
+[16.000s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__description.c
+[16.000s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__type_support.c
+[16.000s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__functions.h
+[16.000s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__struct.h
+[16.000s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__functions.c
+[16.000s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action
+[16.000s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/motor_angle.h
+[16.001s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail
+[16.001s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail/motor_angle__type_support.h
+[16.001s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail/motor_angle__description.c
+[16.001s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail/motor_angle__type_support.c
+[16.001s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail/motor_angle__functions.h
+[16.002s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail/motor_angle__struct.h
+[16.002s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail/motor_angle__functions.c
+[16.002s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/environment/library_path.sh
+[16.003s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/environment/library_path.dsv
+[16.003s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_generator_c.so
+[16.004s] -- Set non-toolchain portion of runtime path of "/home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_generator_c.so" to ""
+[16.004s] -- Up-to-date: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces
+[16.004s] -- Up-to-date: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg
+[16.004s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[16.004s] -- Up-to-date: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail
+[16.005s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_mode__rosidl_typesupport_fastrtps_c.h
+[16.005s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/inference_result__rosidl_typesupport_fastrtps_c.h
+[16.005s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_fastrtps_c.h
+[16.005s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/yolov8_inference__rosidl_typesupport_fastrtps_c.h
+[16.005s] -- Up-to-date: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv
+[16.005s] -- Up-to-date: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail
+[16.005s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__rosidl_typesupport_fastrtps_c.h
+[16.005s] -- Up-to-date: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action
+[16.005s] -- Up-to-date: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail
+[16.006s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail/motor_angle__rosidl_typesupport_fastrtps_c.h
+[16.006s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_fastrtps_c.so
+[16.006s] -- Set non-toolchain portion of runtime path of "/home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[16.007s] -- Up-to-date: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces
+[16.007s] -- Up-to-date: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg
+[16.007s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/yolov8_inference.hpp
+[16.007s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[16.007s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/set_pwm.hpp
+[16.007s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/set_mode.hpp
+[16.007s] -- Up-to-date: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail
+[16.007s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/yolov8_inference__traits.hpp
+[16.008s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__traits.hpp
+[16.008s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/inference_result__traits.hpp
+[16.008s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__struct.hpp
+[16.008s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_mode__builder.hpp
+[16.008s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/yolov8_inference__builder.hpp
+[16.008s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/yolov8_inference__struct.hpp
+[16.008s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__builder.hpp
+[16.008s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/inference_result__struct.hpp
+[16.009s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__type_support.hpp
+[16.009s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_mode__type_support.hpp
+[16.009s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_mode__traits.hpp
+[16.009s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_mode__struct.hpp
+[16.009s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/inference_result__type_support.hpp
+[16.009s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/inference_result__builder.hpp
+[16.010s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/yolov8_inference__type_support.hpp
+[16.010s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/inference_result.hpp
+[16.010s] -- Up-to-date: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv
+[16.010s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/motor_angle.hpp
+[16.010s] -- Up-to-date: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail
+[16.010s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__type_support.hpp
+[16.010s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__builder.hpp
+[16.010s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__traits.hpp
+[16.011s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__struct.hpp
+[16.011s] -- Up-to-date: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action
+[16.011s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/motor_angle.hpp
+[16.011s] -- Up-to-date: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail
+[16.011s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail/motor_angle__type_support.hpp
+[16.011s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail/motor_angle__builder.hpp
+[16.011s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail/motor_angle__traits.hpp
+[16.011s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail/motor_angle__struct.hpp
+[16.012s] -- Up-to-date: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces
+[16.012s] -- Up-to-date: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg
+[16.012s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[16.012s] -- Up-to-date: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail
+[16.012s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_mode__rosidl_typesupport_fastrtps_cpp.hpp
+[16.012s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/inference_result__rosidl_typesupport_fastrtps_cpp.hpp
+[16.013s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/yolov8_inference__rosidl_typesupport_fastrtps_cpp.hpp
+[16.013s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_fastrtps_cpp.hpp
+[16.013s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/dds_fastrtps
+[16.013s] -- Up-to-date: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv
+[16.013s] -- Up-to-date: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail
+[16.013s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/dds_fastrtps
+[16.013s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__rosidl_typesupport_fastrtps_cpp.hpp
+[16.014s] -- Up-to-date: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action
+[16.014s] -- Up-to-date: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail
+[16.014s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail/dds_fastrtps
+[16.014s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail/motor_angle__rosidl_typesupport_fastrtps_cpp.hpp
+[16.014s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[16.015s] -- Set non-toolchain portion of runtime path of "/home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[16.015s] -- Up-to-date: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces
+[16.016s] -- Up-to-date: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg
+[16.016s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[16.016s] -- Up-to-date: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail
+[16.016s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/inference_result__type_support.c
+[16.017s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_introspection_c.h
+[16.017s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/inference_result__rosidl_typesupport_introspection_c.h
+[16.017s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_mode__type_support.c
+[16.017s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/yolov8_inference__type_support.c
+[16.017s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_mode__rosidl_typesupport_introspection_c.h
+[16.018s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/yolov8_inference__rosidl_typesupport_introspection_c.h
+[16.018s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__type_support.c
+[16.018s] -- Up-to-date: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv
+[16.018s] -- Up-to-date: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail
+[16.018s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__type_support.c
+[16.018s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__rosidl_typesupport_introspection_c.h
+[16.018s] -- Up-to-date: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action
+[16.019s] -- Up-to-date: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail
+[16.019s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail/motor_angle__type_support.c
+[16.019s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail/motor_angle__rosidl_typesupport_introspection_c.h
+[16.019s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_introspection_c.so
+[16.019s] -- Set non-toolchain portion of runtime path of "/home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[16.020s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_c.so
+[16.020s] -- Set non-toolchain portion of runtime path of "/home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_c.so" to ""
+[16.020s] -- Up-to-date: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces
+[16.020s] -- Up-to-date: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg
+[16.020s] -- Up-to-date: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail
+[16.021s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_mode__rosidl_typesupport_introspection_cpp.hpp
+[16.021s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/yolov8_inference__rosidl_typesupport_introspection_cpp.hpp
+[16.021s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_introspection_cpp.hpp
+[16.021s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/yolov8_inference__type_support.cpp
+[16.021s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_mode__type_support.cpp
+[16.022s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/inference_result__rosidl_typesupport_introspection_cpp.hpp
+[16.022s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/set_pwm__type_support.cpp
+[16.022s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/msg/detail/inference_result__type_support.cpp
+[16.022s] -- Up-to-date: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv
+[16.022s] -- Up-to-date: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail
+[16.022s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__rosidl_typesupport_introspection_cpp.hpp
+[16.023s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/srv/detail/motor_angle__type_support.cpp
+[16.023s] -- Up-to-date: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action
+[16.023s] -- Up-to-date: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail
+[16.023s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail/motor_angle__rosidl_typesupport_introspection_cpp.hpp
+[16.023s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/include/servo_interfaces/servo_interfaces/action/detail/motor_angle__type_support.cpp
+[16.023s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_introspection_cpp.so
+[16.024s] -- Set non-toolchain portion of runtime path of "/home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[16.024s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_cpp.so
+[16.025s] -- Set non-toolchain portion of runtime path of "/home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_typesupport_cpp.so" to ""
+[16.025s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/environment/pythonpath.sh
+[16.025s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/environment/pythonpath.dsv
+[16.025s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces-0.0.0-py3.12.egg-info
+[16.026s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces-0.0.0-py3.12.egg-info/top_level.txt
+[16.026s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces-0.0.0-py3.12.egg-info/PKG-INFO
+[16.026s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces-0.0.0-py3.12.egg-info/SOURCES.txt
+[16.026s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces-0.0.0-py3.12.egg-info/dependency_links.txt
+[16.026s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces
+[16.027s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[16.027s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/msg
+[16.027s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/msg/__init__.py
+[16.027s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/msg/_inference_result_s.c
+[16.027s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/msg/_inference_result.py
+[16.028s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/msg/_yolov8_inference.py
+[16.028s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/msg/_set_pwm_s.c
+[16.028s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/msg/_set_mode_s.c
+[16.028s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/msg/_set_mode.py
+[16.028s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/msg/_set_pwm.py
+[16.029s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/msg/_yolov8_inference_s.c
+[16.029s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/__init__.py
+[16.029s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/srv
+[16.029s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/srv/__init__.py
+[16.029s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/srv/_motor_angle.py
+[16.030s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/srv/_motor_angle_s.c
+[16.030s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_c.c
+[16.030s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/_servo_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[16.030s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/servo_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[16.030s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/servo_interfaces_s__rosidl_typesupport_introspection_c.so
+[16.030s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/action
+[16.031s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/action/__init__.py
+[16.031s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/action/_motor_angle.py
+[16.031s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/action/_motor_angle_s.c
+[16.031s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/servo_interfaces_s__rosidl_typesupport_c.so
+[16.114s] Listing '/home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces'...
+[16.114s] Compiling '/home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/__init__.py'...
+[16.115s] Listing '/home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/action'...
+[16.115s] Compiling '/home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/action/__init__.py'...
+[16.115s] Compiling '/home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/action/_motor_angle.py'...
+[16.115s] Listing '/home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/msg'...
+[16.115s] Compiling '/home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/msg/__init__.py'...
+[16.115s] Compiling '/home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/msg/_inference_result.py'...
+[16.115s] Compiling '/home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/msg/_set_mode.py'...
+[16.115s] Compiling '/home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/msg/_set_pwm.py'...
+[16.115s] Compiling '/home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/msg/_yolov8_inference.py'...
+[16.115s] Listing '/home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/srv'...
+[16.116s] Compiling '/home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/srv/__init__.py'...
+[16.116s] Compiling '/home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/srv/_motor_angle.py'...
+[16.127s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/servo_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[16.128s] -- Set non-toolchain portion of runtime path of "/home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/servo_interfaces_s__rosidl_typesupport_fastrtps_c.so" to ""
+[16.128s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/servo_interfaces_s__rosidl_typesupport_introspection_c.so
+[16.129s] -- Set non-toolchain portion of runtime path of "/home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/servo_interfaces_s__rosidl_typesupport_introspection_c.so" to ""
+[16.129s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/servo_interfaces_s__rosidl_typesupport_c.so
+[16.130s] -- Set non-toolchain portion of runtime path of "/home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces/servo_interfaces_s__rosidl_typesupport_c.so" to ""
+[16.130s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_generator_py.so
+[16.131s] -- Set non-toolchain portion of runtime path of "/home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/libservo_interfaces__rosidl_generator_py.so" to ""
+[16.131s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/ament_index/resource_index/rust_packages/servo_interfaces
+[16.131s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/rust
+[16.131s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/rust/build.rs
+[16.132s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/rust/src
+[16.132s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/rust/src/msg
+[16.132s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/rust/src/msg/rmw.rs
+[16.132s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/rust/src/action.rs
+[16.132s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/rust/src/lib.rs
+[16.132s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/rust/src/srv
+[16.132s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/rust/src/srv/rmw.rs
+[16.133s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/rust/src/srv.rs
+[16.133s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/rust/src/msg.rs
+[16.133s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/rust/src/action
+[16.133s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/rust/src/action/rmw.rs
+[16.133s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/rust/Cargo.toml
+[16.133s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/msg/SetPwm.idl
+[16.134s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/msg/SetMode.idl
+[16.134s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/msg/InferenceResult.idl
+[16.134s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/msg/Yolov8Inference.idl
+[16.134s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/srv/MotorAngle.idl
+[16.135s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/action/MotorAngle.idl
+[16.135s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/msg/SetPwm.msg
+[16.135s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/msg/SetMode.msg
+[16.135s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/msg/InferenceResult.msg
+[16.135s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/msg/Yolov8Inference.msg
+[16.136s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/srv/MotorAngle.srv
+[16.136s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/action/MotorAngle.action
+[16.136s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/ament_index/resource_index/package_run_dependencies/servo_interfaces
+[16.136s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/ament_index/resource_index/parent_prefix_path/servo_interfaces
+[16.136s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/environment/ament_prefix_path.sh
+[16.137s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/environment/ament_prefix_path.dsv
+[16.137s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/environment/path.sh
+[16.137s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/environment/path.dsv
+[16.137s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/local_setup.bash
+[16.138s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/local_setup.sh
+[16.138s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/local_setup.zsh
+[16.138s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/local_setup.dsv
+[16.138s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/package.dsv
+[16.138s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/ament_index/resource_index/packages/servo_interfaces
+[16.139s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_generator_cExport.cmake
+[16.139s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_generator_cExport-noconfig.cmake
+[16.139s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[16.139s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[16.140s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_generator_cppExport.cmake
+[16.140s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[16.140s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[16.140s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[16.141s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[16.141s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfaces__rosidl_typesupport_cExport.cmake
+[16.141s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[16.141s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[16.142s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[16.142s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfaces__rosidl_typesupport_cppExport.cmake
+[16.142s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[16.142s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_generator_pyExport.cmake
+[16.143s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/export_servo_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[16.143s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/rosidl_cmake-extras.cmake
+[16.143s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[16.143s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[16.143s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[16.144s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[16.144s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[16.144s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[16.144s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfacesConfig.cmake
+[16.145s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/cmake/servo_interfacesConfig-version.cmake
+[16.145s] -- Installing: /home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/share/servo_interfaces/package.xml
+[16.149s] Invoked command in '/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com VIRTUAL_ENV_PROMPT=(yolo_env) /usr/bin/cmake --install /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces

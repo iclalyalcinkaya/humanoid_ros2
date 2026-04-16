@@ -4,12 +4,15 @@
   "idl_tuples": [
     "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces:msg/SetPwm.idl",
     "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces:msg/SetMode.idl",
+    "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces:msg/InferenceResult.idl",
+    "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces:msg/Yolov8Inference.idl",
     "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces:srv/MotorAngle.idl",
     "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces:action/MotorAngle.idl"
   ],
   "include_paths": [
-    "service_msgs:/opt/ros/jazzy/share/service_msgs",
+    "std_msgs:/opt/ros/jazzy/share/std_msgs",
     "builtin_interfaces:/opt/ros/jazzy/share/builtin_interfaces",
+    "service_msgs:/opt/ros/jazzy/share/service_msgs",
     "action_msgs:/opt/ros/jazzy/share/action_msgs",
     "unique_identifier_msgs:/opt/ros/jazzy/share/unique_identifier_msgs"
   ]

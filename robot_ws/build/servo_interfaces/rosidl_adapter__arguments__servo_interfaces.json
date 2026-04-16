@@ -3,6 +3,8 @@
   "non_idl_tuples": [
     "/home/rasp/humanoid_ros2/robot_ws/src/servo_interfaces:msg/SetPwm.msg",
     "/home/rasp/humanoid_ros2/robot_ws/src/servo_interfaces:msg/SetMode.msg",
+    "/home/rasp/humanoid_ros2/robot_ws/src/servo_interfaces:msg/InferenceResult.msg",
+    "/home/rasp/humanoid_ros2/robot_ws/src/servo_interfaces:msg/Yolov8Inference.msg",
     "/home/rasp/humanoid_ros2/robot_ws/src/servo_interfaces:srv/MotorAngle.srv",
     "/home/rasp/humanoid_ros2/robot_ws/src/servo_interfaces:action/MotorAngle.action"
   ]

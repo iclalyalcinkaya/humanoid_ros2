@@ -76,6 +76,16 @@ CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/deta
 CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/set_mode__struct.hpp
 CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/set_mode__traits.hpp
 CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/set_mode__type_support.hpp
+CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/inference_result.hpp
+CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/inference_result__builder.hpp
+CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/inference_result__struct.hpp
+CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/inference_result__traits.hpp
+CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/inference_result__type_support.hpp
+CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/yolov8_inference.hpp
+CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/yolov8_inference__builder.hpp
+CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/yolov8_inference__struct.hpp
+CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/yolov8_inference__traits.hpp
+CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/yolov8_inference__type_support.hpp
 CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/srv/motor_angle.hpp
 CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/srv/detail/motor_angle__builder.hpp
 CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/srv/detail/motor_angle__struct.hpp
@@ -109,18 +119,50 @@ rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/rosi
 rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/srv__type_support.hpp.em
 rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: rosidl_adapter/servo_interfaces/msg/SetPwm.idl
 rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: rosidl_adapter/servo_interfaces/msg/SetMode.idl
+rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: rosidl_adapter/servo_interfaces/msg/InferenceResult.idl
+rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: rosidl_adapter/servo_interfaces/msg/Yolov8Inference.idl
 rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: rosidl_adapter/servo_interfaces/srv/MotorAngle.idl
 rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: rosidl_adapter/servo_interfaces/action/MotorAngle.idl
-rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
+rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/std_msgs/msg/Bool.idl
+rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/std_msgs/msg/Byte.idl
+rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/std_msgs/msg/ByteMultiArray.idl
+rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/std_msgs/msg/Char.idl
+rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/std_msgs/msg/ColorRGBA.idl
+rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/std_msgs/msg/Empty.idl
+rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/std_msgs/msg/Float32.idl
+rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/std_msgs/msg/Float32MultiArray.idl
+rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/std_msgs/msg/Float64.idl
+rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/std_msgs/msg/Float64MultiArray.idl
+rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/std_msgs/msg/Header.idl
+rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/std_msgs/msg/Int16.idl
+rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/std_msgs/msg/Int16MultiArray.idl
+rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/std_msgs/msg/Int32.idl
+rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/std_msgs/msg/Int32MultiArray.idl
+rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/std_msgs/msg/Int64.idl
+rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/std_msgs/msg/Int64MultiArray.idl
+rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/std_msgs/msg/Int8.idl
+rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/std_msgs/msg/Int8MultiArray.idl
+rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/std_msgs/msg/MultiArrayDimension.idl
+rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/std_msgs/msg/MultiArrayLayout.idl
+rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/std_msgs/msg/String.idl
+rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/std_msgs/msg/UInt16.idl
+rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/std_msgs/msg/UInt16MultiArray.idl
+rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/std_msgs/msg/UInt32.idl
+rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/std_msgs/msg/UInt32MultiArray.idl
+rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/std_msgs/msg/UInt64.idl
+rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/std_msgs/msg/UInt64MultiArray.idl
+rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/std_msgs/msg/UInt8.idl
+rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/std_msgs/msg/UInt8MultiArray.idl
 rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/builtin_interfaces/msg/Time.idl
+rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
 rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/action_msgs/msg/GoalInfo.idl
 rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/action_msgs/msg/GoalStatus.idl
 rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/action_msgs/msg/GoalStatusArray.idl
 rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/action_msgs/srv/CancelGoal.idl
 rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/unique_identifier_msgs/msg/UUID.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
-	/usr/bin/python3 /opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_cpp__arguments.json
+	/home/rasp/humanoid_ros2/yolo_env/bin/python3 /opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_cpp__arguments.json
 
 rosidl_generator_cpp/servo_interfaces/msg/detail/set_pwm__builder.hpp: rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/servo_interfaces/msg/detail/set_pwm__builder.hpp
@@ -148,6 +190,36 @@ rosidl_generator_cpp/servo_interfaces/msg/detail/set_mode__traits.hpp: rosidl_ge
 
 rosidl_generator_cpp/servo_interfaces/msg/detail/set_mode__type_support.hpp: rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/servo_interfaces/msg/detail/set_mode__type_support.hpp
+
+rosidl_generator_cpp/servo_interfaces/msg/inference_result.hpp: rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/servo_interfaces/msg/inference_result.hpp
+
+rosidl_generator_cpp/servo_interfaces/msg/detail/inference_result__builder.hpp: rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/servo_interfaces/msg/detail/inference_result__builder.hpp
+
+rosidl_generator_cpp/servo_interfaces/msg/detail/inference_result__struct.hpp: rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/servo_interfaces/msg/detail/inference_result__struct.hpp
+
+rosidl_generator_cpp/servo_interfaces/msg/detail/inference_result__traits.hpp: rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/servo_interfaces/msg/detail/inference_result__traits.hpp
+
+rosidl_generator_cpp/servo_interfaces/msg/detail/inference_result__type_support.hpp: rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/servo_interfaces/msg/detail/inference_result__type_support.hpp
+
+rosidl_generator_cpp/servo_interfaces/msg/yolov8_inference.hpp: rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/servo_interfaces/msg/yolov8_inference.hpp
+
+rosidl_generator_cpp/servo_interfaces/msg/detail/yolov8_inference__builder.hpp: rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/servo_interfaces/msg/detail/yolov8_inference__builder.hpp
+
+rosidl_generator_cpp/servo_interfaces/msg/detail/yolov8_inference__struct.hpp: rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/servo_interfaces/msg/detail/yolov8_inference__struct.hpp
+
+rosidl_generator_cpp/servo_interfaces/msg/detail/yolov8_inference__traits.hpp: rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/servo_interfaces/msg/detail/yolov8_inference__traits.hpp
+
+rosidl_generator_cpp/servo_interfaces/msg/detail/yolov8_inference__type_support.hpp: rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/servo_interfaces/msg/detail/yolov8_inference__type_support.hpp
 
 rosidl_generator_cpp/servo_interfaces/srv/motor_angle.hpp: rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/servo_interfaces/srv/motor_angle.hpp
@@ -188,6 +260,10 @@ servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/action/detail/motor
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/action/detail/motor_angle__traits.hpp
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/action/detail/motor_angle__type_support.hpp
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/action/motor_angle.hpp
+servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/inference_result__builder.hpp
+servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/inference_result__struct.hpp
+servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/inference_result__traits.hpp
+servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/inference_result__type_support.hpp
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/set_mode__builder.hpp
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/set_mode__struct.hpp
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/set_mode__traits.hpp
@@ -196,9 +272,15 @@ servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/set_pwm_
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/set_pwm__struct.hpp
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/set_pwm__traits.hpp
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/set_pwm__type_support.hpp
+servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/yolov8_inference__builder.hpp
+servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/yolov8_inference__struct.hpp
+servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/yolov8_inference__traits.hpp
+servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/yolov8_inference__type_support.hpp
+servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/inference_result.hpp
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/set_mode.hpp
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp
+servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/yolov8_inference.hpp
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/srv/detail/motor_angle__builder.hpp
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/srv/detail/motor_angle__struct.hpp
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/srv/detail/motor_angle__traits.hpp

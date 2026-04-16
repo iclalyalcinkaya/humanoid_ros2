@@ -1,8 +1,12 @@
 action/MotorAngle.action
 action/MotorAngle.idl
+msg/InferenceResult.idl
+msg/InferenceResult.msg
 msg/SetMode.idl
 msg/SetMode.msg
 msg/SetPwm.idl
 msg/SetPwm.msg
+msg/Yolov8Inference.idl
+msg/Yolov8Inference.msg
 srv/MotorAngle.idl
 srv/MotorAngle.srv

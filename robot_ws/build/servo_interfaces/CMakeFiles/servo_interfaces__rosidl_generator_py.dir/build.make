@@ -97,10 +97,38 @@ CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_i
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_set_mode_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_py/servo_interfaces/msg/_set_mode_s.c -o CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_set_mode_s.c.s
 
+CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_inference_result_s.c.o: CMakeFiles/servo_interfaces__rosidl_generator_py.dir/flags.make
+CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_inference_result_s.c.o: rosidl_generator_py/servo_interfaces/msg/_inference_result_s.c
+CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_inference_result_s.c.o: CMakeFiles/servo_interfaces__rosidl_generator_py.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_inference_result_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_inference_result_s.c.o -MF CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_inference_result_s.c.o.d -o CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_inference_result_s.c.o -c /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_py/servo_interfaces/msg/_inference_result_s.c
+
+CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_inference_result_s.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_inference_result_s.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_py/servo_interfaces/msg/_inference_result_s.c > CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_inference_result_s.c.i
+
+CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_inference_result_s.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_inference_result_s.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_py/servo_interfaces/msg/_inference_result_s.c -o CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_inference_result_s.c.s
+
+CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.c.o: CMakeFiles/servo_interfaces__rosidl_generator_py.dir/flags.make
+CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.c.o: rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.c
+CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.c.o: CMakeFiles/servo_interfaces__rosidl_generator_py.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.c.o -MF CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.c.o.d -o CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.c.o -c /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.c
+
+CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.c > CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.c.i
+
+CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.c -o CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.c.s
+
 CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/srv/_motor_angle_s.c.o: CMakeFiles/servo_interfaces__rosidl_generator_py.dir/flags.make
 CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/srv/_motor_angle_s.c.o: rosidl_generator_py/servo_interfaces/srv/_motor_angle_s.c
 CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/srv/_motor_angle_s.c.o: CMakeFiles/servo_interfaces__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/srv/_motor_angle_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/srv/_motor_angle_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/srv/_motor_angle_s.c.o -MF CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/srv/_motor_angle_s.c.o.d -o CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/srv/_motor_angle_s.c.o -c /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_py/servo_interfaces/srv/_motor_angle_s.c
 
 CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/srv/_motor_angle_s.c.i: cmake_force
@@ -114,7 +142,7 @@ CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_i
 CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/action/_motor_angle_s.c.o: CMakeFiles/servo_interfaces__rosidl_generator_py.dir/flags.make
 CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/action/_motor_angle_s.c.o: rosidl_generator_py/servo_interfaces/action/_motor_angle_s.c
 CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/action/_motor_angle_s.c.o: CMakeFiles/servo_interfaces__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/action/_motor_angle_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/action/_motor_angle_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/action/_motor_angle_s.c.o -MF CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/action/_motor_angle_s.c.o.d -o CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/action/_motor_angle_s.c.o -c /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_py/servo_interfaces/action/_motor_angle_s.c
 
 CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/action/_motor_angle_s.c.i: cmake_force
@@ -129,6 +157,8 @@ CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_i
 servo_interfaces__rosidl_generator_py_OBJECTS = \
 "CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_set_pwm_s.c.o" \
 "CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_set_mode_s.c.o" \
+"CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_inference_result_s.c.o" \
+"CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.c.o" \
 "CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/srv/_motor_angle_s.c.o" \
 "CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/action/_motor_angle_s.c.o"
 
@@ -137,10 +167,18 @@ servo_interfaces__rosidl_generator_py_EXTERNAL_OBJECTS =
 
 libservo_interfaces__rosidl_generator_py.so: CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_set_pwm_s.c.o
 libservo_interfaces__rosidl_generator_py.so: CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_set_mode_s.c.o
+libservo_interfaces__rosidl_generator_py.so: CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_inference_result_s.c.o
+libservo_interfaces__rosidl_generator_py.so: CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/msg/_yolov8_inference_s.c.o
 libservo_interfaces__rosidl_generator_py.so: CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/srv/_motor_angle_s.c.o
 libservo_interfaces__rosidl_generator_py.so: CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_interfaces/action/_motor_angle_s.c.o
 libservo_interfaces__rosidl_generator_py.so: CMakeFiles/servo_interfaces__rosidl_generator_py.dir/build.make
 libservo_interfaces__rosidl_generator_py.so: libservo_interfaces__rosidl_typesupport_c.so
+libservo_interfaces__rosidl_generator_py.so: /opt/ros/jazzy/lib/libstd_msgs__rosidl_typesupport_fastrtps_c.so
+libservo_interfaces__rosidl_generator_py.so: /opt/ros/jazzy/lib/libstd_msgs__rosidl_typesupport_fastrtps_cpp.so
+libservo_interfaces__rosidl_generator_py.so: /opt/ros/jazzy/lib/libstd_msgs__rosidl_typesupport_introspection_c.so
+libservo_interfaces__rosidl_generator_py.so: /opt/ros/jazzy/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.so
+libservo_interfaces__rosidl_generator_py.so: /opt/ros/jazzy/lib/libstd_msgs__rosidl_typesupport_cpp.so
+libservo_interfaces__rosidl_generator_py.so: /opt/ros/jazzy/lib/libstd_msgs__rosidl_generator_py.so
 libservo_interfaces__rosidl_generator_py.so: /opt/ros/jazzy/lib/libaction_msgs__rosidl_typesupport_fastrtps_c.so
 libservo_interfaces__rosidl_generator_py.so: /opt/ros/jazzy/lib/libaction_msgs__rosidl_typesupport_fastrtps_cpp.so
 libservo_interfaces__rosidl_generator_py.so: /opt/ros/jazzy/lib/libaction_msgs__rosidl_typesupport_introspection_c.so
@@ -154,6 +192,8 @@ libservo_interfaces__rosidl_generator_py.so: /opt/ros/jazzy/lib/libunique_identi
 libservo_interfaces__rosidl_generator_py.so: /opt/ros/jazzy/lib/libunique_identifier_msgs__rosidl_typesupport_cpp.so
 libservo_interfaces__rosidl_generator_py.so: /opt/ros/jazzy/lib/libunique_identifier_msgs__rosidl_generator_py.so
 libservo_interfaces__rosidl_generator_py.so: libservo_interfaces__rosidl_generator_c.so
+libservo_interfaces__rosidl_generator_py.so: /opt/ros/jazzy/lib/libstd_msgs__rosidl_typesupport_c.so
+libservo_interfaces__rosidl_generator_py.so: /opt/ros/jazzy/lib/libstd_msgs__rosidl_generator_c.so
 libservo_interfaces__rosidl_generator_py.so: /opt/ros/jazzy/lib/libservice_msgs__rosidl_typesupport_fastrtps_c.so
 libservo_interfaces__rosidl_generator_py.so: /opt/ros/jazzy/lib/libservice_msgs__rosidl_typesupport_fastrtps_cpp.so
 libservo_interfaces__rosidl_generator_py.so: /opt/ros/jazzy/lib/libservice_msgs__rosidl_typesupport_introspection_c.so
@@ -174,7 +214,7 @@ libservo_interfaces__rosidl_generator_py.so: /opt/ros/jazzy/lib/libservice_msgs_
 libservo_interfaces__rosidl_generator_py.so: /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_generator_c.so
 libservo_interfaces__rosidl_generator_py.so: /opt/ros/jazzy/lib/librosidl_typesupport_fastrtps_c.so
 libservo_interfaces__rosidl_generator_py.so: /opt/ros/jazzy/lib/librosidl_typesupport_fastrtps_cpp.so
-libservo_interfaces__rosidl_generator_py.so: /opt/ros/jazzy/lib/libfastcdr.so.2.2.5
+libservo_interfaces__rosidl_generator_py.so: /opt/ros/jazzy/lib/libfastcdr.so.2.2.7
 libservo_interfaces__rosidl_generator_py.so: /opt/ros/jazzy/lib/librmw.so
 libservo_interfaces__rosidl_generator_py.so: /opt/ros/jazzy/lib/librosidl_dynamic_typesupport.so
 libservo_interfaces__rosidl_generator_py.so: /opt/ros/jazzy/lib/librosidl_typesupport_introspection_cpp.so
@@ -185,7 +225,7 @@ libservo_interfaces__rosidl_generator_py.so: /opt/ros/jazzy/lib/libunique_identi
 libservo_interfaces__rosidl_generator_py.so: /opt/ros/jazzy/lib/librosidl_runtime_c.so
 libservo_interfaces__rosidl_generator_py.so: /opt/ros/jazzy/lib/librcutils.so
 libservo_interfaces__rosidl_generator_py.so: CMakeFiles/servo_interfaces__rosidl_generator_py.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C shared library libservo_interfaces__rosidl_generator_py.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C shared library libservo_interfaces__rosidl_generator_py.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/servo_interfaces__rosidl_generator_py.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

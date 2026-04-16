@@ -68,6 +68,8 @@ include CMakeFiles/servo_interfaces__rosidl_generator_type_description.dir/progr
 
 CMakeFiles/servo_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/servo_interfaces/msg/SetPwm.json
 CMakeFiles/servo_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/servo_interfaces/msg/SetMode.json
+CMakeFiles/servo_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/servo_interfaces/msg/InferenceResult.json
+CMakeFiles/servo_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/servo_interfaces/msg/Yolov8Inference.json
 CMakeFiles/servo_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/servo_interfaces/srv/MotorAngle.json
 CMakeFiles/servo_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/servo_interfaces/action/MotorAngle.json
 
@@ -75,13 +77,21 @@ rosidl_generator_type_description/servo_interfaces/msg/SetPwm.json: /opt/ros/jaz
 rosidl_generator_type_description/servo_interfaces/msg/SetPwm.json: /opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_type_description/__init__.py
 rosidl_generator_type_description/servo_interfaces/msg/SetPwm.json: rosidl_adapter/servo_interfaces/msg/SetPwm.idl
 rosidl_generator_type_description/servo_interfaces/msg/SetPwm.json: rosidl_adapter/servo_interfaces/msg/SetMode.idl
+rosidl_generator_type_description/servo_interfaces/msg/SetPwm.json: rosidl_adapter/servo_interfaces/msg/InferenceResult.idl
+rosidl_generator_type_description/servo_interfaces/msg/SetPwm.json: rosidl_adapter/servo_interfaces/msg/Yolov8Inference.idl
 rosidl_generator_type_description/servo_interfaces/msg/SetPwm.json: rosidl_adapter/servo_interfaces/srv/MotorAngle.idl
 rosidl_generator_type_description/servo_interfaces/msg/SetPwm.json: rosidl_adapter/servo_interfaces/action/MotorAngle.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating type hashes for ROS interfaces"
-	/usr/bin/python3 /opt/ros/jazzy/lib/rosidl_generator_type_description/rosidl_generator_type_description --generator-arguments-file /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_type_description__arguments.json
+	/home/rasp/humanoid_ros2/yolo_env/bin/python3 /opt/ros/jazzy/lib/rosidl_generator_type_description/rosidl_generator_type_description --generator-arguments-file /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_type_description__arguments.json
 
 rosidl_generator_type_description/servo_interfaces/msg/SetMode.json: rosidl_generator_type_description/servo_interfaces/msg/SetPwm.json
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_type_description/servo_interfaces/msg/SetMode.json
+
+rosidl_generator_type_description/servo_interfaces/msg/InferenceResult.json: rosidl_generator_type_description/servo_interfaces/msg/SetPwm.json
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_type_description/servo_interfaces/msg/InferenceResult.json
+
+rosidl_generator_type_description/servo_interfaces/msg/Yolov8Inference.json: rosidl_generator_type_description/servo_interfaces/msg/SetPwm.json
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_type_description/servo_interfaces/msg/Yolov8Inference.json
 
 rosidl_generator_type_description/servo_interfaces/srv/MotorAngle.json: rosidl_generator_type_description/servo_interfaces/msg/SetPwm.json
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_type_description/servo_interfaces/srv/MotorAngle.json
@@ -91,8 +101,10 @@ rosidl_generator_type_description/servo_interfaces/action/MotorAngle.json: rosid
 
 servo_interfaces__rosidl_generator_type_description: CMakeFiles/servo_interfaces__rosidl_generator_type_description
 servo_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/servo_interfaces/action/MotorAngle.json
+servo_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/servo_interfaces/msg/InferenceResult.json
 servo_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/servo_interfaces/msg/SetMode.json
 servo_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/servo_interfaces/msg/SetPwm.json
+servo_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/servo_interfaces/msg/Yolov8Inference.json
 servo_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/servo_interfaces/srv/MotorAngle.json
 servo_interfaces__rosidl_generator_type_description: CMakeFiles/servo_interfaces__rosidl_generator_type_description.dir/build.make
 .PHONY : servo_interfaces__rosidl_generator_type_description
