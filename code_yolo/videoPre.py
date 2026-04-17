@@ -4,13 +4,15 @@ x, y, w, h = None, None, None, None
 locked_id = None
 wait_counter = 0
 old_lock = []
-model = YOLO('yolov8n.pt')
+#model = YOLO('yolov8n.pt')
+model = YOLO('/home/rasp/humanoid_ros2/robot_ws/yolov8n_ncnn_model', task='detect')
+
 #model = YOLO('yolov8n-cls.pt')
 
 #model.predict(source='1', save=True, conf=0.5, save_txt=False)
 
 #results = model(source='walking_people.mp4', save=True, conf=0.5, save_txt=False, stream=True)
-results = model.track(source='walking7.mp4',save=False, save_frames=True, conf=0.6, stream=True, persist=True, classes=[0], show_conf=False)  # Tracking with default tracker
+results = model.track(source='walking7.mp4',save=True, save_frames=True, conf=0.6, stream=True, persist=True, classes=[0], show_conf=False)  # Tracking with default tracker
 #results = model.track("https://youtu.be/LNwODJXcvt4", show=True, tracker="bytetrack.yaml")  # with ByteTrack
 
 

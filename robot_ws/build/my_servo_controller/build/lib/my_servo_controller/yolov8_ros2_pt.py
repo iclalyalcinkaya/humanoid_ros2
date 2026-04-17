@@ -14,6 +14,7 @@ class Camera_subscriber(Node):
     def __init__(self):
         super().__init__('camera_subscriber')
 
+        #self.model = YOLO('/home/rasp/humanoid_ros2/robot_ws/yolov8n_ncnn_model', task='detect')
         self.model = YOLO('yolov8n.pt')
 
         self.yolov8_inference = Yolov8Inference()
@@ -22,7 +23,7 @@ class Camera_subscriber(Node):
             Image,
             'rgb_cam/image_raw',
             self.camera_callback,
-            10)
+            1)
         self.subscription 
 
         self.yolov8_pub = self.create_publisher(Yolov8Inference, "/Yolov8_Inference", 1)
@@ -35,7 +36,8 @@ class Camera_subscriber(Node):
     def camera_callback(self, data):
 
         img = bridge.imgmsg_to_cv2(data, "bgr8")
-        results = self.model.track(img, conf=0.6, classes=[0], persist=True, tracker="bytetrack.yaml", stream=False, show_conf=False)
+        #results = self.model.track(img, conf=0.6, classes=[0], persist=True, tracker="bytetrack.yaml", stream=True, show_conf=False, save=True, save_frames=True)
+        results = self.model.track(img, conf=0.6, classes=[0], persist=True, tracker="botsort.yaml", stream=False, show_conf=False, save=True, save_frames=True)
 
         self.yolov8_inference.header.frame_id = "inference"
         self.yolov8_inference.header.stamp = self.get_clock().now().to_msg()
@@ -138,6 +140,7 @@ class Camera_subscriber(Node):
                     
                     self.motor_pub.publish(self.goal_position)
                     # self.get_logger().info(f"Yayınlanan Pozisyon: ({int(x)}, {int(y)})")
+            self.get_logger().info(f"Old locked IDs: {self.old_lock}")
 
         annotated_frame = results[0].plot()
         img_msg = bridge.cv2_to_imgmsg(annotated_frame)  

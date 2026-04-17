@@ -19,7 +19,7 @@ class Goal_subscriber(Node):
         self.frame_width = 1920
         self.frame_height = 1080
 
-        self.frame_angle_x = 60  # Assuming a horizontal field of view of 60 degrees
+        self.frame_angle_x = 65  # Assuming a horizontal field of view of 65 degrees
         self.frame_angle_y = 45  # Assuming a vertical field of view of 45 degrees
 
     def goal_callback(self, data):

@@ -58,7 +58,7 @@ class ServoTopicNode(Node):
         self.motor_thread = [None] * MOTOR_COUNT
         self.active_motor = [False] * MOTOR_COUNT
         self.head_thread = None
-
+        self.head_track = False
         self.gazebo_pubs = {}
         for motor_idx, joint_name in GAZEBO_JOINT_MAP.items():
             topic_name = f'/h1/{joint_name}/cmd_pos'
@@ -78,18 +78,21 @@ class ServoTopicNode(Node):
     def head_move_callback(self, msg):
         # Convert the pan and tilt values to motor angles
         if self.active_mode != 4:
-            pan_min, pan_max = MOTOR_ANGLE_LIMITS[10]
-            tilt_min, tilt_max = MOTOR_ANGLE_LIMITS[11]
-            pan_an = int(self.current_angles[10] + msg.pan)
-            tilt_an = int(self.current_angles[11] + msg.tilt)
+            pan_min, pan_max = MOTOR_ANGLE_LIMITS[2]
+            tilt_min, tilt_max = MOTOR_ANGLE_LIMITS[3]
+            pan_an = int(self.current_angles['2'] + msg.pan)
+            tilt_an = int(self.current_angles['3'] + msg.tilt)
             pan_angle = min(pan_max, max(pan_min, pan_an))  # Assuming msg.pan is in the range of -90 to 90
             tilt_angle = min(tilt_max, max(tilt_min, tilt_an))  # Assuming msg.tilt is in the range of -90 to 90
 
             # Move the head motors (assuming motor 10 is neck_pan and motor 11 is neck_tilt)
             if self.head_thread is not None:
                 self.active_mode = 0
+                self.head_track = False
                 self.head_thread.join(timeout=0.5)
-            self.head_thread = threading.Thread(target=self.sendMultipleMotorGoals, args=({10: pan_angle, 11: tilt_angle}, self.speed, True))
+            self.get_logger().info(f"Head Move Received: Pan {msg.pan} -> {pan_angle}, Tilt {msg.tilt} -> {tilt_angle}")
+            self.head_track = True
+            self.head_thread = threading.Thread(target=self.sendMultipleMotorGoals, args=({2: pan_angle, 3: tilt_angle}, self.speed))
             self.head_thread.start()
 
     def sim_active_callback(self, msg):
@@ -271,11 +274,11 @@ class ServoTopicNode(Node):
             self.get_logger().warn(f"Goal Abonded: Motor {motor_num+1} to {int(target_position)}")
             return False
 
-    def sendMultipleMotorGoals(self, targets, speed, head_track=False):
+    def sendMultipleMotorGoals(self, targets, speed):
         """Moves multiple motors simultaneously in a single synchronized loop."""
         Ts = 0.1
         Step = self.speed
-        while self.active_mode != 0 or head_track:
+        while self.active_mode != 0 or self.head_track:
             all_reached = True # Assume done until proven otherwise
             
             for motor_num, target_angle in targets.items():
@@ -317,6 +320,7 @@ class ServoTopicNode(Node):
                                 self.kit.servo[motor_num+2].angle = current_an
                             else:
                                 self.kit.servo[motor_num].angle = current_an
+                                self.get_logger().info(f"Motor: {motor_num+1} angle: {current_an}")
                             # self.kit.servo[MOVE_ORDER[motor_num]].angle = current_an 
                         self.current_angles[str(motor_num+1)] = int(current_an)
 
