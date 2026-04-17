@@ -86,6 +86,16 @@ CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/deta
 CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/yolov8_inference__struct.hpp
 CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/yolov8_inference__traits.hpp
 CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/yolov8_inference__type_support.hpp
+CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/goal_position.hpp
+CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/goal_position__builder.hpp
+CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/goal_position__struct.hpp
+CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/goal_position__traits.hpp
+CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/goal_position__type_support.hpp
+CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/head_move.hpp
+CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/head_move__builder.hpp
+CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/head_move__struct.hpp
+CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/head_move__traits.hpp
+CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/head_move__type_support.hpp
 CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/srv/motor_angle.hpp
 CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/srv/detail/motor_angle__builder.hpp
 CMakeFiles/servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/srv/detail/motor_angle__struct.hpp
@@ -121,6 +131,8 @@ rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: rosidl_adapter/servo_inte
 rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: rosidl_adapter/servo_interfaces/msg/SetMode.idl
 rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: rosidl_adapter/servo_interfaces/msg/InferenceResult.idl
 rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: rosidl_adapter/servo_interfaces/msg/Yolov8Inference.idl
+rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: rosidl_adapter/servo_interfaces/msg/GoalPosition.idl
+rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: rosidl_adapter/servo_interfaces/msg/HeadMove.idl
 rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: rosidl_adapter/servo_interfaces/srv/MotorAngle.idl
 rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: rosidl_adapter/servo_interfaces/action/MotorAngle.idl
 rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/std_msgs/msg/Bool.idl
@@ -221,6 +233,36 @@ rosidl_generator_cpp/servo_interfaces/msg/detail/yolov8_inference__traits.hpp: r
 rosidl_generator_cpp/servo_interfaces/msg/detail/yolov8_inference__type_support.hpp: rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/servo_interfaces/msg/detail/yolov8_inference__type_support.hpp
 
+rosidl_generator_cpp/servo_interfaces/msg/goal_position.hpp: rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/servo_interfaces/msg/goal_position.hpp
+
+rosidl_generator_cpp/servo_interfaces/msg/detail/goal_position__builder.hpp: rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/servo_interfaces/msg/detail/goal_position__builder.hpp
+
+rosidl_generator_cpp/servo_interfaces/msg/detail/goal_position__struct.hpp: rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/servo_interfaces/msg/detail/goal_position__struct.hpp
+
+rosidl_generator_cpp/servo_interfaces/msg/detail/goal_position__traits.hpp: rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/servo_interfaces/msg/detail/goal_position__traits.hpp
+
+rosidl_generator_cpp/servo_interfaces/msg/detail/goal_position__type_support.hpp: rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/servo_interfaces/msg/detail/goal_position__type_support.hpp
+
+rosidl_generator_cpp/servo_interfaces/msg/head_move.hpp: rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/servo_interfaces/msg/head_move.hpp
+
+rosidl_generator_cpp/servo_interfaces/msg/detail/head_move__builder.hpp: rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/servo_interfaces/msg/detail/head_move__builder.hpp
+
+rosidl_generator_cpp/servo_interfaces/msg/detail/head_move__struct.hpp: rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/servo_interfaces/msg/detail/head_move__struct.hpp
+
+rosidl_generator_cpp/servo_interfaces/msg/detail/head_move__traits.hpp: rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/servo_interfaces/msg/detail/head_move__traits.hpp
+
+rosidl_generator_cpp/servo_interfaces/msg/detail/head_move__type_support.hpp: rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/servo_interfaces/msg/detail/head_move__type_support.hpp
+
 rosidl_generator_cpp/servo_interfaces/srv/motor_angle.hpp: rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/servo_interfaces/srv/motor_angle.hpp
 
@@ -260,6 +302,14 @@ servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/action/detail/motor
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/action/detail/motor_angle__traits.hpp
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/action/detail/motor_angle__type_support.hpp
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/action/motor_angle.hpp
+servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/goal_position__builder.hpp
+servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/goal_position__struct.hpp
+servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/goal_position__traits.hpp
+servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/goal_position__type_support.hpp
+servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/head_move__builder.hpp
+servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/head_move__struct.hpp
+servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/head_move__traits.hpp
+servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/head_move__type_support.hpp
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/inference_result__builder.hpp
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/inference_result__struct.hpp
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/inference_result__traits.hpp
@@ -276,6 +326,8 @@ servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/yolov8_i
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/yolov8_inference__struct.hpp
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/yolov8_inference__traits.hpp
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/detail/yolov8_inference__type_support.hpp
+servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/goal_position.hpp
+servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/head_move.hpp
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/inference_result.hpp
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
 servo_interfaces__cpp: rosidl_generator_cpp/servo_interfaces/msg/set_mode.hpp

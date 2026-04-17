@@ -52,6 +52,7 @@ setup(
             "yolov8_ros2_pt_node = my_servo_controller.yolov8_ros2_pt:main",
             "yolov8_ros2_video_node = my_servo_controller.yolov8_ros2_video:main",
             "yolov8_subscriber_node = my_servo_controller.yolov8_ros2_subscriber:main",
+            "head_controller_node = my_servo_controller.head_controller:main",
         ],
     },
 )

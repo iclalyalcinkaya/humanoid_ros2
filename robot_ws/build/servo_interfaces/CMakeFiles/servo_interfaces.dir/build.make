@@ -70,6 +70,8 @@ CMakeFiles/servo_interfaces: /home/rasp/humanoid_ros2/robot_ws/src/servo_interfa
 CMakeFiles/servo_interfaces: /home/rasp/humanoid_ros2/robot_ws/src/servo_interfaces/msg/SetMode.msg
 CMakeFiles/servo_interfaces: /home/rasp/humanoid_ros2/robot_ws/src/servo_interfaces/msg/InferenceResult.msg
 CMakeFiles/servo_interfaces: /home/rasp/humanoid_ros2/robot_ws/src/servo_interfaces/msg/Yolov8Inference.msg
+CMakeFiles/servo_interfaces: /home/rasp/humanoid_ros2/robot_ws/src/servo_interfaces/msg/GoalPosition.msg
+CMakeFiles/servo_interfaces: /home/rasp/humanoid_ros2/robot_ws/src/servo_interfaces/msg/HeadMove.msg
 CMakeFiles/servo_interfaces: /home/rasp/humanoid_ros2/robot_ws/src/servo_interfaces/srv/MotorAngle.srv
 CMakeFiles/servo_interfaces: /home/rasp/humanoid_ros2/robot_ws/src/servo_interfaces/action/MotorAngle.action
 CMakeFiles/servo_interfaces: /opt/ros/jazzy/share/std_msgs/msg/Bool.idl

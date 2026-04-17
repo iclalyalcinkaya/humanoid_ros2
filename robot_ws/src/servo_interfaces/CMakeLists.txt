@@ -15,6 +15,8 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/SetMode.msg"
   "msg/InferenceResult.msg"
   "msg/Yolov8Inference.msg"
+  "msg/GoalPosition.msg"
+  "msg/HeadMove.msg"
   "srv/MotorAngle.srv"
   "action/MotorAngle.action"
   DEPENDENCIES std_msgs

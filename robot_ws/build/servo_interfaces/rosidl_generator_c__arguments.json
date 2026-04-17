@@ -7,6 +7,8 @@
     "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces:msg/SetMode.idl",
     "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces:msg/InferenceResult.idl",
     "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces:msg/Yolov8Inference.idl",
+    "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces:msg/GoalPosition.idl",
+    "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces:msg/HeadMove.idl",
     "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces:srv/MotorAngle.idl",
     "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces:action/MotorAngle.idl"
   ],
@@ -15,6 +17,8 @@
     "/home/rasp/humanoid_ros2/robot_ws/src/servo_interfaces/msg/SetMode.msg",
     "/home/rasp/humanoid_ros2/robot_ws/src/servo_interfaces/msg/InferenceResult.msg",
     "/home/rasp/humanoid_ros2/robot_ws/src/servo_interfaces/msg/Yolov8Inference.msg",
+    "/home/rasp/humanoid_ros2/robot_ws/src/servo_interfaces/msg/GoalPosition.msg",
+    "/home/rasp/humanoid_ros2/robot_ws/src/servo_interfaces/msg/HeadMove.msg",
     "/home/rasp/humanoid_ros2/robot_ws/src/servo_interfaces/srv/MotorAngle.srv",
     "/home/rasp/humanoid_ros2/robot_ws/src/servo_interfaces/action/MotorAngle.action"
   ],
@@ -82,6 +86,8 @@
     "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces/msg/SetMode.idl",
     "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces/msg/InferenceResult.idl",
     "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces/msg/Yolov8Inference.idl",
+    "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces/msg/GoalPosition.idl",
+    "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces/msg/HeadMove.idl",
     "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces/srv/MotorAngle.idl",
     "/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_adapter/servo_interfaces/action/MotorAngle.idl",
     "/opt/ros/jazzy/share/std_msgs/msg/Bool.idl",
@@ -128,6 +134,8 @@
     "msg/SetMode.idl:/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_type_description/servo_interfaces/msg/SetMode.json",
     "msg/InferenceResult.idl:/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_type_description/servo_interfaces/msg/InferenceResult.json",
     "msg/Yolov8Inference.idl:/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_type_description/servo_interfaces/msg/Yolov8Inference.json",
+    "msg/GoalPosition.idl:/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_type_description/servo_interfaces/msg/GoalPosition.json",
+    "msg/HeadMove.idl:/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_type_description/servo_interfaces/msg/HeadMove.json",
     "srv/MotorAngle.idl:/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_type_description/servo_interfaces/srv/MotorAngle.json",
     "action/MotorAngle.idl:/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_type_description/servo_interfaces/action/MotorAngle.json"
   ]

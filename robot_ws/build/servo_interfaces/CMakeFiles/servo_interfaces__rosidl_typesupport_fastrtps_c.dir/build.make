@@ -81,6 +81,8 @@ rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_pwm__rosidl_typesu
 rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/servo_interfaces/msg/SetMode.idl
 rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/servo_interfaces/msg/InferenceResult.idl
 rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/servo_interfaces/msg/Yolov8Inference.idl
+rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/servo_interfaces/msg/GoalPosition.idl
+rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/servo_interfaces/msg/HeadMove.idl
 rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/servo_interfaces/srv/MotorAngle.idl
 rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/servo_interfaces/action/MotorAngle.idl
 rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_fastrtps_c.h: /opt/ros/jazzy/share/std_msgs/msg/Bool.idl
@@ -144,6 +146,18 @@ rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/yolov8_inference__rosi
 
 rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/yolov8_inference__type_support_c.cpp: rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_fastrtps_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/yolov8_inference__type_support_c.cpp
+
+rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/goal_position__rosidl_typesupport_fastrtps_c.h: rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_fastrtps_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/goal_position__rosidl_typesupport_fastrtps_c.h
+
+rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/goal_position__type_support_c.cpp: rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_fastrtps_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/goal_position__type_support_c.cpp
+
+rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/head_move__rosidl_typesupport_fastrtps_c.h: rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_fastrtps_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/head_move__rosidl_typesupport_fastrtps_c.h
+
+rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/head_move__type_support_c.cpp: rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_fastrtps_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/head_move__type_support_c.cpp
 
 rosidl_typesupport_fastrtps_c/servo_interfaces/srv/detail/motor_angle__rosidl_typesupport_fastrtps_c.h: rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_fastrtps_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/servo_interfaces/srv/detail/motor_angle__rosidl_typesupport_fastrtps_c.h
@@ -213,10 +227,38 @@ CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesuppor
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/yolov8_inference__type_support_c.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/yolov8_inference__type_support_c.cpp -o CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/yolov8_inference__type_support_c.cpp.s
 
+CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/goal_position__type_support_c.cpp.o: CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/flags.make
+CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/goal_position__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/goal_position__type_support_c.cpp
+CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/goal_position__type_support_c.cpp.o: CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/goal_position__type_support_c.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/goal_position__type_support_c.cpp.o -MF CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/goal_position__type_support_c.cpp.o.d -o CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/goal_position__type_support_c.cpp.o -c /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/goal_position__type_support_c.cpp
+
+CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/goal_position__type_support_c.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/goal_position__type_support_c.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/goal_position__type_support_c.cpp > CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/goal_position__type_support_c.cpp.i
+
+CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/goal_position__type_support_c.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/goal_position__type_support_c.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/goal_position__type_support_c.cpp -o CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/goal_position__type_support_c.cpp.s
+
+CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/head_move__type_support_c.cpp.o: CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/flags.make
+CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/head_move__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/head_move__type_support_c.cpp
+CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/head_move__type_support_c.cpp.o: CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/head_move__type_support_c.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/head_move__type_support_c.cpp.o -MF CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/head_move__type_support_c.cpp.o.d -o CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/head_move__type_support_c.cpp.o -c /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/head_move__type_support_c.cpp
+
+CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/head_move__type_support_c.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/head_move__type_support_c.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/head_move__type_support_c.cpp > CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/head_move__type_support_c.cpp.i
+
+CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/head_move__type_support_c.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/head_move__type_support_c.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/head_move__type_support_c.cpp -o CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/head_move__type_support_c.cpp.s
+
 CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/srv/detail/motor_angle__type_support_c.cpp.o: CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/flags.make
 CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/srv/detail/motor_angle__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/servo_interfaces/srv/detail/motor_angle__type_support_c.cpp
 CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/srv/detail/motor_angle__type_support_c.cpp.o: CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/srv/detail/motor_angle__type_support_c.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/srv/detail/motor_angle__type_support_c.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/srv/detail/motor_angle__type_support_c.cpp.o -MF CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/srv/detail/motor_angle__type_support_c.cpp.o.d -o CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/srv/detail/motor_angle__type_support_c.cpp.o -c /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_typesupport_fastrtps_c/servo_interfaces/srv/detail/motor_angle__type_support_c.cpp
 
 CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/srv/detail/motor_angle__type_support_c.cpp.i: cmake_force
@@ -230,7 +272,7 @@ CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesuppor
 CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/action/detail/motor_angle__type_support_c.cpp.o: CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/flags.make
 CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/action/detail/motor_angle__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/servo_interfaces/action/detail/motor_angle__type_support_c.cpp
 CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/action/detail/motor_angle__type_support_c.cpp.o: CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/action/detail/motor_angle__type_support_c.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/action/detail/motor_angle__type_support_c.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/action/detail/motor_angle__type_support_c.cpp.o -MF CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/action/detail/motor_angle__type_support_c.cpp.o.d -o CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/action/detail/motor_angle__type_support_c.cpp.o -c /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_typesupport_fastrtps_c/servo_interfaces/action/detail/motor_angle__type_support_c.cpp
 
 CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/action/detail/motor_angle__type_support_c.cpp.i: cmake_force
@@ -247,6 +289,8 @@ servo_interfaces__rosidl_typesupport_fastrtps_c_OBJECTS = \
 "CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_mode__type_support_c.cpp.o" \
 "CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/inference_result__type_support_c.cpp.o" \
 "CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/yolov8_inference__type_support_c.cpp.o" \
+"CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/goal_position__type_support_c.cpp.o" \
+"CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/head_move__type_support_c.cpp.o" \
 "CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/srv/detail/motor_angle__type_support_c.cpp.o" \
 "CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/action/detail/motor_angle__type_support_c.cpp.o"
 
@@ -257,6 +301,8 @@ libservo_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/servo_interfac
 libservo_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_mode__type_support_c.cpp.o
 libservo_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/inference_result__type_support_c.cpp.o
 libservo_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/yolov8_inference__type_support_c.cpp.o
+libservo_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/goal_position__type_support_c.cpp.o
+libservo_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/head_move__type_support_c.cpp.o
 libservo_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/srv/detail/motor_angle__type_support_c.cpp.o
 libservo_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/servo_interfaces/action/detail/motor_angle__type_support_c.cpp.o
 libservo_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make
@@ -279,7 +325,7 @@ libservo_interfaces__rosidl_typesupport_fastrtps_c.so: /opt/ros/jazzy/lib/libuni
 libservo_interfaces__rosidl_typesupport_fastrtps_c.so: /opt/ros/jazzy/lib/librosidl_runtime_c.so
 libservo_interfaces__rosidl_typesupport_fastrtps_c.so: /opt/ros/jazzy/lib/librcutils.so
 libservo_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX shared library libservo_interfaces__rosidl_typesupport_fastrtps_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX shared library libservo_interfaces__rosidl_typesupport_fastrtps_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -292,6 +338,10 @@ CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/clean:
 
 CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/servo_interfaces/action/detail/motor_angle__rosidl_typesupport_fastrtps_c.h
 CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/servo_interfaces/action/detail/motor_angle__type_support_c.cpp
+CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/goal_position__rosidl_typesupport_fastrtps_c.h
+CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/goal_position__type_support_c.cpp
+CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/head_move__rosidl_typesupport_fastrtps_c.h
+CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/head_move__type_support_c.cpp
 CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/inference_result__rosidl_typesupport_fastrtps_c.h
 CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/inference_result__type_support_c.cpp
 CMakeFiles/servo_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/servo_interfaces/msg/detail/set_mode__rosidl_typesupport_fastrtps_c.h

@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "servo_interfaces/msg/detail/set_mode__type_support.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "servo_interfaces/msg/detail/set_mode__functions.h"
 #include "servo_interfaces/msg/detail/set_mode__struct.h"
+#include "servo_interfaces/msg/detail/set_mode__type_support.h"
 
 #ifdef __cplusplus
 extern "C"

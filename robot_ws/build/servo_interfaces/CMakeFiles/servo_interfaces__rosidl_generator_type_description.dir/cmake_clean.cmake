@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/servo_interfaces__rosidl_generator_type_description"
   "rosidl_generator_type_description/servo_interfaces/action/MotorAngle.json"
+  "rosidl_generator_type_description/servo_interfaces/msg/GoalPosition.json"
+  "rosidl_generator_type_description/servo_interfaces/msg/HeadMove.json"
   "rosidl_generator_type_description/servo_interfaces/msg/InferenceResult.json"
   "rosidl_generator_type_description/servo_interfaces/msg/SetMode.json"
   "rosidl_generator_type_description/servo_interfaces/msg/SetPwm.json"

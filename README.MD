@@ -195,3 +195,9 @@ Launch dosyası olarak çalıştırınca ve düzgün bir şekilde kapatılmaz is
 * **Bileklerin Serbest Bırakılması:** İşlemci yükünü azaltmak için orijinal repository'de `fixed` (sabit) olarak ayarlanan bilek eklemleri `revolute` olarak değiştirilip aktifleştirildi.
 * **PID Tuning:** Düşük ataletli (low-inertia) bileklerin yerçekimi altında düşmemesi ve titrememesi (oscillation) için Gazebo'nun `JointPositionController` eklentileri sisteme dahil edildi. Kp (Yay) ve Kd (Sönümleyici) değerleri optimize edilerek simülasyon stabil hale getirildi.
 
+cat /sys/class/thermal/thermal_zone*/temp
+
+export PYTHONPATH=/home/rasp/humanoid_ros2/yolo_env/lib/python3.12/site-packages:$PYTHONPATH
+
+source /opt/ros/jazzy/setup.bash
+source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash

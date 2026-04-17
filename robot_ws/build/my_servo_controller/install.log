@@ -3,6 +3,7 @@
 /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller/yolov8_ros2_pt.py
 /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller/topic_controller.py
 /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller/__init__.py
+/home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller/head_controller.py
 /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller/servo_controller.py
 /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller/yolov8_ros2_video.py
 /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller/servo_mover.py
@@ -13,6 +14,7 @@
 /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller/__pycache__/yolov8_ros2_pt.cpython-312.pyc
 /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller/__pycache__/topic_controller.cpython-312.pyc
 /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller/__pycache__/__init__.cpython-312.pyc
+/home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller/__pycache__/head_controller.cpython-312.pyc
 /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller/__pycache__/servo_controller.cpython-312.pyc
 /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller/__pycache__/yolov8_ros2_video.cpython-312.pyc
 /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/python3.12/site-packages/my_servo_controller/__pycache__/servo_mover.cpython-312.pyc
@@ -21,6 +23,7 @@
 /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/share/ament_index/resource_index/packages/my_servo_controller
 /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/share/my_servo_controller/package.xml
 /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/share/my_servo_controller/launch/flask_controller_launch.py
+/home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/share/my_servo_controller/launch/topic_with_yolo_launch.py
 /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/share/my_servo_controller/launch/topic_controller_launch.py
 /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/share/my_servo_controller/launch/gazibo_sim_launch.py
 /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/share/my_servo_controller/launch/action_controller_launch.py
@@ -40,6 +43,7 @@
 /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/my_servo_controller/action_controller_node
 /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/my_servo_controller/flask_controller_node
 /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/my_servo_controller/gazibo_sim_node
+/home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/my_servo_controller/head_controller_node
 /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/my_servo_controller/servo_controller_node
 /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/my_servo_controller/servo_mover_node
 /home/rasp/humanoid_ros2/robot_ws/install/my_servo_controller/lib/my_servo_controller/topic_controller_node

@@ -1,5 +1,9 @@
 action/MotorAngle.action
 action/MotorAngle.idl
+msg/GoalPosition.idl
+msg/GoalPosition.msg
+msg/HeadMove.idl
+msg/HeadMove.msg
 msg/InferenceResult.idl
 msg/InferenceResult.msg
 msg/SetMode.idl

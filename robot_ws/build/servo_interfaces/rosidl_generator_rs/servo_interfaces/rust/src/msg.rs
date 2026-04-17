@@ -268,3 +268,125 @@ impl rosidl_runtime_rs::Message for Yolov8Inference {
 }
 
 
+// Corresponds to servo_interfaces__msg__GoalPosition
+
+// This struct is not documented.
+#[allow(missing_docs)]
+
+#[cfg_attr(feature = "serde", derive(Deserialize, Serialize))]
+#[derive(Clone, Debug, PartialEq, PartialOrd)]
+pub struct GoalPosition {
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub x: u8,
+
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub y: u8,
+
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub w: u8,
+
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub h: u8,
+
+}
+
+
+
+impl Default for GoalPosition {
+  fn default() -> Self {
+    <Self as rosidl_runtime_rs::Message>::from_rmw_message(super::msg::rmw::GoalPosition::default())
+  }
+}
+
+impl rosidl_runtime_rs::Message for GoalPosition {
+  type RmwMsg = super::msg::rmw::GoalPosition;
+
+  fn into_rmw_message(msg_cow: std::borrow::Cow<'_, Self>) -> std::borrow::Cow<'_, Self::RmwMsg> {
+    match msg_cow {
+      std::borrow::Cow::Owned(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
+        x: msg.x,
+        y: msg.y,
+        w: msg.w,
+        h: msg.h,
+      }),
+      std::borrow::Cow::Borrowed(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
+      x: msg.x,
+      y: msg.y,
+      w: msg.w,
+      h: msg.h,
+      })
+    }
+  }
+
+  fn from_rmw_message(msg: Self::RmwMsg) -> Self {
+    Self {
+      x: msg.x,
+      y: msg.y,
+      w: msg.w,
+      h: msg.h,
+    }
+  }
+}
+
+
+// Corresponds to servo_interfaces__msg__HeadMove
+
+// This struct is not documented.
+#[allow(missing_docs)]
+
+#[cfg_attr(feature = "serde", derive(Deserialize, Serialize))]
+#[derive(Clone, Debug, PartialEq, PartialOrd)]
+pub struct HeadMove {
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub pan: f32,
+
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub tilt: f32,
+
+}
+
+
+
+impl Default for HeadMove {
+  fn default() -> Self {
+    <Self as rosidl_runtime_rs::Message>::from_rmw_message(super::msg::rmw::HeadMove::default())
+  }
+}
+
+impl rosidl_runtime_rs::Message for HeadMove {
+  type RmwMsg = super::msg::rmw::HeadMove;
+
+  fn into_rmw_message(msg_cow: std::borrow::Cow<'_, Self>) -> std::borrow::Cow<'_, Self::RmwMsg> {
+    match msg_cow {
+      std::borrow::Cow::Owned(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
+        pan: msg.pan,
+        tilt: msg.tilt,
+      }),
+      std::borrow::Cow::Borrowed(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
+      pan: msg.pan,
+      tilt: msg.tilt,
+      })
+    }
+  }
+
+  fn from_rmw_message(msg: Self::RmwMsg) -> Self {
+    Self {
+      pan: msg.pan,
+      tilt: msg.tilt,
+    }
+  }
+}
+
+

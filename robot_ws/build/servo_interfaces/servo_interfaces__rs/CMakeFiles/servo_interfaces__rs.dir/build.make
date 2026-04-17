@@ -92,12 +92,16 @@ rosidl_generator_rs/servo_interfaces/rust/src/lib.rs: rosidl_adapter/servo_inter
 rosidl_generator_rs/servo_interfaces/rust/src/lib.rs: rosidl_adapter/servo_interfaces/msg/SetMode.idl
 rosidl_generator_rs/servo_interfaces/rust/src/lib.rs: rosidl_adapter/servo_interfaces/msg/InferenceResult.idl
 rosidl_generator_rs/servo_interfaces/rust/src/lib.rs: rosidl_adapter/servo_interfaces/msg/Yolov8Inference.idl
+rosidl_generator_rs/servo_interfaces/rust/src/lib.rs: rosidl_adapter/servo_interfaces/msg/GoalPosition.idl
+rosidl_generator_rs/servo_interfaces/rust/src/lib.rs: rosidl_adapter/servo_interfaces/msg/HeadMove.idl
 rosidl_generator_rs/servo_interfaces/rust/src/lib.rs: rosidl_adapter/servo_interfaces/srv/MotorAngle.idl
 rosidl_generator_rs/servo_interfaces/rust/src/lib.rs: rosidl_adapter/servo_interfaces/action/MotorAngle.idl
 rosidl_generator_rs/servo_interfaces/rust/src/lib.rs: rosidl_adapter/servo_interfaces/msg/SetPwm.idl
 rosidl_generator_rs/servo_interfaces/rust/src/lib.rs: rosidl_adapter/servo_interfaces/msg/SetMode.idl
 rosidl_generator_rs/servo_interfaces/rust/src/lib.rs: rosidl_adapter/servo_interfaces/msg/InferenceResult.idl
 rosidl_generator_rs/servo_interfaces/rust/src/lib.rs: rosidl_adapter/servo_interfaces/msg/Yolov8Inference.idl
+rosidl_generator_rs/servo_interfaces/rust/src/lib.rs: rosidl_adapter/servo_interfaces/msg/GoalPosition.idl
+rosidl_generator_rs/servo_interfaces/rust/src/lib.rs: rosidl_adapter/servo_interfaces/msg/HeadMove.idl
 rosidl_generator_rs/servo_interfaces/rust/src/lib.rs: rosidl_adapter/servo_interfaces/srv/MotorAngle.idl
 rosidl_generator_rs/servo_interfaces/rust/src/lib.rs: rosidl_adapter/servo_interfaces/action/MotorAngle.idl
 rosidl_generator_rs/servo_interfaces/rust/src/lib.rs: /opt/ros/jazzy/share/std_msgs/msg/Bool.idl

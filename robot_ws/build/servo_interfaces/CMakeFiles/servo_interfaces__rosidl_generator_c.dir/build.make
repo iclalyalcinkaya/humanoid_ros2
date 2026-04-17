@@ -92,6 +92,8 @@ rosidl_generator_c/servo_interfaces/msg/set_pwm.h: rosidl_adapter/servo_interfac
 rosidl_generator_c/servo_interfaces/msg/set_pwm.h: rosidl_adapter/servo_interfaces/msg/SetMode.idl
 rosidl_generator_c/servo_interfaces/msg/set_pwm.h: rosidl_adapter/servo_interfaces/msg/InferenceResult.idl
 rosidl_generator_c/servo_interfaces/msg/set_pwm.h: rosidl_adapter/servo_interfaces/msg/Yolov8Inference.idl
+rosidl_generator_c/servo_interfaces/msg/set_pwm.h: rosidl_adapter/servo_interfaces/msg/GoalPosition.idl
+rosidl_generator_c/servo_interfaces/msg/set_pwm.h: rosidl_adapter/servo_interfaces/msg/HeadMove.idl
 rosidl_generator_c/servo_interfaces/msg/set_pwm.h: rosidl_adapter/servo_interfaces/srv/MotorAngle.idl
 rosidl_generator_c/servo_interfaces/msg/set_pwm.h: rosidl_adapter/servo_interfaces/action/MotorAngle.idl
 rosidl_generator_c/servo_interfaces/msg/set_pwm.h: /opt/ros/jazzy/share/std_msgs/msg/Bool.idl
@@ -180,6 +182,30 @@ rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__struct.h: rosid
 rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__type_support.h: rosidl_generator_c/servo_interfaces/msg/set_pwm.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__type_support.h
 
+rosidl_generator_c/servo_interfaces/msg/goal_position.h: rosidl_generator_c/servo_interfaces/msg/set_pwm.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/servo_interfaces/msg/goal_position.h
+
+rosidl_generator_c/servo_interfaces/msg/detail/goal_position__functions.h: rosidl_generator_c/servo_interfaces/msg/set_pwm.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/servo_interfaces/msg/detail/goal_position__functions.h
+
+rosidl_generator_c/servo_interfaces/msg/detail/goal_position__struct.h: rosidl_generator_c/servo_interfaces/msg/set_pwm.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/servo_interfaces/msg/detail/goal_position__struct.h
+
+rosidl_generator_c/servo_interfaces/msg/detail/goal_position__type_support.h: rosidl_generator_c/servo_interfaces/msg/set_pwm.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/servo_interfaces/msg/detail/goal_position__type_support.h
+
+rosidl_generator_c/servo_interfaces/msg/head_move.h: rosidl_generator_c/servo_interfaces/msg/set_pwm.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/servo_interfaces/msg/head_move.h
+
+rosidl_generator_c/servo_interfaces/msg/detail/head_move__functions.h: rosidl_generator_c/servo_interfaces/msg/set_pwm.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/servo_interfaces/msg/detail/head_move__functions.h
+
+rosidl_generator_c/servo_interfaces/msg/detail/head_move__struct.h: rosidl_generator_c/servo_interfaces/msg/set_pwm.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/servo_interfaces/msg/detail/head_move__struct.h
+
+rosidl_generator_c/servo_interfaces/msg/detail/head_move__type_support.h: rosidl_generator_c/servo_interfaces/msg/set_pwm.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/servo_interfaces/msg/detail/head_move__type_support.h
+
 rosidl_generator_c/servo_interfaces/srv/motor_angle.h: rosidl_generator_c/servo_interfaces/msg/set_pwm.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/servo_interfaces/srv/motor_angle.h
 
@@ -239,6 +265,24 @@ rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__functions.c: ro
 
 rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__type_support.c: rosidl_generator_c/servo_interfaces/msg/set_pwm.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__type_support.c
+
+rosidl_generator_c/servo_interfaces/msg/detail/goal_position__description.c: rosidl_generator_c/servo_interfaces/msg/set_pwm.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/servo_interfaces/msg/detail/goal_position__description.c
+
+rosidl_generator_c/servo_interfaces/msg/detail/goal_position__functions.c: rosidl_generator_c/servo_interfaces/msg/set_pwm.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/servo_interfaces/msg/detail/goal_position__functions.c
+
+rosidl_generator_c/servo_interfaces/msg/detail/goal_position__type_support.c: rosidl_generator_c/servo_interfaces/msg/set_pwm.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/servo_interfaces/msg/detail/goal_position__type_support.c
+
+rosidl_generator_c/servo_interfaces/msg/detail/head_move__description.c: rosidl_generator_c/servo_interfaces/msg/set_pwm.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/servo_interfaces/msg/detail/head_move__description.c
+
+rosidl_generator_c/servo_interfaces/msg/detail/head_move__functions.c: rosidl_generator_c/servo_interfaces/msg/set_pwm.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/servo_interfaces/msg/detail/head_move__functions.c
+
+rosidl_generator_c/servo_interfaces/msg/detail/head_move__type_support.c: rosidl_generator_c/servo_interfaces/msg/set_pwm.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/servo_interfaces/msg/detail/head_move__type_support.c
 
 rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__description.c: rosidl_generator_c/servo_interfaces/msg/set_pwm.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__description.c
@@ -426,10 +470,94 @@ CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_int
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__type_support.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__type_support.c -o CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__type_support.c.s
 
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__description.c.o: CMakeFiles/servo_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__description.c.o: rosidl_generator_c/servo_interfaces/msg/detail/goal_position__description.c
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__description.c.o: CMakeFiles/servo_interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__description.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__description.c.o -MF CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__description.c.o.d -o CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__description.c.o -c /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__description.c
+
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__description.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__description.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__description.c > CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__description.c.i
+
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__description.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__description.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__description.c -o CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__description.c.s
+
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__functions.c.o: CMakeFiles/servo_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__functions.c.o: rosidl_generator_c/servo_interfaces/msg/detail/goal_position__functions.c
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__functions.c.o: CMakeFiles/servo_interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__functions.c.o -MF CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__functions.c.o.d -o CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__functions.c.o -c /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__functions.c
+
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__functions.c > CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__functions.c.i
+
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__functions.c -o CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__functions.c.s
+
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__type_support.c.o: CMakeFiles/servo_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__type_support.c.o: rosidl_generator_c/servo_interfaces/msg/detail/goal_position__type_support.c
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__type_support.c.o: CMakeFiles/servo_interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__type_support.c.o -MF CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__type_support.c.o.d -o CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__type_support.c.o -c /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__type_support.c
+
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__type_support.c > CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__type_support.c.i
+
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__type_support.c -o CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__type_support.c.s
+
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__description.c.o: CMakeFiles/servo_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__description.c.o: rosidl_generator_c/servo_interfaces/msg/detail/head_move__description.c
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__description.c.o: CMakeFiles/servo_interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__description.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__description.c.o -MF CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__description.c.o.d -o CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__description.c.o -c /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/msg/detail/head_move__description.c
+
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__description.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__description.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/msg/detail/head_move__description.c > CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__description.c.i
+
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__description.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__description.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/msg/detail/head_move__description.c -o CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__description.c.s
+
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__functions.c.o: CMakeFiles/servo_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__functions.c.o: rosidl_generator_c/servo_interfaces/msg/detail/head_move__functions.c
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__functions.c.o: CMakeFiles/servo_interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__functions.c.o -MF CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__functions.c.o.d -o CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__functions.c.o -c /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/msg/detail/head_move__functions.c
+
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/msg/detail/head_move__functions.c > CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__functions.c.i
+
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/msg/detail/head_move__functions.c -o CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__functions.c.s
+
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__type_support.c.o: CMakeFiles/servo_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__type_support.c.o: rosidl_generator_c/servo_interfaces/msg/detail/head_move__type_support.c
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__type_support.c.o: CMakeFiles/servo_interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__type_support.c.o -MF CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__type_support.c.o.d -o CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__type_support.c.o -c /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/msg/detail/head_move__type_support.c
+
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/msg/detail/head_move__type_support.c > CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__type_support.c.i
+
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/msg/detail/head_move__type_support.c -o CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__type_support.c.s
+
 CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__description.c.o: CMakeFiles/servo_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__description.c.o: rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__description.c
 CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__description.c.o: CMakeFiles/servo_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__description.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__description.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__description.c.o -MF CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__description.c.o.d -o CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__description.c.o -c /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__description.c
 
 CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__description.c.i: cmake_force
@@ -443,7 +571,7 @@ CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_int
 CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__functions.c.o: CMakeFiles/servo_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__functions.c.o: rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__functions.c
 CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__functions.c.o: CMakeFiles/servo_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__functions.c.o -MF CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__functions.c.o.d -o CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__functions.c.o -c /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__functions.c
 
 CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__functions.c.i: cmake_force
@@ -457,7 +585,7 @@ CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_int
 CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__type_support.c.o: CMakeFiles/servo_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__type_support.c.o: rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__type_support.c
 CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__type_support.c.o: CMakeFiles/servo_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__type_support.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__type_support.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__type_support.c.o -MF CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__type_support.c.o.d -o CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__type_support.c.o -c /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__type_support.c
 
 CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__type_support.c.i: cmake_force
@@ -471,7 +599,7 @@ CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_int
 CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/action/detail/motor_angle__description.c.o: CMakeFiles/servo_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/action/detail/motor_angle__description.c.o: rosidl_generator_c/servo_interfaces/action/detail/motor_angle__description.c
 CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/action/detail/motor_angle__description.c.o: CMakeFiles/servo_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/action/detail/motor_angle__description.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/action/detail/motor_angle__description.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/action/detail/motor_angle__description.c.o -MF CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/action/detail/motor_angle__description.c.o.d -o CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/action/detail/motor_angle__description.c.o -c /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/action/detail/motor_angle__description.c
 
 CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/action/detail/motor_angle__description.c.i: cmake_force
@@ -485,7 +613,7 @@ CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_int
 CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/action/detail/motor_angle__functions.c.o: CMakeFiles/servo_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/action/detail/motor_angle__functions.c.o: rosidl_generator_c/servo_interfaces/action/detail/motor_angle__functions.c
 CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/action/detail/motor_angle__functions.c.o: CMakeFiles/servo_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/action/detail/motor_angle__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/action/detail/motor_angle__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/action/detail/motor_angle__functions.c.o -MF CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/action/detail/motor_angle__functions.c.o.d -o CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/action/detail/motor_angle__functions.c.o -c /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/action/detail/motor_angle__functions.c
 
 CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/action/detail/motor_angle__functions.c.i: cmake_force
@@ -499,7 +627,7 @@ CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_int
 CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/action/detail/motor_angle__type_support.c.o: CMakeFiles/servo_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/action/detail/motor_angle__type_support.c.o: rosidl_generator_c/servo_interfaces/action/detail/motor_angle__type_support.c
 CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/action/detail/motor_angle__type_support.c.o: CMakeFiles/servo_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/action/detail/motor_angle__type_support.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/action/detail/motor_angle__type_support.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/action/detail/motor_angle__type_support.c.o -MF CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/action/detail/motor_angle__type_support.c.o.d -o CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/action/detail/motor_angle__type_support.c.o -c /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/action/detail/motor_angle__type_support.c
 
 CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/action/detail/motor_angle__type_support.c.i: cmake_force
@@ -524,6 +652,12 @@ servo_interfaces__rosidl_generator_c_OBJECTS = \
 "CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__description.c.o" \
 "CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__functions.c.o" \
 "CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__type_support.c.o" \
+"CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__description.c.o" \
+"CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__functions.c.o" \
+"CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__type_support.c.o" \
+"CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__description.c.o" \
+"CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__functions.c.o" \
+"CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__type_support.c.o" \
 "CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__description.c.o" \
 "CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__functions.c.o" \
 "CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__type_support.c.o" \
@@ -546,6 +680,12 @@ libservo_interfaces__rosidl_generator_c.so: CMakeFiles/servo_interfaces__rosidl_
 libservo_interfaces__rosidl_generator_c.so: CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__description.c.o
 libservo_interfaces__rosidl_generator_c.so: CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__functions.c.o
 libservo_interfaces__rosidl_generator_c.so: CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__type_support.c.o
+libservo_interfaces__rosidl_generator_c.so: CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__description.c.o
+libservo_interfaces__rosidl_generator_c.so: CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__functions.c.o
+libservo_interfaces__rosidl_generator_c.so: CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__type_support.c.o
+libservo_interfaces__rosidl_generator_c.so: CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__description.c.o
+libservo_interfaces__rosidl_generator_c.so: CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__functions.c.o
+libservo_interfaces__rosidl_generator_c.so: CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/msg/detail/head_move__type_support.c.o
 libservo_interfaces__rosidl_generator_c.so: CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__description.c.o
 libservo_interfaces__rosidl_generator_c.so: CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__functions.c.o
 libservo_interfaces__rosidl_generator_c.so: CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__type_support.c.o
@@ -561,7 +701,7 @@ libservo_interfaces__rosidl_generator_c.so: /opt/ros/jazzy/lib/libbuiltin_interf
 libservo_interfaces__rosidl_generator_c.so: /opt/ros/jazzy/lib/librosidl_runtime_c.so
 libservo_interfaces__rosidl_generator_c.so: /opt/ros/jazzy/lib/librcutils.so
 libservo_interfaces__rosidl_generator_c.so: CMakeFiles/servo_interfaces__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking C shared library libservo_interfaces__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Linking C shared library libservo_interfaces__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/servo_interfaces__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -579,6 +719,18 @@ CMakeFiles/servo_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/s
 CMakeFiles/servo_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/servo_interfaces/action/detail/motor_angle__type_support.c
 CMakeFiles/servo_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/servo_interfaces/action/detail/motor_angle__type_support.h
 CMakeFiles/servo_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/servo_interfaces/action/motor_angle.h
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/servo_interfaces/msg/detail/goal_position__description.c
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/servo_interfaces/msg/detail/goal_position__functions.c
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/servo_interfaces/msg/detail/goal_position__functions.h
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/servo_interfaces/msg/detail/goal_position__struct.h
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/servo_interfaces/msg/detail/goal_position__type_support.c
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/servo_interfaces/msg/detail/goal_position__type_support.h
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/servo_interfaces/msg/detail/head_move__description.c
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/servo_interfaces/msg/detail/head_move__functions.c
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/servo_interfaces/msg/detail/head_move__functions.h
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/servo_interfaces/msg/detail/head_move__struct.h
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/servo_interfaces/msg/detail/head_move__type_support.c
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/servo_interfaces/msg/detail/head_move__type_support.h
 CMakeFiles/servo_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/servo_interfaces/msg/detail/inference_result__description.c
 CMakeFiles/servo_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/servo_interfaces/msg/detail/inference_result__functions.c
 CMakeFiles/servo_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/servo_interfaces/msg/detail/inference_result__functions.h
@@ -603,6 +755,8 @@ CMakeFiles/servo_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/s
 CMakeFiles/servo_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__struct.h
 CMakeFiles/servo_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__type_support.c
 CMakeFiles/servo_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__type_support.h
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/servo_interfaces/msg/goal_position.h
+CMakeFiles/servo_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/servo_interfaces/msg/head_move.h
 CMakeFiles/servo_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/servo_interfaces/msg/inference_result.h
 CMakeFiles/servo_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/servo_interfaces/msg/set_mode.h
 CMakeFiles/servo_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/servo_interfaces/msg/set_pwm.h

@@ -6,7 +6,7 @@ from adafruit_servokit import ServoKit
 import time
 import threading
 from rosbridge_msgs.msg import ConnectedClients
-from servo_interfaces.msg import SetMode, SetPwm
+from servo_interfaces.msg import SetMode, SetPwm, HeadMove
 from std_msgs.msg import Float64, Bool
 import math
 
@@ -57,6 +57,7 @@ class ServoTopicNode(Node):
         self.speed = 5
         self.motor_thread = [None] * MOTOR_COUNT
         self.active_motor = [False] * MOTOR_COUNT
+        self.head_thread = None
 
         self.gazebo_pubs = {}
         for motor_idx, joint_name in GAZEBO_JOINT_MAP.items():
@@ -67,6 +68,29 @@ class ServoTopicNode(Node):
         self.mode_sub = self.create_subscription(SetMode, '/set_mode', self.mode_sub_callback, 10)
         self.cmd_sub = self.create_subscription(SetPwm, '/web_cmd', self.web_cmd_callback, 10)
         self.simulation_sub = self.create_subscription(Bool, '/sim_active', self.sim_active_callback, 10)
+        self.head_sub = self.create_subscription(HeadMove, '/head_move', self.head_move_callback, 10)
+
+        """
+        run_mode_sequence(4) # Move to neutral pose on startup
+        self.active_mode = 4
+        """
+
+    def head_move_callback(self, msg):
+        # Convert the pan and tilt values to motor angles
+        if self.active_mode != 4:
+            pan_min, pan_max = MOTOR_ANGLE_LIMITS[10]
+            tilt_min, tilt_max = MOTOR_ANGLE_LIMITS[11]
+            pan_an = int(self.current_angles[10] + msg.pan)
+            tilt_an = int(self.current_angles[11] + msg.tilt)
+            pan_angle = min(pan_max, max(pan_min, pan_an))  # Assuming msg.pan is in the range of -90 to 90
+            tilt_angle = min(tilt_max, max(tilt_min, tilt_an))  # Assuming msg.tilt is in the range of -90 to 90
+
+            # Move the head motors (assuming motor 10 is neck_pan and motor 11 is neck_tilt)
+            if self.head_thread is not None:
+                self.active_mode = 0
+                self.head_thread.join(timeout=0.5)
+            self.head_thread = threading.Thread(target=self.sendMultipleMotorGoals, args=({10: pan_angle, 11: tilt_angle}, self.speed, True))
+            self.head_thread.start()
 
     def sim_active_callback(self, msg):
         self.active_mode = 0
@@ -174,21 +198,21 @@ class ServoTopicNode(Node):
             self.speed = 2
             L_elbow, L_shoulder_pitch = angles[3], angles[2]
             R_elbow, R_shoulder_pitch = angles[8], angles[7]
-            neck_pitch = angles[11]
+            #neck_pitch = angles[11]
             
             while self.active_mode == mode_num:
                 L_elbow = 66 if L_elbow == 60 else 60
                 L_shoulder_pitch = 50 if L_shoulder_pitch == 60 else 60
                 R_elbow = 66 if R_elbow == 60 else 60
                 R_shoulder_pitch = 50 if R_shoulder_pitch == 60 else 60
-                neck_pitch = 90 if neck_pitch == 100 else 100 
+                #neck_pitch = 90 if neck_pitch == 100 else 100 
                 
                 target_group = {
                     3: L_elbow,
                     8: R_elbow,
                     2: L_shoulder_pitch,
                     7: R_shoulder_pitch,
-                    11: neck_pitch
+                    #11: neck_pitch
                 }
                 
                 # Move them all at the exact same time!
@@ -247,11 +271,11 @@ class ServoTopicNode(Node):
             self.get_logger().warn(f"Goal Abonded: Motor {motor_num+1} to {int(target_position)}")
             return False
 
-    def sendMultipleMotorGoals(self, targets, speed):
+    def sendMultipleMotorGoals(self, targets, speed, head_track=False):
         """Moves multiple motors simultaneously in a single synchronized loop."""
         Ts = 0.1
         Step = self.speed
-        while self.active_mode != 0:
+        while self.active_mode != 0 or head_track:
             all_reached = True # Assume done until proven otherwise
             
             for motor_num, target_angle in targets.items():

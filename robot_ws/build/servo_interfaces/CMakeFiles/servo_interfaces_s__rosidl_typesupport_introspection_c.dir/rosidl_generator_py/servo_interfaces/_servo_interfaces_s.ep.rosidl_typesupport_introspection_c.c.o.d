@@ -243,6 +243,12 @@ CMakeFiles/servo_interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_gen
  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__struct.h \
  /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \
  /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/msg/detail/yolov8_inference__functions.h \
+ /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__type_support.h \
+ /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__struct.h \
+ /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/msg/detail/goal_position__functions.h \
+ /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/msg/detail/head_move__type_support.h \
+ /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/msg/detail/head_move__struct.h \
+ /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/msg/detail/head_move__functions.h \
  /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__type_support.h \
  /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__struct.h \
  /opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.h \
