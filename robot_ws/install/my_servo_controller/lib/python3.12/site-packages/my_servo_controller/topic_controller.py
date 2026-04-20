@@ -320,7 +320,7 @@ class ServoTopicNode(Node):
                                 self.kit.servo[motor_num+2].angle = current_an
                             else:
                                 self.kit.servo[motor_num].angle = current_an
-                                self.get_logger().info(f"Motor: {motor_num+1} angle: {current_an}")
+                                #self.get_logger().info(f"Motor: {motor_num+1} angle: {current_an}")
                             # self.kit.servo[MOVE_ORDER[motor_num]].angle = current_an 
                         self.current_angles[str(motor_num+1)] = int(current_an)
 

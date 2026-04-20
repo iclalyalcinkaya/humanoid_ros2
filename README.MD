@@ -201,3 +201,17 @@ export PYTHONPATH=/home/rasp/humanoid_ros2/yolo_env/lib/python3.12/site-packages
 
 source /opt/ros/jazzy/setup.bash
 source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash
+
+        """
+        Node(
+            package='camera_ros',
+            executable='camera_node',
+            name='camera_node',
+            output='screen',
+            parameters=[
+                {'width': 640},  # Pi 5'i zorlamamak için çözünürlüğü düşük tutuyoruz
+                {'height': 480},
+                {'fps': 15}      # YOLO'nun işleme hızına uygun bir FPS
+            ]
+        ),
+        """

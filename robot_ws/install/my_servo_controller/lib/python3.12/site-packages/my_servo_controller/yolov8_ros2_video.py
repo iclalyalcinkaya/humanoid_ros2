@@ -11,7 +11,7 @@ class VideoPublisher(Node):
         super().__init__('video_publisher')
         
         # Publish to the exact topic your YOLO script is subscribed to
-        self.publisher_ = self.create_publisher(Image, 'rgb_cam/image_raw', 1)
+        self.publisher_ = self.create_publisher(Image, 'camera/image_raw', 1)
         
         # Set the path to your video file here
         self.video_path = '/home/rasp/humanoid_ros2/code_yolo/walking7.mp4' 
@@ -19,7 +19,7 @@ class VideoPublisher(Node):
         self.bridge = CvBridge()
         
         # Publish at approximately 30 FPS (1 / 30 = ~0.033 seconds)
-        timer_period = 0.5 # 0.033  
+        timer_period = 0.2 # 0.033  
         self.timer = self.create_timer(timer_period, self.timer_callback)
 
     def timer_callback(self):

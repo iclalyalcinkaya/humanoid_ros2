@@ -80,8 +80,8 @@ class ServoTopicNode(Node):
         if self.active_mode != 4:
             pan_min, pan_max = MOTOR_ANGLE_LIMITS[2]
             tilt_min, tilt_max = MOTOR_ANGLE_LIMITS[3]
-            pan_an = int(self.current_angles['2'] + msg.pan)
-            tilt_an = int(self.current_angles['3'] + msg.tilt)
+            pan_an = self.current_angles['2'] + int(msg.pan)
+            tilt_an = self.current_angles['3'] + int(msg.tilt)
             pan_angle = min(pan_max, max(pan_min, pan_an))  # Assuming msg.pan is in the range of -90 to 90
             tilt_angle = min(tilt_max, max(tilt_min, tilt_an))  # Assuming msg.tilt is in the range of -90 to 90
 
@@ -320,7 +320,7 @@ class ServoTopicNode(Node):
                                 self.kit.servo[motor_num+2].angle = current_an
                             else:
                                 self.kit.servo[motor_num].angle = current_an
-                                self.get_logger().info(f"Motor: {motor_num+1} angle: {current_an}")
+                                #self.get_logger().info(f"Motor: {motor_num+1} angle: {current_an}")
                             # self.kit.servo[MOVE_ORDER[motor_num]].angle = current_an 
                         self.current_angles[str(motor_num+1)] = int(current_an)
 

@@ -6,9 +6,15 @@ from ament_index_python import get_package_share_directory
 from launch.actions import IncludeLaunchDescription, ExecuteProcess
 from launch_xml.launch_description_sources import XMLLaunchDescriptionSource
 
+from launch.actions import AppendEnvironmentVariable
+
 def generate_launch_description():
     html_folder_path = '/home/rasp/humanoid_ros2/webpages'
     return LaunchDescription([
+        AppendEnvironmentVariable(
+            'PYTHONPATH',
+            '/home/rasp/humanoid_ros2/yolo_env/lib/python3.12/site-packages'
+        ),
         Node(
             package='my_servo_controller',
             namespace='',
