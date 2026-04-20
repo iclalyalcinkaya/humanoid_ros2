@@ -34,7 +34,7 @@ void servo_interfaces__msg__GoalPosition__rosidl_typesupport_introspection_c__Go
 static rosidl_typesupport_introspection_c__MessageMember servo_interfaces__msg__GoalPosition__rosidl_typesupport_introspection_c__GoalPosition_message_member_array[4] = {
   {
     "x",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
+    rosidl_typesupport_introspection_c__ROS_TYPE_UINT16,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is key
@@ -52,7 +52,7 @@ static rosidl_typesupport_introspection_c__MessageMember servo_interfaces__msg__
   },
   {
     "y",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
+    rosidl_typesupport_introspection_c__ROS_TYPE_UINT16,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is key
@@ -70,7 +70,7 @@ static rosidl_typesupport_introspection_c__MessageMember servo_interfaces__msg__
   },
   {
     "w",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
+    rosidl_typesupport_introspection_c__ROS_TYPE_UINT16,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is key
@@ -88,7 +88,7 @@ static rosidl_typesupport_introspection_c__MessageMember servo_interfaces__msg__
   },
   {
     "h",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
+    rosidl_typesupport_introspection_c__ROS_TYPE_UINT16,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is key

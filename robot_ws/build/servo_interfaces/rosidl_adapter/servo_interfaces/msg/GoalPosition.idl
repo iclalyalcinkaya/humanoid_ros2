@@ -6,13 +6,13 @@
 module servo_interfaces {
   module msg {
     struct GoalPosition {
-      uint8 x;
+      uint16 x;
 
-      uint8 y;
+      uint16 y;
 
-      uint8 w;
+      uint16 w;
 
-      uint8 h;
+      uint16 h;
     };
   };
 };

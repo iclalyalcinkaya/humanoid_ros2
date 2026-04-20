@@ -41,7 +41,7 @@ void GoalPosition_fini_function(void * message_memory)
 static const ::rosidl_typesupport_introspection_cpp::MessageMember GoalPosition_message_member_array[4] = {
   {
     "x",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT8,  // type
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT16,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is key
@@ -59,7 +59,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember GoalPosition_
   },
   {
     "y",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT8,  // type
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT16,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is key
@@ -77,7 +77,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember GoalPosition_
   },
   {
     "w",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT8,  // type
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT16,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is key
@@ -95,7 +95,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember GoalPosition_
   },
   {
     "h",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT8,  // type
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT16,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is key

@@ -6,7 +6,7 @@ from rclpy.node import Node
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
 
-from servo_interfaces.msg import InferenceResult, GoalPosition, Yolov8Inference
+from servo_interfaces.msg import GoalPosition, HeadMove
 bridge = CvBridge()
 
 class Camera_subscriber(Node):
@@ -19,15 +19,23 @@ class Camera_subscriber(Node):
 
         self.subscription = self.create_subscription(
             Image,
-            'camera/image_raw',
+            '/image_raw',
             self.camera_callback,
             1)
         self.subscription 
 
-        self.motor_pub = self.create_publisher(GoalPosition, "/goal_position", 1)
+        #self.motor_pub = self.create_publisher(GoalPosition, "/goal_position", 1)
         self.locked_id = None
         self.wait_counter = 0
-        self.old_lock = []
+        #self.old_lock = []
+
+        self.move_motor_pub = self.create_publisher(HeadMove, "/head_move", 10)
+
+        self.frame_width = 640
+        self.frame_height = 480
+
+        self.frame_angle_x = 35  # Assuming a horizontal field of view of 50 degrees
+        self.frame_angle_y = 25  # Assuming a vertical field of view of 25 degrees
 
     def camera_callback(self, data):
 
@@ -45,15 +53,15 @@ class Camera_subscriber(Node):
                 if self.locked_id is not None:                    
                     if self.locked_id in current_ids:
                         idx = current_ids.index(self.locked_id)
-                        self.get_logger().info(f"Locked target ID index {idx}")
+                        #self.get_logger().info(f"Locked target ID index {idx}")
                         
-                        x_center = r.boxes.xywh[idx][0].item()
+                        #x_center = r.boxes.xywh[idx][0].item()
                         y_lower = r.boxes.xyxy[idx][3].item()                      
 
                         # if there is closer object than the locked one, unlock it
                         if self.locked_id != sorted_lower_boxes[0][0].item():
                             if sorted_lower_boxes[0][1][3].item() - y_lower > 50:
-                                self.get_logger().info(f"Closer target detected. Unlocking current target ID {self.locked_id}.")
+                                #self.get_logger().info(f"Closer target detected. Unlocking current target ID {self.locked_id}.")
                                 self.locked_id = None                                             
                         
                         # If the target is to far from the center of the frame, unlock it
@@ -68,30 +76,42 @@ class Camera_subscriber(Node):
                         self.wait_counter += 1
                         if self.wait_counter > 5:
                             self.wait_counter = 0
-                            self.get_logger().info(f"Target ID is disappear {self.locked_id}.")
+                            #self.get_logger().info(f"Target ID is disappear {self.locked_id}.")
                             self.locked_id = None
 
                 # Locking to a new target if no target is currently locked
                 #self.get_logger().info(f"Current IDs: {current_ids}")
                 if self.locked_id is None:
                     self.locked_id = sorted_lower_boxes[0][0].item()  # Sadece ID değerini float/int olarak al
-                    self.get_logger().info(f"Yeni Hedef Kilitlendi: ID {self.locked_id}")
-                    self.old_lock.append(self.locked_id)
+                    #self.get_logger().info(f"Yeni Hedef Kilitlendi: ID {self.locked_id}")
+                    #self.old_lock.append(self.locked_id)
 
                 # Sending location of the target
                 if self.locked_id is not None and self.locked_id in current_ids:
                     idx = current_ids.index(self.locked_id)
-                    self.goal_position = GoalPosition()
+                    #self.goal_position = GoalPosition()
                     
-                    x, y, w, h = r.boxes.xywh[idx].tolist()
-                    self.goal_position.x = int(x)
-                    self.goal_position.y = int(y)
-                    self.goal_position.w = int(w)
-                    self.goal_position.h = int(h)
+                    #x, y, w, h = r.boxes.xywh[idx].tolist()
+                    #self.goal_position.x = int(x)
+                    #self.goal_position.y = int(y)
+                    #self.goal_position.w = int(w)
+                    #self.goal_position.h = int(h)
                     
-                    self.motor_pub.publish(self.goal_position)
-                    # self.get_logger().info(f"Yayınlanan Pozisyon: ({int(x)}, {int(y)})")
-            self.get_logger().info(f"Old locked IDs: {self.old_lock}")
+                    #self.motor_pub.publish(self.goal_position)
+
+                    x= r.boxes.xywh[idx][0].item()
+                    y= r.boxes.xywh[idx][1].item()
+
+                    move_x = ((self.frame_width / 2 - x)/(self.frame_width/2))*(self.frame_angle_x/2)  # Convert to degrees, assuming the camera's field of view is 180 degrees
+                    move_y = ((self.frame_height / 2 - y)/(self.frame_height/2))*(self.frame_angle_y/2)  # Convert to degrees
+                    #(1080, 1920)
+                    motor_goal = HeadMove()
+                    motor_goal.pan = move_x
+                    motor_goal.tilt = move_y
+                    self.move_motor_pub.publish(motor_goal)
+
+                    #self.get_logger().info(f"Goal Position Published: ({int(x)}, {int(y)})")
+            #self.get_logger().info(f"Old locked IDs: {self.old_lock}")
 
 
 def main(args=None):

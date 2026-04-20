@@ -64,39 +64,39 @@ struct GoalPosition_
 
   // field types and members
   using _x_type =
-    uint8_t;
+    uint16_t;
   _x_type x;
   using _y_type =
-    uint8_t;
+    uint16_t;
   _y_type y;
   using _w_type =
-    uint8_t;
+    uint16_t;
   _w_type w;
   using _h_type =
-    uint8_t;
+    uint16_t;
   _h_type h;
 
   // setters for named parameter idiom
   Type & set__x(
-    const uint8_t & _arg)
+    const uint16_t & _arg)
   {
     this->x = _arg;
     return *this;
   }
   Type & set__y(
-    const uint8_t & _arg)
+    const uint16_t & _arg)
   {
     this->y = _arg;
     return *this;
   }
   Type & set__w(
-    const uint8_t & _arg)
+    const uint16_t & _arg)
   {
     this->w = _arg;
     return *this;
   }
   Type & set__h(
-    const uint8_t & _arg)
+    const uint16_t & _arg)
   {
     this->h = _arg;
     return *this;

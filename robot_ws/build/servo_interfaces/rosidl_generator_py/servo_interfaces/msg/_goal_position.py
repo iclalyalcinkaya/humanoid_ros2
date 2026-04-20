@@ -70,19 +70,19 @@ class GoalPosition(metaclass=Metaclass_GoalPosition):
     ]
 
     _fields_and_field_types = {
-        'x': 'uint8',
-        'y': 'uint8',
-        'w': 'uint8',
-        'h': 'uint8',
+        'x': 'uint16',
+        'y': 'uint16',
+        'w': 'uint16',
+        'h': 'uint16',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
     # related to the data type of each of the components the message.
     SLOT_TYPES = (
-        rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
-        rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
-        rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
-        rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
+        rosidl_parser.definition.BasicType('uint16'),  # noqa: E501
+        rosidl_parser.definition.BasicType('uint16'),  # noqa: E501
+        rosidl_parser.definition.BasicType('uint16'),  # noqa: E501
+        rosidl_parser.definition.BasicType('uint16'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -155,8 +155,8 @@ class GoalPosition(metaclass=Metaclass_GoalPosition):
             assert \
                 isinstance(value, int), \
                 "The 'x' field must be of type 'int'"
-            assert value >= 0 and value < 256, \
-                "The 'x' field must be an unsigned integer in [0, 255]"
+            assert value >= 0 and value < 65536, \
+                "The 'x' field must be an unsigned integer in [0, 65535]"
         self._x = value
 
     @builtins.property
@@ -170,8 +170,8 @@ class GoalPosition(metaclass=Metaclass_GoalPosition):
             assert \
                 isinstance(value, int), \
                 "The 'y' field must be of type 'int'"
-            assert value >= 0 and value < 256, \
-                "The 'y' field must be an unsigned integer in [0, 255]"
+            assert value >= 0 and value < 65536, \
+                "The 'y' field must be an unsigned integer in [0, 65535]"
         self._y = value
 
     @builtins.property
@@ -185,8 +185,8 @@ class GoalPosition(metaclass=Metaclass_GoalPosition):
             assert \
                 isinstance(value, int), \
                 "The 'w' field must be of type 'int'"
-            assert value >= 0 and value < 256, \
-                "The 'w' field must be an unsigned integer in [0, 255]"
+            assert value >= 0 and value < 65536, \
+                "The 'w' field must be an unsigned integer in [0, 65535]"
         self._w = value
 
     @builtins.property
@@ -200,6 +200,6 @@ class GoalPosition(metaclass=Metaclass_GoalPosition):
             assert \
                 isinstance(value, int), \
                 "The 'h' field must be of type 'int'"
-            assert value >= 0 and value < 256, \
-                "The 'h' field must be an unsigned integer in [0, 255]"
+            assert value >= 0 and value < 65536, \
+                "The 'h' field must be an unsigned integer in [0, 65535]"
         self._h = value

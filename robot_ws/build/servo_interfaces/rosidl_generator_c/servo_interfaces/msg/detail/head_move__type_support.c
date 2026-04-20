@@ -5,9 +5,9 @@
 #include <string.h>
 
 #include "servo_interfaces/msg/detail/head_move__functions.h"
+#include "servo_interfaces/msg/detail/head_move__struct.h"
 #include "servo_interfaces/msg/detail/head_move__type_support.h"
 #include "rosidl_typesupport_interface/macros.h"
-#include "servo_interfaces/msg/detail/head_move__struct.h"
 
 #ifdef __cplusplus
 extern "C"

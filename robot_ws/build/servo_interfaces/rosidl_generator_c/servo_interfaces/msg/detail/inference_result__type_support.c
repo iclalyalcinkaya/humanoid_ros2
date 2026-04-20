@@ -5,8 +5,8 @@
 #include <string.h>
 
 #include "servo_interfaces/msg/detail/inference_result__type_support.h"
-#include "servo_interfaces/msg/detail/inference_result__functions.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "servo_interfaces/msg/detail/inference_result__functions.h"
 #include "servo_interfaces/msg/detail/inference_result__struct.h"
 
 #ifdef __cplusplus

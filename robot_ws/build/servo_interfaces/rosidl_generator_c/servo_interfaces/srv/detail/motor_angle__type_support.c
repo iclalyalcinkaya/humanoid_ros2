@@ -5,8 +5,8 @@
 #include <string.h>
 
 #include "servo_interfaces/srv/detail/motor_angle__functions.h"
-#include "servo_interfaces/srv/detail/motor_angle__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "servo_interfaces/srv/detail/motor_angle__struct.h"
 #include "servo_interfaces/srv/detail/motor_angle__type_support.h"
 
 #ifdef __cplusplus

@@ -6,7 +6,7 @@
         {
           "name": "x",
           "type": {
-            "type_id": 3,
+            "type_id": 5,
             "capacity": 0,
             "string_capacity": 0,
             "nested_type_name": ""
@@ -16,7 +16,7 @@
         {
           "name": "y",
           "type": {
-            "type_id": 3,
+            "type_id": 5,
             "capacity": 0,
             "string_capacity": 0,
             "nested_type_name": ""
@@ -26,7 +26,7 @@
         {
           "name": "w",
           "type": {
-            "type_id": 3,
+            "type_id": 5,
             "capacity": 0,
             "string_capacity": 0,
             "nested_type_name": ""
@@ -36,7 +36,7 @@
         {
           "name": "h",
           "type": {
-            "type_id": 3,
+            "type_id": 5,
             "capacity": 0,
             "string_capacity": 0,
             "nested_type_name": ""
@@ -50,7 +50,7 @@
   "type_hashes": [
     {
       "type_name": "servo_interfaces/msg/GoalPosition",
-      "hash_string": "RIHS01_d5852c3369227b0c19ea8243c3d7c3c65812f714c6cf1595941891d679667e95"
+      "hash_string": "RIHS01_cc3c1cee253202e265888a45bf0f7c74ac0b57969bed855b5f53ce141f4ceee6"
     }
   ]
 }

@@ -12,12 +12,12 @@ import math
 
 MOTOR_COUNT = 12
 MOTOR_ANGLE_LIMITS = [[0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180], [0, 180]]
-MOTOR_START_ANGLES = {'1': 90,  '2': 90,  '3': 90,  '4': 90,  '5': 90,  '6': 90,  '7': 90,  '8': 90,  '9': 90,  '10': 90, '11': 90, '12': 90}
+MOTOR_START_ANGLES = {'1': 90,  '2': 120,  '3': 90,  '4': 90,  '5': 90,  '6': 90,  '7': 90,  '8': 90,  '9': 90,  '10': 90, '11': 90, '12': 90}
 MODE_ANGLES = {
     1: [10, 81, 40, 90, 90, 170, 100, 60, 80, 90, 90, 90], 
     2: [90, 90, 90, 90, 90, 20, 60, 80, 80, 90, 90, 90], 
     3: [60, 105, 60, 60, 90, 120, 75, 60, 60, 90, 90, 90],
-    4: [90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90],
+    4: [90, 120, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90],
 }
 MOVE_ORDER = [14, 5, 2, 4, 13, 8, 7, 6, 9, 10, 11, 3] # The conncected order of the servos in the physical robot
 
@@ -70,18 +70,17 @@ class ServoTopicNode(Node):
         self.simulation_sub = self.create_subscription(Bool, '/sim_active', self.sim_active_callback, 10)
         self.head_sub = self.create_subscription(HeadMove, '/head_move', self.head_move_callback, 10)
 
-        """
-        run_mode_sequence(4) # Move to neutral pose on startup
         self.active_mode = 4
-        """
+        self.run_mode_sequence(4) # Move to neutral pose on startup
+        
 
     def head_move_callback(self, msg):
         # Convert the pan and tilt values to motor angles
         if self.active_mode != 4:
             pan_min, pan_max = MOTOR_ANGLE_LIMITS[2]
             tilt_min, tilt_max = MOTOR_ANGLE_LIMITS[3]
-            pan_an = int(self.current_angles['2'] + msg.pan)
-            tilt_an = int(self.current_angles['3'] + msg.tilt)
+            pan_an = self.current_angles['2'] + int(msg.pan)
+            tilt_an = self.current_angles['3'] + int(msg.tilt)
             pan_angle = min(pan_max, max(pan_min, pan_an))  # Assuming msg.pan is in the range of -90 to 90
             tilt_angle = min(tilt_max, max(tilt_min, tilt_an))  # Assuming msg.tilt is in the range of -90 to 90
 
@@ -90,9 +89,9 @@ class ServoTopicNode(Node):
                 self.active_mode = 0
                 self.head_track = False
                 self.head_thread.join(timeout=0.5)
-            self.get_logger().info(f"Head Move Received: Pan {msg.pan} -> {pan_angle}, Tilt {msg.tilt} -> {tilt_angle}")
+            self.get_logger().info(f"Head Move Received: Pan {int(msg.pan)} -> {pan_angle} current pan: {self.current_angles['2']}")
             self.head_track = True
-            self.head_thread = threading.Thread(target=self.sendMultipleMotorGoals, args=({2: pan_angle, 3: tilt_angle}, self.speed))
+            self.head_thread = threading.Thread(target=self.sendMultipleMotorGoals, args=({1: pan_angle, 2: tilt_angle}, 20))
             self.head_thread.start()
 
     def sim_active_callback(self, msg):
@@ -182,11 +181,15 @@ class ServoTopicNode(Node):
             for i in range(11, -1, -1):
                 if self.active_mode != mode_num: return # Exit if mode changed
                 self.sendMotorGoal(i, angles[i])
+            self.active_mode = 0 # Return to idle after pose is complete
         else:
             self.speed = 5
             for i in range(12):
                 if self.active_mode != mode_num: return
                 self.sendMotorGoal(i, angles[i])
+            if mode_num == 4:
+                self.active_mode = 0 # Return to idle after going to neutral pose
+
 
         # 2. WAVE MODE (Continuous)
         if mode_num == 2:

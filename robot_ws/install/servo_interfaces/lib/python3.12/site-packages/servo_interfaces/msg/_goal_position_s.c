@@ -56,7 +56,7 @@ bool servo_interfaces__msg__goal_position__convert_from_py(PyObject * _pymsg, vo
       return false;
     }
     assert(PyLong_Check(field));
-    ros_message->x = (uint8_t)PyLong_AsUnsignedLong(field);
+    ros_message->x = (uint16_t)PyLong_AsUnsignedLong(field);
     Py_DECREF(field);
   }
   {  // y
@@ -65,7 +65,7 @@ bool servo_interfaces__msg__goal_position__convert_from_py(PyObject * _pymsg, vo
       return false;
     }
     assert(PyLong_Check(field));
-    ros_message->y = (uint8_t)PyLong_AsUnsignedLong(field);
+    ros_message->y = (uint16_t)PyLong_AsUnsignedLong(field);
     Py_DECREF(field);
   }
   {  // w
@@ -74,7 +74,7 @@ bool servo_interfaces__msg__goal_position__convert_from_py(PyObject * _pymsg, vo
       return false;
     }
     assert(PyLong_Check(field));
-    ros_message->w = (uint8_t)PyLong_AsUnsignedLong(field);
+    ros_message->w = (uint16_t)PyLong_AsUnsignedLong(field);
     Py_DECREF(field);
   }
   {  // h
@@ -83,7 +83,7 @@ bool servo_interfaces__msg__goal_position__convert_from_py(PyObject * _pymsg, vo
       return false;
     }
     assert(PyLong_Check(field));
-    ros_message->h = (uint8_t)PyLong_AsUnsignedLong(field);
+    ros_message->h = (uint16_t)PyLong_AsUnsignedLong(field);
     Py_DECREF(field);
   }
 

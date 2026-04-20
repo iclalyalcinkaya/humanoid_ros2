@@ -1,4 +1,4 @@
-uint8 x
-uint8 y
-uint8 w
-uint8 h
+uint16 x
+uint16 y
+uint16 w
+uint16 h

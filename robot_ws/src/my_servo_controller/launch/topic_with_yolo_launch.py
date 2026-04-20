@@ -29,20 +29,6 @@ def generate_launch_description():
             name='yolov8_ros2_pt_node',
             output='screen'
         ),
-        Node(
-            package='my_servo_controller',
-            namespace='',
-            executable='head_controller_node',
-            name='head_controller_node',
-            output='screen'
-        ),
-        Node(
-            package='my_servo_controller',
-            namespace='',
-            executable='yolov8_ros2_video_node',
-            name='yolov8_ros2_video_node',
-            output='screen'
-        ),
         IncludeLaunchDescription(
             XMLLaunchDescriptionSource(
                 os.path.join(
@@ -55,5 +41,18 @@ def generate_launch_description():
             cmd=['python3', '-m', 'http.server', '--directory', html_folder_path],
             #cwd=html_folder_path, #html folder
             output='screen'
+        ),
+        Node(
+            package='usb_cam',
+            executable='usb_cam_node_exe',
+            name='usb_cam',
+            output='screen',
+            parameters=[
+                {'video_device': '/dev/video0'}, # Kameranın Linux'taki varsayılan adresi
+                {'framerate': 10.0},             # Sistemi yormamak için 10 FPS ile sınırlıyoruz
+                {'image_width': 640},            # Çözünürlük genişliği
+                {'image_height': 480},           # Çözünürlük yüksekliği
+                {'pixel_format': 'yuyv'}         # Logitech kameralar için en stabil format
+            ],
         ),
     ])

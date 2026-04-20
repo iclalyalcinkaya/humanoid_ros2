@@ -22,10 +22,10 @@ extern "C"
 /// Struct defined in msg/GoalPosition in the package servo_interfaces.
 typedef struct servo_interfaces__msg__GoalPosition
 {
-  uint8_t x;
-  uint8_t y;
-  uint8_t w;
-  uint8_t h;
+  uint16_t x;
+  uint16_t y;
+  uint16_t w;
+  uint16_t h;
 } servo_interfaces__msg__GoalPosition;
 
 // Struct for a sequence of servo_interfaces__msg__GoalPosition.

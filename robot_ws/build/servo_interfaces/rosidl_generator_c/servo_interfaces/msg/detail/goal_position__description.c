@@ -11,10 +11,10 @@ servo_interfaces__msg__GoalPosition__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0xd5, 0x85, 0x2c, 0x33, 0x69, 0x22, 0x7b, 0x0c,
-      0x19, 0xea, 0x82, 0x43, 0xc3, 0xd7, 0xc3, 0xc6,
-      0x58, 0x12, 0xf7, 0x14, 0xc6, 0xcf, 0x15, 0x95,
-      0x94, 0x18, 0x91, 0xd6, 0x79, 0x66, 0x7e, 0x95,
+      0xcc, 0x3c, 0x1c, 0xee, 0x25, 0x32, 0x02, 0xe2,
+      0x65, 0x88, 0x8a, 0x45, 0xbf, 0x0f, 0x7c, 0x74,
+      0xac, 0x0b, 0x57, 0x96, 0x9b, 0xed, 0x85, 0x5b,
+      0x5f, 0x53, 0xce, 0x14, 0x1f, 0x4c, 0xee, 0xe6,
     }};
   return &hash;
 }
@@ -40,7 +40,7 @@ static rosidl_runtime_c__type_description__Field servo_interfaces__msg__GoalPosi
   {
     {servo_interfaces__msg__GoalPosition__FIELD_NAME__x, 1, 1},
     {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT8,
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT16,
       0,
       0,
       {NULL, 0, 0},
@@ -50,7 +50,7 @@ static rosidl_runtime_c__type_description__Field servo_interfaces__msg__GoalPosi
   {
     {servo_interfaces__msg__GoalPosition__FIELD_NAME__y, 1, 1},
     {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT8,
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT16,
       0,
       0,
       {NULL, 0, 0},
@@ -60,7 +60,7 @@ static rosidl_runtime_c__type_description__Field servo_interfaces__msg__GoalPosi
   {
     {servo_interfaces__msg__GoalPosition__FIELD_NAME__w, 1, 1},
     {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT8,
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT16,
       0,
       0,
       {NULL, 0, 0},
@@ -70,7 +70,7 @@ static rosidl_runtime_c__type_description__Field servo_interfaces__msg__GoalPosi
   {
     {servo_interfaces__msg__GoalPosition__FIELD_NAME__h, 1, 1},
     {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT8,
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT16,
       0,
       0,
       {NULL, 0, 0},
@@ -99,10 +99,10 @@ servo_interfaces__msg__GoalPosition__get_type_description(
 }
 
 static char toplevel_type_raw_source[] =
-  "uint8 x\n"
-  "uint8 y\n"
-  "uint8 w\n"
-  "uint8 h";
+  "uint16 x\n"
+  "uint16 y\n"
+  "uint16 w\n"
+  "uint16 h";
 
 static char msg_encoding[] = "msg";
 
@@ -116,7 +116,7 @@ servo_interfaces__msg__GoalPosition__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {servo_interfaces__msg__GoalPosition__TYPE_NAME, 33, 33},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 31, 31},
+    {toplevel_type_raw_source, 35, 35},
   };
   return &source;
 }

@@ -11,21 +11,21 @@ class Goal_subscriber(Node):
             GoalPosition,
             'goal_position',
             self.goal_callback,
-            10)
+            1)
         self.subscription
 
         self.move_motor_pub = self.create_publisher(HeadMove, "/head_move", 10)
 
-        self.frame_width = 1920
-        self.frame_height = 1080
+        self.frame_width = 640
+        self.frame_height = 480
 
-        self.frame_angle_x = 65  # Assuming a horizontal field of view of 65 degrees
-        self.frame_angle_y = 45  # Assuming a vertical field of view of 45 degrees
+        self.frame_angle_x = 35  # Assuming a horizontal field of view of 50 degrees
+        self.frame_angle_y = 25  # Assuming a vertical field of view of 25 degrees
 
     def goal_callback(self, data):
         self.get_logger().info(f"Received goal position: ({data.x}, {data.y}), size: ({data.w}, {data.h})")
-        move_x = ((self.frame_width // 2 - data.x)/(self.frame_width/2))*self.frame_angle_x/2  # Convert to degrees, assuming the camera's field of view is 180 degrees
-        move_y = ((self.frame_height // 2 - data.y)/(self.frame_height/2))*self.frame_angle_y/2  # Convert to degrees
+        move_x = ((self.frame_width / 2 - data.x)/(self.frame_width/2))*(self.frame_angle_x/2)  # Convert to degrees, assuming the camera's field of view is 180 degrees
+        move_y = ((self.frame_height / 2 - data.y)/(self.frame_height/2))*(self.frame_angle_y/2)  # Convert to degrees
         #(1080, 1920)
         motor_goal = HeadMove()
         motor_goal.pan = move_x

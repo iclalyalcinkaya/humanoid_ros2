@@ -370,22 +370,22 @@ pub struct GoalPosition {
 
     // This member is not documented.
     #[allow(missing_docs)]
-    pub x: u8,
+    pub x: u16,
 
 
     // This member is not documented.
     #[allow(missing_docs)]
-    pub y: u8,
+    pub y: u16,
 
 
     // This member is not documented.
     #[allow(missing_docs)]
-    pub w: u8,
+    pub w: u16,
 
 
     // This member is not documented.
     #[allow(missing_docs)]
-    pub h: u8,
+    pub h: u16,
 
 }
 
