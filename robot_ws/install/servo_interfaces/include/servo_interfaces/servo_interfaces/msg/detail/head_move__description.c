@@ -11,10 +11,10 @@ servo_interfaces__msg__HeadMove__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0xcf, 0x84, 0x2d, 0xbd, 0x3e, 0xf4, 0x79, 0x87,
-      0xe8, 0x99, 0x13, 0x6c, 0xf7, 0xff, 0x77, 0xba,
-      0xe8, 0x83, 0x62, 0x36, 0x5d, 0xc0, 0x78, 0xb7,
-      0x14, 0xa9, 0x78, 0xb7, 0x8d, 0x35, 0xd8, 0x14,
+      0xac, 0x2c, 0x24, 0x88, 0xa9, 0xb6, 0x1d, 0xdf,
+      0xb1, 0x3a, 0x7d, 0x10, 0xa6, 0xe7, 0xf6, 0xb1,
+      0xa1, 0xb1, 0x79, 0x24, 0x69, 0xb5, 0xbf, 0x91,
+      0x11, 0x78, 0x9d, 0xf2, 0xce, 0x4a, 0x1e, 0x68,
     }};
   return &hash;
 }
@@ -38,7 +38,7 @@ static rosidl_runtime_c__type_description__Field servo_interfaces__msg__HeadMove
   {
     {servo_interfaces__msg__HeadMove__FIELD_NAME__pan, 3, 3},
     {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_INT16,
       0,
       0,
       {NULL, 0, 0},
@@ -48,7 +48,7 @@ static rosidl_runtime_c__type_description__Field servo_interfaces__msg__HeadMove
   {
     {servo_interfaces__msg__HeadMove__FIELD_NAME__tilt, 4, 4},
     {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_INT16,
       0,
       0,
       {NULL, 0, 0},
@@ -77,8 +77,8 @@ servo_interfaces__msg__HeadMove__get_type_description(
 }
 
 static char toplevel_type_raw_source[] =
-  "float32 pan\n"
-  "float32 tilt";
+  "int16 pan\n"
+  "int16 tilt";
 
 static char msg_encoding[] = "msg";
 
@@ -92,7 +92,7 @@ servo_interfaces__msg__HeadMove__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {servo_interfaces__msg__HeadMove__TYPE_NAME, 29, 29},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 24, 24},
+    {toplevel_type_raw_source, 20, 20},
   };
   return &source;
 }

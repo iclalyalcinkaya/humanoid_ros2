@@ -34,7 +34,7 @@ void servo_interfaces__msg__HeadMove__rosidl_typesupport_introspection_c__HeadMo
 static rosidl_typesupport_introspection_c__MessageMember servo_interfaces__msg__HeadMove__rosidl_typesupport_introspection_c__HeadMove_message_member_array[2] = {
   {
     "pan",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT16,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is key
@@ -52,7 +52,7 @@ static rosidl_typesupport_introspection_c__MessageMember servo_interfaces__msg__
   },
   {
     "tilt",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT16,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is key

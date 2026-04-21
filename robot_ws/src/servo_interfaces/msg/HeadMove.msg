@@ -1,2 +1,2 @@
-float32 pan
-float32 tilt
+int16 pan
+int16 tilt

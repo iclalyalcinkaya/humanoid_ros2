@@ -14,8 +14,6 @@ ros_python_check_fields = getenv('ROS_PYTHON_CHECK_FIELDS', default='')
 
 import builtins  # noqa: E402, I100
 
-import math  # noqa: E402, I100
-
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -70,15 +68,15 @@ class HeadMove(metaclass=Metaclass_HeadMove):
     ]
 
     _fields_and_field_types = {
-        'pan': 'float',
-        'tilt': 'float',
+        'pan': 'int16',
+        'tilt': 'int16',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
     # related to the data type of each of the components the message.
     SLOT_TYPES = (
-        rosidl_parser.definition.BasicType('float'),  # noqa: E501
-        rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int16'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int16'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -90,8 +88,8 @@ class HeadMove(metaclass=Metaclass_HeadMove):
             assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
                 'Invalid arguments passed to constructor: %s' % \
                 ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.pan = kwargs.get('pan', float())
-        self.tilt = kwargs.get('tilt', float())
+        self.pan = kwargs.get('pan', int())
+        self.tilt = kwargs.get('tilt', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -143,10 +141,10 @@ class HeadMove(metaclass=Metaclass_HeadMove):
     def pan(self, value):
         if self._check_fields:
             assert \
-                isinstance(value, float), \
-                "The 'pan' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'pan' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+                isinstance(value, int), \
+                "The 'pan' field must be of type 'int'"
+            assert value >= -32768 and value < 32768, \
+                "The 'pan' field must be an integer in [-32768, 32767]"
         self._pan = value
 
     @builtins.property
@@ -158,8 +156,8 @@ class HeadMove(metaclass=Metaclass_HeadMove):
     def tilt(self, value):
         if self._check_fields:
             assert \
-                isinstance(value, float), \
-                "The 'tilt' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'tilt' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+                isinstance(value, int), \
+                "The 'tilt' field must be of type 'int'"
+            assert value >= -32768 and value < 32768, \
+                "The 'tilt' field must be an integer in [-32768, 32767]"
         self._tilt = value

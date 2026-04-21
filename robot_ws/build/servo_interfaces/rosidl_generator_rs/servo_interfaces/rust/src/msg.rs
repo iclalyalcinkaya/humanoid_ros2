@@ -348,12 +348,12 @@ pub struct HeadMove {
 
     // This member is not documented.
     #[allow(missing_docs)]
-    pub pan: f32,
+    pub pan: i16,
 
 
     // This member is not documented.
     #[allow(missing_docs)]
-    pub tilt: f32,
+    pub tilt: i16,
 
 }
 

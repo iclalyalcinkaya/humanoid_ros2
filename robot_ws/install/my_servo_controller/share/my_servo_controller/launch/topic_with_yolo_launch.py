@@ -49,10 +49,10 @@ def generate_launch_description():
             output='screen',
             parameters=[
                 {'video_device': '/dev/video0'}, # Kameranın Linux'taki varsayılan adresi
-                {'framerate': 5.0},             # Sistemi yormamak için 10 FPS ile sınırlıyoruz
+                {'framerate': 10.0},             # Sistemi yormamak için 10 FPS ile sınırlıyoruz
                 {'image_width': 640},            # Çözünürlük genişliği
                 {'image_height': 480},           # Çözünürlük yüksekliği
-                {'pixel_format': 'yuyv'}         # Logitech kameralar için en stabil format
+                {'pixel_format': 'mjpeg2rgb'}         # Logitech kameralar için en stabil format
             ],
         ),
     ])

@@ -22,8 +22,8 @@ extern "C"
 /// Struct defined in msg/HeadMove in the package servo_interfaces.
 typedef struct servo_interfaces__msg__HeadMove
 {
-  float pan;
-  float tilt;
+  int16_t pan;
+  int16_t tilt;
 } servo_interfaces__msg__HeadMove;
 
 // Struct for a sequence of servo_interfaces__msg__HeadMove.

@@ -55,8 +55,8 @@ bool servo_interfaces__msg__head_move__convert_from_py(PyObject * _pymsg, void *
     if (!field) {
       return false;
     }
-    assert(PyFloat_Check(field));
-    ros_message->pan = (float)PyFloat_AS_DOUBLE(field);
+    assert(PyLong_Check(field));
+    ros_message->pan = (int16_t)PyLong_AsLong(field);
     Py_DECREF(field);
   }
   {  // tilt
@@ -64,8 +64,8 @@ bool servo_interfaces__msg__head_move__convert_from_py(PyObject * _pymsg, void *
     if (!field) {
       return false;
     }
-    assert(PyFloat_Check(field));
-    ros_message->tilt = (float)PyFloat_AS_DOUBLE(field);
+    assert(PyLong_Check(field));
+    ros_message->tilt = (int16_t)PyLong_AsLong(field);
     Py_DECREF(field);
   }
 
@@ -92,7 +92,7 @@ PyObject * servo_interfaces__msg__head_move__convert_to_py(void * raw_ros_messag
   servo_interfaces__msg__HeadMove * ros_message = (servo_interfaces__msg__HeadMove *)raw_ros_message;
   {  // pan
     PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->pan);
+    field = PyLong_FromLong(ros_message->pan);
     {
       int rc = PyObject_SetAttrString(_pymessage, "pan", field);
       Py_DECREF(field);
@@ -103,7 +103,7 @@ PyObject * servo_interfaces__msg__head_move__convert_to_py(void * raw_ros_messag
   }
   {  // tilt
     PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->tilt);
+    field = PyLong_FromLong(ros_message->tilt);
     {
       int rc = PyObject_SetAttrString(_pymessage, "tilt", field);
       Py_DECREF(field);

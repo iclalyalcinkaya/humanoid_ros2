@@ -65,9 +65,13 @@
             <button class="btn mode-btn" id="btnMode4" onclick="setMode(4)">Home</button>
         </div>
 
-        <div class="control-row" style="justify-content: center; gap: 20px;">
+        <div class="control-row" style="justify-content: center; gap: 20px;">   
             <button class="btn"><a href="action_index.html" style="color: #ffffff;">Action Page</a></button>
             <button class="btn" onclick="cancelAll()">STOP ALL</button>
+            <div class="pid-group" style="gap: 0px">
+                <button class="btn sim-btn" id="btnHeadDeactive" onclick="headActive()" style="display:none; width: 190px;">Activate Head Tracking</button>
+                <button class="btn sim-btn active" id="btnHeadActive" onclick="headActive()" style="width: 190px;">Deactivate Head Tracking</button>
+            </div>
             <div class="pid-group">
                 <label for="speed">Speed:</label>
                 <button class="step-btn" onclick="adjustSpeed('speed', -10)">-10</button>
@@ -124,6 +128,7 @@
         let modeTopic;
         let manualCmdTopic;
         let simActiveTopic;
+        let headActiveTopic;
         let checked = true;
         let ID;
         let myClientId;
@@ -180,6 +185,12 @@
                     messageType : 'std_msgs/msg/Bool'
                 });
 
+                headActiveTopic = new ROSLIB.Topic({
+                    ros : ros,
+                    name : '/head_active',
+                    messageType : 'std_msgs/msg/Bool'
+                });
+
                 ID = new ROSLIB.Topic({
                     ros : ros,
                     name : '/connected_clients',
@@ -214,6 +225,27 @@
                 };
                 simActiveTopic.publish(msg);
                 console.log(`Simulation: ${sim}`);
+            }
+        }
+
+        let head = true;
+        function headActive(){
+            if(head){
+                head = false;
+                document.getElementById('btnHeadDeactive').style.display = 'inline';
+                document.getElementById('btnHeadActive').style.display = 'none';
+
+            }else{
+                head = true;
+                document.getElementById('btnHeadDeactive').style.display = 'none';
+                document.getElementById('btnHeadActive').style.display = 'inline';
+            }
+            if(headActiveTopic) {
+                var msg = {
+                    data: head
+                };
+                headActiveTopic.publish(msg);
+                console.log(`Head Movement: ${head}`);
             }
         }
 
