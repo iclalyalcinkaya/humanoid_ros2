@@ -184,6 +184,11 @@ ros2 launch my_servo_controller topic_controller_launch.py
 IP adresini gir ve bağlan.
 Simülasyon aktivasyon butonuna bas.
 
+## YOLOv8
+YOLOv8 kullanılarak robotun kafası ile önünden geçen insanları takip edebilecek bir algoritma hazırlanmıştır.
+
+yolov8_ros2_pt_node ile kameradan alınan görüntü işlenir ve önünde bulunan insanları tespit eder. En yakında bulunan kişinin merkeze olan uzaklığını   kontrol düğümüne gönderir. Kontrol düğümü ise bu uzaklığa göre kafayı yönlendirir. 
+
 ## OLUŞABİLECEK SORUNLAR  
 Çarpmayı algılayamadan devam edebilir. Onun için bir hata durumu koymalı veya acil durum butonu yeterli olur.
 
@@ -201,17 +206,3 @@ export PYTHONPATH=/home/rasp/humanoid_ros2/yolo_env/lib/python3.12/site-packages
 
 source /opt/ros/jazzy/setup.bash
 source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash
-
-        """
-        Node(
-            package='camera_ros',
-            executable='camera_node',
-            name='camera_node',
-            output='screen',
-            parameters=[
-                {'width': 640},  # Pi 5'i zorlamamak için çözünürlüğü düşük tutuyoruz
-                {'height': 480},
-                {'fps': 15}      # YOLO'nun işleme hızına uygun bir FPS
-            ]
-        ),
-        """

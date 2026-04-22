@@ -37,16 +37,6 @@ class Camera_subscriber(Node):
         self.frame_width = 640
         self.frame_height = 480
 
-        self.frame_angle_x = 27  # Step size in degrees for the horizontal field of view of the camera
-        self.frame_angle_y = 25  # Step size in degrees for the vertical field of view of the camera
-
-        self.center_x = self.frame_width / 2.0
-        self.center_y = self.frame_height / 2.0
-        
-        # Degrees per pixel (eliminates multiple divisions per frame)
-        self.deg_per_px_x = self.frame_angle_x / self.frame_width
-        self.deg_per_px_y = self.frame_angle_y / self.frame_height
-
     def head_active_callback(self, msg):
         self.head_active = msg.data
 
@@ -54,8 +44,8 @@ class Camera_subscriber(Node):
         if not self.head_active:
             return
         img = bridge.imgmsg_to_cv2(data, "bgr8")
-        results = self.model.track(img, conf=0.6, classes=[0], persist=True, tracker="bytetrack.yaml", stream=False, show_conf=False, save=False, save_frames=False, imgsz=[self.frame_height, self.frame_width])
-        #results = self.model.track(img, conf=0.6, classes=[0], persist=True, tracker="botsort.yaml", stream=False, show_conf=False, save=True, save_frames=True, imgsz=(self.frame_width, self.frame_height))
+        results = self.model.track(img, conf=0.6, classes=[0], persist=True, tracker="bytetrack.yaml", stream=False, show_conf=False, save=True, save_frames=True, imgsz=[self.frame_height, self.frame_width])
+        #results = self.model.track(img, conf=0.6, classes=[0], persist=True, tracker="botsort.yaml", stream=False, show_conf=False, save=True, save_frames=True, imgsz=[self.frame_height, self.frame_width])
 
         for r in results:            
             if r.boxes.is_track and r.boxes.id is not None:
@@ -101,31 +91,18 @@ class Camera_subscriber(Node):
                     #self.old_lock.append(self.locked_id)
 
                 # Sending location of the target
-                if self.locked_id is not None and self.locked_id in current_ids:
+                if self.locked_id is not None and self.wait_counter == 0:
                     idx = current_ids.index(self.locked_id)
 
-                    x= r.boxes.xywh[idx][0].item()
-                    y= r.boxes.xywh[idx][1].item()
+                    x = r.boxes.xywh[idx][0].item()
+                    y = r.boxes.xywh[idx][1].item()
 
                     self.get_logger().info(f"Locked Target ID {self.locked_id} Position: ({int(x)}, {int(y)})")
-                    error_x = self.center_x - x
-                    error_y = self.center_y - y
-
-                    # Ignore movements smaller than 20 pixels
-                    if abs(error_x) < 30:
-                        error_x = 0.0
-                    if abs(error_y) < 20:
-                        error_y = 0.0
-
-                    if error_x != 0.0 or error_y != 0.0:
-                        move_x = error_x * self.deg_per_px_x
-                        move_y = error_y * self.deg_per_px_y
-                        
-                        motor_goal = HeadMove()
-                        motor_goal.pan = int(move_x)
-                        motor_goal.tilt = int(move_y)
-                        
-                        self.move_motor_pub.publish(motor_goal)
+                    
+                    motor_goal = HeadMove()
+                    motor_goal.pan = x
+                    motor_goal.tilt = y
+                    self.move_motor_pub.publish(motor_goal)
 
                     #self.get_logger().info(f"Goal Position Published: ({int(x)}, {int(y)})")
             #self.get_logger().info(f"Old locked IDs: {self.old_lock}")

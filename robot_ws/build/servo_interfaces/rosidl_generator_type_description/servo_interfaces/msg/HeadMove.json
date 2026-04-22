@@ -6,7 +6,7 @@
         {
           "name": "pan",
           "type": {
-            "type_id": 4,
+            "type_id": 10,
             "capacity": 0,
             "string_capacity": 0,
             "nested_type_name": ""
@@ -16,7 +16,7 @@
         {
           "name": "tilt",
           "type": {
-            "type_id": 4,
+            "type_id": 10,
             "capacity": 0,
             "string_capacity": 0,
             "nested_type_name": ""
@@ -30,7 +30,7 @@
   "type_hashes": [
     {
       "type_name": "servo_interfaces/msg/HeadMove",
-      "hash_string": "RIHS01_ac2c2488a9b61ddfb13a7d10a6e7f6b1a1b1792469b5bf9111789df2ce4a1e68"
+      "hash_string": "RIHS01_cf842dbd3ef47987e899136cf7ff77bae88362365dc078b714a978b78d35d814"
     }
   ]
 }

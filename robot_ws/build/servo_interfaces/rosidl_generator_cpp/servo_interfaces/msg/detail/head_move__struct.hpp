@@ -42,8 +42,8 @@ struct HeadMove_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->pan = 0;
-      this->tilt = 0;
+      this->pan = 0.0f;
+      this->tilt = 0.0f;
     }
   }
 
@@ -53,28 +53,28 @@ struct HeadMove_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->pan = 0;
-      this->tilt = 0;
+      this->pan = 0.0f;
+      this->tilt = 0.0f;
     }
   }
 
   // field types and members
   using _pan_type =
-    int16_t;
+    float;
   _pan_type pan;
   using _tilt_type =
-    int16_t;
+    float;
   _tilt_type tilt;
 
   // setters for named parameter idiom
   Type & set__pan(
-    const int16_t & _arg)
+    const float & _arg)
   {
     this->pan = _arg;
     return *this;
   }
   Type & set__tilt(
-    const int16_t & _arg)
+    const float & _arg)
   {
     this->tilt = _arg;
     return *this;

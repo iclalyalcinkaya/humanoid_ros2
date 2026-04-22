@@ -41,7 +41,7 @@ void HeadMove_fini_function(void * message_memory)
 static const ::rosidl_typesupport_introspection_cpp::MessageMember HeadMove_message_member_array[2] = {
   {
     "pan",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT16,  // type
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is key
@@ -59,7 +59,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember HeadMove_mess
   },
   {
     "tilt",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT16,  // type
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is key

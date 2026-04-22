@@ -6,9 +6,9 @@
 module servo_interfaces {
   module msg {
     struct HeadMove {
-      int16 pan;
+      float pan;
 
-      int16 tilt;
+      float tilt;
     };
   };
 };

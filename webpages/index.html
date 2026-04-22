@@ -235,6 +235,14 @@
                 document.getElementById('btnHeadDeactive').style.display = 'inline';
                 document.getElementById('btnHeadActive').style.display = 'none';
 
+                if(modeTopic) {
+                var msg = {
+                    mode: 5,
+                    client_id: myClientId
+                };
+                modeTopic.publish(msg);
+                console.log(`Sent Mode: 5 (Head Pose)`);
+            }
             }else{
                 head = true;
                 document.getElementById('btnHeadDeactive').style.display = 'none';
