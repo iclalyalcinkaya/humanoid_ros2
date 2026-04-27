@@ -11,8 +11,8 @@ setup.py
 launch/action_controller_launch.py
 launch/flask_controller_launch.py
 launch/gazibo_sim_launch.py
+launch/head_with_yolo_launch.py
 launch/topic_controller_launch.py
-launch/topic_with_yolo_launch.py
 my_servo_controller/__init__.py
 my_servo_controller/action_controller.py
 my_servo_controller/flask_controller.py
@@ -22,7 +22,6 @@ my_servo_controller/servo_controller.py
 my_servo_controller/servo_mover.py
 my_servo_controller/topic_controller.py
 my_servo_controller/yolov8_ros2_pt.py
-my_servo_controller/yolov8_ros2_subscriber.py
 my_servo_controller/yolov8_ros2_video.py
 resource/my_servo_controller
 test/test_copyright.py

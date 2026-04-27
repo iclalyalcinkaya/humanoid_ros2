@@ -209,16 +209,16 @@ CMakeFiles/servo_interfaces__rosidl_generator_py.dir/rosidl_generator_py/servo_i
  /usr/include/python3.12/cpython/pyfpe.h \
  /usr/include/python3.12/tracemalloc.h \
  /usr/lib/gcc/aarch64-linux-gnu/13/include/stdbool.h \
- /home/rasp/humanoid_ros2/yolo_env/lib/python3.12/site-packages/numpy/core/include/numpy/ndarrayobject.h \
- /home/rasp/humanoid_ros2/yolo_env/lib/python3.12/site-packages/numpy/core/include/numpy/ndarraytypes.h \
- /home/rasp/humanoid_ros2/yolo_env/lib/python3.12/site-packages/numpy/core/include/numpy/npy_common.h \
- /home/rasp/humanoid_ros2/yolo_env/lib/python3.12/site-packages/numpy/core/include/numpy/numpyconfig.h \
- /home/rasp/humanoid_ros2/yolo_env/lib/python3.12/site-packages/numpy/core/include/numpy/_numpyconfig.h \
- /home/rasp/humanoid_ros2/yolo_env/lib/python3.12/site-packages/numpy/core/include/numpy/npy_endian.h \
- /home/rasp/humanoid_ros2/yolo_env/lib/python3.12/site-packages/numpy/core/include/numpy/npy_cpu.h \
- /home/rasp/humanoid_ros2/yolo_env/lib/python3.12/site-packages/numpy/core/include/numpy/utils.h \
- /home/rasp/humanoid_ros2/yolo_env/lib/python3.12/site-packages/numpy/core/include/numpy/_neighborhood_iterator_imp.h \
- /home/rasp/humanoid_ros2/yolo_env/lib/python3.12/site-packages/numpy/core/include/numpy/__multiarray_api.h \
+ /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarrayobject.h \
+ /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarraytypes.h \
+ /usr/lib/python3/dist-packages/numpy/core/include/numpy/npy_common.h \
+ /usr/lib/python3/dist-packages/numpy/core/include/numpy/numpyconfig.h \
+ /usr/lib/python3/dist-packages/numpy/core/include/numpy/_numpyconfig.h \
+ /usr/lib/python3/dist-packages/numpy/core/include/numpy/npy_endian.h \
+ /usr/lib/python3/dist-packages/numpy/core/include/numpy/npy_cpu.h \
+ /usr/lib/python3/dist-packages/numpy/core/include/numpy/utils.h \
+ /usr/lib/python3/dist-packages/numpy/core/include/numpy/_neighborhood_iterator_imp.h \
+ /usr/lib/python3/dist-packages/numpy/core/include/numpy/__multiarray_api.h \
  /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
  /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/msg/detail/set_mode__struct.h \
  /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/string.h \

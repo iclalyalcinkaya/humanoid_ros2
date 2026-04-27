@@ -6,7 +6,7 @@ from adafruit_servokit import ServoKit
 import time
 import threading
 from rosbridge_msgs.msg import ConnectedClients
-from servo_interfaces.msg import SetMode, SetPwm, HeadMove
+from servo_interfaces.msg import SetMode, SetPwm
 from std_msgs.msg import Float64, Bool
 import math
 
@@ -61,80 +61,21 @@ class ServoTopicNode(Node):
             topic_name = f'/h1/{joint_name}/cmd_pos'
             self.gazebo_pubs[motor_idx] = self.create_publisher(Float64, topic_name, 10)
 
+        for motor_num in range(MOTOR_COUNT):
+            self.kit.servo[motor_num].angle = MODE_ANGLES[4][motor_num] # Ensure physical motors are in the correct starting position
+        #self.active_mode = 4
+        #self.run_mode_sequence(4)
+
         self.client_sub = self.create_subscription(ConnectedClients, '/connected_clients', self.client_sub_callback, 10)
         self.mode_sub = self.create_subscription(SetMode, '/set_mode', self.mode_sub_callback, 10)
         self.cmd_sub = self.create_subscription(SetPwm, '/web_cmd', self.web_cmd_callback, 10)
         self.simulation_sub = self.create_subscription(Bool, '/sim_active', self.sim_active_callback, 10)
-        self.head_move = self.create_subscription(HeadMove, '/head_move', self.head_move_callback, 10)
-        self.head_active_sub = self.create_subscription(Bool, '/head_active', self.head_active_callback, 10)
-
-        self.pan_min, self.pan_max = MOTOR_ANGLE_LIMITS[2]
-        self.tilt_min, self.tilt_max = MOTOR_ANGLE_LIMITS[3]
-
-        self.frame_width = 640
-        self.frame_height = 480
-
-        # Values below acts like the Proportional factor in PID
-        self.frame_angle_x = 35 
-        self.frame_angle_y = 25 
-
-        self.center_x = self.frame_width / 2.0
-        self.center_y = self.frame_height / 2.0
         
-        # Degrees per pixel (eliminates multiple divisions per frame)
-        self.deg_per_px_x = self.frame_angle_x / self.frame_width
-        self.deg_per_px_y = self.frame_angle_y / self.frame_height
-
-        self.Kp = 1
-
-        self.head_active = False
-        for motor_num in range(MOTOR_COUNT):
-            self.kit.servo[motor_num].angle = MODE_ANGLES[4][motor_num] # Ensure physical motors are in the correct starting position
-        self.head_active = True
-
-    def head_move_callback(self, msg):
-        # Convert the pan and tilt values to motor angles
-        if self.head_active and self.motor_thread[10] == None and self.motor_thread[11] == None:
-            if self.sim_ac:
-                current_pan = self.current_angles_sim['2']
-                current_tilt = self.current_angles_sim['3']
-            else:
-                current_pan = self.current_angles['2']
-                current_tilt = self.current_angles['3']
-            
-            error_x = self.center_x - msg.pan
-            error_y = self.center_y - msg.tilt
-
-            # Ignore movements smaller than 20 pixels
-            if abs(error_x) < 30:
-                error_x = 0.0
-            if abs(error_y) < 20:
-                error_y = 0.0
-
-            if error_x != 0.0 or error_y != 0.0:
-                move_x = error_x * self.deg_per_px_x
-                move_y = error_y * self.deg_per_px_y
-             
-                step_pan = move_x * self.Kp
-                step_tilt = move_y * self.Kp
-
-                pan_an = current_pan + int(step_pan)
-                tilt_an = current_tilt - int(step_tilt)
-
-                target_pan = min(self.pan_max, max(self.pan_min, pan_an))
-                target_tilt = min(self.tilt_max, max(self.tilt_min, tilt_an))
-
-                self.get_logger().info(f"Head Move Received: Pan {int(msg.pan)} -> {target_pan} current pan: {current_pan} | Tilt {int(msg.tilt)} -> {target_tilt} current tilt: {current_tilt}")
-                self.write_head_instant(target_pan, target_tilt)
-
-    def head_active_callback(self, msg):
-        self.head_active = msg.data
-
-    def sim_active_callback(self, msg):
+    def sim_active_callback(self, msg): # To check if simulation is active or not
         self.active_mode = 0
         self.sim_ac = msg.data
 
-    def web_cmd_callback(self, msg):
+    def web_cmd_callback(self, msg): #To control any motor directly from the web interface, bypassing mode sequences
         incoming_id = msg.client_id
 
         if self.active_client_id is None:
@@ -147,17 +88,9 @@ class ServoTopicNode(Node):
         motor_num = msg.motor_num - 1
         target_pos = msg.target_position
         self.speed = msg.speed
-        """
-        if self.mode_thread is not None:
+
+        if self.active_mode != -1:
             self.active_mode = 0
-            self.mode_thread.join(timeout=0.5)
-        # Spin up a quick thread to move specific motor
-        #threading.Thread(target=self.sendMotorGoal, args=(motor_num, target_pos)).start()
-        if self.motor_thread[motor_num] is not None:
-            self.active_motor[motor_num] = False
-            self.motor_thread[motor_num].join(timeout=0.5)
-        """
-        self.active_mode = 0
         self.active_motor[motor_num] = False
 
         self.get_logger().info(f"Goal Accepted: Motor {motor_num +1} to {int(target_pos)}")
@@ -184,28 +117,16 @@ class ServoTopicNode(Node):
             self.get_logger().warn("Mode rejected: Robot is locked by another user.")
             return
 
-        if new_mode == -1 or new_mode == 0:
+        if new_mode == 0:
             self.get_logger().info("STOP command received.")
             self.active_motor = [False] * MOTOR_COUNT # Stop any active motor threads
             self.active_mode = 0 # Stops the background thread
             return
         
-        if new_mode == 5:
-            self.write_head_instant(MOTOR_START_ANGLES['2'], MOTOR_START_ANGLES['3'])
-
         elif new_mode != self.active_mode:
             self.get_logger().info(f"Switching to Mode: {new_mode}")
             self.active_mode = 0
-            """
-            # Start the new mode in a background thread so ROS doesn't freeze
-            if self.mode_thread is not None:
-                self.mode_thread.join(timeout=0.2)
-            for i in range(MOTOR_COUNT):
-                if self.motor_thread[i] is not None:
-                    # self.get_logger().info(f"{self.active_motor[i]} Stopping Motor {i+1} thread.")
-                    self.active_motor[i] = False
-                    self.motor_thread[i].join(timeout=0.1)
-            """
+
             for i in range(MOTOR_COUNT):
                 self.active_motor[i] = False
             
@@ -221,13 +142,13 @@ class ServoTopicNode(Node):
         # 1. POSE MODE
         if mode_num == 1:
             self.speed = 5
-            for i in range(9, -1, -1):
+            for i in range(11, -1, -1):
                 if self.active_mode != mode_num: return # Exit if mode changed
                 self.sendMotorGoal(i, angles[i])
             self.active_mode = 0 # Return to idle after pose is complete
         else:
             self.speed = 5
-            for i in range(10):
+            for i in range(12):
                 if self.active_mode != mode_num: return
                 self.sendMotorGoal(i, angles[i])           
             if mode_num == 4:
@@ -267,7 +188,6 @@ class ServoTopicNode(Node):
                 self.sendMultipleMotorGoals(target_group)
 
     def sendMotorGoal(self, motor_num, target_angle):
-        """Moves the motor in steps."""
 
         my_thread = threading.current_thread()
 
@@ -279,6 +199,7 @@ class ServoTopicNode(Node):
 
         min_angle, max_angle = MOTOR_ANGLE_LIMITS[motor_num]
 
+        # Check bounds before starting the loop to avoid unnecessary movement
         if not (0 <= motor_num < MOTOR_COUNT and min_angle <= target_position <= max_angle):
             self.get_logger().error(f"Goal Aborted: Motor {motor_num} or Angle out of bounds")
             return False
@@ -291,10 +212,10 @@ class ServoTopicNode(Node):
         while abs(error) > 0.1 and self.active_mode != 0 and (self.active_mode != -1 or self.active_motor[motor_num]):
             if self.mode_thread is not my_thread and self.motor_thread[motor_num] is not my_thread:
                 break
-
             if my_thread is self.mode_thread and self.active_mode == -1:
                 break
             
+            # If step is larger than the remaining error, just finish the last bit to avoid overshooting
             if abs(error) < abs(Step) and abs(Step) != 1:
                 Step = error
             if error*Step < 0:
@@ -310,13 +231,13 @@ class ServoTopicNode(Node):
                     self.current_angles_sim[str(motor_num+1)] = int(current_an)
             else: 
                 with self.i2c_lock:
-                    if motor_num == 9 or motor_num == 11:
+                    if motor_num == 9 or motor_num == 10:
                         self.kit.servo[motor_num+2].angle = current_an
                     else:
                         self.kit.servo[motor_num].angle = current_an
                     # self.kit.servo[MOVE_ORDER[motor_num]].angle = current_an 
                 self.current_angles[str(motor_num+1)] = int(current_an)
-            #self.get_logger().info(f"Motor: {motor_num+1} angle: {current_an}")
+            self.get_logger().info(f"Motor: {motor_num+1} angle: {current_an}")
             error = target_position - current_an
             time.sleep(Ts)
         if(error == 0):
@@ -334,12 +255,12 @@ class ServoTopicNode(Node):
         #Step = self.speed
         my_thread = threading.current_thread()
 
-        while self.active_mode > 0:
+        while self.active_mode > 0: #self.active_mode == 3: # Only run while in the correct mode, and exit if mode changes
             all_reached = True # Assume done until proven otherwise            
 
             for motor_num, target_angle in targets.items():
                 if self.mode_thread is not my_thread:
-                    break
+                    return
                 target_position = float(target_angle)
                 if(self.sim_ac):
                     current_an = float(self.current_angles_sim[str(motor_num+1)])
@@ -374,11 +295,11 @@ class ServoTopicNode(Node):
                             self.current_angles_sim[str(motor_num+1)] = int(current_an)
                     else: 
                         with self.i2c_lock:
-                            if motor_num == 9 or motor_num == 11:
+                            if motor_num == 9 or motor_num == 10:
                                 self.kit.servo[motor_num+2].angle = current_an
                             else:
                                 self.kit.servo[motor_num].angle = current_an
-                                #self.get_logger().info(f"MultiMotorController Motor: {motor_num+1} angle: {current_an}")
+                                self.get_logger().info(f"MultiMotorController Motor: {motor_num+1} angle: {current_an}")
                             # self.kit.servo[MOVE_ORDER[motor_num]].angle = current_an 
                         self.current_angles[str(motor_num+1)] = int(current_an)
 
@@ -386,28 +307,6 @@ class ServoTopicNode(Node):
                 break
             
             time.sleep(Ts)
-
-    def write_head_instant(self, pan_val, tilt_val):
-        # 2. Command Simulation OR Hardware
-        if self.sim_ac:
-            if 1 in self.gazebo_pubs:
-                msg = Float64()
-                msg.data = math.radians(pan_val - 90.0) 
-                self.gazebo_pubs[1].publish(msg)
-                self.current_angles_sim['2'] = int(pan_val)
-                
-            if 2 in self.gazebo_pubs:
-                msg = Float64()
-                msg.data = math.radians(tilt_val - 90.0) 
-                self.gazebo_pubs[2].publish(msg)
-                self.current_angles_sim['3'] = int(tilt_val)
-        else:
-            with self.i2c_lock:
-                self.kit.servo[1].angle = pan_val
-                self.kit.servo[2].angle = tilt_val
-            self.current_angles['2'] = int(pan_val)
-            self.current_angles['3'] = int(tilt_val)
-
 
 def main(args=None):
     rclpy.init(args=args)

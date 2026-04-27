@@ -290,7 +290,7 @@ endif()
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   execute_process(
         COMMAND
-        "/home/rasp/humanoid_ros2/yolo_env/bin/python3" "-m" "compileall"
+        "/usr/bin/python3" "-m" "compileall"
         "/home/rasp/humanoid_ros2/robot_ws/install/servo_interfaces/lib/python3.12/site-packages/servo_interfaces"
       )
 endif()

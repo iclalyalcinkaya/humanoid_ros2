@@ -8,4 +8,3 @@ servo_mover_node = my_servo_controller.servo_mover:main
 topic_controller_node = my_servo_controller.topic_controller:main
 yolov8_ros2_pt_node = my_servo_controller.yolov8_ros2_pt:main
 yolov8_ros2_video_node = my_servo_controller.yolov8_ros2_video:main
-yolov8_subscriber_node = my_servo_controller.yolov8_ros2_subscriber:main

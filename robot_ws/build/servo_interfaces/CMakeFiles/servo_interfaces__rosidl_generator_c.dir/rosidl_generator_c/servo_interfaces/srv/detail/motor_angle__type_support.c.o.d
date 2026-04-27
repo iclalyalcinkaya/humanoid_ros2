@@ -25,6 +25,26 @@ CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_int
  /usr/include/aarch64-linux-gnu/bits/stdint-least.h \
  /opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.h \
  /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \
+ /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__type_support.h \
+ /opt/ros/jazzy/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h \
+ /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/msg/rosidl_generator_c__visibility_control.h \
+ /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/message_type_support_struct.h \
+ /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/type_description__struct.h \
+ /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/individual_type_description__struct.h \
+ /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
+ /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
+ /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/field__struct.h \
+ /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/field_type__struct.h \
+ /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/type_source__struct.h \
+ /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_hash.h \
+ /opt/ros/jazzy/include/rcutils/rcutils/allocator.h \
+ /opt/ros/jazzy/include/rcutils/rcutils/macros.h \
+ /opt/ros/jazzy/include/rcutils/rcutils/types/rcutils_ret.h \
+ /opt/ros/jazzy/include/rcutils/rcutils/visibility_control.h \
+ /opt/ros/jazzy/include/rcutils/rcutils/visibility_control_macros.h \
+ /opt/ros/jazzy/include/rcutils/rcutils/sha256.h \
+ /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
+ /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h \
  /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__functions.h \
  /usr/include/stdlib.h /usr/include/aarch64-linux-gnu/bits/waitflags.h \
  /usr/include/aarch64-linux-gnu/bits/waitstatus.h \
@@ -52,24 +72,4 @@ CMakeFiles/servo_interfaces__rosidl_generator_c.dir/rosidl_generator_c/servo_int
  /usr/include/aarch64-linux-gnu/bits/struct_mutex.h \
  /usr/include/aarch64-linux-gnu/bits/struct_rwlock.h \
  /usr/include/alloca.h /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
- /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/action_type_support_struct.h \
- /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/message_type_support_struct.h \
- /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/type_description__struct.h \
- /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/individual_type_description__struct.h \
- /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
- /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
- /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/field__struct.h \
- /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/field_type__struct.h \
- /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/type_source__struct.h \
- /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_hash.h \
- /opt/ros/jazzy/include/rcutils/rcutils/allocator.h \
- /opt/ros/jazzy/include/rcutils/rcutils/macros.h \
- /opt/ros/jazzy/include/rcutils/rcutils/types/rcutils_ret.h \
- /opt/ros/jazzy/include/rcutils/rcutils/visibility_control.h \
- /opt/ros/jazzy/include/rcutils/rcutils/visibility_control_macros.h \
- /opt/ros/jazzy/include/rcutils/rcutils/sha256.h \
- /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
- /opt/ros/jazzy/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h \
- /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h \
- /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/msg/rosidl_generator_c__visibility_control.h \
- /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_c/servo_interfaces/srv/detail/motor_angle__type_support.h
+ /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/action_type_support_struct.h

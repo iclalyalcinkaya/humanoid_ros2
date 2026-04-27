@@ -174,7 +174,7 @@ rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/acti
 rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/action_msgs/srv/CancelGoal.idl
 rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp: /opt/ros/jazzy/share/unique_identifier_msgs/msg/UUID.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
-	/home/rasp/humanoid_ros2/yolo_env/bin/python3 /opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_cpp__arguments.json
+	/usr/bin/python3 /opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_generator_cpp__arguments.json
 
 rosidl_generator_cpp/servo_interfaces/msg/detail/set_pwm__builder.hpp: rosidl_generator_cpp/servo_interfaces/msg/set_pwm.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/servo_interfaces/msg/detail/set_pwm__builder.hpp

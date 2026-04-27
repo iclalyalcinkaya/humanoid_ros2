@@ -4,9 +4,9 @@
 
 #include <string.h>
 
-#include "servo_interfaces/msg/detail/yolov8_inference__struct.h"
 #include "servo_interfaces/msg/detail/yolov8_inference__type_support.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "servo_interfaces/msg/detail/yolov8_inference__struct.h"
 #include "servo_interfaces/msg/detail/yolov8_inference__functions.h"
 
 #ifdef __cplusplus

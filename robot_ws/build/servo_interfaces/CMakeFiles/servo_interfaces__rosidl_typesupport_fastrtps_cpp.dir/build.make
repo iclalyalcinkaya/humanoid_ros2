@@ -124,7 +124,7 @@ rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/set_pwm
 rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/set_pwm__type_support.cpp: /opt/ros/jazzy/share/action_msgs/srv/CancelGoal.idl
 rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/set_pwm__type_support.cpp: /opt/ros/jazzy/share/unique_identifier_msgs/msg/UUID.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ type support for eProsima Fast-RTPS"
-	/home/rasp/humanoid_ros2/yolo_env/bin/python3 /opt/ros/jazzy/lib/rosidl_typesupport_fastrtps_cpp/rosidl_typesupport_fastrtps_cpp --generator-arguments-file /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_typesupport_fastrtps_cpp__arguments.json
+	/usr/bin/python3 /opt/ros/jazzy/lib/rosidl_typesupport_fastrtps_cpp/rosidl_typesupport_fastrtps_cpp --generator-arguments-file /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_typesupport_fastrtps_cpp__arguments.json
 
 rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_fastrtps_cpp.hpp: rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/dds_fastrtps/set_pwm__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_cpp/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_fastrtps_cpp.hpp

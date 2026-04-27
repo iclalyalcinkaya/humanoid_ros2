@@ -10,11 +10,6 @@
 * `rosbridge_suite` paketi
 * Python kütüphanesi: `adafruit-circuitpython-servokit` ve `lgpio`
 * HTML için [ROS2 kütüphanesi (ROS2LIBJS)](https://github.com/6RiverSystems/ros2libjs)
-* Çalıştırmadan önce rosbridge için firewall izni eklemeniz gerekebilir.
-```
-sudo ufw allow 9090/tcp
-sudo ufw reload
-```
 ```
 git clone https://github.com/iclalyalcinkaya/humanoid_ros2.git
 ```
@@ -109,7 +104,7 @@ PWM frekansı ayarlanabilir.
 [ServoKit GitHub](https://github.com/adafruit/Adafruit_CircuitPython_ServoKit)
 [ServoKit API](https://docs.circuitpython.org/projects/servokit/en/latest/index.html)
 
-## SERVICE VEYA ACTION VEYA TOPİC
+## SERVICE, ACTION VEYA TOPİC
 Motor açılarının komutlarını göndermek için action kullanmak daha mantıklı oluyor. Services senkron olarak çalışır ve bir sonraki isteği göndermek için öncekinin bitmesi bekler. İsteği gönderdikten sonra süreç hakkında bir bilgisi olmaz. 
 
 Actions asenkron olarak çalışır, bir hedef gönderdikten sonra farklı şeylerle uğraşabilir. Farklı bir hedef gönderebilir veya önceki hedefi durdurabilir. Süreç sırasında ise server sürekli bir feedback gönderebilir.
@@ -125,7 +120,20 @@ API istenilen posizyon verilerini goal olarak ros’a gönderiyor. Ros PID ile m
 
 Action kullanılmasının nedeni yeni bir goal geldiğinde eskisini terk edebilmek.
 
+## DIRECTORY TREE
+humanoid_ros2/
+├── robot_ws/                  # ROS 2 Çalışma Alanı
+│   ├── src/
+│   │   ├── my_servo_controller/ # Ana kontrol düğümleri
+│   │   └── ros_gz_h1_bringup/   # Gazebo simülasyon dosyaları
+├── webpages/                  # Web API ve Arayüz dosyaları
+│   ├── index.html
+│   └── action_index.html
+└── assets/                    # Görseller ve medya
+
 ## ACTION SERVER
+/humanoid_ros2/robot_ws/src/my_servo_controller/my_servo_controller/action_controller.py
+
 Motor sınırlarını ve motor başlangıç değerleri buradan ayarlanabilir.
 
 Hedef mesajının içinde bir client id gönderilir ve bir id tanımlıyken başka bir client tarafından gönderilen hedefleri reddeder. Aynı zamanda rosbridge server tarafına bağlı olan client bilgilerini kontrol eder. Bağlantı sayısında bir değişim olduğunda bağlı olduğu client hala aktif mi doğrular. Aktif değil ise tanımlı client değiştirilir. Tanımlı cihaz değiştirilirse aktif olan hedefler iptal edilir.
@@ -138,6 +146,8 @@ ReentrantCallbackGroup mantıkları kullanılıyor.
 Başlangıçta motor açılarından oluşan bir Dictionary oluşturulur. Değişen motor açı değeri buraya kaydedilerek motorlar paralel çalıştırılabilirler.
 
 ## ACTION CLIENT
+/humanoid_ros2/webpages/action_index.html
+
 API client olarak davranır. Buradan Kullanılacaksa PID parametreleri veya adım hızı ayarlanabilir.
 
 Bağlanılacak olan Raspberry Pi IP adresi girilerek bağlantı başlatılır. İlk bağlantı sırasında bir client id oluşturularak gönderilir.
@@ -148,6 +158,14 @@ Modları etkinleştiren, robotu durduran butonlar ve bütün motorların tek tek
 Komut döngüsü içerisinde aynı anda hareket etmeleri gerekmiyorsa bir birlerinin hareketinin bitmesini bekler. Aynı zamanda alınan feedback sayesinde motor konumu ekrana anlık olarak yazdırılır.
 
 Verilen komuta göre server’a bir hedef gönderir. Bir hedefin ortasında yeni bir hedef gönderilirse önceki hedef iptal edilir.
+
+## TOPIC CONTOLLER 
+/humanoid_ros2/robot_ws/src/my_servo_controller/my_servo_controller/topic_controller.py
+Motorların açı sınırları ve başlangıç konumları buradan ayarlanır.
+Mod döngü hesaplamaları burada yapılır. Eğer bir sorun çıkarsa kendi içinde halledilir.
+
+/home/rasp/humanoid_ros2/webpages/index.html
+Web arayüzünden simülasyon, mod ve hedef bilgisi yayınlanır. Bir hesaplama yapılmaz.
 
 ## POZ VERME
 Sürekli bir hareket olmadığından motorlar belirlenen açılara götürülür.
@@ -187,22 +205,23 @@ Simülasyon aktivasyon butonuna bas.
 ## YOLOv8
 YOLOv8 kullanılarak robotun kafası ile önünden geçen insanları takip edebilecek bir algoritma hazırlanmıştır.
 
-yolov8_ros2_pt_node ile kameradan alınan görüntü işlenir ve önünde bulunan insanları tespit eder. En yakında bulunan kişinin merkeze olan uzaklığını   kontrol düğümüne gönderir. Kontrol düğümü ise bu uzaklığa göre kafayı yönlendirir. 
+yolov8_ros2_pt_node ile kameradan alınan görüntü işlenir ve önünde bulunan insanları tespit eder. En yakında bulunan kişinin merkeze olan uzaklığını   kontrol düğümüne gönderir. Kontrol düğümü ise bu uzaklığa göre kafayı yönlendirir.
+
+Çalışabilmesi için YOLO kütüphanesinin yüklenmesi gerekmekte.
+
+```
+ros2 launch my_servo_controller head_with_yolo_launch.py 
+```
 
 ## OLUŞABİLECEK SORUNLAR  
 Çarpmayı algılayamadan devam edebilir. Onun için bir hata durumu koymalı veya acil durum butonu yeterli olur.
 
 Launch dosyası olarak çalıştırınca ve düzgün bir şekilde kapatılmaz ise node durmuyor. Hayalet olarak çalışmaya devam ediyor.
 
+İnsan takibi sırasında Kp değeri uygun ayarlanmazsa overshoot yaparak ortalamayabilir veya hareket yavaş kaldığı için hedefi takip edemeyebilir.
+
 ## DAHA FAZLA
 [Orijinal](https://github.com/K-d4wg/ros2_heinz) Unitree H1 simülasyon modeline eklemeler yapılmıştır.
 * **Özel Boyun Eklemi:** Orijinal modelde bulunmayan, 2 eksenli (Pan/Tilt) özel bir boyun ve kafa (cylinder/sphere) sisteme fiziksel ve görsel olarak entegre edildi.
 * **Bileklerin Serbest Bırakılması:** İşlemci yükünü azaltmak için orijinal repository'de `fixed` (sabit) olarak ayarlanan bilek eklemleri `revolute` olarak değiştirilip aktifleştirildi.
 * **PID Tuning:** Düşük ataletli (low-inertia) bileklerin yerçekimi altında düşmemesi ve titrememesi (oscillation) için Gazebo'nun `JointPositionController` eklentileri sisteme dahil edildi. Kp (Yay) ve Kd (Sönümleyici) değerleri optimize edilerek simülasyon stabil hale getirildi.
-
-cat /sys/class/thermal/thermal_zone*/temp
-
-export PYTHONPATH=/home/rasp/humanoid_ros2/yolo_env/lib/python3.12/site-packages:$PYTHONPATH
-
-source /opt/ros/jazzy/setup.bash
-source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash

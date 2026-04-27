@@ -124,7 +124,7 @@ rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/set_pwm__rosidl
 rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_introspection_cpp.hpp: /opt/ros/jazzy/share/action_msgs/srv/CancelGoal.idl
 rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_introspection_cpp.hpp: /opt/ros/jazzy/share/unique_identifier_msgs/msg/UUID.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ introspection for ROS interfaces"
-	/home/rasp/humanoid_ros2/yolo_env/bin/python3 /opt/ros/jazzy/lib/rosidl_typesupport_introspection_cpp/rosidl_typesupport_introspection_cpp --generator-arguments-file /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_typesupport_introspection_cpp__arguments.json
+	/usr/bin/python3 /opt/ros/jazzy/lib/rosidl_typesupport_introspection_cpp/rosidl_typesupport_introspection_cpp --generator-arguments-file /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/rosidl_typesupport_introspection_cpp__arguments.json
 
 rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/set_mode__rosidl_typesupport_introspection_cpp.hpp: rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/set_pwm__rosidl_typesupport_introspection_cpp.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/servo_interfaces/msg/detail/set_mode__rosidl_typesupport_introspection_cpp.hpp

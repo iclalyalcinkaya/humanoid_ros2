@@ -67,7 +67,7 @@ include CMakeFiles/ament_cmake_python_build_servo_interfaces_egg.dir/compiler_de
 include CMakeFiles/ament_cmake_python_build_servo_interfaces_egg.dir/progress.make
 
 CMakeFiles/ament_cmake_python_build_servo_interfaces_egg:
-	cd /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/ament_cmake_python/servo_interfaces && /home/rasp/humanoid_ros2/yolo_env/bin/python3 setup.py egg_info
+	cd /home/rasp/humanoid_ros2/robot_ws/build/servo_interfaces/ament_cmake_python/servo_interfaces && /usr/bin/python3 setup.py egg_info
 
 ament_cmake_python_build_servo_interfaces_egg: CMakeFiles/ament_cmake_python_build_servo_interfaces_egg
 ament_cmake_python_build_servo_interfaces_egg: CMakeFiles/ament_cmake_python_build_servo_interfaces_egg.dir/build.make
