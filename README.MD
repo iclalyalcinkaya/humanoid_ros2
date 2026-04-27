@@ -121,6 +121,7 @@ API istenilen posizyon verilerini goal olarak ros’a gönderiyor. Ros PID ile m
 Action kullanılmasının nedeni yeni bir goal geldiğinde eskisini terk edebilmek.
 
 ## DIRECTORY TREE
+```bash
 humanoid_ros2/
 ├── robot_ws/                  # ROS 2 Çalışma Alanı
 │   ├── src/
@@ -130,6 +131,7 @@ humanoid_ros2/
 │   ├── index.html
 │   └── action_index.html
 └── assets/                    # Görseller ve medya
+```
 
 ## ACTION SERVER
 /humanoid_ros2/robot_ws/src/my_servo_controller/my_servo_controller/action_controller.py
