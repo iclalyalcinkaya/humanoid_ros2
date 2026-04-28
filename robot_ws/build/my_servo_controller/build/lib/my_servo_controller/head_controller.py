@@ -74,8 +74,8 @@ class ServoTopicNode(Node):
         self.frame_width = 640
         self.frame_height = 480
 
-        self.frame_angle_x = 35 
-        self.frame_angle_y = 25 
+        self.frame_angle_x = 35 #48.2 
+        self.frame_angle_y = 25 #37  
 
         self.center_x = self.frame_width / 2.0
         self.center_y = self.frame_height / 2.0

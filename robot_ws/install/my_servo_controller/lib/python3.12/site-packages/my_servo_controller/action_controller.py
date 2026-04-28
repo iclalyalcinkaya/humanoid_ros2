@@ -138,11 +138,9 @@ class ServoActionServer(Node):
 
                 if(request.speed):
                     #If step is to big take smaller step
-                    while(abs(error) < abs(Step) and abs(Step) != 1):
-                        Step = int(Step / 2)
-                    #if(abs(error) < abs(Step) and abs(Step) != 1): #If Step is biggerden error make step smaller
-                    #    Step = 1
-                    if(error * Step < 0):
+                    if abs(error) < abs(Step) and abs(Step) != 1:
+                        Step = error
+                    if error*Step < 0:
                         Step *= -1
                 else:
                     Step = Kp * error #+ Ki * integral + Kd * derivative #Simple P controller, can be extended to PID if needed

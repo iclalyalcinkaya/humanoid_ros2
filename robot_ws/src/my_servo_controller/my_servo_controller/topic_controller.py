@@ -17,7 +17,7 @@ MODE_ANGLES = {
     1: [10, 81, 40, 90, 90, 170, 100, 60, 80, 90, 90, 90], 
     2: [90, 90, 90, 90, 90, 20, 60, 80, 80, 90, 90, 90], 
     3: [60, 105, 60, 60, 90, 120, 75, 60, 60, 90, 90, 90],
-    4: [90, 120, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90]
+    4: [90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90]
 }
 MOVE_ORDER = [14, 5, 2, 4, 13, 8, 7, 6, 9, 10, 11, 3] # The conncected order of the servos in the physical robot
 
@@ -62,7 +62,8 @@ class ServoTopicNode(Node):
             self.gazebo_pubs[motor_idx] = self.create_publisher(Float64, topic_name, 10)
 
         for motor_num in range(MOTOR_COUNT):
-            self.kit.servo[motor_num].angle = MODE_ANGLES[4][motor_num] # Ensure physical motors are in the correct starting position
+            with self.i2c_lock:
+                self.kit.servo[motor_num].angle = MODE_ANGLES[4][motor_num] # Ensure physical motors are in the correct starting position
         #self.active_mode = 4
         #self.run_mode_sequence(4)
 
@@ -146,6 +147,7 @@ class ServoTopicNode(Node):
                 if self.active_mode != mode_num: return # Exit if mode changed
                 self.sendMotorGoal(i, angles[i])
             self.active_mode = 0 # Return to idle after pose is complete
+            #self.get_logger().info("Pose complete.")
         else:
             self.speed = 5
             for i in range(12):
@@ -153,6 +155,7 @@ class ServoTopicNode(Node):
                 self.sendMotorGoal(i, angles[i])           
             if mode_num == 4:
                 self.active_mode = 0
+                #self.get_logger().info("Returned to home pose.")
 
         # 2. WAVE MODE (Continuous)
         if mode_num == 2:
@@ -218,7 +221,7 @@ class ServoTopicNode(Node):
             # If step is larger than the remaining error, just finish the last bit to avoid overshooting
             if abs(error) < abs(Step) and abs(Step) != 1:
                 Step = error
-            if error*Step < 0:
+            elif error*Step < 0:
                 Step *= -1
             
             current_an = max(min_angle, min(max_angle, current_an + Step))
@@ -237,7 +240,7 @@ class ServoTopicNode(Node):
                         self.kit.servo[motor_num].angle = current_an
                     # self.kit.servo[MOVE_ORDER[motor_num]].angle = current_an 
                 self.current_angles[str(motor_num+1)] = int(current_an)
-            self.get_logger().info(f"Motor: {motor_num+1} angle: {current_an}")
+            #self.get_logger().info(f"Motor: {motor_num+1} angle: {current_an}")
             error = target_position - current_an
             time.sleep(Ts)
         if(error == 0):
@@ -298,10 +301,10 @@ class ServoTopicNode(Node):
                             if motor_num == 9 or motor_num == 10:
                                 self.kit.servo[motor_num+2].angle = current_an
                             else:
-                                self.kit.servo[motor_num].angle = current_an
-                                self.get_logger().info(f"MultiMotorController Motor: {motor_num+1} angle: {current_an}")
-                            # self.kit.servo[MOVE_ORDER[motor_num]].angle = current_an 
+                                self.kit.servo[motor_num].angle = current_an                            
+                                #self.kit.servo[MOVE_ORDER[motor_num]].angle = current_an 
                         self.current_angles[str(motor_num+1)] = int(current_an)
+                    #self.get_logger().info(f"MultiMotorController Motor: {motor_num+1} angle: {current_an}")
 
             if all_reached:
                 break

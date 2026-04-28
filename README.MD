@@ -123,14 +123,14 @@ Action kullanılmasının nedeni yeni bir goal geldiğinde eskisini terk edebilm
 ## DIRECTORY TREE
 ```bash
 humanoid_ros2/
-├── robot_ws/                  # ROS 2 Çalışma Alanı
+├── robot_ws/                       # ROS 2 Çalışma Alanı
 │   ├── src/
-│   │   ├── my_servo_controller/ # Ana kontrol düğümleri
-│   │   └── ros_gz_h1_bringup/   # Gazebo simülasyon dosyaları
-├── webpages/                  # Web API ve Arayüz dosyaları
+│   │   ├── my_servo_controller/    # Ana kontrol düğümleri
+│   │   └── ros_gz_h1_bringup/      # Gazebo simülasyon dosyaları
+├── webpages/                       # Web API ve Arayüz dosyaları
 │   ├── index.html
 │   └── action_index.html
-└── assets/                    # Görseller ve medya
+└── assets/                         # Görseller ve medya
 ```
 
 ## ACTION SERVER
@@ -163,10 +163,14 @@ Verilen komuta göre server’a bir hedef gönderir. Bir hedefin ortasında yeni
 
 ## TOPIC CONTOLLER 
 /humanoid_ros2/robot_ws/src/my_servo_controller/my_servo_controller/topic_controller.py
+
 Motorların açı sınırları ve başlangıç konumları buradan ayarlanır.
 Mod döngü hesaplamaları burada yapılır. Eğer bir sorun çıkarsa kendi içinde halledilir.
 
+Motorların bulundukları açıları sadece raspberry pi'de tutar tekrar yayınlamaz.
+
 /home/rasp/humanoid_ros2/webpages/index.html
+
 Web arayüzünden simülasyon, mod ve hedef bilgisi yayınlanır. Bir hesaplama yapılmaz.
 
 ## POZ VERME
@@ -207,7 +211,7 @@ Simülasyon aktivasyon butonuna bas.
 ## YOLOv8
 YOLOv8 kullanılarak robotun kafası ile önünden geçen insanları takip edebilecek bir algoritma hazırlanmıştır.
 
-yolov8_ros2_pt_node ile kameradan alınan görüntü işlenir ve önünde bulunan insanları tespit eder. En yakında bulunan kişinin merkeze olan uzaklığını   kontrol düğümüne gönderir. Kontrol düğümü ise bu uzaklığa göre kafayı yönlendirir.
+yolov8_ros2_pt_node ile kameradan alınan görüntü işlenir ve önünde bulunan insanları tespit eder. En yakında bulunan kişinin merkeze olan uzaklığını kontrol düğümüne gönderir. Kontrol düğümü ise bu uzaklığa göre kafayı yönlendirir.
 
 Çalışabilmesi için YOLO kütüphanesinin yüklenmesi gerekmekte.
 

@@ -44,8 +44,8 @@ class Camera_subscriber(Node):
         if not self.head_active:
             return
         img = bridge.imgmsg_to_cv2(data, "bgr8")
-        results = self.model.track(img, conf=0.6, classes=[0], persist=True, tracker="bytetrack.yaml", stream=False, show_conf=False, save=True, save_frames=True, imgsz=[self.frame_height, self.frame_width])
-        #results = self.model.track(img, conf=0.6, classes=[0], persist=True, tracker="botsort.yaml", stream=False, show_conf=False, save=True, save_frames=True, imgsz=[self.frame_height, self.frame_width])
+        #results = self.model.track(img, conf=0.6, classes=[0], persist=True, tracker="bytetrack.yaml", stream=False, show_conf=False, save=False, save_frames=False, imgsz=[self.frame_height, self.frame_width])
+        results = self.model.track(img, conf=0.6, classes=[0], persist=True, tracker="botsort.yaml", stream=False, show_conf=True, save=True, save_frames=False, imgsz=[self.frame_height, self.frame_width])
 
         for r in results:            
             if r.boxes.is_track and r.boxes.id is not None:
